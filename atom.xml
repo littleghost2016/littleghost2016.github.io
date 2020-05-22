@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">LittleGhost的博客</title>
     <subtitle type="html">MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</subtitle>
-    <updated>2020-05-22T21:20:59&#43;08:00</updated>
+    <updated>2020-05-22T23:11:24&#43;08:00</updated>
     <id>https://blog.littleghost.ml/</id>
     <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blog.littleghost.ml/atom.xml" />
@@ -16,56 +16,6 @@
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.71.0">Hugo</generator>
-        <entry>
-            <title type="text">Hexo迁移至hugo</title>
-            <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/posts/hexo%E8%BF%81%E7%A7%BB%E8%87%B3hugo/" />
-            <id>https://blog.littleghost.ml/posts/hexo%E8%BF%81%E7%A7%BB%E8%87%B3hugo/</id>
-            <updated>2020-05-22T11:08:49&#43;08:00</updated>
-            <published>2020-05-22T11:07:31&#43;08:00</published>
-            <author>
-                    <name>LittleGhost</name>
-                    <uri>https://blog.littleghost.ml</uri>
-                    <email>785340571@qq.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">原因</summary>
-            
-                <content type="html">&lt;h1 id=&#34;原因&#34;&gt;原因&lt;/h1&gt;
-</content>
-            
-            
-            
-            
-            
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/" term="技术" label="技术" />
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://blog.littleghost.ml/tags/hexo/" term="hexo" label="hexo" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://blog.littleghost.ml/tags/hugo/" term="hugo" label="hugo" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
         <entry>
             <title type="text">移动光猫GM219-S</title>
             <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/posts/%E7%A7%BB%E5%8A%A8%E5%85%89%E7%8C%ABGM219-S/" />
@@ -2244,7 +2194,7 @@ WantedBy=multi-user.target
             <title type="text">git-stash学习</title>
             <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/posts/git-stash%E5%AD%A6%E4%B9%A0/" />
             <id>https://blog.littleghost.ml/posts/git-stash%E5%AD%A6%E4%B9%A0/</id>
-            <updated>2020-05-22T10:25:44&#43;08:00</updated>
+            <updated>2020-05-22T23:11:22&#43;08:00</updated>
             <published>2019-11-04T20:24:20&#43;08:00</published>
             <author>
                     <name>LittleGhost</name>
@@ -12048,7 +11998,7 @@ end start
             <title type="text">Java作业整理</title>
             <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/posts/Java%E4%BD%9C%E4%B8%9A%E6%95%B4%E7%90%86/" />
             <id>https://blog.littleghost.ml/posts/Java%E4%BD%9C%E4%B8%9A%E6%95%B4%E7%90%86/</id>
-            <updated>2020-05-22T11:08:17&#43;08:00</updated>
+            <updated>2020-05-22T09:34:12&#43;08:00</updated>
             <published>2017-01-07T14:36:56&#43;08:00</published>
             <author>
                     <name>LittleGhost</name>
@@ -14626,14 +14576,6 @@ end start
             
             
                 
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/" term="技术" label="技术" />
-                            
-                        
                     
                 
                     
