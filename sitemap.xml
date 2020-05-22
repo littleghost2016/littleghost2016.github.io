@@ -3,43 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://blog.littleghost.ml/categories/</loc>
-    <lastmod>2020-05-22T11:08:49+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.littleghost.ml/tags/hexo/</loc>
-    <lastmod>2020-05-22T11:08:49+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.littleghost.ml/posts/hexo%E8%BF%81%E7%A7%BB%E8%87%B3hugo/</loc>
-    <lastmod>2020-05-22T11:08:49+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.littleghost.ml/tags/hugo/</loc>
-    <lastmod>2020-05-22T11:08:49+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.littleghost.ml/</loc>
-    <lastmod>2020-05-22T11:08:49+08:00</lastmod>
+    <lastmod>2020-05-22T23:23:53+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.littleghost.ml/posts/</loc>
-    <lastmod>2020-05-22T11:08:49+08:00</lastmod>
+    <lastmod>2020-05-22T23:23:53+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.littleghost.ml/posts/test/</loc>
+    <lastmod>2020-05-22T23:23:53+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.littleghost.ml/tags/</loc>
-    <lastmod>2020-05-22T11:08:49+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2020-05-22T11:08:49+08:00</lastmod>
+    <lastmod>2020-05-22T23:11:22+08:00</lastmod>
   </url>
   
   <url>
@@ -59,7 +39,7 @@
   
   <url>
     <loc>https://blog.littleghost.ml/tags/git/</loc>
-    <lastmod>2020-05-22T10:25:44+08:00</lastmod>
+    <lastmod>2020-05-22T23:11:22+08:00</lastmod>
   </url>
   
   <url>
@@ -189,7 +169,12 @@
   
   <url>
     <loc>https://blog.littleghost.ml/posts/git-stash%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2020-05-22T10:25:44+08:00</lastmod>
+    <lastmod>2020-05-22T23:11:22+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.littleghost.ml/tags/hexo/</loc>
+    <lastmod>2020-05-22T23:11:22+08:00</lastmod>
   </url>
   
   <url>
@@ -469,17 +454,21 @@
   
   <url>
     <loc>https://blog.littleghost.ml/tags/java/</loc>
-    <lastmod>2020-05-22T11:08:17+08:00</lastmod>
+    <lastmod>2020-05-22T09:34:12+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.littleghost.ml/posts/Java%E4%BD%9C%E4%B8%9A%E6%95%B4%E7%90%86/</loc>
-    <lastmod>2020-05-22T11:08:17+08:00</lastmod>
+    <lastmod>2020-05-22T09:34:12+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.littleghost.ml/posts/C%E8%AF%AD%E8%A8%80%E4%B8%8A%E6%9C%BA%E4%BD%9C%E4%B8%9A/</loc>
     <lastmod>2020-05-22T09:32:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.littleghost.ml/categories/</loc>
   </url>
   
 </urlset>
