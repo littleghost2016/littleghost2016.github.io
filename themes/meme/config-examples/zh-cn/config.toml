@@ -1,8 +1,8 @@
 ##########################################
 # 站点配置
 
-baseURL = "https://blog.littleghost.ml/"
-title = "LittleGhost的博客"
+baseURL = "https://example.com/"
+title = "Hugo 主题 MemE"
 languageCode = "zh-CN"
 hasCJKLanguage = true
 # 版权信息（支持 Markdown）
@@ -40,7 +40,7 @@ enableRobotsTXT = true
 paginate = 5
 
 # URL 相关
-disablePathToLower = true
+disablePathToLower = false
 relativeURLs = false
 uglyURLs = false
 
@@ -92,17 +92,17 @@ uglyURLs = false
 # 作者信息
 [author]
     # 名字
-    name = "LittleGhost"
+    name = "reuixiy"
     # 邮箱
-    email = "785340571@qq.com"
+    email = "reuixiy@gmail.com"
     # 座右铭或简介
-    motto = "新晋的信息安全小鬼头"
+    motto = "Viva La Vida"
     # 头像
-    avatar = "/icons/22980536.jfif"
+    avatar = "/icons/apple-touch-icon.png"
     # 网站（默认值：baseURL）
-    website = "https://blog.littleghost.ml"
+    website = "https://io-oi.me/"
     # 推特
-    # twitter = "reuixiy"
+    twitter = "reuixiy"
 
 # 相关文章
 [related]
@@ -312,20 +312,20 @@ uglyURLs = false
     # 站点信息
 
     # 站点的 LOGO
-    siteLogo = "/icons/22980536.jfif"
+    siteLogo = "/icons/apple-touch-icon.png"
     # 说明：用于 JSON-LD、Open Graph
 
     # 站点的描述
-    siteDescription = "本站采用MemE模板，MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。"
+    siteDescription = "MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。"
     # 说明：用于 HTML 的头部元数据、JSON-LD、
     #      Open Graph、Atom、RSS
 
     # 站点的创建时间
-    siteCreatedTime = "2016-08-21T20:00:00+08:00"
+    siteCreatedTime = "1969-07-20T20:17:43+00:00"
     # 注意：请保持此格式，更改数字
 
     # 站点的推特帐号
-    # siteTwitter = "reuixiy"
+    siteTwitter = "reuixiy"
     # 说明：用于 Twitter Cards
 
 
@@ -387,7 +387,7 @@ uglyURLs = false
     # 列表页面
 
     # 宽度
-    listWidth = 42
+    listWidth = 36
     # 说明：如果留空（""），则用 42 作为默认值
     #      单位：em
 
@@ -409,7 +409,7 @@ uglyURLs = false
     chineseZodiac = true
 
     # 是否翻译年份（仅对年份标题有效）
-    i18nYear = false
+    i18nYear = true
     # 是否翻译月份（仅对月份标题有效）
     i18nMonth = true
 
@@ -443,7 +443,7 @@ uglyURLs = false
     # Atom & RSS
 
     # 是否包括全文内容
-    includeContent = false
+    includeContent = true
     # 说明：如果否，则只会包含文章的摘要。关于摘
     #      要，Hugo 能按你设置的字数限制自动截
     #      取，你也可以在文章中通过
@@ -651,7 +651,7 @@ uglyURLs = false
     # 注意：只支持 HSL 颜色值
 
     # 文章的内容宽度
-    postWidth = 42
+    postWidth = 36
     # 说明：如果留空（""），则用 42 作为默认值
     #      单位：em
 
@@ -719,7 +719,7 @@ uglyURLs = false
     readingTimeIcon = "clock"
 
     # 是否显示不蒜子页面浏览量
-    displayBusuanziPagePV = true
+    displayBusuanziPagePV = false
     # 不蒜子页面浏览量的图标
     busuanziPagePVIcon = "eye"
     # 说明：仅在生产环境（production）下渲染
@@ -860,25 +860,25 @@ uglyURLs = false
     #      SVG，则可留空（""）品牌栏字体。
 
     # 品牌栏
-    fontFamilySiteBrand = "'更纱黑体 UI SC'"
+    fontFamilySiteBrand = ""
     # 菜单栏
-    fontFamilyMenu = "'更纱黑体 UI SC'"
+    fontFamilyMenu = ""
     # 文章标题、文章副标题、列表标题、列表的年份和月份标题、相关文章标题、文章上下篇标题、表格的表头、定义列表中的术语
-    fontFamilyTitle = "'更纱黑体 UI SC', 'Noto Serif SC', 'EB Garamond', serif"
+    fontFamilyTitle = "'Noto Serif SC', 'EB Garamond', serif"
     # 分节标题、目录标题
-    fontFamilyHeadings = "'更纱黑体 UI SC', 'Noto Serif SC', 'EB Garamond', serif"
+    fontFamilyHeadings = "'Noto Serif SC', 'EB Garamond', serif"
     # 代码、上标、文章元信息、文章更新徽章、文章的 Git 版本信息、极简页脚、不蒜子站点浏览计数
-    fontFamilyCode = "'等距更纱黑体 SC', 'Source Code Pro', 'Noto Serif SC', monospace"
+    fontFamilyCode = "'Source Code Pro', 'Noto Serif SC', monospace"
     # 引用
-    fontFamilyQuote = "'更纱黑体 UI SC'"
+    fontFamilyQuote = ""
     # 文章目录
-    fontFamilyTOC = "'更纱黑体 UI SC'"
+    fontFamilyTOC = ""
     # 说明文字
-    fontFamilyCaption = "'更纱黑体 UI SC'"
+    fontFamilyCaption = ""
     # 页脚
-    fontFamilyFooter = "'更纱黑体 UI SC'"
+    fontFamilyFooter = ""
     # 主体
-    fontFamilyBody = "'更纱黑体 UI SC', 'EB Garamond', 'Noto Serif SC', serif"
+    fontFamilyBody = "'EB Garamond', 'Noto Serif SC', serif"
 
     # 网络字体链接
     fontsLink = "https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Noto+Serif+SC:wght@400;500;700&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap"
@@ -891,7 +891,7 @@ uglyURLs = false
     ######################################
     ## 字号（单位：px）
 
-    fontSize = 18
+    fontSize = 16
 
     ######################################
     ## 制表符的宽度
@@ -969,7 +969,7 @@ uglyURLs = false
     ## 中文标点符号字形纠正
 
     # 是否开启
-    enableChinesePunctuationGlyphCorrection = false
+    enableChinesePunctuationGlyphCorrection = true
 
 
     ######################################
@@ -1055,10 +1055,10 @@ uglyURLs = false
 
     displayShareOnText = false
 
-    # shareOnTwitter = true
-    # shareOnFacebook = true
-    # shareOnLinkedIn = true
-    # shareOnTelegram = true
+    shareOnTwitter = true
+    shareOnFacebook = true
+    shareOnLinkedIn = true
+    shareOnTelegram = true
     shareOnWeibo = true
     shareOnDouban = true
     shareOnQQ = true
@@ -1173,7 +1173,7 @@ uglyURLs = false
     # 自定义页脚（支持 Markdown）
     customFooter = ""
 
-    displayBusuanziSiteUVAndPV = true
+    displayBusuanziSiteUVAndPV = false
     busuanziSiteUVText = "本站访客数"
     busuanziSiteUVIcon = "user"
     busuanziSitePVText = "本站访问量"
@@ -1183,7 +1183,7 @@ uglyURLs = false
     #      https://busuanzi.ibruce.info/
 
     # 社交链接
-    enableSocials = false
+    enableSocials = true
     # 说明：见 data/Socials.toml
 
 
@@ -1209,7 +1209,7 @@ uglyURLs = false
     enableHighlight = true
 
     # 是否开启竖直滚动
-    enableOverflowY = false
+    enableOverflowY = true
     # 最大高度
     maxHeight = 20
     # 单位：em

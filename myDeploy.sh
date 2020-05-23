@@ -20,6 +20,7 @@ cp ../.gitmodules ./
 cp ../config.toml ./
 cp ../myDeploy.ps1 ./
 cp ../myDeploy.sh ./
+cp ../themes ./
 
 git add -A
 git commit -m `date +%Y-%m-%dT%H:%M:%S\+08:00`
