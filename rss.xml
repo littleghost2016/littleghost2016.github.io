@@ -23,21 +23,23 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sat, 23 May 2020 15:32:52 &#43;0800</lastBuildDate>
+        <lastBuildDate>Mon, 25 May 2020 20:28:06 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://blog.littleghost.ml/rss.xml" />
         
         
             <item>
-                <title>Test</title>
-                <link>https://blog.littleghost.ml/posts/test/</link>
-                <guid isPermaLink="true">https://blog.littleghost.ml/posts/test/</guid>
-                <pubDate>Fri, 22 May 2020 23:23:36 &#43;0800</pubDate>
+                <title>从hexo迁移到hugo</title>
+                <link>https://blog.littleghost.ml/posts/%E4%BB%8Ehexo%E8%BF%81%E7%A7%BB%E5%88%B0hugo/</link>
+                <guid isPermaLink="true">https://blog.littleghost.ml/posts/%E4%BB%8Ehexo%E8%BF%81%E7%A7%BB%E5%88%B0hugo/</guid>
+                <pubDate>Mon, 25 May 2020 20:11:36 &#43;0800</pubDate>
                 
                     <author>785340571@qq.com (LittleGhost)</author>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
-                <description>aaa bbb ccc ddd eee </description>
+                <description>原因 间接原因 hexo基于nodejs，部署hexo的时候需要加载许多包。而hugo只……
+    
+    </description>
                 
                 
                 
@@ -69,6 +71,14 @@
                 
                 
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
                         
                     
                         
@@ -107,6 +117,14 @@
                 
                     
                         
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
+                        
                     
                         
                             
@@ -140,6 +158,14 @@
                 
                     
                         
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
+                        
                     
                         
                             
@@ -172,6 +198,14 @@
                 
                 
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
                         
                     
                         
@@ -212,6 +246,14 @@
                 
                     
                         
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
+                        
                     
                         
                             
@@ -251,6 +293,14 @@
                 
                     
                         
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%96%87%E5%AD%A6/">文学</category>
+                                
+                            
+                        
                     
                         
                             
@@ -283,6 +333,14 @@
                 
                 
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
                         
                     
                         
@@ -328,6 +386,14 @@
                 
                 
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
                         
                     
                         
@@ -380,6 +446,14 @@
                 
                     
                         
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
+                        
                     
                         
                             
@@ -425,6 +499,14 @@
                 
                     
                         
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
+                        
                     
                         
                             
@@ -457,6 +539,14 @@
                 
                 
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
                         
                     
                         
@@ -496,6 +586,14 @@
                 
                 
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%A0%91%E8%8E%93%E6%B4%BE/">树莓派</category>
+                                
+                            
                         
                     
                         
@@ -548,6 +646,14 @@
                 
                     
                         
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
+                        
                     
                         
                             
@@ -580,6 +686,14 @@
                 
                 
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
                         
                     
                         
@@ -618,6 +732,14 @@
                 
                     
                         
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
+                        
                     
                         
                             
@@ -648,6 +770,14 @@
                 
                 
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E7%A1%AC%E4%BB%B6/">硬件</category>
+                                
+                            
                         
                     
                         
@@ -688,6 +818,14 @@
                 
                     
                         
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%A0%91%E8%8E%93%E6%B4%BE/">树莓派</category>
+                                
+                            
+                        
                     
                         
                             
@@ -720,6 +858,14 @@
                 
                 
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
                         
                     
                         
@@ -760,6 +906,14 @@
                 
                     
                         
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
+                        
                     
                         
                             
@@ -793,6 +947,14 @@
                 
                     
                         
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
+                        
                     
                         
                             
@@ -823,6 +985,14 @@
                 
                 
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
                         
                     
                         
@@ -856,6 +1026,14 @@
                 
                 
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
                         
                     
                         
@@ -914,6 +1092,14 @@ Quick Start Create a new post 1  $ hexo new &amp;#34;My New Post&amp;#34;   More
                 
                     
                         
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
+                        
                     
                         
                             
@@ -921,6 +1107,12 @@ Quick Start Create a new post 1  $ hexo new &amp;#34;My New Post&amp;#34;   More
                                 
                                 
                                     <category domain="https://blog.littleghost.ml/tags/qq/">qq</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/tags/perl/">perl</category>
                                 
                             
                         
@@ -946,6 +1138,14 @@ Quick Start Create a new post 1  $ hexo new &amp;#34;My New Post&amp;#34;   More
                 
                 
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
                         
                     
                         
@@ -980,6 +1180,14 @@ Quick Start Create a new post 1  $ hexo new &amp;#34;My New Post&amp;#34;   More
                 
                     
                         
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
+                        
                     
                         
                             
@@ -1012,6 +1220,14 @@ Quick Start Create a new post 1  $ hexo new &amp;#34;My New Post&amp;#34;   More
                 
                 
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
                         
                     
                         
@@ -1046,6 +1262,14 @@ Quick Start Create a new post 1  $ hexo new &amp;#34;My New Post&amp;#34;   More
                 
                     
                         
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
+                        
                     
                         
                             
@@ -1078,6 +1302,14 @@ Quick Start Create a new post 1  $ hexo new &amp;#34;My New Post&amp;#34;   More
                 
                 
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
                         
                     
                         
@@ -1112,6 +1344,14 @@ Quick Start Create a new post 1  $ hexo new &amp;#34;My New Post&amp;#34;   More
                 
                     
                         
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
+                        
                     
                         
                             
@@ -1144,6 +1384,14 @@ Quick Start Create a new post 1  $ hexo new &amp;#34;My New Post&amp;#34;   More
                 
                 
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
                         
                     
                         
@@ -1178,6 +1426,14 @@ Quick Start Create a new post 1  $ hexo new &amp;#34;My New Post&amp;#34;   More
                 
                     
                         
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
+                        
                     
                         
                             
@@ -1210,6 +1466,14 @@ Quick Start Create a new post 1  $ hexo new &amp;#34;My New Post&amp;#34;   More
                 
                 
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
                         
                     
                         
@@ -1244,6 +1508,14 @@ Quick Start Create a new post 1  $ hexo new &amp;#34;My New Post&amp;#34;   More
                 
                     
                         
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
+                        
                     
                         
                             
@@ -1276,6 +1548,14 @@ Quick Start Create a new post 1  $ hexo new &amp;#34;My New Post&amp;#34;   More
                 
                 
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
                         
                     
                         
@@ -1310,6 +1590,14 @@ Quick Start Create a new post 1  $ hexo new &amp;#34;My New Post&amp;#34;   More
                 
                     
                         
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
+                        
                     
                         
                             
@@ -1342,6 +1630,14 @@ Quick Start Create a new post 1  $ hexo new &amp;#34;My New Post&amp;#34;   More
                 
                 
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
                         
                     
                         
@@ -1382,6 +1678,14 @@ Quick Start Create a new post 1  $ hexo new &amp;#34;My New Post&amp;#34;   More
                 
                     
                         
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
+                        
                     
                         
                             
@@ -1414,6 +1718,14 @@ Quick Start Create a new post 1  $ hexo new &amp;#34;My New Post&amp;#34;   More
                 
                 
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
                         
                     
                         
@@ -1448,6 +1760,14 @@ Quick Start Create a new post 1  $ hexo new &amp;#34;My New Post&amp;#34;   More
                 
                     
                         
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
+                        
                     
                         
                             
@@ -1480,6 +1800,14 @@ Quick Start Create a new post 1  $ hexo new &amp;#34;My New Post&amp;#34;   More
                 
                 
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
                         
                     
                         
@@ -1514,6 +1842,14 @@ Quick Start Create a new post 1  $ hexo new &amp;#34;My New Post&amp;#34;   More
                 
                     
                         
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
+                        
                     
                         
                             
@@ -1547,6 +1883,14 @@ Quick Start Create a new post 1  $ hexo new &amp;#34;My New Post&amp;#34;   More
                 
                     
                         
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
+                        
                     
                         
                             
@@ -1579,6 +1923,14 @@ Quick Start Create a new post 1  $ hexo new &amp;#34;My New Post&amp;#34;   More
                 
                 
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
                         
                     
                         
