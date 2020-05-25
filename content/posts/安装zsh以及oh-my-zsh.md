@@ -2,7 +2,7 @@
 title: 安装zsh以及oh-my-zsh
 date: 2018-07-21T18:03:54+08:00
 tags: ["zsh"]
-category: ["技术"]
+categories: ["技术"]
 ---
 
 # zsh

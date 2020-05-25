@@ -2,7 +2,7 @@
 title: 通过API自动更新Cloudflare的DNS解析-Go语言版本
 date: 2019-12-11T17:34:01+08:00
 tags: ["dns", "go", "爬虫"]
-category: ["技术"]
+categories: ["技术"]
 ---
 
 # 功能

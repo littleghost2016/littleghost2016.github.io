@@ -2,6 +2,7 @@
 title: zsh报错command not found compdef
 date: 2019-07-10T21:38:55+08:00
 tags: ["zsh"]
+categories: ["技术"]
 ---
 安装zsh后报错，解决方案：
 

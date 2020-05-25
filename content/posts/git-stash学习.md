@@ -2,7 +2,7 @@
 title: git-stash学习
 date: 2019-11-04T20:24:20+08:00
 tags: ["git", "hexo"]
-category: ["技术"]
+categories: ["技术"]
 ---
 # 背景
 

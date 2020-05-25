@@ -2,7 +2,7 @@
 title: 树莓派搭建smb
 date: 2020-01-20T21:42:55+08:00
 tags: ["树莓派", "smb"]
-category: ["技术"]
+categories: ["技术"]
 ---
 
 >   ~~很简单，有手就行。~~

@@ -2,7 +2,7 @@
 title: 重装vps
 date: 2019-11-13 16:06:44
 tags: ["caddy", "v2ray", "bash"]
-category: ["技术"]
+categories: ["技术"]
 ---
 # 总体工作
 

@@ -2,7 +2,7 @@
 title: VMWare虚拟机“锁定文件失败解决方法”
 date: 2019-07-10T13:45:02+08:00
 tags: ["vmware"]
-category: ["技术"]
+categories: ["技术"]
 ---
 2019年07月10日 
 

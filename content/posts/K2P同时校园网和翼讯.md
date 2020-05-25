@@ -2,6 +2,7 @@
 title: K2P同时校园网和翼讯
 date: 2019-07-11 03:16:47
 tags: ["K2P"]
+categories: ["技术"]
 ---
 > [文章](http://rs.xidian.edu.cn/forum.php?mod=viewthread&tid=906698&highlight=ipv6)原创为西电睿思的小忧伤，感谢大佬提供技术和文章授权！
 >
@@ -113,3 +114,12 @@ $ reboot
 最后，稍等几分钟就会有ipv6地址了，如果使用过程中发现ipv6没了，就到system-startup里找到`nat6`，重启路由器。可访问 http://test-ipv6.com/ 检测是否有ipv6地址。
 
 > 最后的最后，建议把[hosts](https://raw.githubusercontent.com/googlehosts/hosts/master/hosts-files/hosts)添加到路由器里，这样所有设备就都可以用了，亲测iOS，安卓，macOS，win无线连接都可以使用ipv6，不需要额外配置。
+
+# 10.部分模块编译路径
+
+```
+kmod-ipt-nat6 : Kernel modules -> Netfilter Extensions -> kmod-ipt-nat6
+kmod-macvlan : Kernel modules -> Network Devices -> kmod-macvlan
+iputils-tracepath6 : Nerwork -> iputils-tracepath6 
+```
+

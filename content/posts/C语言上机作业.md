@@ -2,7 +2,7 @@
 title: C语言上机作业
 date: 2016-01-03T22:45:25+08:00
 tags: ["c"]
-category: ["技术"]
+categories: ["技术"]
 ---
 
 # C语言上机作业

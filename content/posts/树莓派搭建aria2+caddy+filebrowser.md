@@ -2,7 +2,7 @@
 title: 树莓派搭建aria2+caddy+filebrowser
 date: 2019-11-02T23:10:20+08:00
 tags: ["树莓派", "aria2", "caddy", "filebrowser"]
-category: ["树莓派"]
+categories: ["树莓派"]
 ---
 树莓派为3B+，24小时供电，*就是有点吵*。
 

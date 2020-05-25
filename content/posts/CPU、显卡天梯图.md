@@ -2,7 +2,7 @@
 title: CPU、显卡天梯图
 date: 2019-07-31T15:28:19+08:00
 tags: ["cpu", "显卡"]
-category: ["硬件"]
+categories: ["硬件"]
 ---
 
 # CPU天梯图

@@ -2,7 +2,7 @@
 title: 树莓派使用docker
 date: 2020-01-24T21:38:51+08:00
 tags: ["树莓派", "docker"]
-category: ["技术"]
+categories: ["技术"]
 ---
 
 # 解决Got permission denied问题

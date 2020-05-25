@@ -2,7 +2,7 @@
 title: 使用scoop
 date: 2020-03-28T21:45:33+08:00
 tags: ["scoop"]
-category: ["技术"]
+categories: ["技术"]
 ---
 
 # 安装

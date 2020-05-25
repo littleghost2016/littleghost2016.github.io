@@ -2,7 +2,7 @@
 title: V2ray使用QUIC
 date: 2019-09-24T16:57:39+08:00
 tags: ["v2ray", "quic"]
-category: ["技术"]
+categories: ["技术"]
 ---
 # 配置文件
 

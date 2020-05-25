@@ -2,7 +2,7 @@
 title: Markdown中使用Base64格式保存图片
 date: 2019-07-14T15:59:49+08:00
 tags: ["markdown", "base64"]
-category: ["技术"]
+categories: ["技术"]
 ---
 # 压缩图片的网页
 

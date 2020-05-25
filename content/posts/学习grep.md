@@ -2,7 +2,7 @@
 title: 学习grep
 date: 2019-11-05T00:04:24+08:00
 tags: ["linux"]
-category: ["技术"]
+categories: ["技术"]
 ---
 ```bash
 $ grep [-acinv] [--color=auto] 'string' filename

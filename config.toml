@@ -206,10 +206,16 @@ uglyURLs = false
         pre = "internal"
         post = "user-circle"
     [[menu.main]]
+        url = "/friendlinks/"
+        name = "友链"
         weight = 6
-        identifier = "theme-switcher"
+        pre = "internal"
+        post = "user"
     [[menu.main]]
         weight = 7
+        identifier = "theme-switcher"
+    [[menu.main]]
+        weight = 8
         identifier = "lang-switcher"
 
 

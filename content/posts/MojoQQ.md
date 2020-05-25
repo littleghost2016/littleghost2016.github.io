@@ -1,8 +1,8 @@
 ---
 title: MojoQQ
 date: 2018-09-21T16:46:13+08:00
-tags: ["qq"]
-category: ["技术"]
+tags: ["qq", "perl"]
+categories: ["技术"]
 ---
 
 # 安装

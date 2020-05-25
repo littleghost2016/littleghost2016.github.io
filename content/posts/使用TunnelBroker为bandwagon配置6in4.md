@@ -2,7 +2,7 @@
 title: 使用TunnelBroker为bandwagon配置6in4
 date: 2019-12-01T11:24:41+08:00
 tags: ["ipv6", "6in4", "TunnelBroker", "linux"]
-category: ["技术"]
+categories: ["技术"]
 ---
 
 VPS套餐只提供ipv4地址，无ipv6，使用`TunnelBroker`搭建6in4隧道，获取可使用的ipv6地址。

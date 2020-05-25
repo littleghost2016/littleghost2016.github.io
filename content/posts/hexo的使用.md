@@ -2,7 +2,7 @@
 title: hexo的使用
 date: 2019-07-13T16:42:41+08:00
 tags: ["hexo"]
-category: ["技术"]
+categories: ["技术"]
 ---
 # 安装Hexo
 

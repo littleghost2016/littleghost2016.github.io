@@ -2,7 +2,7 @@
 title: Java作业整理
 date: 2017-01-07T14:36:56+08:00
 tags: ["java"]
-category: ["技术"]
+categories: ["技术"]
 ---
 
 # 课后题
