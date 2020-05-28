@@ -30,7 +30,7 @@ $ hugo new "posts/新文章.md"
 
 同时，如果直接在`content`文件夹下创建诸如`me.md`、`friendlinks.md`文件，同时在`config.toml`配置文件中指定这些文件对应的url链接，则可实现类似`hexo`中类似的`about.html`、`友链`等页面的效果。
 
-## *disablePath*ToLower
+## disablePathToLower
 
 `hugo`在使用时，url会默认将所有英文字母转为小写，这将导致这样的问题：若md文件的名称中有大写字母时，通过链接访问会自己转为小写，提示找不到页面，因此应该在`config.toml`中将下面的选项打开
 
