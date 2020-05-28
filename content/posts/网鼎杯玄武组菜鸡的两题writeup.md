@@ -458,3 +458,508 @@ foreach (${el} in ${file})
 ```
 
 ![通过爆破解出flag](clip_image004.jpg)
+
+---
+
+太菜了自己。。。。以下是没做出来的题目，记录一下
+
+# apl
+
+![](apl.jpg)
+
+# easy_wa
+
+enc.py
+
+```python
+from secret import flag
+from os import urandom as ua
+from libnum import s2n
+hlen=lambda x:len(hex(x)[2:].strip('L'))
+magic=32805
+
+def calc(m,p):
+    res=0
+    lens=hlen(p)
+    for i in bin(m)[2:]:
+        res*=2
+        res^=m if i=='1' else 0
+        res^=p if hlen(res) == lens else 0
+    return res
+
+# pow_check()
+# token_check()
+
+assert len(flag) <= 64
+if len(flag) != 64:
+    for i in range(64-len(flag)):
+        flag+=ua(1)
+
+r = 4
+for i in range(4):
+    print calc(s2n(flag[:r]),magic + (1<<r*8))
+    flag = flag[r:]
+    r *= 2
+```
+
+# js_on
+
+ajax.js
+
+```javascript
+function sendAjax(url, Ajax_obj) {
+	_defalut = {
+		type: 'GET',
+		params: null,
+	}
+	for (var i in Ajax_obj) {
+		_defalut[i] = Ajax_obj[i]
+	}
+	var f;
+	url.indexOf('?') > -1 ? f = '&' : f = '?';
+	url += f + '_=' + Date.now();
+
+	if (_defalut.type.toLowerCase() === 'get') {
+
+		for (var i in _defalut.params) {
+			url += '&' + i + '=' + _defalut.params[i]
+		}
+		_defalut.params = null
+	}
+
+	if (_defalut.type.toLowerCase() === 'post') {
+		_defalut.params = JSON.stringify(_defalut.params)
+	}
+
+	var Ajax = new XMLHttpRequest();
+	Ajax.open(_defalut.type, url, true);
+
+	Ajax.send(_defalut.params);
+	Ajax.onreadystatechange = function () {
+		if (Ajax.readyState == 4 && Ajax.status == 200) {
+			if (typeof _defalut.success == "function") {
+				_defalut.success(JSON.parse(Ajax.responseText))
+			}
+		}
+	}
+}
+```
+
+login.js
+
+```javascript
+var login = (function () {
+    return {
+
+        init: function () {
+           this.$btn = document.querySelector('.but');
+
+            this.event()
+        },
+        event: function () {
+            var _this=this
+        //点击发送数据
+            this.$btn.onclick = function () {
+                _this.$name = document.getElementById('name').value.trim()
+                _this.$pass = document.getElementById('password').value.trim()
+                _this.sendData()  
+            }
+        },
+        //发送数据
+        sendData: function () {
+            var _this=this
+
+            var obj = {
+                type: 'POST',
+                params: {
+                    username: _this.$name,
+                    password: _this.$pass
+                },
+                success: function (data) {
+                   _this.loginSuccess(data)
+                }
+            }
+            sendAjax('php/login.php', obj)
+        },
+        //对获取数据判断
+        loginSuccess:function(data){
+            if (data.code == 200) {
+                document.cookie = "token=" + data.data.token;
+                location.href='index.php'
+            } else if (data.code == 100) {
+                alert(data.msg)  
+            }
+        }
+    }
+
+}())
+```
+
+star.js
+
+```javascript
+function Star(ctx,id, x, y) {
+  this.ctx = ctx;
+  this.id = id;
+  this.x = x;
+  this.y = y;
+  this.r = Math.floor(Math.random() * 2) + 1;
+  var alpha = (Math.floor(Math.random() * 10) + 1) / 10 / 2;
+  this.color = "rgba(255,255,255," + alpha + ")";
+}
+
+Star.prototype.draw = function () {
+  this.ctx.fillStyle = this.color;
+  this.ctx.shadowBlur = this.r * 2;
+  this.ctx.beginPath();
+  this.ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false);
+  this.ctx.closePath();
+  this.ctx.fill();
+}
+
+Star.prototype.move = function () {
+  var HEIGHT = HEIGHT = document.documentElement.clientHeight;
+  this.y -= .15;
+  if (this.y <= -10) this.y = HEIGHT + 10;
+  this.draw();
+}
+
+Star.prototype.die = function () {
+  stars[this.id] = null;
+  delete stars[this.id];
+}
+
+function Dot(ctx, id, x, y, r) {
+  this.ctx = ctx;
+  this.id = id;
+  this.x = x;
+  this.y = y;
+  this.r = Math.floor(Math.random() * 4) + 1;
+  this.maxLinks = 2;
+  this.speed = .5;
+  this.a = .5;
+  this.aReduction = .005;
+  this.color = "rgba(255,255,255," + this.a + ")";
+  this.linkColor = "rgba(255,255,255," + this.a / 4 + ")";
+  this.dir = Math.floor(Math.random() * 140) + 200;
+}
+
+Dot.prototype.draw = function () {
+  this.ctx.fillStyle = this.color;
+  this.ctx.shadowBlur = this.r * 2;
+  this.ctx.beginPath();
+  this.ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false);
+  this.ctx.closePath();
+  this.ctx.fill();
+}
+
+Dot.prototype.link = function () {
+  if (this.id == 0) return;
+  var previousDot1 = getPreviousDot(this.id, 1);
+  var previousDot2 = getPreviousDot(this.id, 2);
+  var previousDot3 = getPreviousDot(this.id, 3);
+  if (!previousDot1) return;
+  this.ctx.strokeStyle = this.linkColor;
+  this.ctx.lineWidth = 1
+  this.ctx.shadowBlur = 0
+  this.ctx.moveTo(previousDot1.x, previousDot1.y);
+  this.ctx.beginPath();
+  this.ctx.lineTo(this.x, this.y);
+  if (previousDot2 != false) this.ctx.lineTo(previousDot2.x, previousDot2.y);
+  if (previousDot3 != false) this.ctx.lineTo(previousDot3.x, previousDot3.y);
+  this.ctx.stroke();
+  this.ctx.closePath();
+}
+
+Dot.prototype.move = function () {
+  this.a -= this.aReduction;
+  if (this.a <= 0) {
+    this.die();
+    return
+  }
+  this.color = "rgba(255,255,255," + this.a + ")";
+  this.linkColor = "rgba(255,255,255," + this.a / 4 + ")";
+  this.x = this.x + Math.cos(degToRad(this.dir)) * this.speed,
+    this.y = this.y + Math.sin(degToRad(this.dir)) * this.speed;
+  this.draw();
+  this.link();
+}
+
+Dot.prototype.die = function () {
+  dots[this.id] = null;
+  delete dots[this.id];
+}
+
+//setInterval(drawIfMouseMoving, 17);
+
+var starBg = (function () {
+  var canvas,
+    ctx,
+    WIDTH,
+    HEIGHT,
+    mouseMoving = false,
+    mouseMoveChecker,
+    mouseX,
+    mouseY,
+    stars = [],
+    initStarsPopulation = 80,
+    dots = [],
+    dotsMinDist = 2,
+    maxDistFromCursor = 50;
+  return {
+    init: function (ele) {
+      canvas = document.querySelector(ele);
+      ctx = canvas.getContext('2d')
+      this.setCanvasSize();
+      this.start();
+    },
+    event() {
+      var _this = this;
+      window.onmousemove = function (e) {
+        mouseMoving = true;
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        clearInterval(mouseMoveChecker);
+        mouseMoveChecker = setTimeout(function () {
+          mouseMoving = false;
+        }, 100);
+      }
+      
+    },
+    start() {
+      ctx.strokeStyle = "white";
+      ctx.shadowColor = "white";
+      for (var i = 0; i < initStarsPopulation; i++) {
+        stars[i] = new Star(ctx, i, Math.floor(Math.random() * WIDTH), Math.floor(Math.random() * HEIGHT));
+        //stars[i].draw();
+      }
+      ctx.shadowBlur = 0;
+      this.animate();
+    },
+    degToRad(deg) {
+      return deg * (Math.PI / 180);
+    },
+    drawIfMouseMoving() {
+      if (!mouseMoving) return;
+
+      if (dots.length == 0) {
+        dots[0] = new Dot(ctx, 0, mouseX, mouseY);
+        dots[0].draw();
+        return;
+      }
+
+      var previousDot = this.getPreviousDot(dots.length, 1);
+      var prevX = previousDot.x;
+      var prevY = previousDot.y;
+
+      var diffX = Math.abs(prevX - mouseX);
+      var diffY = Math.abs(prevY - mouseY);
+
+      if (diffX < dotsMinDist || diffY < dotsMinDist) return;
+
+      var xVariation = Math.random() > .5 ? -1 : 1;
+      xVariation = xVariation * Math.floor(Math.random() * maxDistFromCursor) + 1;
+      var yVariation = Math.random() > .5 ? -1 : 1;
+      yVariation = yVariation * Math.floor(Math.random() * maxDistFromCursor) + 1;
+      dots[dots.length] = new Dot(ctx, dots.length, mouseX + xVariation, mouseY + yVariation);
+      dots[dots.length - 1].draw();
+      dots[dots.length - 1].link();
+    },
+    animate() {
+      ctx.clearRect(0, 0, WIDTH, HEIGHT);
+
+      for (var i in stars) {
+        stars[i].move();
+      }
+      for (var i in dots) {
+        dots[i].move();
+      }
+      this.drawIfMouseMoving();
+
+      requestAnimationFrame( this.animate.bind(this));
+    },
+    setCanvasSize() {
+      WIDTH = document.documentElement.clientWidth,
+      HEIGHT = document.documentElement.clientHeight;
+
+      canvas.setAttribute("width", WIDTH);
+      canvas.setAttribute("height", HEIGHT);
+    },
+    getPreviousDot(id, stepback) {
+      if (id == 0 || id - stepback < 0) return false;
+      if (typeof dots[id - stepback] != "undefined") return dots[id - stepback];
+      else return false; //getPreviousDot(id - stepback);
+    }
+  }
+
+}())
+```
+
+# safe_box
+
+```python
+#!/usr/bin/python
+# encoding: utf-8
+import random
+import sys
+import os
+from hashlib import sha256,sha512
+from Crypto.Util.number import *
+from Crypto.PublicKey import RSA
+# from secret import flag
+
+def my_print(message):
+    sys.stdout.write('{0}\n'.format(message))
+    sys.stdout.flush()
+    sys.stderr.flush()
+
+def read_str():
+    return sys.stdin.readline().strip()
+
+def read_int():
+    return int(sys.stdin.readline().strip())
+
+def proof_of_work():
+    s = os.urandom(10)
+    digest = sha256(s).hexdigest()
+    print("sha256(XXX + {0}) == {1}".format(s[3:].encode('hex'),digest))
+    my_print("Give me XXX in hex: ")
+    x = read_str()
+    if len(x) != 6 or x != s[:3].encode('hex'):
+        print("Wrong!")
+        return False
+    return True
+
+def PoW():
+    if not proof_of_work():
+        exit(-1)
+
+class Cipher:
+    def __init__(self, q, p, d):
+        self.p = p
+        self.q = q
+        self.e = [bytes_to_long(os.urandom(10)) for _ in range(self.p-1)]
+        self.d = d
+
+    def pad(self, msg, l):
+        return msg+(l-(len(msg)%l))*chr(l-(len(msg)%l))
+    
+    def unpad(self,msg):
+        return msg.replace(msg[-1]*ord(msg[-1]),'')
+
+    def enc(self, p):
+        c = []
+        for i in range(self.q):
+            b = bytes_to_long(p)
+            a = i+1
+            for j in self.e:
+                b += j*a
+                a *= i+1
+            c.append({'a':i+1, 'b':b})
+        return c
+
+    def encrypt(self,p):
+        c = {}
+        p = self.pad(p, self.d)
+        for i in range(len(p)/self.d):
+            c[i] = self.enc(p[i*self.d:(i+1)*self.d])
+        return c
+
+    def dec(self, x, key):
+        s = 0
+        for a, b in enumerate(key):
+            r1 = 1
+            r2 = 1
+            for c, d in enumerate(key):
+                if a == c:
+                    continue
+                r1 *= (x - d['a'])
+                r2 *= (b['a'] - d['a'])
+            s = (s + b['b'] * int(r1/r2))
+        return s
+
+    def decrypt(self, c):
+        p = ''
+        for i in c.keys():
+            p += long_to_bytes(self.dec(0,c[i]))
+        return self.unpad(p)
+
+
+def print_key(x):
+    for i in range(len(c)):
+        my_print('part:{}'.format(i))
+        for j in range(x):
+            my_print(c[i][j])
+
+
+def open_box():
+    key = {}
+    my_print('hash:{}'.format(sha512(pri).hexdigest()))
+    my_print('Input your key:')
+    try:
+        for i in range(len(c)):
+            my_print('How many?')
+            n = read_int()
+            k = []
+            for j in range(n):
+                my_print('a:')
+                a = read_int()
+                my_print('b:')
+                b = read_int()
+                k.append({'a':a, 'b':b})
+            key[i] = k
+        my_print(C.decrypt(key))
+    except:
+        my_print('Wrong!')
+        exit(-1)
+
+
+def print_flag():
+    my_print('flag:{}'.format(flag_enc))
+
+
+if __name__ == '__main__':
+    PoW()
+    rsa_key = RSA.generate(1024)
+    pri = rsa_key.exportKey().decode('ascii')
+    e = rsa_key.e
+    n = rsa_key.n
+    # flag_enc = pow(bytes_to_long(flag),e,n)
+    C = Cipher(40,30,40)
+    c = {}
+    c = C.encrypt(pri)
+
+    my_print('====================================',)
+    my_print('             Safe Box               ',)
+    my_print('====================================',)
+    my_print('1. Print key                        ',)
+    my_print('2. Open the box                     ',)
+    my_print('3. Print flag                       ',)
+    my_print('4. Exit                             ',)
+    my_print('====================================',)
+
+    try:
+        while True:
+            my_print('Your choice:')
+            choice = read_int()
+            if choice == 1:
+                print_key(20)
+            elif choice == 2:
+                open_box()
+                continue
+            elif choice == 3:
+                print_flag()
+                continue
+            elif choice == 4:
+                my_print('Bye~')
+                exit(0)
+            else:
+                my_print('Invalid!')
+                exit(-1)
+    except:
+        exit(-1)
+```
+
+# vulcrack
+
+vulcrack.apk
