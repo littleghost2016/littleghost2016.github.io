@@ -10,7 +10,7 @@
         <title>LittleGhost的博客</title>
         <link>https://blog.littleghost.ml/</link>
         <description>本站采用MemE模板，MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</description>
-        <generator>Hugo 0.71.0 https://gohugo.io/</generator>
+        <generator>Hugo 0.71.1 https://gohugo.io/</generator>
         
             <language>zh-CN</language>
         
@@ -23,10 +23,57 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Mon, 25 May 2020 20:47:47 &#43;0800</lastBuildDate>
+        <lastBuildDate>Thu, 28 May 2020 21:17:55 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://blog.littleghost.ml/rss.xml" />
         
+        
+            <item>
+                <title>网鼎杯玄武组菜鸡的两题writeup</title>
+                <link>https://blog.littleghost.ml/posts/%E7%BD%91%E9%BC%8E%E6%9D%AF%E7%8E%84%E6%AD%A6%E7%BB%84%E8%8F%9C%E9%B8%A1%E7%9A%84%E4%B8%A4%E9%A2%98writeup/</link>
+                <guid isPermaLink="true">https://blog.littleghost.ml/posts/%E7%BD%91%E9%BC%8E%E6%9D%AF%E7%8E%84%E6%AD%A6%E7%BB%84%E8%8F%9C%E9%B8%A1%E7%9A%84%E4%B8%A4%E9%A2%98writeup/</guid>
+                <pubDate>Thu, 28 May 2020 20:46:10 &#43;0800</pubDate>
+                
+                    <author>785340571@qq.com (LittleGhost)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                <description>签到题 操作内容 此题writeup来自队友。 进入容器，首先按 Ctrl+U 查看页面源码，发现存在j……
+    
+    </description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/tags/ctf/">ctf</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/tags/writeup/">writeup</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>从hexo迁移到hugo</title>
