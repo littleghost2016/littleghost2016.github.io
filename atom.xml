@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">LittleGhost的博客</title>
     <subtitle type="html">本站采用MemE模板，MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</subtitle>
-    <updated>2020-05-28T21:17:54&#43;08:00</updated>
+    <updated>2020-05-28T21:23:02&#43;08:00</updated>
     <id>https://blog.littleghost.ml/</id>
     <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blog.littleghost.ml/atom.xml" />
@@ -69,7 +69,7 @@
             <title type="text">从hexo迁移到hugo</title>
             <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/posts/%E4%BB%8Ehexo%E8%BF%81%E7%A7%BB%E5%88%B0hugo/" />
             <id>https://blog.littleghost.ml/posts/%E4%BB%8Ehexo%E8%BF%81%E7%A7%BB%E5%88%B0hugo/</id>
-            <updated>2020-05-25T20:11:42&#43;08:00</updated>
+            <updated>2020-05-28T21:22:47&#43;08:00</updated>
             <published>2020-05-25T20:11:36&#43;08:00</published>
             <author>
                     <name>LittleGhost</name>
