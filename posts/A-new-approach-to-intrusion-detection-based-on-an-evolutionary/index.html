@@ -1,0 +1,2052 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+    <meta charset="UTF-8" />
+
+    <meta name="generator" content="Hugo 0.72.0" /><meta name="theme-color" content="#fff" />
+        <script>
+            const userPrefers = localStorage.getItem('theme');
+            if (userPrefers === 'dark') {
+                changeModeMeta('dark');
+            } else if (userPrefers === 'light') {
+                changeModeMeta('light');
+            }
+            function changeModeMeta(theme) {
+                document.documentElement.setAttribute('data-theme', theme);
+            }
+        </script>
+
+    
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <title>《A new approach to intrusion detection based on an evolutionary》 | LittleGhost的博客</title>
+
+    <link rel="stylesheet" href="/css/meme.min.4c45a9d90ce879a869ec428d9d69e1231e687722dba0f0cde6f1cae31a98149d.css" integrity="sha256-TEWp2Qzoeahp7EKNnWnhIx5odyLboPDN5vHK4xqYFJ0=" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" media="print" onload="this.media='all'" />
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" /></noscript>
+
+    <meta name="author" content="LittleGhost" /><meta name="description" content="这学期选修了《计算智能》，大作业是阅读论文完成报告，于是记录下读论文的过程。 A new approach to……
+    
+    " />
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="LittleGhost的博客" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="LittleGhost的博客" />
+    <meta name="msapplication-starturl" content="../../" />
+    <meta name="msapplication-TileColor" content="#fff" />
+    <meta name="msapplication-TileImage" content="../../icons/mstile-150x150.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    
+    
+
+    
+    <link rel="canonical" href="https://blog.littleghost.ml/posts/A-new-approach-to-intrusion-detection-based-on-an-evolutionary/" />
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "datePublished": "2020-06-06T15:52:19+08:00",
+        "dateModified": "2020-06-07T11:30:24+08:00",
+        "url": "https://blog.littleghost.ml/posts/A-new-approach-to-intrusion-detection-based-on-an-evolutionary/",
+        "headline": "《A new approach to intrusion detection based on an evolutionary》",
+        "description": "这学期选修了《计算智能》，大作业是阅读论文完成报告，于是记录下读论文的过程。 A new approach to……\n    \n    ",
+        "inLanguage" : "zh-CN",
+        "articleSection": "posts",
+        "wordCount":  13250 ,
+        "image": "https://blog.littleghost.ml/icons/22980536.jfif",
+        "author": {
+            "@type": "Person",
+            "description": "新晋的信息安全小鬼头",
+            "email": "785340571@qq.com",
+            "image": "https://blog.littleghost.ml/icons/22980536.jfif",
+            "url": "https://blog.littleghost.ml",
+            "name": "LittleGhost"
+        },
+        "license": "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)",
+        "publisher": {
+            "@type": "Organization",
+            "name": "LittleGhost的博客",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://blog.littleghost.ml/icons/22980536.jfif"
+            },
+            "url": "https://blog.littleghost.ml/"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebSite",
+            "@id": "https://blog.littleghost.ml/"
+        }
+    }
+</script>
+
+    
+
+<meta name="twitter:card" content="summary" />
+
+
+    
+
+
+
+<meta property="og:title" content="《A new approach to intrusion detection based on an evolutionary》" />
+<meta property="og:description" content="这学期选修了《计算智能》，大作业是阅读论文完成报告，于是记录下读论文的过程。 A new approach to……
+    
+    " />
+<meta property="og:url" content="https://blog.littleghost.ml/posts/A-new-approach-to-intrusion-detection-based-on-an-evolutionary/" />
+<meta property="og:site_name" content="LittleGhost的博客" />
+<meta property="og:locale" content="zh" /><meta property="og:image" content="https://blog.littleghost.ml/icons/22980536.jfif" />
+    <meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2020-06-06T15:52:19&#43;08:00" />
+    <meta property="article:modified_time" content="2020-06-07T11:30:24&#43;08:00" />
+    
+    <meta property="article:section" content="posts" />
+
+
+
+    
+</head>
+
+    <body>
+        <div class="container">
+            
+    <header class="header" data-scroll-header>
+        
+            <div class="header-wrapper">
+                <div class="header-inner single">
+                    
+    <div class="site-brand">
+        
+            <a href="/" class="brand">LittleGhost的博客</a>
+        
+    </div>
+
+                    <nav class="nav">
+    <ul class="menu" id="menu">
+        
+            
+        
+        
+        
+        
+            
+                <li class="menu-item"><a href="/posts/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon archive"><path d="M32 448c0 17.7 14.3 32 32 32h384c17.7 0 32-14.3 32-32V160H32v288zm160-212c0-6.6 5.4-12 12-12h104c6.6 0 12 5.4 12 12v8c0 6.6-5.4 12-12 12H204c-6.6 0-12-5.4-12-12v-8zM480 32H32C14.3 32 0 46.3 0 64v48c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16V64c0-17.7-14.3-32-32-32z"/></svg><span class="menu-item-name">文章</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="/categories/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon th"><path d="M149.333 56v80c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V56c0-13.255 10.745-24 24-24h101.333c13.255 0 24 10.745 24 24zm181.334 240v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm32-240v80c0 13.255 10.745 24 24 24H488c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24zm-32 80V56c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm-205.334 56H24c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24zM0 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24zm386.667-56H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zm0 160H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zM181.333 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24z"/></svg><span class="menu-item-name">分类</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="/tags/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="icon tags"><path d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"/></svg><span class="menu-item-name">标签</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="/about/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon user-circle"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"/></svg><span class="menu-item-name">关于</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="/friendlinks/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon user"><path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"/></svg><span class="menu-item-name">友链</span></a>
+                </li>
+            
+        
+            
+                
+                    
+                    
+                        <li class="menu-item">
+                            <a id="theme-switcher" href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon theme-icon-light"><path d="M193.2 104.5l48.8-97.5a18 18 0 0128 0l48.8 97.5 103.4 -34.5a18 18 0 0119.8 19.8l-34.5 103.4l97.5 48.8a18 18 0 010 28l-97.5 48.8 34.5 103.4a18 18 0 01-19.8 19.8l-103.4-34.5-48.8 97.5a18 18 0 01-28 0l-48.8-97.5l-103.4 34.5a18 18 0 01-19.8-19.8l34.5-103.4-97.5-48.8a18 18 0 010-28l97.5-48.8-34.5-103.4a18 18 0 0119.8-19.8zM256 128a128 128 0 10.01 0M256 160a96 96 0 10.01 0"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon theme-icon-dark"><path d="M27 412a256 256 0 10154-407a11.5 11.5 0 00-5 20a201.5 201.5 0 01-134 374a11.5 11.5 0 00-15 13"/></svg></a>
+                        </li>
+                    
+                
+            
+        
+            
+                
+            
+        
+    </ul>
+</nav>
+
+                    
+                </div>
+            </div>
+            
+    <input type="checkbox" id="nav-toggle" aria-hidden="true" />
+    <label for="nav-toggle" class="nav-toggle"></label>
+    <label for="nav-toggle" class="nav-curtain"></label>
+
+
+        
+    </header>
+
+
+
+
+            
+            
+    <main class="main single" id="main">
+    <div class="main-inner">
+
+        
+
+        <article class="content post" data-align="justify" data-type="posts" data-toc-num="true">
+
+            <h1 class="post-title">《A new approach to intrusion detection based on an evolutionary》</h1>
+
+            
+
+            
+                
+            
+
+            
+                
+
+<div class="post-meta">
+    
+        
+        <time datetime="2020-06-06T15:52:19&#43;08:00" class="post-meta-item published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;2020.6.6</time>
+    
+    
+        
+        <time datetime="2020-06-07T11:30:24&#43;08:00" class="post-meta-item modified"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2020.6.7</time>
+    
+    
+    
+        
+        
+        
+            
+                <span class="post-meta-item category"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M464 128H272l-54.63-54.63c-6-6-14.14-9.37-22.63-9.37H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48zm0 272H48V112h140.12l54.63 54.63c6 6 14.14 9.37 22.63 9.37H464v224z"/></svg>&nbsp;<a href="/categories/%E8%AE%BA%E6%96%87/" class="category-link">论文</a></span>
+            
+        
+    
+    
+        
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;13250</span>
+    
+    
+        
+        <span class="post-meta-item reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;27&nbsp;分钟</span>
+    
+    
+        
+            
+            <span class="post-meta-item busuanzi-page-pv" id="busuanzi_container_page_pv"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon post-meta-icon"><path d="M288 144a110.94 110.94 0 0 0-31.24 5 55.4 55.4 0 0 1 7.24 27 56 56 0 0 1-56 56 55.4 55.4 0 0 1-27-7.24A111.71 111.71 0 1 0 288 144zm284.52 97.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400c-98.65 0-189.09-55-237.93-144C98.91 167 189.34 112 288 112s189.09 55 237.93 144C477.1 345 386.66 400 288 400z"/></svg>&nbsp;<span id="busuanzi_value_page_pv"></span></span>
+        
+    
+    
+</div>
+
+            
+
+            <div class="post-body">
+              <p>这学期选修了《计算智能》，大作业是阅读论文完成报告，于是记录下读论文的过程。</p>
+<p><a href="http://www.cloudbus.org/~adel/pdf/ccj2007.pdf" target="_blank" rel="noopener">A new approach to intrusion detection based on an evolutionary soft computing model using neuro-fuzzy classifiers</a></p>
+<p>author: Adel Nadjaran Toosi, Mohsen Kahani</p>
+<h1 id="abstract"><a href="#abstract" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Abstract</h1>
+<p>An intrusion detection system’s main goal is to classify activities of a system into two major categories: normal and suspicious (intrusive) activities. Intrusion detection systems usually specify the type of attack or classify activities in some specific groups. The objective of this paper is to incorporate several soft computing techniques into the classifying system to detect and classify intrusions from normal behaviors based on the attack type in a computer network. Among the several soft computing paradigms, neuro-fuzzy networks, fuzzy inference approach and genetic algorithms are investigated in this work. A set of parallel neuro-fuzzy classifiers are used to do an initial classification. The fuzzy inference system would then be based on the outputs of neuro-fuzzy classifiers, making final decision of whether the current activity is normal or intrusive. Finally, in order to attain the best result, genetic algorithm optimizes the structure of our fuzzy decision engine. The experiments and evaluations of the proposed method were performed with the KDD Cup 99 intrusion detection dataset.</p>
+<p><strong>Keywords</strong>: Intrusion detection; Soft computing; Neuro-fuzzy; Fuzzy; Genetic algorithm; KDD Cup 99</p>
+<h1 id="1-introduction"><a href="#1-introduction" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>1. Introduction</h1>
+<p>With the widespread use of computer networks, the number of attacks has grown extensively, and many new hacking tools and intrusive methods have appeared. Using an intrusion detection system (IDS) is one way of dealing with suspicious activities within a network.</p>
+<p>An intrusion detection system monitors the activities of a given environment and decides whether these activities are malicious (intrusive) or legitimate (normal) based on system integrity, confidentiality and the availability of information resources. The intrusion detection system collects information about the system being observed. This collected audit data is processed by the detector. The detector eliminates unnecessary information from the audit data and then makes a decision to evaluate the probability that these activities can be considered as a sign of an intrusion<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">[1]</a></sup><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">[2]</a></sup>.</p>
+<p>Soft computing is an innovative approach to construct a computationally intelligent system which parallels the extraordinary ability of the human mind to reason and learn in an environment of uncertainty and imprecision<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">[3]</a></sup>. Typically, soft computing consists of several computing paradigms, including neural networks, fuzzy sets, approximate reasoning, genetic algorithms, simulated annealing, etc.</p>
+<p>Many soft computing approaches have been applied to the intrusion detection field <sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">[4]</a></sup><sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">[5]</a></sup><sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">[6]</a></sup><sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">[7]</a></sup>. In this paper, a novel intrusion detection system based on the integration of a few soft computing methods including neuro-fuzzy, fuzzy and genetic algorithms is described. The key contribution of this work is the utilization of outputs of neuro-fuzzy network as linguistic variables which expresses how reliable current output is.</p>
+<p>Fuzzy logic, as a robust soft computing method, has demonstrated its ability in intrusion detection systems<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">[5]</a></sup><sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">[6]</a></sup><sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">[8]</a></sup><sup id="fnref:9"><a href="#fn:9" class="footnote-ref" role="doc-noteref">[9]</a></sup><sup id="fnref:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">[10]</a></sup>. Moreover, fuzzy systems have several important features which make them suitable for intrusion detection<sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">[8]</a></sup>. Most fuzzy systems make use of human expert knowledge to create their fuzzy rule base and hence lack adaptation, though. Therefore, building fuzzy systems with learning and adaptation capabilities has recently received much attention<sup id="fnref:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">[10]</a></sup>. Various methods have been suggested for automatic generation and adjustment of fuzzy rules without using the aid of human experts; the neural fuzzy<sup id="fnref:11"><a href="#fn:11" class="footnote-ref" role="doc-noteref">[11]</a></sup><sup id="fnref:12"><a href="#fn:12" class="footnote-ref" role="doc-noteref">[12]</a></sup> and genetic fuzzy are two most successful approaches in this regard<sup id="fnref:13"><a href="#fn:13" class="footnote-ref" role="doc-noteref">[13]</a></sup><sup id="fnref:14"><a href="#fn:14" class="footnote-ref" role="doc-noteref">[14]</a></sup>.</p>
+<p>From the view point of classification, the main work of building an intrusion detection system is to build a classifier that can categorize normal and intrusive event data from the original dataset. ANFIS as an Adaptive neurofuzzy inference system<sup id="fnref:12"><a href="#fn:12" class="footnote-ref" role="doc-noteref">[12]</a></sup> has the ability to construct models solely based on the target system sample data. This ability among others qualifies ANFIS as a fuzzy classifier for intrusion detection.</p>
+<p>The proposed system has different layers which correspond to the needs in various modules of the proposed IDS system. First of all, several neuro-fuzzy classifiers use extracted features of the audit data to classify activities in the network. In this case fuzzy inference system as a decision-making engine based on outputs of the classifiers of previous layer makes the final decision on whether the current activity is normal or intrusive. Finally, genetic algorithms are employed to optimize the structure of fuzzy sets of the fuzzy decision-making engine.</p>
+<p>In order to promote the comparison of different works in IDS area, the Lincoln Laboratory at MIT, under the Defense Advanced Research Project Agency (DARPA) and Air Force Research Laboratory (AFRL/SNHS) sponsorship, constructed and distributed the first standard dataset for evaluation of computer network IDS<sup id="fnref:15"><a href="#fn:15" class="footnote-ref" role="doc-noteref">[15]</a></sup>.</p>
+<p>Afterward the fifth ACM SIGKDD International Conference on Knowledge Discovery and Data Mining with the purpose of demonstrating the learning contest, collected and generated TCP dump data provided by the aforementioned DARPA in the form of train-and-test sets whose features are defined for the connection records (a connection is a sequence of TCP packets starting and ending at some well-defined times). The main goal of the learning contest was to select classifiers with the best qualifications of recognizing normal and intrusive connections. The above dataset is named as KDD Cup 99 dataset [17] here, and has been used for the experiments.</p>
+<p>The subsequent parts of this paper are organized as follows: At first, the related works done by the other researchers is briefly reviewed in Section 2. Section 3 describes KDD Cup 99 dataset on which the experiments are conducted. Then, the next section briefly outlines the basics of fuzzy inference systems and neuro-fuzzy concepts in general and ANFIS (Adaptive Neuro-Fuzzy Inference System) in particular. The last part of this section has been devoted to describing the subtractive clustering technique employed by ANFIS for automatic generation of the initial fuzzy inference system structure. Next, in Sections 5 and 6, the proposed system is explained and experimental results as well as evaluation of the proposed approach are discussed, respectively. Finally, Section 7 makes some concluding remarks and proposes further areas for future research.</p>
+<h1 id="2-related-work"><a href="#2-related-work" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>2. Related work</h1>
+<p>There were a total of 24 <u>entries（参赛者）</u> submitted to the KDD Cup 99 contest. All the top three winners’ approaches use some variants（变种） of decision trees. The KDD’99 contest winner entry made use of an ensemble of 50*10 C5 decision trees, using cost-sensitive bagged boosting<sup id="fnref:16"><a href="#fn:16" class="footnote-ref" role="doc-noteref">[16]</a></sup>. The runner-up entry also used decision trees. A set of decision trees was constructed. Then a problem-specific global optimization criterion（针对特定问题的全局优化准则） was used to select optimal subset of trees to give the final prediction<sup id="fnref:17"><a href="#fn:17" class="footnote-ref" role="doc-noteref">[17]</a></sup>. The third-placed approach used two-layer decision trees. The first layer was trained on the connections which cannot be classified by security experts, whereas the second layer was built on the connections which cannot be classified by the first layer<sup id="fnref:18"><a href="#fn:18" class="footnote-ref" role="doc-noteref">[18]</a></sup>.</p>
+<p>Thereafter, other approaches on the classification problem of KDD Cup 99 have emerged. One of the successful approaches based on data-mining framework used RIPPER rules which have been presented by Lee et al.<sup id="fnref:19"><a href="#fn:19" class="footnote-ref" role="doc-noteref">[19]</a></sup>. Association rules and Frequent Episodes algorithms（关联规则和频繁集算法） have been used to derive correlations（相关性） between features and represent the sequentially（顺序） of audit records, respectively. Agarwal and Joshi proposed a framework for learning a rule-based model (PNrule) to make classifier models on a dataset that has widely different class distributions in training data<sup id="fnref:20"><a href="#fn:20" class="footnote-ref" role="doc-noteref">[20]</a></sup>.</p>
+<p>There are some works in which the performance of different machine learning algorithms and classification techniques were compared based on the KDD Cup 99 dataset. Sabhnani and Serpen analyzed the performance of comprehensive set of pattern recognition and machine learning algorithms according to the above dataset. Experiments outcomes show that a specific classification algorithm performs better for certain attack categories. The present fact（目前的事实） was a motivation（促进） for the authors to use a multi-classifier model which utilizes different classifiers for each specific attack category of KDD dataset<sup id="fnref:21"><a href="#fn:21" class="footnote-ref" role="doc-noteref">[21]</a></sup>.</p>
+<p>Recently, soft computing approaches are used for intrusion detection systems. Some of these methods have been evaluated on KDD dataset. Fuzzy rule-based classifiers, decision trees, support vector machines, linear genetic programming（线性遗传规划 ）have been used in<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">[7]</a></sup> by Abraham and Jain to illustrate the importance of soft computing paradigm for modeling（建模） intrusion detection systems. Abadeh et al. describe a fuzzy genetics-based learning algorithm and discuss its usage for intrusion detection in network<sup id="fnref:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">[10]</a></sup>. Their experiments were performed on KDD dataset. Another work which utilizes genetic algorithm for incorporating（合并） the capability of learning to fuzzy rules is the work of Gomez and Dasgupta<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">[5]</a></sup>. Genetic programming based on RSSDSS algorithm for dynamically filtering the dataset is another technique which exists in this area<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">[4]</a></sup>. It’s important to note that this model detects whether or not a record is intrusive（是否有入侵性） not if attack records belong to a specific attack category（而不是是否属于一种特定的攻击类别）.</p>
+<p>Yeung and Chow proposed a novel detection approach using non-parametric density estimation（非参数密度估计） based on ParzenWindow estimator with Gaussian kernels to build an anomaly（异常） intrusion detection system<sup id="fnref:22"><a href="#fn:22" class="footnote-ref" role="doc-noteref">[22]</a></sup>. This model also only detects whether the current record is an intrusion or not.</p>
+<p>It seems necessary to cite the works that criticize many aspects of the DARPA evaluation dataset<sup id="fnref:23"><a href="#fn:23" class="footnote-ref" role="doc-noteref">[23]</a></sup><sup id="fnref:24"><a href="#fn:24" class="footnote-ref" role="doc-noteref">[24]</a></sup>. McHugh<sup id="fnref:23"><a href="#fn:23" class="footnote-ref" role="doc-noteref">[23]</a></sup>, with respect to the collected traffic data by DARPA, criticizes the lack of statistical evidence of similarity to the typical Air Force network traffic, low traffic rates, relative uniform distribution of the four major attack categories, skewed（歪曲的） distribution of victim hosts, and flat network topology（平面网络拓扑）. More detailed analysis of this dataset which is made by Mahoney and Chan confirms McHugh’s criticism that the data is of statistically different characteristics from the real traffic. They also suggest an approach to mitigate（缓解） the problem<sup id="fnref:24"><a href="#fn:24" class="footnote-ref" role="doc-noteref">[24]</a></sup>. However, it is difficult to employ such solutions for the KDD Cup dataset. Moreover, since this work should be compared with other works in this area and certainly should be respectful to the experimental conditions of other compared works, the original KDD dataset have been used for the experiments.</p>
+<h1 id="3-kdd-cup-99-dataset"><a href="#3-kdd-cup-99-dataset" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>3. KDD Cup 99 dataset</h1>
+<p>The KDD Cup 99 dataset includes a set of 41 features derived from each connection and a label which specifies the status of connection records as either normal or specific attack type. The list of these features can be found in Appendix A. These features had all forms of continuous, discrete, and symbolic, with significantly varying ranges falling in four categories（这些特征具有连续、离散和象征性的所有形式，显著的变化范围分为四类）<sup id="fnref:25"><a href="#fn:25" class="footnote-ref" role="doc-noteref">[25]</a></sup>:</p>
+<ul>
+<li>The first category consists of the <em>intrinsic</em> features of a connection, which include the basic features of individual TCP connections. The duration（持续） of the connection, the type of the protocol (TCP, UDP, etc.), and network service (http, telnet, etc.) are some of the features.</li>
+<li>The <em>content</em> features within a connection suggested by domain knowledge are used to assess the payload of the original TCP packets, such as the number of failed login attempts.</li>
+<li>The <em>same host</em> features examine established connections in the past two seconds that have the same destination host as the current connection, and calculate the statistics related to the protocol behavior, service, etc.</li>
+<li>The <em>similar same service</em> features inspect the connections in the past two seconds that have the same service as the current connection.</li>
+</ul>
+<p>Likewise, attacks fall into four main categories<sup id="fnref:25"><a href="#fn:25" class="footnote-ref" role="doc-noteref">[25]</a></sup>:</p>
+<ul>
+<li>DoS (Denial of Service): making some computing or memory resources too busy to accept legitimate users access these resources.</li>
+<li>R2L (Remote to Local): unauthorized access from a remote machine in order to exploit machine’s vulnerabilities.</li>
+<li>U2R (User to Root): unauthorized access to local superuser (root) privileges using system’s susceptibility.</li>
+<li>Probe: host and port scans as precursors to other attacks. An attacker scans a network to gather information or find known vulnerabilities.</li>
+</ul>
+<p>KDD dataset is divided into training and testing record sets. Total number of connection records in the training dataset is about 5 million records. This is too large for our purpose; as such, only concise（简洁的） training dataset of KDD, known as 10% training dataset, was employed here. The distribution of normal and attack types of connection records in this subset have been summarized in Table 1.</p>
+<p>As it can be seen in Table 1, sample distributions for different categories of attacks in training data differ significantly from each other. One of the main contributions of this work is to overcome this issue by using different classifier for each class of data.</p>
+<p>The test data enjoys a different distribution. Moreover, the test data includes additional attack types not present in the training data which makes classifying more complicated. Table 2 summarizes the distribution of normal and attack types of connection records in the test dataset. And Table 3, based on major types of attack, shows the sample distribution of the new attacks in the test dataset. New attacks refer to those which were not present in the training dataset, but exist in the test dataset.</p>
+<h4 id="table-1"><a href="#table-1" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Table 1</h4>
+<p>The sample distributions on the subset of 10% data of KDD Cup 99 dataset</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Number of samples</th>
+<th>Samples percent (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Normal</td>
+<td>97277</td>
+<td>19.69</td>
+</tr>
+<tr>
+<td>Probe</td>
+<td>4107</td>
+<td>0.83</td>
+</tr>
+<tr>
+<td>DoS</td>
+<td>391458</td>
+<td>79.24</td>
+</tr>
+<tr>
+<td>U2R</td>
+<td>52</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td>R2L</td>
+<td>1126</td>
+<td>0.23</td>
+</tr>
+<tr>
+<td></td>
+<td>492021</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
+<h4 id="table-2"><a href="#table-2" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Table 2</h4>
+<p>The sample distributions on the test data with the corrected labels ofKDD Cup 99 dataset</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Number ofsamples</th>
+<th>Samples  percent (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Normal</td>
+<td>60593</td>
+<td>19.48</td>
+</tr>
+<tr>
+<td>Probe</td>
+<td>4166</td>
+<td>1.34</td>
+</tr>
+<tr>
+<td>DoS</td>
+<td>229853</td>
+<td>73.90</td>
+</tr>
+<tr>
+<td>U2R</td>
+<td>228</td>
+<td>0.07</td>
+</tr>
+<tr>
+<td>R2L</td>
+<td>16189</td>
+<td>5.20</td>
+</tr>
+<tr>
+<td></td>
+<td>311029</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
+<h4 id="table-3"><a href="#table-3" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Table 3</h4>
+<p>The new attacks sample distributions on the test data with the corrected labels of KDD Cup 99 dataset</p>
+<table>
+<thead>
+<tr>
+<th align="center">Class</th>
+<th align="center">Number of novel attack samples</th>
+<th align="center">Total number of samples</th>
+<th align="center">Samples percent (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Probe</td>
+<td align="center">1789</td>
+<td align="center">4166</td>
+<td align="center">43</td>
+</tr>
+<tr>
+<td align="center">DoS</td>
+<td align="center">6555</td>
+<td align="center">229853</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">U2R</td>
+<td align="center">189</td>
+<td align="center">228</td>
+<td align="center">83</td>
+</tr>
+<tr>
+<td align="center">R2L</td>
+<td align="center">10196</td>
+<td align="center">16189</td>
+<td align="center">63</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">18729</td>
+<td align="center">250436</td>
+<td align="center">7.5</td>
+</tr>
+</tbody>
+</table>
+<p>![image-20200606171157494](《A new approach to intrusion detection based on an evolutionary》/image-20200606171157494.png)</p>
+<p>Fig. 1. The Mamdani fuzzy inference system using min and max for T-norm and T-conorm operators, respectively<sup id="fnref:12"><a href="#fn:12" class="footnote-ref" role="doc-noteref">[12]</a></sup>.</p>
+<h1 id="4-fuzzy-and-neuro-fuzzy"><a href="#4-fuzzy-and-neuro-fuzzy" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>4. Fuzzy and neuro-fuzzy</h1>
+<h2 id="41-fuzzy-inference-system-fis"><a href="#41-fuzzy-inference-system-fis" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>4.1. Fuzzy inference system (FIS)</h2>
+<p>The past few years have witnessed a rapid growth in the number and variety of applications of fuzzy logic. Among various combinations of methodologies in soft computing, the one that has the highest visibility is that of fuzzy logic and neuro computing, leading to so-called neuro-fuzzy systems. An effective method developed by Jang for this purpose is called ANFIS (Adaptive neuro-fuzzy inference system)<sup id="fnref:12"><a href="#fn:12" class="footnote-ref" role="doc-noteref">[12]</a></sup>.</p>
+<p>The basic structure of most Fuzzy inference systems (FISs) that we have seen so far is a model that maps the input characteristics to the input Membership functions (MF). Three well-known types of FIS are employed in various systems. The <em>Mamdani Fuzzy Model</em><sup id="fnref:26"><a href="#fn:26" class="footnote-ref" role="doc-noteref">[26]</a></sup> was proposed as the very first attempt to map an input to an output space on top of the experiences of experts.</p>
+<p>An example of two-input single-output Mamdani fuzzy model with two rules can be expressed as</p>
+<p>$$
+if\ x\ is\ A1\ and\ y\ is\ B1\ then\ z\ is\ C1,
+$$</p>
+<p>$$
+if\ x\ is\ A2\ and\ y\ is\ B2\ then\ z\ is\ C2,
+$$</p>
+<p>where A and B are fuzzy sets of inputs with membership functions of A1, A2 and B1, B2, respectively, and C is the fuzzy output set.</p>
+<p>Max and min as the choice for T-norm and T-conorm operator are adopted here, respectively. The resulting fuzzy reasoning is shown in Fig. 1. For more acquaintance with T-norm and T-conorm, and inference system of Mamdani fuzzy models the readers may refer to<sup id="fnref:12"><a href="#fn:12" class="footnote-ref" role="doc-noteref">[12]</a></sup>.</p>
+<p>Since usual systems take only crisp values, we should use a defuzzifier to convert a fuzzy set to a crisp value. (Defuzzification refers to the way a crisp value is extracted from a fuzzy set as a representative value<sup id="fnref:12"><a href="#fn:12" class="footnote-ref" role="doc-noteref">[12]</a></sup>.) We use centroid of area defuzzification strategy to convert the output to a crisp value. An explanation of centroid of area defuzzification strategy is shown below. Centroid of area $Z_{COA}$ is:</p>
+<p>$$
+Z_{COA}=\frac{\int_Z\mu_A(z)z\mathrm{d}t}{\int_Z\mu_A(z)\mathrm{d}t}
+$$
+where $\mu A(z)$ is the aggregated output MF.</p>
+<p>Before introducing the structure of ANFIS as our main classifier, it is important to mention that Mamdani fuzzy inference system (FIS) has been used for the final decision-making module. More details on structure of the system and decision-making engine will be explored at later sections.</p>
+<p>In an effort to develop a systematic approach to generate fuzzy rules from a given input–output dataset, Takagi, Sugeno, and Kang proposed TSK Fuzzy Model (known as the Sugeno Fuzzy Model)<sup id="fnref:27"><a href="#fn:27" class="footnote-ref" role="doc-noteref">[27]</a></sup>. A fuzzy rule in a Sugeno fuzzy model has the form of,
+$$
+if\ is\ A\ and\ y\ is\ B\ then\ z\ = f(x,y),
+$$
+where A and B are input fuzzy sets in antecedent and usually $z = f(x,y)$ a zero- or first-order polynomial function（零阶或一阶多项式函数） in the consequent（结果）.</p>
+<p>Fuzzy reasoning procedure for the first order Sugeno fuzzy model is shown in Fig. 2a. Here, defuzzification procedure in the Mamdani fuzzy model is replaced by the operation of weighted average（加权平均运算） in order to avoid the timeconsuming procedure of the former（避免了前者耗时的过程）<sup id="fnref:12"><a href="#fn:12" class="footnote-ref" role="doc-noteref">[12]</a></sup>.</p>
+<p>![image-20200606171343930](《A new approach to intrusion detection based on an evolutionary》/image-20200606171343930.png)</p>
+<p>Fig. 2. (a) The Sugeno fuzzy model reasoning; (b) equivalent ANFIS structure<sup id="fnref:12"><a href="#fn:12" class="footnote-ref" role="doc-noteref">[12]</a></sup>.</p>
+<h2 id="42-adaptive-neuro-fuzzy-inference-system-anfis"><a href="#42-adaptive-neuro-fuzzy-inference-system-anfis" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>4.2. Adaptive neuro-fuzzy inference system (ANFIS)</h2>
+<p>There are some modeling situations in which one cannot just look at the data and decides on the shape of membership functions. Rather than choosing the parameters associated with a given membership function arbitrarily（武断地）, these parameters could be chosen so that they tailor（改变） the membership functions <u>to the variation in the input/output data（根据输入/输出的变化）</u> in order to account for these types of variations in the data values. This is where the so-called neuro-adaptive learning technique incorporated into ANFIS can help.</p>
+<p>Assume a Fuzzy inference system with two inputs x, y and one output z with the first order of Sugeno Fuzzy Model. Fuzzy rule set with two fuzzy if–then rules is as follows:
+$$
+if\ x\ is\ A1\ and\ y\ is\ B1,\ then\ f1 = p1x + q1y + r1,
+$$</p>
+<p>$$
+if\ x\ is\ A2\ and\ y\ is\ B2,\ then\ f2 = p2x + q2y + r2;
+$$</p>
+<p>Fig. 2a illustrates the reasoning mechanism（推理机制） for this Sugeno model.</p>
+<p>As it is shown in Fig. 2b, the reasoning mechanism can be implemented into a feed-forward neural network with supervised learning capability, which is known as ANFIS architecture.</p>
+<p>The square and circle nodes（方形和圆形节点） are for <u>adaptive nodes with parameters（有参数的自适应节点）</u> and <u>fixed nodes without parameters（无参数的固定节点）</u>, respectively. The first layer consists of square nodes that perform fuzzification with chosen membership function. The parameters in this layer are called <u>premise parameters（前提参数）</u>. In the second layer, the T-norm operation is performed to produce the firing strength of each rule. The ratio of the ith rule firing strengthtothesumofallrules’firingstrengthiscalculatedin the third layer, generating the normalized firing strengths（产生每个规则的射击强度）. The fourth layer consists of square nodes that perform <u>multiplication（乘法）</u> of <u>normalized firing strengths（标准射击强度）</u> with the <u>corresponding rule（相应规则）</u>. The parameters in this layer are called consequent parameters. The <u>overall output（总输出）</u> is calculated by the sum of all incoming signals in the fifth layer<sup id="fnref:12"><a href="#fn:12" class="footnote-ref" role="doc-noteref">[12]</a></sup>.</p>
+<p>ANFIS provides a method for the fuzzy modeling procedure to learn information about a dataset in order to compute the membership function parameters that best allow the associated Fuzzy inference system to track the given input/output data. This learning method works similarly to that of neural networks. The parameters associated with the membership functions will change through the learning process. ANFIS uses either <u>back propagation（反向传播）</u> or a <u>combination（组合）</u> of <u>least square estimations（最小二乘估计）</u> and back propagation for membership function parameter estimations. The readers are referred to<sup id="fnref:12"><a href="#fn:12" class="footnote-ref" role="doc-noteref">[12]</a></sup> for more details on these methods.</p>
+<h2 id="43-usubtractive-clustering减法聚类u"><a href="#43-usubtractive-clustering减法聚类u" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>4.3. <u>Subtractive clustering（减法聚类）</u></h2>
+<p>The purpose of clustering is to identify natural groupings of data from a large dataset to produce a concise representation of a system’s behavior. It is possible to use the cluster information to generate a Sugeno-type fuzzy inference system that best models the data behavior using a minimum number of rules. The rules partition themselves according to the fuzzy qualities associated with each of the data clusters.</p>
+<p>Assume a 2-D training dataset (including input and desired output) and cluster center (xi,yi). The ith rule can be expressed in the form of
+$$
+if\ X\ is\ close\ to\ x_i,\ then\ Y\ is\ close\ to\ y_i,
+$$
+After the structure is determined, back propagation or gradient decent and other optimization schemes can be applied to proceed with parameter identification.</p>
+<p>However, before the start of the ANFIS training, the fuzzy inference system should be generated. FIS generation can implement in <u>grid partitioning（网格划分）</u> or subtractive clustering. In grid partitioning, all the possible rules are generated based on the number of MFs for each input. For example, in a two dimensional input space with three MFs in the input sets, the number of rules in grid partitioning results in 9 rules. This partitioning strategy needs only a small number of MFs for each input and encounters problems when we have moderately a large number of each input. So we use subtractive clustering to determine the number of rules, and the initial points of the membership functions.</p>
+<p>Suppose that there is not a clear idea of how many clusters there should be for a given set of data. Subtractive clustering<sup id="fnref:28"><a href="#fn:28" class="footnote-ref" role="doc-noteref">[28]</a></sup>is a fast one-pass algorithm for estimating the number of clusters and the cluster centers in a set of data. This method is used here, and it is an extension of the Mountain clustering method proposed by Yager and Filev<sup id="fnref:29"><a href="#fn:29" class="footnote-ref" role="doc-noteref">[29]</a></sup>.</p>
+<p>Consider a collection of m data points {x1,...,xm} in an N-dimensional space. Subtractive clustering assumes each data point as a potential cluster center and calculates a measure of the potential for each data point based on the <u>density（密度）</u> of surrounding data points. Density measure at data point xj is calculated as follows:</p>
+<p>$$
+D_j=\sum_{i=1}^m\exp(-\frac{|x_j-x_i|^2}{(r_a/2)^2})
+$$
+where ra is a positive constant value and it defines the neighborhood <u>radius（半径）</u>. The algorithm selects the data point with the highest density measure as the first cluster center and then <u>eradicates（消除）</u> the potential of data points near the first cluster center. The algorithm then selects the data point with the highest remaining potential (next highest density measure has been remained) as the next cluster center and eradicates the potential of data points near this new cluster center. This process of acquiring a new cluster center and eradicating the potential of surrounding data points repeats until the potential of all data points <u>fall below a threshold（落到阈值以下）</u>. The range of influence of a cluster center in each of the data dimensions is called cluster radius. The cluster radius <u>indicates（指示）</u> the range of influence of a cluster when you consider the data space as a single hypercube. A small cluster radius will lead to find many small clusters in the data (resulting in many rules) and <u>vice versa（反之亦然）</u>.</p>
+<p>The clusters’ information obtained by this method is used for determining the initial number of rules and <u>antecedent （先前的）</u>membership functions, which is used for identifying the FIS. An important advantage of using a clustering method to find rules is that the resulting rules are more <u>tailored（定做的，引申为适合）</u> to the input data than they are in an FIS generated without clustering. In this study, we use Subtractive clustering has been used to determine the number of rules and antecedent membership functions. So one can obtain a FIS structure that contains a set of fuzzy rules to <u>cover the feature space（覆盖特征空间）</u>.</p>
+<h1 id="5-proposed-system"><a href="#5-proposed-system" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>5. Proposed system</h1>
+<p>The principle motivation for this work was to provide a framework for using soft computing approaches to build a classifier that can act better than single algorithm using a single soft computing approach, e.g., neuro-fuzzy. The proposed system is discussed in details in this section. First, the system architecture is explained. Then, data sources, selected from KDD for training the system, are introduced. Afterward, layers of proposed framework are presented in more details.</p>
+<h2 id="51-system-architecture"><a href="#51-system-architecture" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>5.1. System architecture</h2>
+<p>The proposed architecture for the Evolutionary Soft Computing Intrusion Detection System includes two layers. In the first layer, there are five ANFIS modules which are trained to explore the intrusive activity from the input data. Each ANFIS module belongs to one of the classes in the dataset each providing an output which specifies the degree of relativity of the data to the specific class 1 shows total membership while 1 is used otherwise. (It is important to mention that the ANFIS structure has only one output.) The most important motivation to using ANFIS in this way is that ANFIS is usually more appropriate as a <u>binary classifier（二进制分类器）</u> rather than a multi-classifier<sup id="fnref:30"><a href="#fn:30" class="footnote-ref" role="doc-noteref">[30]</a></sup>.</p>
+<p>Second, a Fuzzy Inference module, based on <u>empirical knowledge（经验知识）</u>, is employed to make the final decision for recognition. The fuzzy inference module implements nonlinear mappings from the outputs of the neuro-fuzzy classifiers of the pervious layer to the final output space which specifies if the input data are normal or intrusive. Afterward, if the system recognizes that the current pattern is intrusive by nature, the classifier of the first layer, in which the output is the nearest value among all classifiers, specifies the class of the attack.</p>
+<p>In order to attain the best results, genetic algorithm (GA) is used to optimize the structure of the fuzzy decision-making engine. The GA structure is discussed in more depth later. Fig. 3 depicts the schematic block diagram of the proposed system architecture.</p>
+<p>![image-20200606172417321](《A new approach to intrusion detection based on an evolutionary》/image-20200606172417321.png)</p>
+<p>Fig. 3. System architecture block diagram.</p>
+<h2 id="52-the-data-sources"><a href="#52-the-data-sources" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>5.2. The data sources</h2>
+<p>All of the above features have been applied to the inputs of the five neuro-fuzzy classifiers. From the classification point of view, any system mainly consists of two phases: (1) the training of the parameters of the classifier according to the training dataset and (2) using the classifier to categorize a test dataset. Here, 10% of the training dataset was used as the source of the training dataset. Since the number of records in the 10% dataset was still very large for our purposes, different subsets of the training and checking dataset were randomly selected from the subset of 10% of data, for the training phase. The basic idea behind using a checking dataset for model validation is that after a certain point in training, the model begins <u>overfitting（过度拟合）</u> the training dataset. If overfitting does occur, we cannot expect the classifier to respond well to other independent datasets. In fact, if checking data is used for ANFIS training, <u>the final FIS associated with the minimum checking error（与最小检查误差相关联的最终FIS）</u> will be chosen.</p>
+<p>Results of different machine learning algorithms show that <u>anomaly detectors（异常检测器）</u> do better than <u>signature-based（基于特征的）</u> detectors for KDD Cup 99 dataset<sup id="fnref:31"><a href="#fn:31" class="footnote-ref" role="doc-noteref">[31]</a></sup>. This might be because the testing data has <u>substantial（大量）</u> new attacks with signatures not correlated with similar attacks in the training data. On the other hand, the number of training samples for signature-based detectors seems not to be <u>ample（充足）</u> to develop classifiers to function as efficiently as possible. The attack samples in the testing dataset, though, have <u>rather enough deviation（相当大的差别）</u> from normal or regular samples in the training dataset<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">[4]</a></sup><sup id="fnref:22"><a href="#fn:22" class="footnote-ref" role="doc-noteref">[22]</a></sup>.</p>
+<p>Since each classifier in first layer of the system acts as a signature based classifiers and the goal is to select a good training and checking dataset for the learning phase, training and checking dataset has been selected, as shown on the Tables 4 and 5, <u>wherein（其中）</u> numbers of samples in the normal class are approximately equal to the summation of the samples in the other classes. By this policy, in view of the fact that each classifier performs as binary classifier (current activity belongs to this class or not), each classifier <u>somehow（以某种方式）</u> acts as an anomaly detector system.</p>
+<p>The distribution of the samples in the two subsets that were used for the training is listed on Tables 4 and 5. Selected subsets <u>enjoy（具有）</u> different numbers of samples, the smaller one contains a few number of samples to show the system is still capable, despite the fact that a small portion of the training data has been used. The other one in more number of samples enjoys more number of samples to illustrate efficiency of proposed system as much as possible.</p>
+<p>Due to the reduction of <u>random sampling effects（随机抽样效应）</u>, <u>10 trails with the same distribution（10各项同分布的实验）</u>, have been selected for each subset of trainings (training sets in Tables 4 and 5). Therefore, all the <u>evaluation（评估）</u> results in the latter parts of the paper have been computed <u>over（在...之上）</u> these ten trials except those <u>explicitly（确切）</u> mentioned.</p>
+<p>Before concluding this subsection, it should be mentioned that to be fair, we did not have any access to the testing dataset during the training and optimization phase. Moreover, the standard conditions of the KDD Cup competition has been deployed.</p>
+<h2 id="53-the-neuro-fuzzy-classifiers"><a href="#53-the-neuro-fuzzy-classifiers" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>5.3. The neuro-fuzzy classifiers</h2>
+<p>The subtractive clustering method with ra = 0.5 (neighborhood radius) has been used to partition the training sets and generate an FIS structure for each ANFIS. For further fine-tuning and adaptation of membership functions, training sets were used for training ANFIS. Each ANFIS trains at 50 <u>epochs（阶段）</u> of learning and final FIS that is associated with the <u>minimum checking error（最小检测误差）</u> has been chosen. All the MFs of the input and output fuzzy sets were selected in the form of Gaussian functions with two parameters.</p>
+<h2 id="54-the-fuzzy-decision-module"><a href="#54-the-fuzzy-decision-module" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>5.4. The fuzzy decision module</h2>
+<p>The fuzzy inference module has five inputs, obtained from the output values of each ANFIS classifiers. The fuzzy inference module, based on these inputs, determines whether the current connection record is an attack or not. A <u>five-input, single-output（五输入单输出）</u> of Mamdani fuzzy inference system with <u>centroid of area defuzzification strategy（面积质心解模糊策略）</u> was used for this purpose. Each input fuzzy set includes two MFs and all the MFs are <u>Gaussian functions which are specified by four parameters（由四个参数指定的高斯函数）</u>. The proposed fuzzy inference module uses the rules shown in the fuzzy associative memory in Table 6.</p>
+<p>The output of the fuzzy inference engine, which varies between 1 and 1, specifies how intrusive the current record is, 1 to show completely intrusive and 1 for completely normal. Records <u>with positive intrusive values（有正侵入值）</u> are selected as intrusive patterns. After an attack is detected, <u>its class is selected based on the ANFIS module class which returns the highest value（根据返回最大值的ANFIS模块类别来选择其类别）</u>.</p>
+<p>Table 4</p>
+<p>Sample distributions on the First Training and Checking data randomly selected of 10% data of KDD Cup 99 dataset</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th>Normal</th>
+<th>Probe</th>
+<th>DoS</th>
+<th>U2R</th>
+<th>R2L</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ANFIS-N</td>
+<td>Training</td>
+<td>20000</td>
+<td>4000</td>
+<td>15000</td>
+<td>40</td>
+<td>1000</td>
+<td>40040</td>
+</tr>
+<tr>
+<td></td>
+<td>Checking</td>
+<td>2500</td>
+<td>107</td>
+<td>2000</td>
+<td>12</td>
+<td>126</td>
+<td>7245</td>
+</tr>
+<tr>
+<td>ANFIS-P</td>
+<td>Training</td>
+<td>10000</td>
+<td>4000</td>
+<td>5000</td>
+<td>40</td>
+<td>1000</td>
+<td>16040</td>
+</tr>
+<tr>
+<td></td>
+<td>Checking</td>
+<td>1000</td>
+<td>107</td>
+<td>500</td>
+<td>12</td>
+<td>126</td>
+<td>10245</td>
+</tr>
+<tr>
+<td>ANFIS-D</td>
+<td>Training</td>
+<td>25000</td>
+<td>4000</td>
+<td>20000</td>
+<td>40</td>
+<td>1000</td>
+<td>25040</td>
+</tr>
+<tr>
+<td></td>
+<td>Checking</td>
+<td>6000</td>
+<td>107</td>
+<td>5000</td>
+<td>12</td>
+<td>126</td>
+<td>10254</td>
+</tr>
+<tr>
+<td>ANFIS-U</td>
+<td>Training</td>
+<td>200</td>
+<td>50</td>
+<td>50</td>
+<td>46</td>
+<td>50</td>
+<td>246</td>
+</tr>
+<tr>
+<td></td>
+<td>Checking</td>
+<td>100</td>
+<td>25</td>
+<td>25</td>
+<td>6</td>
+<td>25</td>
+<td>181</td>
+</tr>
+<tr>
+<td>ANFIS-R</td>
+<td>Training</td>
+<td>4000</td>
+<td>1000</td>
+<td>2000</td>
+<td>40</td>
+<td>1000</td>
+<td>6040</td>
+</tr>
+<tr>
+<td></td>
+<td>Checking</td>
+<td>2000</td>
+<td>500</td>
+<td>1000</td>
+<td>12</td>
+<td>126</td>
+<td>3138</td>
+</tr>
+</tbody>
+</table>
+<p>Table 5</p>
+<p>Distribution of samples on the Second Training and Checking data randomly selected of 10% data of KDD Cup 99 dataset</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th>Normal</th>
+<th>Probe</th>
+<th>DoS</th>
+<th>U2R</th>
+<th>R2L</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ANFIS-N</td>
+<td>Training</td>
+<td>1500</td>
+<td>500</td>
+<td>500</td>
+<td>52</td>
+<td>500</td>
+<td>3052</td>
+</tr>
+<tr>
+<td></td>
+<td>Checking</td>
+<td>1500</td>
+<td>500</td>
+<td>500</td>
+<td>0</td>
+<td>500</td>
+<td>3000</td>
+</tr>
+<tr>
+<td>ANFIS-P</td>
+<td>Training</td>
+<td>1500</td>
+<td>500</td>
+<td>500</td>
+<td>52</td>
+<td>500</td>
+<td>3052</td>
+</tr>
+<tr>
+<td></td>
+<td>Checking</td>
+<td>1500</td>
+<td>500</td>
+<td>500</td>
+<td>0</td>
+<td>500</td>
+<td>3000</td>
+</tr>
+<tr>
+<td>ANFIS-D</td>
+<td>Training</td>
+<td>1500</td>
+<td>500</td>
+<td>500</td>
+<td>52</td>
+<td>500</td>
+<td>3052</td>
+</tr>
+<tr>
+<td></td>
+<td>Checking</td>
+<td>1500</td>
+<td>500</td>
+<td>500</td>
+<td>0</td>
+<td>500</td>
+<td>3000</td>
+</tr>
+<tr>
+<td>ANFIS-U</td>
+<td>Training</td>
+<td>1500</td>
+<td>500</td>
+<td>500</td>
+<td>46</td>
+<td>500</td>
+<td>3046</td>
+</tr>
+<tr>
+<td></td>
+<td>Checking</td>
+<td>1500</td>
+<td>500</td>
+<td>500</td>
+<td>6</td>
+<td>500</td>
+<td>3006</td>
+</tr>
+<tr>
+<td>ANFIS-R</td>
+<td>Training</td>
+<td>1500</td>
+<td>500</td>
+<td>500</td>
+<td>52</td>
+<td>500</td>
+<td>3052</td>
+</tr>
+<tr>
+<td></td>
+<td>Checking</td>
+<td>1500</td>
+<td>500</td>
+<td>500</td>
+<td>0</td>
+<td>500</td>
+<td>3000</td>
+</tr>
+</tbody>
+</table>
+<p>Table 6</p>
+<p>Fuzzy associative memory for the proposed fuzzy inference rules</p>
+<table>
+<thead>
+<tr>
+<th align="center">Normal</th>
+<th align="center">PROBE</th>
+<th align="center">DoS</th>
+<th align="center">U2R</th>
+<th align="center">R2L</th>
+<th align="center">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">High</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">Normal</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">-High</td>
+<td align="center">-High</td>
+<td align="center">-High</td>
+<td align="center">-High</td>
+<td align="center">Normal</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">High</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">Attack</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">High</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">Attack</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">High</td>
+<td align="center">-</td>
+<td align="center">Attack</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">High</td>
+<td align="center">Attack</td>
+</tr>
+<tr>
+<td align="center">Low</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">Attack</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">Low</td>
+<td align="center">Low</td>
+<td align="center">Low</td>
+<td align="center">Low</td>
+<td align="center">Normal</td>
+</tr>
+</tbody>
+</table>
+<h2 id="55-the-genetic-algorithm-module"><a href="#55-the-genetic-algorithm-module" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>5.5. The Genetic algorithm module</h2>
+<p>Genetic algorithm is a method for solving optimization problems that are based on <u>natural selection（自然选择）</u> – a process that <u>derives from biological evolution（从生物进化中衍生出来）</u><sup id="fnref:32"><a href="#fn:32" class="footnote-ref" role="doc-noteref">[32]</a></sup>. The genetic algorithm repeatedly modifies <u>a population（一个种群）</u> (a set of individuals) by <u>a set of genetic operators（一组遗传算子）</u> including <u>mutation（变异）</u>, <u>crossover（交叉）</u>, and selection. It selects individuals <u>evolving（进化）</u> <u>toward an optimal solution（朝着最佳解决方案）</u> from the current population and uses them to produce children of the next generation. The algorithm stops when the stopping <u>criterion（标准）</u> is met. In the proposed system, each individual (chromosome) has genes codifying parameters of the MFs of the input fuzzy set of the fuzzy decision engine. A chromosome consists of 320 bits of binary data. Each 8 bits of a chromosome determines one parameter out of the four parameters of an MF. Fig. 4 illustrates the decoding process of each individual chromosome.</p>
+<p>The genetic algorithm, which is used here to optimize the input MFs of the fuzzy decision-making module, uses a subset selected from 10% of KDD dataset for the optimization process. The distribution of samples for this subset is shown in Table 7.</p>
+<p>In view of the fact that <u>GA optimization process（遗传算法优化过程）</u> does not always provide <u>an identical（一模一样）</u>, the optimization phase was performed three times and the average of the experiments results was computed for each attained structures. Also, due to the reduction of the effects of randomly sampling, five different trails of subsets – <u>not overlapping with each other（彼此之间不相互重叠）</u> – have been used for this phase.</p>
+<p>The fitness function <u>evaluates the fitness value for each individual（评估每个个体的适应度值）</u>. Fundamentally, the fitness function is the function that should be optimized. This works considers two different fitness functions.</p>
+<p>Before discussing more about the fitness functions, it seems necessary to talk about standard metrics that has been developed for evaluating network intrusion detections. Detection rate and false alarm rate are the two most famous metrics that have already been used. Detection rate is computed as the ratio between the number of correctly detected attacks and the total number of attacks, while false alarm (false positive) rate is computed as the ratio between the number of normal connections that is incorrectly misclassified as attacks and the total number of normal connections. Another metric used here is the classification rate. Classification rate for each class of data is defined as the ratio between the number of test instances correctly classified and the total number of test instances of this class.</p>
+<p>For the purpose of classifier algorithm evaluation, another comparative measure is defined which is Cost Per Example (CPE)<sup id="fnref:21"><a href="#fn:21" class="footnote-ref" role="doc-noteref">[21]</a></sup>.</p>
+<p>CPE is calculated using the following formula:</p>
+<p>where CM and C are <u>confusion matrix（混淆矩阵）</u> and <u>Cost Matrix（成本矩阵）</u>, respectively, and N represents the total number of test instances, m is the number of the classes in classification. A confusion matrix is a square matrix in which each column corresponds to the <u>predicted class（预测类）</u>, while rows correspond to the <u>actual classes（实际类）</u>. An entry at row i and column j, CM(i,j), represents the number of misclassified instances that originally belong to class i, although incorrectly identified as a member of class j. <u>The entries of the primary diagonal（主对角线的类）</u>, CM(i,i), stand for <u>the number of properly detected instances（正确检测到的实例数）</u>. Cost Matrix is similarly defined, as well, and entry C(i,j) represents the <u>cost penalty（代价惩罚）</u> for misclassifying an instance belonging to class i into class j.</p>
+<p>Cost Matrix values employed for the KDD’99 classifier learning contest are shown in Table 8a<sup id="fnref:25"><a href="#fn:25" class="footnote-ref" role="doc-noteref">[25]</a></sup>. <u>Lower values for cost per example measure show better classification for the intrusion detection system（每个例子的消耗越低，说明入侵检测的分类效果越好）</u>.</p>
+<p>![image-20200606174153523](《A new approach to intrusion detection based on an evolutionary》/image-20200606174153523.png)</p>
+<p>Fig. 4. Schematic decoding process of the individual chromosome.</p>
+<h3 id="551-fitness-functions"><a href="#551-fitness-functions" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>5.5.1. Fitness functions</h3>
+<p>This work <u>considers（考虑了）</u> two different <u>fitness functions（适应性功能）</u>. The First fitness function considered here, <u>represents the baseline case（代表基准线的情况下）</u> in which a <u>Cost Per Example（每个事例的成本）</u> with <u>equal misclassification costs（相等的错误分类成本）</u> (Table 8b) is employed. The genetic algorithm （定语从句，used to minimize the cost per examples ）is calculated in this way. Using the mentioned fitness function resolves the <u>trade-off（折衷问题）</u> between detection rate and false alarm rate and <u>leads（与前面的resolves同级）</u> to maximizing the overall detection rate and classification rate with low false alarm rate.</p>
+<p>Another fitness function is employed based on the cost per examples used for evaluating results of the KDD’99 competition<sup id="fnref:25"><a href="#fn:25" class="footnote-ref" role="doc-noteref">[25]</a></sup>. Using the Cost Matrix values employed for the KDD’99 classifier learning contest attained the best classification rate with <u>respect to weighed misclassification cost（关于加权误分类成本）</u>.</p>
+<p>Table 7</p>
+<p>The sample distributions on the selected subset of 10% data of KDD Cup 99 dataset for the optimization process which used by GA</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">Normal</th>
+<th align="center">Probe</th>
+<th align="center">Dos</th>
+<th align="center">U2R</th>
+<th align="center">R2L</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Number of samples</td>
+<td align="center">200</td>
+<td align="center">104</td>
+<td align="center">200</td>
+<td align="center">52</td>
+<td align="center">104</td>
+</tr>
+</tbody>
+</table>
+<p>Table 8</p>
+<p>Characteristics of Cost Matrix; the columns correspond to predicted classes, rows correspond to actual classes</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th>Predicted</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td>Normal</td>
+<td>PROBE</td>
+<td>DoS</td>
+<td>U2R</td>
+<td>R2L</td>
+</tr>
+<tr>
+<td>(a)Actual</td>
+<td>Normal</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td></td>
+<td>PROBE</td>
+<td>1</td>
+<td>0</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td></td>
+<td>DoS</td>
+<td>2</td>
+<td>1</td>
+<td>0</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td></td>
+<td>U2R</td>
+<td>3</td>
+<td>2</td>
+<td>2</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr>
+<td></td>
+<td>R2L</td>
+<td>4</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>(b)Actual</td>
+<td>Normal</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td></td>
+<td>PROBE</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td></td>
+<td>DoS</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td></td>
+<td>U2R</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td></td>
+<td>R2L</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>Table 9</p>
+<p>Abbreviations used for our approaches</p>
+<table>
+<thead>
+<tr>
+<th>Abbreviation</th>
+<th>Approach</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ESC-KDD-1</td>
+<td>First Training set with fitness function of KDD</td>
+</tr>
+<tr>
+<td>ESC-EQU-1</td>
+<td>First Training set with fitness function of equal misclassification cost</td>
+</tr>
+<tr>
+<td>ESC-KDD-2</td>
+<td>Second Training set with fitness function of KDD</td>
+</tr>
+<tr>
+<td>ESC-EQU-2</td>
+<td>Second Training set with fitness function of equal misclassification cost</td>
+</tr>
+</tbody>
+</table>
+<p>Table 10</p>
+<p>Classification rate, Detection rate (DTR), False Alarm rate (FA) and Cost Per Example ofKDD(CPE) for the different approaches of ESC-IDS on the test dataset with corrected labels of KDD Cup 99 dataset</p>
+<table>
+<thead>
+<tr>
+<th align="center">Model</th>
+<th align="center">Normal</th>
+<th align="center">Probe</th>
+<th align="center">DoS</th>
+<th align="center">U2R</th>
+<th align="center">R2L</th>
+<th align="center">DTR</th>
+<th align="center">FA</th>
+<th align="center">CPE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">ESC-KDD-1</td>
+<td align="center">98.2</td>
+<td align="center">84.1</td>
+<td align="center">99.5</td>
+<td align="center">14.1</td>
+<td align="center">31.5</td>
+<td align="center">95.3</td>
+<td align="center">1.9</td>
+<td align="center">0.1579</td>
+</tr>
+<tr>
+<td align="center">ESC-EQU-1</td>
+<td align="center">98.4</td>
+<td align="center">89.2</td>
+<td align="center">99.5</td>
+<td align="center">12.8</td>
+<td align="center">27.3</td>
+<td align="center">95.3</td>
+<td align="center">1.6</td>
+<td align="center">0.1687</td>
+</tr>
+<tr>
+<td align="center">ESC-KDD-2</td>
+<td align="center">96.5</td>
+<td align="center">79.2</td>
+<td align="center">96.8</td>
+<td align="center">8.3</td>
+<td align="center">13.4</td>
+<td align="center">91.6</td>
+<td align="center">3.4</td>
+<td align="center">0.2423</td>
+</tr>
+<tr>
+<td align="center">ESC-EQU-2</td>
+<td align="center">96.9</td>
+<td align="center">79.1</td>
+<td align="center">96.3</td>
+<td align="center">8.2</td>
+<td align="center">13.1</td>
+<td align="center">88.1</td>
+<td align="center">3.2</td>
+<td align="center">0.2493</td>
+</tr>
+</tbody>
+</table>
+<p>Table 11</p>
+<p>Variance classification rate, detection rate (DTR), False alarm rate (FA) and Cost Per Example of KDD (CPE) for the different approaches of ESC-IDS on the test dataset with corrected labels of KDD Cup 99 dataset</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Normal</th>
+<th>Probe</th>
+<th>DoS</th>
+<th>U2R</th>
+<th>R2L</th>
+<th>DTR</th>
+<th>FA</th>
+<th>CPE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ESC-KDD-1</td>
+<td>1.23E-4</td>
+<td>11.74E-4</td>
+<td>0.08E-4</td>
+<td>5.61E-4</td>
+<td>11.29E-4</td>
+<td>0.10E-5</td>
+<td>1.23E-4</td>
+<td>1.29E-4</td>
+</tr>
+<tr>
+<td>ESC-EQU-1</td>
+<td>1.04E-4</td>
+<td>26.15E-4</td>
+<td>0.09E-4</td>
+<td>8.19E-4</td>
+<td>31.74E-4</td>
+<td>0.16E-4</td>
+<td>1.04E-4</td>
+<td>2.84E-4</td>
+</tr>
+<tr>
+<td>ESC-KDD-2</td>
+<td>1.1850</td>
+<td>15.7244</td>
+<td>0.0578</td>
+<td>2.6384</td>
+<td>0.1309</td>
+<td>0.7142</td>
+<td>1.1850</td>
+<td>2.01E-5</td>
+</tr>
+<tr>
+<td>ESC-EQU-2</td>
+<td>2.1679</td>
+<td>25.9518</td>
+<td>4.6407</td>
+<td>2.8281</td>
+<td>1.0419</td>
+<td>4.4325</td>
+<td>2.1679</td>
+<td>1.04E-3</td>
+</tr>
+</tbody>
+</table>
+<p>Table 12</p>
+<p>Confusion Matrix for example obtained structure</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th>Predicted</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th>Accuracy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td>Normal</td>
+<td>PROBE</td>
+<td>DoS</td>
+<td>U2R</td>
+<td>R2L</td>
+<td></td>
+</tr>
+<tr>
+<td>Actual</td>
+<td>Normal</td>
+<td>58809</td>
+<td>478</td>
+<td>251</td>
+<td>774</td>
+<td>281</td>
+<td>98.47%</td>
+</tr>
+<tr>
+<td></td>
+<td>PROBE</td>
+<td>196</td>
+<td>3541</td>
+<td>276</td>
+<td>49</td>
+<td>104</td>
+<td>84.97%</td>
+</tr>
+<tr>
+<td></td>
+<td>DoS</td>
+<td>534</td>
+<td>49</td>
+<td>228524</td>
+<td>541</td>
+<td>105</td>
+<td>99.76%</td>
+</tr>
+<tr>
+<td></td>
+<td>U2R</td>
+<td>85</td>
+<td>64</td>
+<td>24</td>
+<td>29</td>
+<td>26</td>
+<td>16.67%</td>
+</tr>
+<tr>
+<td></td>
+<td>R2L</td>
+<td>10698</td>
+<td>22</td>
+<td>17</td>
+<td>56</td>
+<td>5396</td>
+<td>31.68%</td>
+</tr>
+<tr>
+<td>False positive</td>
+<td></td>
+<td>16.37%</td>
+<td>14.76%</td>
+<td>0.25%</td>
+<td>98.13%</td>
+<td>8.73%</td>
+<td>CPE = 0.1549</td>
+</tr>
+</tbody>
+</table>
+<p>Table 13</p>
+<p>Classification rate, Detection rate (DTR), False alarm rate (FA) and Cost Per Example of KDD (CPE) for the different algorithms performances on the test dataset with corrected labels of KDD Cup 99 dataset (n/r stands for not reported)</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Normal</th>
+<th>Probe</th>
+<th>DoS</th>
+<th>U2R</th>
+<th>R2L</th>
+<th>DTR</th>
+<th>FA</th>
+<th>CPE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ESC-IDS</td>
+<td>98.2</td>
+<td>84.1</td>
+<td>99.5</td>
+<td>14.1</td>
+<td>31.5</td>
+<td>95.3</td>
+<td>1.9</td>
+<td>0.1579</td>
+</tr>
+<tr>
+<td>RSS-DSS<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">[4]</a></sup></td>
+<td>96.5</td>
+<td>86.8</td>
+<td>99.7</td>
+<td>76.3</td>
+<td>12.4</td>
+<td>94.4</td>
+<td>3.5</td>
+<td>n/r</td>
+</tr>
+<tr>
+<td>Parzen-Window<sup id="fnref:22"><a href="#fn:22" class="footnote-ref" role="doc-noteref">[22]</a></sup></td>
+<td>97.4</td>
+<td>99.2</td>
+<td>96.7</td>
+<td>93.6</td>
+<td>31.2</td>
+<td>n/r</td>
+<td>n/r</td>
+<td>0.2024</td>
+</tr>
+<tr>
+<td>Multi-classifier<sup id="fnref:21"><a href="#fn:21" class="footnote-ref" role="doc-noteref">[21]</a></sup></td>
+<td>n/r</td>
+<td>88.7</td>
+<td>97.3</td>
+<td>29.8</td>
+<td>9.6</td>
+<td>n/r</td>
+<td>n/r</td>
+<td>0.2285</td>
+</tr>
+<tr>
+<td>Winner of KDD<sup id="fnref:16"><a href="#fn:16" class="footnote-ref" role="doc-noteref">[16]</a></sup></td>
+<td>99.5</td>
+<td>83.3</td>
+<td>97.1</td>
+<td>13.2</td>
+<td>8.4</td>
+<td>91.8</td>
+<td>0.6</td>
+<td>0.2331</td>
+</tr>
+<tr>
+<td>Runner Up of KDD<sup id="fnref:17"><a href="#fn:17" class="footnote-ref" role="doc-noteref">[17]</a></sup></td>
+<td>99.4</td>
+<td>84.5</td>
+<td>97.5</td>
+<td>11.8</td>
+<td>7.3</td>
+<td>91.5</td>
+<td>0.6</td>
+<td>0.2356</td>
+</tr>
+<tr>
+<td>PNrule<sup id="fnref:20"><a href="#fn:20" class="footnote-ref" role="doc-noteref">[20]</a></sup></td>
+<td>99.5</td>
+<td>73.2</td>
+<td>96.9</td>
+<td>6.6</td>
+<td>10.7</td>
+<td>91.1</td>
+<td>0.4</td>
+<td>0.2371</td>
+</tr>
+</tbody>
+</table>
+<h1 id="6-results"><a href="#6-results" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>6. Results</h1>
+<p>All samples of correctly labeled test dataset of KDD Cup 99 dataset (Table 2) as the testing data to evaluate the classifiers.</p>
+<p>Before discussing the result, it should be mentioned that to perform the experiments, the structures obtained from 10 subsets of training data for both series were used for the classifiers. The genetic algorithm was performed three times, each time for one of the five series of selected subsets. Totatally, 150 different structures were used and the result is the average of the results of this 150 structures.</p>
+<p>In the rest of this section, the performance of the proposed Evolutionary Soft Computing Intrusion Detection System (ESC-IDS) using two different training datasets (Tables 4 and 5) and two different fitness functions is compared. Two different training datasets for training the classifiers and two different fitness functions to optimize the fuzzy decision-making module were used. Table 9 shows the notation used for the special versions of ESC-IDS.</p>
+<p>Table 10 shows results for the different versions of ESCIDS on the test dataset with corrected labels of KDD Cup99 dataset. Considerable outcomes can be seen on the third and fourth rows of the table. These statistics obtained from the structures which have been built on the second training set. This training set contains about 30,000 patterns, some of them are repeated and the whole is far less than total number of samples in the original training dataset. however, the results still demonstrate reasonable values. The variances of each averaged value in Table 10 has been shown on Table 11. Also, as an example, the confusion matrix of one out of the 150 obtained structures is shown in Table 12, which can be helpful in understanding the bias of the proposed classifier towards a particular class of attacks.</p>
+<p>The performance of the ESC-IDS has been compared with some other machine learning methods tested on the KDD dataset and is shown in Table 13. The proposed method demonstrates better performances in a number of attacks categories and an unprecedented cost per examples of 0.1579. Based on the results shown in the Table 13, it can be easily seen that the proposed approach has a good performance for detecting intrusion in computer networks. Also, this method is flexible and can be adjusted for special situations using different fitness functions.</p>
+<p>It should be noted that some values of Table 13 can be <u>misleading（误导）</u>. For example, Parzen-Window<sup id="fnref:22"><a href="#fn:22" class="footnote-ref" role="doc-noteref">[22]</a></sup> algorithm detects only whether a record is intrusive or not and does not specify the attack category. Also, the authors did not report any information regarding the false alarm rates. Also, Parzen-Window and RSS-DSS are <u>anomaly（异常）</u> detection methods that only detect if a connection record is intrusive or not, and do not have any information regarding the attack type.</p>
+<p>For systems that do not classify intrusions, correct classification concept is different from others. In classifying system, while a record has been corrected recognized as an intrusion, misclassification is considered as an error. Looking at Table 13 shows that the proposed system has correctly identified an intrusive record, while might has had problem classifying it.</p>
+<p>It can be stated that all the machine learning algorithms tested on the KDD’99 dataset offered an acceptable level of detection performance only for DoS and PROBE attack categories and demonstrated poor performance on the U2R and R2L categories<sup id="fnref:31"><a href="#fn:31" class="footnote-ref" role="doc-noteref">[31]</a></sup>. The proposed method shows improvement in these two classes (U2R and R2L).</p>
+<h1 id="7-conclusions"><a href="#7-conclusions" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>7. Conclusions</h1>
+<p>In this paper, an evolutionary soft computing approach for intrusion detection was introduced and was successfully demonstrated its usefulness on the training and testing subset of KDD Cup 99 dataset. The ANFIS network was used as a neuro-fuzzy classifier for intrusion detection. ANFIS is capable of producing fuzzy rules without the aid of human experts. Also, subtractive clustering has been utilized to determine the number of rules and membership functions with their initial locations for better classification.</p>
+<p>A fuzzy decision-making engine was developed to make the system more powerful for attack detection, using the fuzzy inference approach. At last, this paper proposed a method to use genetic algorithms to optimize the fuzzy decision-making engine. Experimentation results showed that the proposed method is effective in detecting various intrusions in computer networks.</p>
+<p>Our future work will focus on reducing features for the classifiers by methods of feature selection. Also, the work will be continued to study the fitness function of the genetic algorithm to manipulate more parameters of the fuzzy inference module, even concentrating on fuzzy rules themselves.</p>
+<h1 id="acknowledgements"><a href="#acknowledgements" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Acknowledgements</h1>
+<p>The first author thank FUM Communication and Computer Research Lab. for their in-kind support and encouragement during this research. He also wishes to express his appreciations to the helpful suggestions and comments of dear colleagues E. Bagheri and M. Hosaini.</p>
+<h1 id="appendix-a-lists-of-features-in-kdd-cup-99-dataset"><a href="#appendix-a-lists-of-features-in-kdd-cup-99-dataset" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Appendix A. Lists of features in KDD Cup 99 dataset</h1>
+<table>
+<thead>
+<tr>
+<th>Feature name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>duration</td>
+<td>continuous</td>
+<td>length (number of seconds) of theconnection</td>
+</tr>
+<tr>
+<td>protocol_type</td>
+<td>discrete</td>
+<td>type of the protocol, e.g., tcp,udp, etc.</td>
+</tr>
+<tr>
+<td>service</td>
+<td>discrete</td>
+<td>network service on the destination,e.g., http, telnet, etc.</td>
+</tr>
+<tr>
+<td>src_bytes</td>
+<td>continuous</td>
+<td>number of data bytes from source to destination</td>
+</tr>
+<tr>
+<td>dst_bytes</td>
+<td>continuous</td>
+<td>number of data bytes from destination to source</td>
+</tr>
+<tr>
+<td>flag</td>
+<td>discrete</td>
+<td>normal or error status of the connection</td>
+</tr>
+<tr>
+<td>land</td>
+<td>discrete</td>
+<td>if connection is from/to the same host/port; 0 otherwise</td>
+</tr>
+<tr>
+<td>wrong_fragment</td>
+<td>continuous</td>
+<td>number of ‘‘wrong’’ fragments</td>
+</tr>
+<tr>
+<td>urgent</td>
+<td>continuous</td>
+<td>number of urgent packets</td>
+</tr>
+<tr>
+<td>hot</td>
+<td>continuous</td>
+<td>number of ‘‘hot’’ indicators</td>
+</tr>
+<tr>
+<td>num_failed_logins</td>
+<td>continuous</td>
+<td>number of failed login attempts</td>
+</tr>
+<tr>
+<td>logged_in</td>
+<td>discrete</td>
+<td>1 if successfully logged in; 0otherwise</td>
+</tr>
+<tr>
+<td>num_compromised</td>
+<td>continuous</td>
+<td>number of ‘‘compromised’’conditions</td>
+</tr>
+<tr>
+<td>root_shell</td>
+<td>discrete</td>
+<td>1 if root shell is obtained; 0otherwise</td>
+</tr>
+<tr>
+<td>su_attempted</td>
+<td>discrete</td>
+<td>1 if ‘‘su root’’ command attempted; 0otherwise</td>
+</tr>
+<tr>
+<td>num_root</td>
+<td>continuous</td>
+<td>number of ‘‘root’’ accesses</td>
+</tr>
+<tr>
+<td>num_file_creations</td>
+<td>continuous</td>
+<td>number of file creation operations</td>
+</tr>
+<tr>
+<td>num_shells</td>
+<td>continuous</td>
+<td>number of shell prompts</td>
+</tr>
+<tr>
+<td>num_access_files</td>
+<td>continuous</td>
+<td>number of operations on accesscontrol files</td>
+</tr>
+<tr>
+<td>num_outbound_cmds</td>
+<td>continuous</td>
+<td>number of outbound commands in anftp session</td>
+</tr>
+<tr>
+<td>is_hot_login</td>
+<td>discrete</td>
+<td>1 if the login belongs to the ‘‘hot’’list; 0 otherwise</td>
+</tr>
+<tr>
+<td>is_guest_login</td>
+<td></td>
+<td>1 if the login is a ‘‘guest’’login; 0otherwise</td>
+</tr>
+<tr>
+<td>Count</td>
+<td>continuous</td>
+<td>number of connections to the samehost as the current connection in the past two seconds</td>
+</tr>
+<tr>
+<td>serror_rate</td>
+<td>continuous</td>
+<td>% of connections that have ‘‘SYN’’ errors</td>
+</tr>
+<tr>
+<td>rerror_rate</td>
+<td>continuous</td>
+<td>% of connections that have ‘‘REJ’’ errors</td>
+</tr>
+<tr>
+<td>same_srv_rate</td>
+<td>continuous</td>
+<td>% of connections to the same service</td>
+</tr>
+<tr>
+<td>diff_srv_rate</td>
+<td>continuous</td>
+<td>% of connections to different services</td>
+</tr>
+<tr>
+<td>srv_count</td>
+<td>continuous</td>
+<td>number of connections to the sameservice as the current connection in the past two seconds</td>
+</tr>
+<tr>
+<td>srv_serror_rate</td>
+<td>continuous</td>
+<td>% of connections that have ‘‘SYN’’ errors</td>
+</tr>
+<tr>
+<td>srv_rerror_rate</td>
+<td>continuous</td>
+<td>% of connections that have ‘‘REJ’’ errors</td>
+</tr>
+<tr>
+<td>srv_diff_host_rate</td>
+<td>continuous</td>
+<td>% of connections to different hosts</td>
+</tr>
+<tr>
+<td>dst_host_count</td>
+<td>continuous</td>
+<td>count for destination host</td>
+</tr>
+<tr>
+<td>dst_host_srv_count</td>
+<td>continuous</td>
+<td>srv_count for destination host</td>
+</tr>
+<tr>
+<td>dst_host_same_srv_rate</td>
+<td>continuous</td>
+<td>same_srv_rate for destination host</td>
+</tr>
+<tr>
+<td>dst_host_diff_srv_rate</td>
+<td>continuous</td>
+<td>diff_srv_rate for destination host</td>
+</tr>
+<tr>
+<td>dst_host_same_src_port_rate</td>
+<td>continuous</td>
+<td>same_src_port_rate for destination host</td>
+</tr>
+<tr>
+<td>dst_host_diff_host_rate</td>
+<td>continuous</td>
+<td>diff_host_rate for destination host</td>
+</tr>
+<tr>
+<td>dst_host_serror_rate</td>
+<td>continuous</td>
+<td>serror_rate for destination host</td>
+</tr>
+<tr>
+<td>dst_host_srv_serror_rate</td>
+<td>continuous</td>
+<td>srv_serror_rate for destination host</td>
+</tr>
+<tr>
+<td>dst_host_rerror_rate</td>
+<td>continuous</td>
+<td>rerror_rate for destination host</td>
+</tr>
+<tr>
+<td>dst_host_srv_rerror_rate</td>
+<td>continuous</td>
+<td>srv_serror_rate for destination host</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="回答问题部分"><a href="#回答问题部分" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>回答问题部分</h1>
+<p>以下回答均为自己作答，并不能保证答案准确性，本学渣倒了...</p>
+<h2 id="instructions"><a href="#instructions" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Instructions</h2>
+<p>Please read the paper - “A new approach to intrusion detection based on an evolutionary soft computing model using neuro-fuzzy classifiers” and write a report in English based on your reading and what you have learned in the Computational Intelligence class. In the report, you should provide the answers for the following questions. Do not copy the text from the paper directly. You may include some figures to better illustrate your explanation. Use the font of Times New Roman with size 12.</p>
+<h2 id="q1-give-an-overall-summary-of-the-paper-and-list-the-key-contributions-of-the-paper"><a href="#q1-give-an-overall-summary-of-the-paper-and-list-the-key-contributions-of-the-paper" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Q1**.** Give an overall summary of the paper and list the key contributions of the paper.</h2>
+<h3 id="summary"><a href="#summary" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Summary</h3>
+<p>Intrusion detection system (short for &quot;IDS&quot;) is a real-time monitoring of network transmission to determine whether the operation or behavior is intrusive. The existing shortcomings based on abuse and misuse have low efficiency or high false alarm rate. This paper combines the idea of soft computing with IDS to design a new intrusion detection system using neuro-fuzzy, fuzzy logic and genetic algorithms. The system can effectively identify intrusions and classify intrusion behaviors, while continuously optimizing its own recognition engine, and finally has this good performance on the KDD-Cup 99 data set.</p>
+<h3 id="key-contributions"><a href="#key-contributions" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Key contributions:</h3>
+<ol>
+<li>The first layer of the proposed system uses ANFIS as the main classifier to convert the processable data stream from features that is from inputs to the degree that is in the closed range of -1 to 1 of relativity of the data. Two different training data sets are used to train the classifier.</li>
+<li>The second layer of the proposed uses Fuzzy Inference module that is with fuzzy logic and based on empirical knowledge to make the final decision. And the final result is obtained through fuzzy logic rather than simple pattern matching. The system uses weighted average instead of defuzzification process to avoid more time-consuming operations.</li>
+<li>The proposed system uses genetic algorithm to optimize the structure of the decision engine. More specifically, this system uses genetic algorithms to optimize the input MFs of the fuzzy decision-making module multiple times and in multiple groups. Two different fitness functions are used to optimize the fuzzy decision module.</li>
+<li>The proposed system applies subtractive clustering to use the fewest rules to best model data behavior. Subtractive clustering helps the generation of FIS.</li>
+</ol>
+<h2 id="q2-please-explain-how-artificial-neural-network-is-used-in-the-proposed-ids-system"><a href="#q2-please-explain-how-artificial-neural-network-is-used-in-the-proposed-ids-system" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Q2. Please explain how artificial neural network is used in the proposed IDS system.</h2>
+<p>The proposed IDS system uses adaptive neuro fuzzy inference system (ANFIS) that is as the main classifier to build a model based on the target system sample data.</p>
+<p>Modern neuro-fuzzy systems are usually represented as special multilayer feedforward neural networks. A neuro-fuzzy system is a fuzzy system that uses a learning algorithm derived from or inspired by neural network theory to determine its parameters (fuzzy sets and fuzzy rules) by processing the target sample data. ANFIS that is based on Takagi–Sugeno fuzzy inference system integrates both neural networks and fuzzy logic principles, so it has potential to capture the benefits of both of them.</p>
+<p>In this paper, the proposed IDS system uses ANFIS as a fuzzy classifier for intrusion detection. Several neuro-fuzzy classifiers use the characteristics of audit data to classify activities in the network. ANFIS module implements a neural network that is a reasoning mechanism with supervised learning capability. The network is comprised of nodes with specific functions collected in layers. The five levels of ANFIS conducted five processes, namely generating the membership grades, calculating the firing strength of each rule, calculating the ratios of the rule’s firing strength, computing a parameter function and aggregating the overall output. Meanwhile, ANFIS estimate membership function parameter by using either back propagation or a combination of least square estimations and back propagation. So ANFIS can compute the membership function parameters and the Fuzzy inference system can track data.</p>
+<h2 id="q3-please-explain-how-fuzzy-logic-is-used-in-the-proposed-ids-system"><a href="#q3-please-explain-how-fuzzy-logic-is-used-in-the-proposed-ids-system" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Q3. Please explain how fuzzy logic is used in the proposed IDS system.</h2>
+<p>The proposed IDS system applies fuzzy logic systems to reason about data. And the rules in a fuzzy system are usually of a form similar to “IF … THEN…”.</p>
+<p>Fuzzy logic system uses a collection of fuzzy membership functions and rules, instead of Boolean logic. The general inference process in a fuzzy system occurs in four steps:</p>
+<ol>
+<li>Fuzzification. Use membership functions to determine the degree of truth for each rule premise.</li>
+<li>Inference. Compute the truth-value and applied to the conclusion part of each rule. One fuzzy subset is to be assigned to each output variable for each rule.</li>
+<li>Composition. All of the fuzzy subsets assigned to each output variable are combined together to form a single fuzzy subset for each output variable with various ways.</li>
+<li>Defuzzification. Convert the fuzzy output set to a crisp number.</li>
+</ol>
+<p>In this paper, the proposed IDS system uses A five-input, single-output of Mamdani fuzzy inference system. It receives the output from the previous classifier, enter the decision process, and finally decide whether the activity is intrusive. It chooses Max and Min as T-norm and T-conorm operator. Not only that, the system uses weighted average instead of defuzzification process to save time in the fourth step.</p>
+<h2 id="q4-please-explain-how-genetic-algorithm-is-used-in-the-proposed-ids-system"><a href="#q4-please-explain-how-genetic-algorithm-is-used-in-the-proposed-ids-system" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Q4. Please explain how genetic algorithm is used in the proposed IDS system.</h2>
+<p>The system relies on the fuzzy decision engine to make an output of whether the final behavior is intrusive, so the structure of the fuzzy decision engine is crucial to the judgment of IDS. In this paper, the proposed IDS system uses genetic algorithm to optimize the input MFs of the fuzzy decision-making module.</p>
+<p>The idea of genetic algorithm is to start with the initial population and find a part of individuals with strong adaptability. These individuals can produce a new generation. The new generation inherits the excellent nature of the previous generation and continues to produce newer generations. Therefore, parents have a strong fitness, their children will be better than their parents, and have a better chance of survival. This process of survival of the fittest will be repeated until certain conditions are reached. The following five phases are the key points in genetic algorithm:</p>
+<ol>
+<li>Initial population. In the population, each individual represents a feasible solution. The initial individual (or chromosome) consists of 320 binary data. Every 8 bits of the chromosome determine one of the four parameters of MF. As shown in the figure below.</li>
+<li>Fitness function. The reason that genetic algorithms cannot be considered to be a lazy way of performing design work is precisely because of the effort involved in designing a workable fitness function. And the fitness function is the function that should be optimized. The proposed IDS system uses two different fitness functions. In this paper, the one is based on Cost Per Example with equal misclassification costs and the other is based on the cost per examples used for evaluating results of the KDD’99 competition.</li>
+<li>Selection. Select the fittest individuals and let them pass their genes to the next generation.</li>
+<li>Crossover. For each pair of parents to be mated, a crossover point is chosen at random from within the genes. After the process, the new offspring are added to the population.</li>
+<li>Mutation. In certain new offspring formed, some of their genes can be subjected to a mutation with a low random probability. This implies that some of the bits in the bit string can be flipped. And mutation occurs to maintain diversity within the population and prevent premature convergence.</li>
+</ol>
+<p>In this paper, it is not always the same for genetic algorithm optimization results. Therefore, in the optimization stage, it will be carried out three times, and the average experimental results of each structure are calculated. At the same time, because the impact of random sampling is small, five sub-sets that do not overlap with each other were used in the optimization stage for testing. In summary, the optimization uses a total of 150 different structures, and the final result is the average result of these 150 structures.</p>
+<h2 id="q5-discuss-the-limitations-of-the-proposed-ids-system-in-the-paper"><a href="#q5-discuss-the-limitations-of-the-proposed-ids-system-in-the-paper" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Q5. Discuss the limitations of the proposed IDS system in the paper.</h2>
+<p>From Table 12 of the article, we can see that the proposed system has the highest accuracy for Dos attacks and high accuracy for Normal and PROBE. Therefore, it is proved that the system can realize the improvement of intrusion detection system by using fuzzy neural, fuzzy logic and genetic algorithm. However, the accuracy of the system for U2R and R2L attacks is very low, and U2R still has a high false alarm rate. As mentioned in the paper[[<a href="#_edn1">i]</a>], the KDD data set has shortcomings and limitations, and advocates that the data set should not be used for training pattern recognition or machine learning algorithms to perform abuse detection against these two attack categories.</p>
+<p>The realization of the operator in the genetic algorithm also has many parameters, such as the crossover rate and the mutation rate, and the selection of these parameters seriously affects the quality of the solution, and most of the selection of these parameters currently depends on experience. We cannot find the specific values of relevant parameters from this paper, so there may be areas for improvement for the genetic algorithm module.</p>
+<hr>
+<p>Fuzzy logic 的四个步骤：</p>
+<ol>
+<li>
+<p>Fuzzification. The membership functions defined on the input variables are applied to their actual values, to determine the degree of truth for each rule premise.</p>
+</li>
+<li>
+<p>Inference. The truth-value for the premise of each rule is computed, and applied to the conclusion part of each rule. This results in one fuzzy subset to be assigned to each output variable for each rule. Usually only MIN or PRODUCT are used as inference rules. In MIN inferencing, the output membership function is clipped
+off at a height corresponding to the rule premise's computed degree of truth (fuzzy logic AND). In PRODUCT inferencing, the output membership function is scaled by the rule premise's computed degree of truth.</p>
+</li>
+<li>
+<p>Composition. All of the fuzzy subsets assigned to each output variable are combined together to form a single fuzzy subset for each output variable. This can be done a variety of ways. The two most common methods are MAX and SUM composition. In MAX composition, the combined output fuzzy subset is constructed by taking the point wise maximum over all of the fuzzy subsets assigned to a variable by the inference rule (fuzzy logic OR). In SUM composition, the combined output fuzzy subset is constructed by taking the point wise sum over all of the fuzzy subsets assigned to the output variable by the inference rule.</p>
+</li>
+<li>
+<p>Defuzzification. This is used when it is useful to convert the fuzzy output set to a crisp number. Quite a few defuzzification algorithms are known. Two of the more common techniques are the CENTROID and MAXIMUM methods. In the CENTROID method, the crisp value of the output variable is computed by finding the variable value of the center of gravity of the membership function for the fuzzy value. In the MAXIMUM method, one of the variable values at which the fuzzy subset has its maximum truth-value is chosen as the crisp value for the output variable.</p>
+</li>
+<li>
+<p>模糊化在输入变量上定义的隶属函数将应用于其实际值，以确定每个规则前提的真实程度。</p>
+</li>
+<li>
+<p>推论。计算每个规则前提的真值，并将其应用于每个规则的结论部分。这导致将一个模糊子集分配给每个规则的每个输出变量。通常仅将MIN或PRODUCT用作推理规则。在MIN推论中，输出隶属度函数被裁剪
+在与规则前提计算的真实度（模糊逻辑AND）相对应的高度偏离。在PRODUCT推论中，输出隶属度函数由规则前提的计算出的真实程度进行缩放。</p>
+</li>
+<li>
+<p>组成。分配给每个输出变量的所有模糊子集都组合在一起，以形成每个输出变量的单个模糊子集。这可以通过多种方式完成。两种最常见的方法是MAX和SUM合成。在MAX合成中，组合输出模糊子集是通过对推理规则（模糊逻辑OR）分配给变量的所有模糊子集取逐点最大值来构造的。在SUM合成中，组合输出模糊子集是通过对推理规则分配给输出变量的所有模糊子集进行逐点求和来构造的。</p>
+</li>
+<li>
+<p>模糊化。当将模糊输出集转换为清晰数字时很有用。已知许多解模糊算法。两种较常见的技术是CENTROID和MAXIMUM方法。在CENTROID方法中，通过为模糊值找到隶属函数的重心的变量值来计算输出变量的明晰值。在MAXIMUM方法中，将模糊子集具有其最大真值的变量值之一选择为输出变量的明晰值。</p>
+</li>
+</ol>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>H. Debar, M. Dacier, A. Wespi, Towards a taxonomy of intrusion detection systems, Computer Networks 31 (1999) 805–822. <a href="#fnref:1" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>S. Axelsson, 2000. Intrusion detection systems: a survey and taxonomy, Department of Computer Engineering, Chalmers University, Report No. 99-15. <a href="#fnref:2" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p>L.A. Zadeh, Role of soft computing and fuzzy logic in the conception, design and development of information/intelligent systems, Lecture Notes in Computer Science 695 (1998) 1–9. <a href="#fnref:3" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:4" role="doc-endnote">
+<p>D. Song, M.I. Heywood, A.N. Zincir-Heywood, Training genetic programming on half a million patterns: an example from anomaly detection, IEEE Transactions on Evolutionary Computation 9 (3) (2005) 225–239, doi:10.1109/TEVC.2004.841683. <a href="#fnref:4" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:5" role="doc-endnote">
+<p>J. Gomez, D. Dasgupta, Evolving fuzzy classifiers for intrusion detection, in: Proceeding of 2002 IEEE Workshop on Information Assurance, United States Military Academy, West Point, NY, USA, 2001, pp. 68–75. <a href="#fnref:5" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:6" role="doc-endnote">
+<p>K. Shah, N. Dave, S. Chavan, S. Mukherjee, A. Abraham, S. Sanyal, Adaptive neuro-fuzzy intrusion detection system, in: Proceeding of IEEE International Conference on Information Technology: Coding and Computing (ITCC’04), 5–7 April 2004, IEEE Computer Society, vol. 1, USA, 2004, pp. 70–74. <a href="#fnref:6" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:7" role="doc-endnote">
+<p>A. Abraham, R. Jain, Soft computing models for network intrusion detection systems, Studies in Computational Intelligence 16 (2005) 191–211, doi:10.1007/b98152. <a href="#fnref:7" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:8" role="doc-endnote">
+<p>J.E. Dickerson, J. Juslin, O. Koukousoula, J.A. Dickerson, Fuzzy intrusion detection, in: Proceeding of IFSA World Congress and 20th North American Fuzzy Information Processing Society (NAFIPS) International Conference. North American Fuzzy Information Processing Society (NAFIPS), 25–28 July 2001, Vancouver, Canada, IEEE Computer Society, vol. 3, 2001, pp. 1506–1510. <a href="#fnref:8" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:9" role="doc-endnote">
+<p>M. Gao, M.C. Zhou, Fuzzy intrusion detection based on fuzzy reasoning Petri nets, in: Proceeding of the IEEE International Conference on Systems, October 5–8, 2003, Man and Cybernetics, Washington, DC, USA, vol. 2, 2003, pp. 1272–1277. <a href="#fnref:9" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:10" role="doc-endnote">
+<p>M.S. Abadeh, J. Habibi, C. Lucas, Intrusion detection using a fuzzy genetics-based learning algorithm, Journal of Network and Computer Applications (2005), doi:10.1016/j.jnca.2005.05.002. <a href="#fnref:10" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:11" role="doc-endnote">
+<p>D. Nauck, R. Kruse, NEFCLASS – a neuro-fuzzy approach for the classification of data, in: Proceeding of 1995 ACM Symposium on Applied Computing, Nashville, USA, February 26–28, 1995, ACM Press, New York, 1995, pp. 461–465. <a href="#fnref:11" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:12" role="doc-endnote">
+<p>J.-S.R. Jang, ANFIS: adaptive-network-based fuzzy inference systems, IEEE Transactions on Systems, Man, and Cybernetics 23 (3) (1993) 665–685, doi:10.1109/21.256541. <a href="#fnref:12" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:13" role="doc-endnote">
+<p>H. Ishibuchi, T. Nakashima, T. Murata, A fuzzy classifier system that generates fuzzy if–then rules for pattern classification problems, in: Proceedings of 2nd IEEE International Conference on Evolutionary Computation, Perth, Australia, 29 November–1 December 1995, IEEE, vol. 2, 1995, pp. 759–764. <a href="#fnref:13" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:14" role="doc-endnote">
+<p>J. Liu, J. Kwok, An extended genetic rule induction algorithm, in: Proceedings of the Congress on Evolutionary Computation Conference, 16–19 July 2000, La Jolla, CA, USA, vol. 1, 2000, pp. 458–463. <a href="#fnref:14" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:15" role="doc-endnote">
+<p>DARPA Intrusion detection evaluation: <a href="http://www.ll.mit.edu/SSt/" target="_blank" rel="noopener">http://www.ll.mit.edu/SSt/</a> ideval/result/result_index.html. <a href="#fnref:15" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:16" role="doc-endnote">
+<p>B. Pfahringer, Winning the KDD99 classification cup: bagged boosting, SIGKDD Explorations 1 (2) (2000) 65–66. <a href="#fnref:16" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:17" role="doc-endnote">
+<p>I. Levin, KDD-99 classifier learning contest LLSoft’s results overview. SIGKDD explorations, ACM SIGKDD 1 (2) (2000) 67–75. <a href="#fnref:17" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:18" role="doc-endnote">
+<p>M. Vladimir, V. Alexei, S. Ivan, The MP13 approach to the KDD’99 classifier learning contest, SIGKDD Explorations 1 (2) (2000) 76–77. <a href="#fnref:18" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:19" role="doc-endnote">
+<p>W. Lee, S.J. Stolfo, K Mok, A data mining framework for building intrusion detection models, in: Proceedings of IEEE Symposium on Security and Privacy, 9–12 May 1999, Oakland, CA, USA, pp.
+120–132. <a href="#fnref:19" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:20" role="doc-endnote">
+<p>R. Agarwal, M.V. Joshi, PNrule: A New Framework for Learning Classifier Models in Data Mining, Department of Computer Science, University of Minnesota, Report No. RC-21719, 2000. <a href="#fnref:20" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:21" role="doc-endnote">
+<p>M.R. Sabhnani, G. Serpen, Application of machine learning algorithms to KDD intrusion detection dataset within misuse detection context, in: Proceedings of International Conference on Machine Learning: Models, Technologies, and Applications, 23–26 June 2003, Las Vegas, Nevada, USA, 2003, pp. 209–215. <a href="#fnref:21" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:22" role="doc-endnote">
+<p>D.Y. Yeung, C. Chow, Parzen-Window network intrusion detectors, in: Proceeding of 16th International Conference on Pattern Recognition, 11–15 August, 2002, IEEE Computer Society, vol. 4, pp. 385– 388. <a href="#fnref:22" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:23" role="doc-endnote">
+<p>J. McHugh, Testing intrusion detection systems: a critique of the 1998 and 1999 DARPA intrusion detection, ACM Transactions on Information and System Security (TISSEC) 3 (4) (2000) 262–294. <a href="#fnref:23" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:24" role="doc-endnote">
+<p>M. Mahoney, P.K. Chan, An analysis of the 1999 DARPA/Lincoln laboratory evaluation data for network anomaly detection. Recent advances in intrusion detection: 6th international symposium, RAID (2003) 220–237, doi:10.1007/b13476. <a href="#fnref:24" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:25" role="doc-endnote">
+<p>KDD Cup 1999 Intrusion detection dataset: <a href="http://kdd.ics.uci.edu/" target="_blank" rel="noopener">http://kdd.ics.uci.edu/</a> databases/kddcup99/kddcup99.html. <a href="#fnref:25" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:26" role="doc-endnote">
+<p>E.H. Mamdani, S. Assilian, An experiment in linguistic synthesis with a fuzzy logic controller, International Journal of Man-Machine Studies 7 (1) (1975) 1–13. <a href="#fnref:26" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:27" role="doc-endnote">
+<p>T. Takagi, M. Sugeno, Fuzzy identification of systems and its applications to modeling and control, IEEE Transaction on Systems, Man, and Cybernetics 15 (1985) 116–132. <a href="#fnref:27" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:28" role="doc-endnote">
+<p>S. Chiu, Fuzzy model identification based on cluster estimation, Journal of Intelligent &amp; Fuzzy Systems 2 (3) (1994) 267–278. <a href="#fnref:28" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:29" role="doc-endnote">
+<p>R. Yager, D. Filev, Generation of fuzzy rules by mountain clustering, Journal of Intelligent &amp; Fuzzy Systems 2 (3) (1994) 209–219. <a href="#fnref:29" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:30" role="doc-endnote">
+<p>A. Nadjaran Toosi, M. Kahani, R. Monsefi, Intrusion detection based on neuro fuzzy classification, in: Proceedings of IEEE International Conference on Computing and Informatics, 6–8 June 2006, Kuala Lumpur, Malaysia, 2006. <a href="#fnref:30" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:31" role="doc-endnote">
+<p>M.R. Sabhnani, G. Serpen, Why machine learning algorithms fail in misuse detection on KDD intrusion detection data set, Journal of Intelligent Data Analysis 8 (4) (2004) 403–415. <a href="#fnref:31" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:32" role="doc-endnote">
+<p>E.D. Goldberg, Genetic Algorithms in Search, Optimization &amp; Machine Learning, Addison-Wesley, Reading, MA, 1989. <a href="#fnref:32" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+</ol>
+</section>
+
+            </div>
+
+        </article>
+
+        
+
+        
+    
+    
+        <ul class="post-copyright">
+            <li class="copyright-item author"><span class="copyright-item-text">作者</span>：<a href="https://blog.littleghost.ml" target="_blank" rel="noopener">LittleGhost</a></li>
+            
+                
+                
+                
+                
+                <li class="copyright-item link"><span class="copyright-item-text">链接</span>：<a href="/posts/A-new-approach-to-intrusion-detection-based-on-an-evolutionary/" target="_blank" rel="noopener">https://blog.littleghost.ml/posts/A-new-approach-to-intrusion-detection-based-on-an-evolutionary/</a></li>
+            
+            <li class="copyright-item license"><span class="copyright-item-text">许可</span>：<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></li>
+            
+        </ul>
+    
+
+
+
+        
+    <div class="updated-badge-container">
+        <span title="Updated @ 2020-06-07 11:30:24 CST" style="cursor:help">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2020-06-07</text><text x="915" y="140" textLength="650" transform="scale(.1)">2020-06-07</text></g></svg>
+        </span></div>
+
+
+
+        
+
+
+        <div class="post-share">
+
+        
+
+        <div class="share-items">
+
+            
+
+            
+
+            
+
+            
+
+            
+                <div class="share-item weibo">
+                    
+                    <a href="https://service.weibo.com/share/share.php?&amp;url=https://blog.littleghost.ml/posts/A-new-approach-to-intrusion-detection-based-on-an-evolutionary/&amp;title=%e3%80%8aA%20new%20approach%20to%20intrusion%20detection%20based%20on%20an%20evolutionary%e3%80%8b&amp;pic=https://blog.littleghost.ml/icons/22980536.jfif&amp;searchPic=false" title="分享到「新浪微博」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon weibo-icon"><path d="M407 177.6c7.6-24-13.4-46.8-37.4-41.7-22 4.8-28.8-28.1-7.1-32.8 50.1-10.9 92.3 37.1 76.5 84.8-6.8 21.2-38.8 10.8-32-10.3zM214.8 446.7C108.5 446.7 0 395.3 0 310.4c0-44.3 28-95.4 76.3-143.7C176 67 279.5 65.8 249.9 161c-4 13.1 12.3 5.7 12.3 6 79.5-33.6 140.5-16.8 114 51.4-3.7 9.4 1.1 10.9 8.3 13.1 135.7 42.3 34.8 215.2-169.7 215.2zm143.7-146.3c-5.4-55.7-78.5-94-163.4-85.7-84.8 8.6-148.8 60.3-143.4 116s78.5 94 163.4 85.7c84.8-8.6 148.8-60.3 143.4-116zM347.9 35.1c-25.9 5.6-16.8 43.7 8.3 38.3 72.3-15.2 134.8 52.8 111.7 124-7.4 24.2 29.1 37 37.4 12 31.9-99.8-55.1-195.9-157.4-174.3zm-78.5 311c-17.1 38.8-66.8 60-109.1 46.3-40.8-13.1-58-53.4-40.3-89.7 17.7-35.4 63.1-55.4 103.4-45.1 42 10.8 63.1 50.2 46 88.5zm-86.3-30c-12.9-5.4-30 .3-38 12.9-8.3 12.9-4.3 28 8.6 34 13.1 6 30.8.3 39.1-12.9 8-13.1 3.7-28.3-9.7-34zm32.6-13.4c-5.1-1.7-11.4.6-14.3 5.4-2.9 5.1-1.4 10.6 3.7 12.9 5.1 2 11.7-.3 14.6-5.4 2.8-5.2 1.1-10.9-4-12.9z"/></svg></a>
+                </div>
+            
+
+            
+                <div class="share-item douban">
+                    
+                    <a href="https://www.douban.com/share/service?href=https://blog.littleghost.ml/posts/A-new-approach-to-intrusion-detection-based-on-an-evolutionary/&amp;name=%e3%80%8aA%20new%20approach%20to%20intrusion%20detection%20based%20on%20an%20evolutionary%e3%80%8b&amp;text=%e8%bf%99%e5%ad%a6%e6%9c%9f%e9%80%89%e4%bf%ae%e4%ba%86%e3%80%8a%e8%ae%a1%e7%ae%97%e6%99%ba%e8%83%bd%e3%80%8b%ef%bc%8c%e5%a4%a7%e4%bd%9c%e4%b8%9a%e6%98%af%e9%98%85%e8%af%bb%e8%ae%ba%e6%96%87%e5%ae%8c%e6%88%90%e6%8a%a5%e5%91%8a%ef%bc%8c%e4%ba%8e%e6%98%af%e8%ae%b0%e5%bd%95%e4%b8%8b%e8%af%bb%e8%ae%ba%e6%96%87%e7%9a%84%e8%bf%87%e7%a8%8b%e3%80%82%20A%20new%20approach%20to%e2%80%a6%e2%80%a6%0a%20%20%20%20%0a%20%20%20%20" title="分享到「豆瓣」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon douban-icon"><path d="M.643.92v2.412h22.714V.92H.643zm1.974 4.926v9.42h18.764v-9.42H2.617zm2.72 2.408H18.69v4.605H5.338V8.254zm1.657 7.412l-2.512.938c1.037 1.461 1.87 2.825 2.512 4.091H0v2.385h24v-2.385h-6.678c.818-1.176 1.589-2.543 2.303-4.091l-2.73-.938a29.952 29.952 0 01-2.479 5.03h-4.75c-.786-1.962-1.677-3.641-2.672-5.03Z"/></svg></a>
+                </div>
+            
+
+            
+                <div class="share-item qq">
+                    
+                    <a href="https://connect.qq.com/widget/shareqq/index.html?url=https://blog.littleghost.ml/posts/A-new-approach-to-intrusion-detection-based-on-an-evolutionary/&amp;title=%e3%80%8aA%20new%20approach%20to%20intrusion%20detection%20based%20on%20an%20evolutionary%e3%80%8b&amp;summary=%e8%bf%99%e5%ad%a6%e6%9c%9f%e9%80%89%e4%bf%ae%e4%ba%86%e3%80%8a%e8%ae%a1%e7%ae%97%e6%99%ba%e8%83%bd%e3%80%8b%ef%bc%8c%e5%a4%a7%e4%bd%9c%e4%b8%9a%e6%98%af%e9%98%85%e8%af%bb%e8%ae%ba%e6%96%87%e5%ae%8c%e6%88%90%e6%8a%a5%e5%91%8a%ef%bc%8c%e4%ba%8e%e6%98%af%e8%ae%b0%e5%bd%95%e4%b8%8b%e8%af%bb%e8%ae%ba%e6%96%87%e7%9a%84%e8%bf%87%e7%a8%8b%e3%80%82%20A%20new%20approach%20to%e2%80%a6%e2%80%a6%0a%20%20%20%20%0a%20%20%20%20&amp;pics=https://blog.littleghost.ml/icons/22980536.jfif&amp;site=LittleGhost%e7%9a%84%e5%8d%9a%e5%ae%a2" title="分享到「QQ」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon qq-icon"><path d="M433.754 420.445c-11.526 1.393-44.86-52.741-44.86-52.741 0 31.345-16.136 72.247-51.051 101.786 16.842 5.192 54.843 19.167 45.803 34.421-7.316 12.343-125.51 7.881-159.632 4.037-34.122 3.844-152.316 8.306-159.632-4.037-9.045-15.25 28.918-29.214 45.783-34.415-34.92-29.539-51.059-70.445-51.059-101.792 0 0-33.334 54.134-44.859 52.741-5.37-.65-12.424-29.644 9.347-99.704 10.261-33.024 21.995-60.478 40.144-105.779C60.683 98.063 108.982.006 224 0c113.737.006 163.156 96.133 160.264 214.963 18.118 45.223 29.912 72.85 40.144 105.778 21.768 70.06 14.716 99.053 9.346 99.704z"/></svg></a>
+                </div>
+            
+
+            
+                <div class="share-item qzone">
+                    
+                    <a href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.littleghost.ml/posts/A-new-approach-to-intrusion-detection-based-on-an-evolutionary/&amp;title=%e3%80%8aA%20new%20approach%20to%20intrusion%20detection%20based%20on%20an%20evolutionary%e3%80%8b&amp;summary=%e8%bf%99%e5%ad%a6%e6%9c%9f%e9%80%89%e4%bf%ae%e4%ba%86%e3%80%8a%e8%ae%a1%e7%ae%97%e6%99%ba%e8%83%bd%e3%80%8b%ef%bc%8c%e5%a4%a7%e4%bd%9c%e4%b8%9a%e6%98%af%e9%98%85%e8%af%bb%e8%ae%ba%e6%96%87%e5%ae%8c%e6%88%90%e6%8a%a5%e5%91%8a%ef%bc%8c%e4%ba%8e%e6%98%af%e8%ae%b0%e5%bd%95%e4%b8%8b%e8%af%bb%e8%ae%ba%e6%96%87%e7%9a%84%e8%bf%87%e7%a8%8b%e3%80%82%20A%20new%20approach%20to%e2%80%a6%e2%80%a6%0a%20%20%20%20%0a%20%20%20%20&amp;pics=https://blog.littleghost.ml/icons/22980536.jfif&amp;site=LittleGhost%e7%9a%84%e5%8d%9a%e5%ae%a2" title="分享到「QQ 空间」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon qzone-icon"><path d="M23.985 9.202c-.032-.099-.127-.223-.334-.258-.207-.036-7.351-1.406-7.351-1.406s-.105-.022-.198-.07c-.092-.047-.127-.167-.127-.167S12.447.956 12.349.77C12.25.583 12.104.532 12 .532c-.104 0-.251.051-.349.238-.098.186-3.626 6.531-3.626 6.531s-.035.12-.128.167c-.092.047-.197.07-.197.07S.556 8.908.348 8.943c-.208.036-.302.16-.333.258a.477.477 0 0 0 .125.449l5.362 5.49s.072.08.119.172c.016.104.005.21.005.21s-1.189 7.242-1.22 7.45.075.369.159.43c.083.062.233.106.421.013.189-.093 6.812-3.261 6.812-3.261s.098-.044.201-.061c.103-.017.201.061.201.061s6.623 3.168 6.812 3.261c.188.094.338.049.421-.013a.463.463 0 0 0 .159-.43c-.021-.14-.93-5.677-.93-5.677.876-.54 1.425-1.039 1.849-1.747-2.594.969-6.006 1.717-9.415 1.866-.915.041-2.41.097-3.473-.015-.678-.071-1.17-.144-1.243-.438-.053-.215.054-.46.545-.831a2640.5 2640.5 0 0 1 2.861-2.155c1.285-.968 3.559-2.47 3.559-2.731 0-.285-2.144-.781-4.037-.781-1.945 0-2.275.132-2.811.168-.488.034-.769.005-.804-.138-.06-.248.183-.389.588-.568.709-.314 1.86-.594 1.984-.626.194-.052 3.082-.805 5.618-.535 1.318.14 3.244.668 3.244 1.276 0 .342-1.721 1.494-3.225 2.597-1.149.843-2.217 1.561-2.217 1.688 0 .342 3.533 1.241 6.689 1.01l.003-.022c.048-.092.119-.172.119-.172l5.362-5.49a.477.477 0 0 0 .127-.449z"/></svg></a>
+                </div>
+            
+
+            
+                <div class="share-item qrcode">
+                    <div class="qrcode-container" title="通过「二维码」"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon qrcode-icon"><path d="M0 224h192V32H0v192zM64 96h64v64H64V96zm192-64v192h192V32H256zm128 128h-64V96h64v64zM0 480h192V288H0v192zm64-128h64v64H64v-64zm352-64h32v128h-96v-32h-32v96h-64V288h96v32h64v-32zm0 160h32v32h-32v-32zm-64 0h32v32h-32v-32z"/></svg><div id="qrcode-img"></div>
+                    </div>
+                    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+
+<script>
+    var typeNumber = 0;
+    var errorCorrectionLevel = 'L';
+    var qr = qrcode(typeNumber, errorCorrectionLevel);
+    qr.addData('https:\/\/blog.littleghost.ml\/posts\/A-new-approach-to-intrusion-detection-based-on-an-evolutionary\/');
+    qr.make();
+    document.getElementById('qrcode-img').innerHTML = qr.createImgTag();
+</script>
+
+                </div>
+            
+
+        </div>
+
+    </div>
+
+
+
+
+        
+    
+    
+
+
+
+        
+    
+        <div class="post-tags">
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%99%BA%E8%83%BD/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>计算智能</a>
+                
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/CI/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>CI</a>
+                
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>遗传算法</a>
+                
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/AG/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>AG</a>
+                
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/%E6%A8%A1%E7%B3%8A%E9%80%BB%E8%BE%91FL/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>模糊逻辑&#34;，&#34;FL&#34;</a>
+                
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/%E5%85%A5%E4%BE%B5%E6%A3%80%E6%B5%8B%E7%B3%BB%E7%BB%9F/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>入侵检测系统</a>
+                
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/ids/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>ids</a>
+                
+            
+        </div>
+    
+
+
+
+        
+
+
+        
+
+
+        
+    
+        
+        
+    
+    
+    
+    
+        <ul class="post-nav">
+            
+            
+                <li class="post-nav-next">
+                    <a href="/posts/%E7%BD%91%E9%BC%8E%E6%9D%AF%E7%8E%84%E6%AD%A6%E7%BB%84%E8%8F%9C%E9%B8%A1%E7%9A%84%E4%B8%A4%E9%A2%98writeup/" rel="next">网鼎杯玄武组菜鸡的两题writeup &gt;</a>
+                </li>
+            
+        </ul>
+    
+
+
+
+        
+
+
+    </div>
+</main>
+
+
+            
+    <div id="back-to-top" class="back-to-top">
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon arrow-up"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg></a>
+    </div>
+
+
+            
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="site-info">©&nbsp;2016–2020&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon footer-icon"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg>&nbsp;LittleGhost</div><div class="powered-by">Powered by <a href="https://github.com/gohugoio/hugo" target="_blank" rel="noopener">Hugo</a> | Theme is <a href="https://github.com/reuixiy/hugo-theme-meme" target="_blank" rel="noopener">MemE</a></div><div class="site-copyright"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></div>
+                <div class="busuanzi-site-uv-and-pv">
+                    <span id="busuanzi_container_site_uv">本站访客数&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon busuanzi-site-uv"><path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"/></svg>&nbsp;<span id="busuanzi_value_site_uv"></span></span>&nbsp;|&nbsp;<span id="busuanzi_container_site_pv">本站访问量&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon busuanzi-site-pv"><path d="M288 144a110.94 110.94 0 0 0-31.24 5 55.4 55.4 0 0 1 7.24 27 56 56 0 0 1-56 56 55.4 55.4 0 0 1-27-7.24A111.71 111.71 0 1 0 288 144zm284.52 97.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400c-98.65 0-189.09-55-237.93-144C98.91 167 189.34 112 288 112s189.09 55 237.93 144C477.1 345 386.66 400 288 400z"/></svg>&nbsp;<span id="busuanzi_value_site_pv"></span></span>
+                </div>
+
+            
+
+
+            
+        </div>
+    </footer>
+
+
+        </div>
+        <script src="/js/meme.min.8eeb1784bd2ee50e5dadc087eca94dc8d496f0e502c20b56b8215eb9e5e815cc.js" integrity="sha256-jusXhL0u5Q5drcCH7KlNyNSW8OUCwgtWuCFeueXoFcw="></script>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+<script>
+    var scroll = new SmoothScroll('a[href*="#"]', {
+        speedAsDuration: true,
+        header: '[data-scroll-header]'
+    });
+</script>
+
+
+
+
+
+
+    <script>
+    if (typeof MathJax === 'undefined') {
+        window.MathJax = {
+            loader: {
+                load: ['[tex]/mhchem']
+            },
+            
+            tex: {
+                inlineMath: {'[+]': [['$', '$']]},
+                tags: 'ams',
+                packages: {'[+]': ['mhchem']}
+            }
+        };
+        (function() {
+            var script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js';
+            script.defer = true;
+            document.head.appendChild(script);
+        })();
+    } else {
+        MathJax.texReset();
+        MathJax.typeset();
+    }
+</script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+<script>
+    var config = {
+        startOnLoad: true,
+        flowchart: {
+            useMaxWidth: false,
+            htmlLabels: true
+        }
+    };
+    mermaid.initialize(config);
+</script>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
+
+<script>
+    mediumZoom(document.querySelectorAll('div.post-body img'), {
+        background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
+    })
+</script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.min.js" type="module" defer></script>
+
+
+
+
+
+
+
+    
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+
+
+
+
+    </body>
+</html>

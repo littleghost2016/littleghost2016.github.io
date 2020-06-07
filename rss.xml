@@ -23,10 +23,87 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sat, 06 Jun 2020 12:01:51 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sun, 07 Jun 2020 11:30:47 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://blog.littleghost.ml/rss.xml" />
         
+        
+            <item>
+                <title>《A new approach to intrusion detection based on an evolutionary》</title>
+                <link>https://blog.littleghost.ml/posts/A-new-approach-to-intrusion-detection-based-on-an-evolutionary/</link>
+                <guid isPermaLink="true">https://blog.littleghost.ml/posts/A-new-approach-to-intrusion-detection-based-on-an-evolutionary/</guid>
+                <pubDate>Sat, 06 Jun 2020 15:52:19 &#43;0800</pubDate>
+                
+                    <author>785340571@qq.com (LittleGhost)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                <description>这学期选修了《计算智能》，大作业是阅读论文完成报告，于是记录下读论文的过程。 A new approach to……
+    
+    </description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E8%AE%BA%E6%96%87/">论文</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/tags/%E8%AE%A1%E7%AE%97%E6%99%BA%E8%83%BD/">计算智能</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/tags/CI/">CI</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/tags/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95/">遗传算法</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/tags/AG/">AG</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/tags/%E6%A8%A1%E7%B3%8A%E9%80%BB%E8%BE%91FL/">模糊逻辑&#34;，&#34;FL&#34;</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/tags/%E5%85%A5%E4%BE%B5%E6%A3%80%E6%B5%8B%E7%B3%BB%E7%BB%9F/">入侵检测系统</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/tags/ids/">ids</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>网鼎杯玄武组菜鸡的两题writeup</title>

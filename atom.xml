@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">LittleGhost的博客</title>
     <subtitle type="html">本站采用MemE模板，MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</subtitle>
-    <updated>2020-06-06T12:01:51&#43;08:00</updated>
+    <updated>2020-06-07T11:30:47&#43;08:00</updated>
     <id>https://blog.littleghost.ml/</id>
     <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blog.littleghost.ml/atom.xml" />
@@ -16,6 +16,85 @@
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.72.0">Hugo</generator>
+        <entry>
+            <title type="text">《A new approach to intrusion detection based on an evolutionary》</title>
+            <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/posts/A-new-approach-to-intrusion-detection-based-on-an-evolutionary/" />
+            <id>https://blog.littleghost.ml/posts/A-new-approach-to-intrusion-detection-based-on-an-evolutionary/</id>
+            <updated>2020-06-07T11:30:24&#43;08:00</updated>
+            <published>2020-06-06T15:52:19&#43;08:00</published>
+            <author>
+                    <name>LittleGhost</name>
+                    <uri>https://blog.littleghost.ml</uri>
+                    <email>785340571@qq.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">这学期选修了《计算智能》，大作业是阅读论文完成报告，于是记录下读论文的过程。 A new approach to……
+    
+    </summary>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/categories/%E8%AE%BA%E6%96%87/" term="论文" label="论文" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/tags/%E8%AE%A1%E7%AE%97%E6%99%BA%E8%83%BD/" term="计算智能" label="计算智能" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/tags/CI/" term="CI" label="CI" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/tags/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95/" term="遗传算法" label="遗传算法" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/tags/AG/" term="AG" label="AG" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/tags/%E6%A8%A1%E7%B3%8A%E9%80%BB%E8%BE%91FL/" term="模糊逻辑&#34;，&#34;FL&#34;" label="模糊逻辑&#34;，&#34;FL&#34;" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/tags/%E5%85%A5%E4%BE%B5%E6%A3%80%E6%B5%8B%E7%B3%BB%E7%BB%9F/" term="入侵检测系统" label="入侵检测系统" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/tags/ids/" term="ids" label="ids" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">网鼎杯玄武组菜鸡的两题writeup</title>
             <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/posts/%E7%BD%91%E9%BC%8E%E6%9D%AF%E7%8E%84%E6%AD%A6%E7%BB%84%E8%8F%9C%E9%B8%A1%E7%9A%84%E4%B8%A4%E9%A2%98writeup/" />
