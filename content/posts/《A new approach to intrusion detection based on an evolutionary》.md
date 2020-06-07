@@ -499,7 +499,7 @@ The first author thank FUM Communication and Computer Research Lab. for their in
 
 Please read the paper - “A new approach to intrusion detection based on an evolutionary soft computing model using neuro-fuzzy classifiers” and write a report in English based on your reading and what you have learned in the Computational Intelligence class. In the report, you should provide the answers for the following questions. Do not copy the text from the paper directly. You may include some figures to better illustrate your explanation. Use the font of Times New Roman with size 12. 
 
-## Q1**.** Give an overall summary of the paper and list the key contributions of the paper.
+## Q1. Give an overall summary of the paper and list the key contributions of the paper.
 
 ### Summary
 
@@ -558,17 +558,17 @@ The realization of the operator in the genetic algorithm also has many parameter
 Fuzzy logic 的四个步骤：
 
 1. Fuzzification. The membership functions defined on the input variables are applied to their actual values, to determine the degree of truth for each rule premise.
-
 2. Inference. The truth-value for the premise of each rule is computed, and applied to the conclusion part of each rule. This results in one fuzzy subset to be assigned to each output variable for each rule. Usually only MIN or PRODUCT are used as inference rules. In MIN inferencing, the output membership function is clipped
 off at a height corresponding to the rule premise's computed degree of truth (fuzzy logic AND). In PRODUCT inferencing, the output membership function is scaled by the rule premise's computed degree of truth.
 3. Composition. All of the fuzzy subsets assigned to each output variable are combined together to form a single fuzzy subset for each output variable. This can be done a variety of ways. The two most common methods are MAX and SUM composition. In MAX composition, the combined output fuzzy subset is constructed by taking the point wise maximum over all of the fuzzy subsets assigned to a variable by the inference rule (fuzzy logic OR). In SUM composition, the combined output fuzzy subset is constructed by taking the point wise sum over all of the fuzzy subsets assigned to the output variable by the inference rule.
 4. Defuzzification. This is used when it is useful to convert the fuzzy output set to a crisp number. Quite a few defuzzification algorithms are known. Two of the more common techniques are the CENTROID and MAXIMUM methods. In the CENTROID method, the crisp value of the output variable is computed by finding the variable value of the center of gravity of the membership function for the fuzzy value. In the MAXIMUM method, one of the variable values at which the fuzzy subset has its maximum truth-value is chosen as the crisp value for the output variable.
-
 1. 模糊化在输入变量上定义的隶属函数将应用于其实际值，以确定每个规则前提的真实程度。
 2. 推论。计算每个规则前提的真值，并将其应用于每个规则的结论部分。这导致将一个模糊子集分配给每个规则的每个输出变量。通常仅将MIN或PRODUCT用作推理规则。在MIN推论中，输出隶属度函数被裁剪
    在与规则前提计算的真实度（模糊逻辑AND）相对应的高度偏离。在PRODUCT推论中，输出隶属度函数由规则前提的计算出的真实程度进行缩放。
 3. 组成。分配给每个输出变量的所有模糊子集都组合在一起，以形成每个输出变量的单个模糊子集。这可以通过多种方式完成。两种最常见的方法是MAX和SUM合成。在MAX合成中，组合输出模糊子集是通过对推理规则（模糊逻辑OR）分配给变量的所有模糊子集取逐点最大值来构造的。在SUM合成中，组合输出模糊子集是通过对推理规则分配给输出变量的所有模糊子集进行逐点求和来构造的。
 4. 模糊化。当将模糊输出集转换为清晰数字时很有用。已知许多解模糊算法。两种较常见的技术是CENTROID和MAXIMUM方法。在CENTROID方法中，通过为模糊值找到隶属函数的重心的变量值来计算输出变量的明晰值。在MAXIMUM方法中，将模糊子集具有其最大真值的变量值之一选择为输出变量的明晰值。
+
+[Fuzzy Inference System](http://researchhubs.com/post/engineering/fuzzy-system/fuzzy-inference-system.html)
 
 [^1]:H. Debar, M. Dacier, A. Wespi, Towards a taxonomy of intrusion detection systems, Computer Networks 31 (1999) 805–822.
 [^2]:S. Axelsson, 2000. Intrusion detection systems: a survey and taxonomy, Department of Computer Engineering, Chalmers University, Report No. 99-15.
