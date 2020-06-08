@@ -962,4 +962,4 @@ if __name__ == '__main__':
 
 # vulcrack
 
-vulcrack.apk
+[vulcrack.apk](https://github.com/littleghost2016/littleghost2016.github.io/releases/download/v0.0.1/vulcrack.apk)
