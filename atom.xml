@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">LittleGhost的博客</title>
     <subtitle type="html">本站采用MemE模板，MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</subtitle>
-    <updated>2020-06-07T23:20:32&#43;08:00</updated>
+    <updated>2020-06-08T16:22:36&#43;08:00</updated>
     <id>https://blog.littleghost.ml/</id>
     <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blog.littleghost.ml/atom.xml" />
@@ -99,7 +99,7 @@
             <title type="text">网鼎杯玄武组菜鸡的两题writeup</title>
             <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/posts/%E7%BD%91%E9%BC%8E%E6%9D%AF%E7%8E%84%E6%AD%A6%E7%BB%84%E8%8F%9C%E9%B8%A1%E7%9A%84%E4%B8%A4%E9%A2%98writeup/" />
             <id>https://blog.littleghost.ml/posts/%E7%BD%91%E9%BC%8E%E6%9D%AF%E7%8E%84%E6%AD%A6%E7%BB%84%E8%8F%9C%E9%B8%A1%E7%9A%84%E4%B8%A4%E9%A2%98writeup/</id>
-            <updated>2020-05-28T21:52:36&#43;08:00</updated>
+            <updated>2020-06-08T16:20:55&#43;08:00</updated>
             <published>2020-05-28T20:46:10&#43;08:00</published>
             <author>
                     <name>LittleGhost</name>
