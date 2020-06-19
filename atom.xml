@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">LittleGhost的博客</title>
     <subtitle type="html">本站采用MemE模板，MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</subtitle>
-    <updated>2020-06-08T16:22:36&#43;08:00</updated>
+    <updated>2020-06-19T20:58:29&#43;08:00</updated>
     <id>https://blog.littleghost.ml/</id>
     <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blog.littleghost.ml/atom.xml" />
@@ -17,10 +17,59 @@
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.72.0">Hugo</generator>
         <entry>
+            <title type="text">信息论及其应用小作业 数据压缩</title>
+            <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/posts/%E4%BF%A1%E6%81%AF%E8%AE%BA%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8%E5%B0%8F%E4%BD%9C%E4%B8%9A-%E6%95%B0%E6%8D%AE%E5%8E%8B%E7%BC%A9/" />
+            <id>https://blog.littleghost.ml/posts/%E4%BF%A1%E6%81%AF%E8%AE%BA%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8%E5%B0%8F%E4%BD%9C%E4%B8%9A-%E6%95%B0%E6%8D%AE%E5%8E%8B%E7%BC%A9/</id>
+            <updated>2020-06-19T20:58:07&#43;08:00</updated>
+            <published>2020-06-19T20:37:26&#43;08:00</published>
+            <author>
+                    <name>LittleGhost</name>
+                    <uri>https://blog.littleghost.ml</uri>
+                    <email>785340571@qq.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">实验要求 将附件中的英文文献用最佳不等长编码进行压缩。即利用霍夫曼编码（Huffman……
+    
+    </summary>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/" term="技术" label="技术" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/tags/%E4%BF%A1%E6%81%AF%E8%AE%BA/" term="信息论" label="信息论" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/tags/%E6%95%B0%E6%8D%AE%E5%8E%8B%E7%BC%A9/" term="数据压缩" label="数据压缩" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
             <title type="text">《A new approach to intrusion detection based on an evolutionary》</title>
             <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/posts/A-new-approach-to-intrusion-detection-based-on-an-evolutionary/" />
             <id>https://blog.littleghost.ml/posts/A-new-approach-to-intrusion-detection-based-on-an-evolutionary/</id>
-            <updated>2020-06-07T23:20:28&#43;08:00</updated>
+            <updated>2020-06-19T20:56:29&#43;08:00</updated>
             <published>2020-06-06T15:52:19&#43;08:00</published>
             <author>
                     <name>LittleGhost</name>
@@ -75,7 +124,13 @@
                             
                             
                             
-                                <category scheme="https://blog.littleghost.ml/tags/%E6%A8%A1%E7%B3%8A%E9%80%BB%E8%BE%91FL/" term="模糊逻辑&#34;，&#34;FL&#34;" label="模糊逻辑&#34;，&#34;FL&#34;" />
+                                <category scheme="https://blog.littleghost.ml/tags/%E6%A8%A1%E7%B3%8A%E9%80%BB%E8%BE%91/" term="模糊逻辑" label="模糊逻辑" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/tags/FL/" term="FL" label="FL" />
                             
                         
                             
