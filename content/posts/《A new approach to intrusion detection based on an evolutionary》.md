@@ -1,7 +1,7 @@
 ---
 title: "《A new approach to intrusion detection based on an evolutionary》"
 date: 2020-06-06T15:52:19+08:00
-tags: ["计算智能", "CI", "遗传算法", "AG", 模糊逻辑"，"FL", "入侵检测系统", "ids"]
+tags: ["计算智能", "CI", "遗传算法", "AG", "模糊逻辑", "FL", "入侵检测系统", "ids"]
 categories: ["论文"]
 mathjax: true
 ---
