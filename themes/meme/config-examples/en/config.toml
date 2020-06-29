@@ -136,16 +136,18 @@ uglyURLs = false
     mediaType = "application/rss+xml"
     baseName = "rss"
 
+# Search index for lunr.js
+[outputFormats.SearchIndex]
+    mediaType = "application/json"
+    baseName = "search"
+
 # Hugo’s output control
 [outputs]
     page = ["HTML"]
-    home = ["HTML", "SectionsAtom", "SectionsRSS"]
+    home = ["HTML", "SectionsAtom", "SectionsRSS", "SearchIndex"]
     section = ["HTML"]
-    # Taxonomy
-    taxonomyTerm = ["HTML"]
-    # Taxonomy term
     taxonomy = ["HTML"]
-    # Note: https://github.com/gohugoio/hugo/issues/4528#issuecomment-508488859
+    term = ["HTML"]
 
 # Maximum number of items in the Atom & RSS feed
 [services.rss]
@@ -182,10 +184,10 @@ uglyURLs = false
 #               is left empty("") or does
 #               not exist)
 # identifier    Icon’s class name
-#               (there are two speacial
+#               (there are three special
 #               values for header layout
 #               flex: `theme-switcher`,
-#               `lang-switcher`)
+#               `lang-switcher`, `search`)
 
 [menu]
     ## Menu bar
@@ -225,6 +227,10 @@ uglyURLs = false
     [[menu.main]]
         weight = 7
         identifier = "lang-switcher"
+    [[menu.main]]
+        weight = 8
+        identifier = "search"
+        post = "search"
 
 
 
@@ -398,6 +404,11 @@ uglyURLs = false
     # category?
     displayPostsCount = true
 
+    # Set to a non-negative number to limit
+    # the number of posts displayed per
+    # category/section.
+    limitPostsLimit = -1
+
 
     ######################################
     # Tags Page
@@ -412,7 +423,7 @@ uglyURLs = false
     ######################################
     # List Page
 
-    listWidth = 30
+    listWidth = 36
     # Note: you can leave it empty("") to
     #       fallback to the default value: 42
     #       Unit: em
@@ -519,6 +530,10 @@ uglyURLs = false
     #       may still read your blog in
     #       light mode, even if you have
     #       hidden the theme toggle.
+    #       Unless you enable the following
+    #       option.
+
+    overrideSystemPreferences = false
 
 
     ######################################
@@ -609,6 +624,9 @@ uglyURLs = false
     #       `mermaid` in post’s Front Matter
     #       has a higher priority than here
 
+    mermaidTheme = 'default'
+    mermaidThemeDark = 'dark'
+
 
     ######################################
     # Comments
@@ -630,8 +648,6 @@ uglyURLs = false
     valineAppId = ""
     valineAppKey = ""
     valinePlaceholder = "Just go go"
-    valineNotify = false
-    valineVerify = false
     valinePath = ""
     valineAvatar = "mm"
     valineMeta = ["nick", "mail", "link"]
@@ -639,9 +655,13 @@ uglyURLs = false
     valineLang = "en"
     valineVisitor = false
     valineHighlight = true
-    avatarForce = false
+    valineAvatarForce = false
     valineRecordIP = false
     valineServerURLs = ""
+    valineEmojiCDN = ""
+    valineEmojiMaps = {}
+    valineEnableQQ = false
+    valineRequiredFields = []
     # Note: https://valine.js.org/
 
     ## Utterances
@@ -705,7 +725,7 @@ uglyURLs = false
     #            supported
 
     # The content width of the post
-    postWidth = 32
+    postWidth = 36
     # Note: you can leave it empty("") to
     #       fallback to the default value: 42
     #       Unit: em
@@ -945,7 +965,7 @@ uglyURLs = false
     ######################################
     ## Font Size (unit: px)
 
-    fontSize = 20
+    fontSize = 18
 
     ######################################
     ## Tab Size
@@ -1285,6 +1305,16 @@ uglyURLs = false
 
     enableInstantPage = true
     # Note: https://github.com/instantpage/instant.page
+
+
+    ######################################
+    # Lunr search
+
+    # Note: This requires SearchIndex
+    # output to be enabled.
+
+    enableLunrSearch = true
+    # Note: https://lunrjs.com/
 
 
     ######################################

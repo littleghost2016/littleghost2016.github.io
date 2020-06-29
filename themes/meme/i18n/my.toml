@@ -9,65 +9,65 @@ one = "min"
 other = "min"
 
 [tocTitle]
-other = "Inhalt"
+other = "Isi kandungan"
 
 [readMore]
-other = "Weiterlesen"
+other = "Baca lagi"
 
 [prevPage]
-other = "Neuer"
+other = "Terbaru"
 
 [nextPage]
-other = "Älter"
+other = "Lama"
 
 [copy]
-other = "Kopieren"
+other = "Salinan"
 
 [copied]
-other = "Kopiert!"
+other = "Disalin!"
 
 [copyrightAuthor]
-other = "Autor"
+other = "Pengarang"
 
 [copyrightLink]
-other = "Link"
+other = "Sambungan"
 
 [copyrightLicense]
-other = "Lizenz"
+other = "Lesen"
 
 [shareOn]
-other = "Teile auf:"
+other = "Dikongsikan:"
 
 [shareOnTitle]
-other = "Teile auf "
+other = "Dikongsikan "
 
 [shareViaTitle]
-other = "Teile mit "
+other = "Dikongsikan di "
 
 [relatedPosts]
-other = "Siehe auch:"
+other = "Sila lihat:"
 
 [loadComments]
-other = "Kommentare laden?"
+other = "Berikan komen?"
 
 [pageNotFound]
-other = "404 - Seite nicht gefunden"
+other = "404 - Halaman tidak dijumpa"
 
 [fofLinkText]
-other = "Zur Hauptseite"
+other = "Kembali ke asal"
 
 [serviceWorkerUpdatedText]
-other = "Neue Updates verfügbar"
+other = "Ada kemaskini terbaru"
 
 [serviceWorkerUpdatedAction]
-other = "Neu laden"
+other = "Kemaskini"
 
 [searchResultsTitle]
-one = "Ein Suchergebnis für „{{ .Term }}” gefunden"
-other = "{{ .Count }} Suchergebnisse für „{{ .Term }}” gefunden"
+one = "Jumpa satu halaman untuk “{{ .Term }}”"
+other = "Jumpa {{ .Count }} halaman untuk “{{ .Term }}”"
 
 [searchResultsNone]
-other = "Leider keine Suchergebnisse für „{{ .Term }}”"
+other = "Tidak jumpa sebarang halaman untuk “{{ .Term }}”"
 
 
 # Socials
@@ -104,28 +104,28 @@ other = "QR Code"
 # Used for `i18nMonth`
 
 [january]
-other = "Januar"
+other = "Januari"
 
 [february]
-other = "Februar"
+other = "Februari"
 
 [march]
-other = "März"
+other = "Mac"
 
 [april]
 other = "April"
 
 [may]
-other = "Mai"
+other = "Mei"
 
 [june]
-other = "Juni"
+other = "Jun"
 
 [july]
-other = "Juli"
+other = "Julai"
 
 [august]
-other = "August"
+other = "Ogos"
 
 [september]
 other = "September"
@@ -137,7 +137,7 @@ other = "Oktober"
 other = "November"
 
 [december]
-other = "Dezember"
+other = "Disember"
 
 
 # Numbers
