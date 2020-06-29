@@ -4,21 +4,6 @@
     <meta charset="UTF-8" />
 
     <meta name="generator" content="Hugo 0.73.0" /><meta name="theme-color" content="#fff" />
-        <script>
-            const userPrefers = localStorage.getItem('theme');
-            if (userPrefers === 'dark') {
-                changeModeMeta('dark');
-            } else if (userPrefers === 'light') {
-                changeModeMeta('light');
-            }
-            function changeModeMeta(theme) {
-                document.documentElement.setAttribute('data-theme', theme);
-            }
-        </script>
-
-    
-
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -29,16 +14,20 @@
 
     <title>树莓派搭建aria2&#43;caddy&#43;filebrowser | LittleGhost的博客</title>
 
-    <link rel="stylesheet" href="/css/meme.min.4c45a9d90ce879a869ec428d9d69e1231e687722dba0f0cde6f1cae31a98149d.css" integrity="sha256-TEWp2Qzoeahp7EKNnWnhIx5odyLboPDN5vHK4xqYFJ0=" />
+    <link rel="stylesheet" href="/css/meme.min.a31a4b7aa92479f5f86fe95a52b51220612c5da4459346eb89db7da4ce628675.css" integrity="sha256-oxpLeqkkefX4b&#43;laUrUSIGEsXaRFk0bridt9pM5ihnU=" />
+
+    
+    
+        <script src="/js/meme.min.434274bb2302fe029f98d3d29ae57dab1566be565436f52a6dd93089085533c4.js" integrity="sha256-Q0J0uyMC/gKfmNPSmuV9qxVmvlZUNvUqbdkwiQhVM8Q="></script>
+
+    
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" media="print" onload="this.media='all'" />
         <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" /></noscript>
 
-    <meta name="author" content="LittleGhost" /><meta name="description" content="树莓派为3B&#43;，24小时供电，就是有点吵。 dnsmasq部分 路由器为K2P，刷了Op……
-    
-    " />
+    <meta name="author" content="LittleGhost" /><meta name="description" content="树莓派为3B&#43;，24小时供电，就是有点吵。 dnsmasq部分 路由器为K2P，刷了Op……" />
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
@@ -58,6 +47,7 @@
 
     
     <link rel="canonical" href="https://blog.littleghost.ml/posts/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%90%AD%E5%BB%BAaria2&#43;caddy&#43;filebrowser/" />
+    
 
 <script type="application/ld+json">
     {
@@ -67,7 +57,7 @@
         "dateModified": "2020-05-25T19:30:06+08:00",
         "url": "https://blog.littleghost.ml/posts/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%90%AD%E5%BB%BAaria2+caddy+filebrowser/",
         "headline": "树莓派搭建aria2+caddy+filebrowser",
-        "description": "树莓派为3B+，24小时供电，就是有点吵。 dnsmasq部分 路由器为K2P，刷了Op……\n    \n    ",
+        "description": "树莓派为3B+，24小时供电，就是有点吵。 dnsmasq部分 路由器为K2P，刷了Op……",
         "inLanguage" : "zh-CN",
         "articleSection": "posts",
         "wordCount":  1060 ,
@@ -108,9 +98,7 @@
 
 
 <meta property="og:title" content="树莓派搭建aria2&#43;caddy&#43;filebrowser" />
-<meta property="og:description" content="树莓派为3B&#43;，24小时供电，就是有点吵。 dnsmasq部分 路由器为K2P，刷了Op……
-    
-    " />
+<meta property="og:description" content="树莓派为3B&#43;，24小时供电，就是有点吵。 dnsmasq部分 路由器为K2P，刷了Op……" />
 <meta property="og:url" content="https://blog.littleghost.ml/posts/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%90%AD%E5%BB%BAaria2&#43;caddy&#43;filebrowser/" />
 <meta property="og:site_name" content="LittleGhost的博客" />
 <meta property="og:locale" content="zh" /><meta property="og:image" content="https://blog.littleghost.ml/%E6%9B%BF%E6%8D%A2%E5%AD%97%E4%BD%93.png" />
@@ -214,7 +202,7 @@
 
         <article class="content post" data-align="justify" data-type="posts" data-toc-num="true">
 
-            <h1 class="post-title">树莓派搭建aria2&#43;caddy&#43;filebrowser</h1>
+            <h1 class="post-title">树莓派搭建aria2+caddy+filebrowser</h1>
 
             
 
@@ -268,12 +256,12 @@
 <h1 id="dnsmasq部分"><a href="#dnsmasq部分" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>dnsmasq部分</h1>
 <p>路由器为K2P，刷了Openwrt系统，自带<code>dnsmasq</code>，编辑配置文件</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash">$ vim /etc/dnsmasq.conf
-</code></pre></td></tr></table>
+</code></pre></td></tr></table></div>
 </div>
 </div><p>添加以下内容，三四两行自用于内网RDP，与本篇文章的内容无关</p>
 <pre><code>address=/download.com/192.168.2.198
@@ -282,12 +270,12 @@ address=/mylab6.com/2001::XXXX
 address=/mylab.com/10.173.XX.XX
 </code></pre><p>重新启动<code>dnsmasq</code>服务</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash">$ /etc/init.d/dnsmasq restart
-</code></pre></td></tr></table>
+</code></pre></td></tr></table></div>
 </div>
 </div><h1 id="caddy部分"><a href="#caddy部分" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>caddy部分</h1>
 <blockquote>
@@ -301,12 +289,12 @@ address=/mylab.com/10.173.XX.XX
 <li>
 <p>使用<code>systemd</code>作进程守护</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash">$ sudo vim /etc/systemd/system/caddy.service
-</code></pre></td></tr></table>
+</code></pre></td></tr></table></div>
 </div>
 </div><pre><code>[Unit]
 Description=Caddy Server
@@ -341,20 +329,20 @@ http://filebrowser.com:80 {
 <h1 id="aria2部分"><a href="#aria2部分" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>aria2部分</h1>
 <h2 id="安装"><a href="#安装" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>安装</h2>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash">$ sudo apt install aria2
-</code></pre></td></tr></table>
+</code></pre></td></tr></table></div>
 </div>
 </div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash">$ tree .
-</code></pre></td></tr></table>
+</code></pre></td></tr></table></div>
 </div>
 </div><pre><code>.
 ├── config
@@ -375,12 +363,12 @@ http://filebrowser.com:80 {
 7 directories, 7 files
 </code></pre><h2 id="使用systemd作进程守护"><a href="#使用systemd作进程守护" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>使用<code>systemd</code>作进程守护</h2>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash">$ sudo vim /etc/systemd/system/aria2.service
-</code></pre></td></tr></table>
+</code></pre></td></tr></table></div>
 </div>
 </div><pre><code>[Unit]
 Description=aria2c -- file download manager
@@ -398,15 +386,15 @@ ExecStart=/usr/bin/aria2c -D --conf-path=/home/ubuntu/aria2/config/aria2.conf
 WantedBy=multi-user.target
 </code></pre><h2 id="修改配置文件"><a href="#修改配置文件" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>修改配置文件</h2>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash">$ vim /home/ubuntu/aria2/config/aria2.conf
-</code></pre></td></tr></table>
+</code></pre></td></tr></table></div>
 </div>
 </div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
@@ -511,7 +499,7 @@ bt-seed-unverified<span class="o">=</span><span class="nb">true</span>
 bt-save-metadata<span class="o">=</span><span class="nb">true</span>
 
 listen-port<span class="o">=</span>50000-65000
-</code></pre></td></tr></table>
+</code></pre></td></tr></table></div>
 </div>
 </div><p>HTTP可以，校内PT站可以下载，但公网上的种子和磁力链接都是<code>0/0</code>，尚未解决。</p>
 <h1 id="filebrowser部分"><a href="#filebrowser部分" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>filebrowser部分</h1>
@@ -533,12 +521,12 @@ ExecStart=/home/ubuntu/filebrowser/filebrowser -d /home/ubuntu/filebrowser/fileb
 [Install]
 WantedBy=multi-user.target
 </code></pre><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash">$ tree .
-</code></pre></td></tr></table>
+</code></pre></td></tr></table></div>
 </div>
 </div><pre><code>.
 ├── caddy
@@ -666,21 +654,21 @@ WantedBy=multi-user.target
             
                 <div class="share-item douban">
                     
-                    <a href="https://www.douban.com/share/service?href=https://blog.littleghost.ml/posts/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%90%AD%E5%BB%BAaria2&#43;caddy&#43;filebrowser/&amp;name=%e6%a0%91%e8%8e%93%e6%b4%be%e6%90%ad%e5%bb%baaria2&#43;caddy&#43;filebrowser&amp;text=%e6%a0%91%e8%8e%93%e6%b4%be%e4%b8%ba3B&#43;%ef%bc%8c24%e5%b0%8f%e6%97%b6%e4%be%9b%e7%94%b5%ef%bc%8c%e5%b0%b1%e6%98%af%e6%9c%89%e7%82%b9%e5%90%b5%e3%80%82%20dnsmasq%e9%83%a8%e5%88%86%20%e8%b7%af%e7%94%b1%e5%99%a8%e4%b8%baK2P%ef%bc%8c%e5%88%b7%e4%ba%86Op%e2%80%a6%e2%80%a6%0a%20%20%20%20%0a%20%20%20%20" title="分享到「豆瓣」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon douban-icon"><path d="M.643.92v2.412h22.714V.92H.643zm1.974 4.926v9.42h18.764v-9.42H2.617zm2.72 2.408H18.69v4.605H5.338V8.254zm1.657 7.412l-2.512.938c1.037 1.461 1.87 2.825 2.512 4.091H0v2.385h24v-2.385h-6.678c.818-1.176 1.589-2.543 2.303-4.091l-2.73-.938a29.952 29.952 0 01-2.479 5.03h-4.75c-.786-1.962-1.677-3.641-2.672-5.03Z"/></svg></a>
+                    <a href="https://www.douban.com/share/service?href=https://blog.littleghost.ml/posts/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%90%AD%E5%BB%BAaria2&#43;caddy&#43;filebrowser/&amp;name=%e6%a0%91%e8%8e%93%e6%b4%be%e6%90%ad%e5%bb%baaria2&#43;caddy&#43;filebrowser&amp;text=%e6%a0%91%e8%8e%93%e6%b4%be%e4%b8%ba3B&#43;%ef%bc%8c24%e5%b0%8f%e6%97%b6%e4%be%9b%e7%94%b5%ef%bc%8c%e5%b0%b1%e6%98%af%e6%9c%89%e7%82%b9%e5%90%b5%e3%80%82%20dnsmasq%e9%83%a8%e5%88%86%20%e8%b7%af%e7%94%b1%e5%99%a8%e4%b8%baK2P%ef%bc%8c%e5%88%b7%e4%ba%86Op%e2%80%a6%e2%80%a6" title="分享到「豆瓣」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon douban-icon"><path d="M.643.92v2.412h22.714V.92H.643zm1.974 4.926v9.42h18.764v-9.42H2.617zm2.72 2.408H18.69v4.605H5.338V8.254zm1.657 7.412l-2.512.938c1.037 1.461 1.87 2.825 2.512 4.091H0v2.385h24v-2.385h-6.678c.818-1.176 1.589-2.543 2.303-4.091l-2.73-.938a29.952 29.952 0 01-2.479 5.03h-4.75c-.786-1.962-1.677-3.641-2.672-5.03Z"/></svg></a>
                 </div>
             
 
             
                 <div class="share-item qq">
                     
-                    <a href="https://connect.qq.com/widget/shareqq/index.html?url=https://blog.littleghost.ml/posts/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%90%AD%E5%BB%BAaria2&#43;caddy&#43;filebrowser/&amp;title=%e6%a0%91%e8%8e%93%e6%b4%be%e6%90%ad%e5%bb%baaria2&#43;caddy&#43;filebrowser&amp;summary=%e6%a0%91%e8%8e%93%e6%b4%be%e4%b8%ba3B&#43;%ef%bc%8c24%e5%b0%8f%e6%97%b6%e4%be%9b%e7%94%b5%ef%bc%8c%e5%b0%b1%e6%98%af%e6%9c%89%e7%82%b9%e5%90%b5%e3%80%82%20dnsmasq%e9%83%a8%e5%88%86%20%e8%b7%af%e7%94%b1%e5%99%a8%e4%b8%baK2P%ef%bc%8c%e5%88%b7%e4%ba%86Op%e2%80%a6%e2%80%a6%0a%20%20%20%20%0a%20%20%20%20&amp;pics=https://blog.littleghost.ml/%E6%9B%BF%E6%8D%A2%E5%AD%97%E4%BD%93.png&amp;site=LittleGhost%e7%9a%84%e5%8d%9a%e5%ae%a2" title="分享到「QQ」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon qq-icon"><path d="M433.754 420.445c-11.526 1.393-44.86-52.741-44.86-52.741 0 31.345-16.136 72.247-51.051 101.786 16.842 5.192 54.843 19.167 45.803 34.421-7.316 12.343-125.51 7.881-159.632 4.037-34.122 3.844-152.316 8.306-159.632-4.037-9.045-15.25 28.918-29.214 45.783-34.415-34.92-29.539-51.059-70.445-51.059-101.792 0 0-33.334 54.134-44.859 52.741-5.37-.65-12.424-29.644 9.347-99.704 10.261-33.024 21.995-60.478 40.144-105.779C60.683 98.063 108.982.006 224 0c113.737.006 163.156 96.133 160.264 214.963 18.118 45.223 29.912 72.85 40.144 105.778 21.768 70.06 14.716 99.053 9.346 99.704z"/></svg></a>
+                    <a href="https://connect.qq.com/widget/shareqq/index.html?url=https://blog.littleghost.ml/posts/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%90%AD%E5%BB%BAaria2&#43;caddy&#43;filebrowser/&amp;title=%e6%a0%91%e8%8e%93%e6%b4%be%e6%90%ad%e5%bb%baaria2&#43;caddy&#43;filebrowser&amp;summary=%e6%a0%91%e8%8e%93%e6%b4%be%e4%b8%ba3B&#43;%ef%bc%8c24%e5%b0%8f%e6%97%b6%e4%be%9b%e7%94%b5%ef%bc%8c%e5%b0%b1%e6%98%af%e6%9c%89%e7%82%b9%e5%90%b5%e3%80%82%20dnsmasq%e9%83%a8%e5%88%86%20%e8%b7%af%e7%94%b1%e5%99%a8%e4%b8%baK2P%ef%bc%8c%e5%88%b7%e4%ba%86Op%e2%80%a6%e2%80%a6&amp;pics=https://blog.littleghost.ml/%E6%9B%BF%E6%8D%A2%E5%AD%97%E4%BD%93.png&amp;site=LittleGhost%e7%9a%84%e5%8d%9a%e5%ae%a2" title="分享到「QQ」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon qq-icon"><path d="M433.754 420.445c-11.526 1.393-44.86-52.741-44.86-52.741 0 31.345-16.136 72.247-51.051 101.786 16.842 5.192 54.843 19.167 45.803 34.421-7.316 12.343-125.51 7.881-159.632 4.037-34.122 3.844-152.316 8.306-159.632-4.037-9.045-15.25 28.918-29.214 45.783-34.415-34.92-29.539-51.059-70.445-51.059-101.792 0 0-33.334 54.134-44.859 52.741-5.37-.65-12.424-29.644 9.347-99.704 10.261-33.024 21.995-60.478 40.144-105.779C60.683 98.063 108.982.006 224 0c113.737.006 163.156 96.133 160.264 214.963 18.118 45.223 29.912 72.85 40.144 105.778 21.768 70.06 14.716 99.053 9.346 99.704z"/></svg></a>
                 </div>
             
 
             
                 <div class="share-item qzone">
                     
-                    <a href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.littleghost.ml/posts/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%90%AD%E5%BB%BAaria2&#43;caddy&#43;filebrowser/&amp;title=%e6%a0%91%e8%8e%93%e6%b4%be%e6%90%ad%e5%bb%baaria2&#43;caddy&#43;filebrowser&amp;summary=%e6%a0%91%e8%8e%93%e6%b4%be%e4%b8%ba3B&#43;%ef%bc%8c24%e5%b0%8f%e6%97%b6%e4%be%9b%e7%94%b5%ef%bc%8c%e5%b0%b1%e6%98%af%e6%9c%89%e7%82%b9%e5%90%b5%e3%80%82%20dnsmasq%e9%83%a8%e5%88%86%20%e8%b7%af%e7%94%b1%e5%99%a8%e4%b8%baK2P%ef%bc%8c%e5%88%b7%e4%ba%86Op%e2%80%a6%e2%80%a6%0a%20%20%20%20%0a%20%20%20%20&amp;pics=https://blog.littleghost.ml/%E6%9B%BF%E6%8D%A2%E5%AD%97%E4%BD%93.png&amp;site=LittleGhost%e7%9a%84%e5%8d%9a%e5%ae%a2" title="分享到「QQ 空间」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon qzone-icon"><path d="M23.985 9.202c-.032-.099-.127-.223-.334-.258-.207-.036-7.351-1.406-7.351-1.406s-.105-.022-.198-.07c-.092-.047-.127-.167-.127-.167S12.447.956 12.349.77C12.25.583 12.104.532 12 .532c-.104 0-.251.051-.349.238-.098.186-3.626 6.531-3.626 6.531s-.035.12-.128.167c-.092.047-.197.07-.197.07S.556 8.908.348 8.943c-.208.036-.302.16-.333.258a.477.477 0 0 0 .125.449l5.362 5.49s.072.08.119.172c.016.104.005.21.005.21s-1.189 7.242-1.22 7.45.075.369.159.43c.083.062.233.106.421.013.189-.093 6.812-3.261 6.812-3.261s.098-.044.201-.061c.103-.017.201.061.201.061s6.623 3.168 6.812 3.261c.188.094.338.049.421-.013a.463.463 0 0 0 .159-.43c-.021-.14-.93-5.677-.93-5.677.876-.54 1.425-1.039 1.849-1.747-2.594.969-6.006 1.717-9.415 1.866-.915.041-2.41.097-3.473-.015-.678-.071-1.17-.144-1.243-.438-.053-.215.054-.46.545-.831a2640.5 2640.5 0 0 1 2.861-2.155c1.285-.968 3.559-2.47 3.559-2.731 0-.285-2.144-.781-4.037-.781-1.945 0-2.275.132-2.811.168-.488.034-.769.005-.804-.138-.06-.248.183-.389.588-.568.709-.314 1.86-.594 1.984-.626.194-.052 3.082-.805 5.618-.535 1.318.14 3.244.668 3.244 1.276 0 .342-1.721 1.494-3.225 2.597-1.149.843-2.217 1.561-2.217 1.688 0 .342 3.533 1.241 6.689 1.01l.003-.022c.048-.092.119-.172.119-.172l5.362-5.49a.477.477 0 0 0 .127-.449z"/></svg></a>
+                    <a href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.littleghost.ml/posts/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%90%AD%E5%BB%BAaria2&#43;caddy&#43;filebrowser/&amp;title=%e6%a0%91%e8%8e%93%e6%b4%be%e6%90%ad%e5%bb%baaria2&#43;caddy&#43;filebrowser&amp;summary=%e6%a0%91%e8%8e%93%e6%b4%be%e4%b8%ba3B&#43;%ef%bc%8c24%e5%b0%8f%e6%97%b6%e4%be%9b%e7%94%b5%ef%bc%8c%e5%b0%b1%e6%98%af%e6%9c%89%e7%82%b9%e5%90%b5%e3%80%82%20dnsmasq%e9%83%a8%e5%88%86%20%e8%b7%af%e7%94%b1%e5%99%a8%e4%b8%baK2P%ef%bc%8c%e5%88%b7%e4%ba%86Op%e2%80%a6%e2%80%a6&amp;pics=https://blog.littleghost.ml/%E6%9B%BF%E6%8D%A2%E5%AD%97%E4%BD%93.png&amp;site=LittleGhost%e7%9a%84%e5%8d%9a%e5%ae%a2" title="分享到「QQ 空间」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon qzone-icon"><path d="M23.985 9.202c-.032-.099-.127-.223-.334-.258-.207-.036-7.351-1.406-7.351-1.406s-.105-.022-.198-.07c-.092-.047-.127-.167-.127-.167S12.447.956 12.349.77C12.25.583 12.104.532 12 .532c-.104 0-.251.051-.349.238-.098.186-3.626 6.531-3.626 6.531s-.035.12-.128.167c-.092.047-.197.07-.197.07S.556 8.908.348 8.943c-.208.036-.302.16-.333.258a.477.477 0 0 0 .125.449l5.362 5.49s.072.08.119.172c.016.104.005.21.005.21s-1.189 7.242-1.22 7.45.075.369.159.43c.083.062.233.106.421.013.189-.093 6.812-3.261 6.812-3.261s.098-.044.201-.061c.103-.017.201.061.201.061s6.623 3.168 6.812 3.261c.188.094.338.049.421-.013a.463.463 0 0 0 .159-.43c-.021-.14-.93-5.677-.93-5.677.876-.54 1.425-1.039 1.849-1.747-2.594.969-6.006 1.717-9.415 1.866-.915.041-2.41.097-3.473-.015-.678-.071-1.17-.144-1.243-.438-.053-.215.054-.46.545-.831a2640.5 2640.5 0 0 1 2.861-2.155c1.285-.968 3.559-2.47 3.559-2.731 0-.285-2.144-.781-4.037-.781-1.945 0-2.275.132-2.811.168-.488.034-.769.005-.804-.138-.06-.248.183-.389.588-.568.709-.314 1.86-.594 1.984-.626.194-.052 3.082-.805 5.618-.535 1.318.14 3.244.668 3.244 1.276 0 .342-1.721 1.494-3.225 2.597-1.149.843-2.217 1.561-2.217 1.688 0 .342 3.533 1.241 6.689 1.01l.003-.022c.048-.092.119-.172.119-.172l5.362-5.49a.477.477 0 0 0 .127-.449z"/></svg></a>
                 </div>
             
 
@@ -843,9 +831,7 @@ WantedBy=multi-user.target
 
 
         </div>
-        <script src="/js/meme.min.8eeb1784bd2ee50e5dadc087eca94dc8d496f0e502c20b56b8215eb9e5e815cc.js" integrity="sha256-jusXhL0u5Q5drcCH7KlNyNSW8OUCwgtWuCFeueXoFcw="></script>
-
-
+        
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 
 <script>
@@ -862,18 +848,18 @@ WantedBy=multi-user.target
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.5.2/dist/mermaid.min.js"></script>
 <script>
-    var config = {
+    let mermaidConfig = {
         startOnLoad: true,
         flowchart: {
             useMaxWidth: false,
             htmlLabels: true
-        }
+        },
+        theme: 'default'
     };
-    mermaid.initialize(config);
+    mermaid.initialize(mermaidConfig);
 </script>
-
 
 
 

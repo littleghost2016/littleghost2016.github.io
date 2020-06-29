@@ -4,21 +4,6 @@
     <meta charset="UTF-8" />
 
     <meta name="generator" content="Hugo 0.73.0" /><meta name="theme-color" content="#fff" />
-        <script>
-            const userPrefers = localStorage.getItem('theme');
-            if (userPrefers === 'dark') {
-                changeModeMeta('dark');
-            } else if (userPrefers === 'light') {
-                changeModeMeta('light');
-            }
-            function changeModeMeta(theme) {
-                document.documentElement.setAttribute('data-theme', theme);
-            }
-        </script>
-
-    
-
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -29,7 +14,13 @@
 
     <title>LittleGhost的博客</title>
 
-    <link rel="stylesheet" href="/css/meme.min.4c45a9d90ce879a869ec428d9d69e1231e687722dba0f0cde6f1cae31a98149d.css" integrity="sha256-TEWp2Qzoeahp7EKNnWnhIx5odyLboPDN5vHK4xqYFJ0=" />
+    <link rel="stylesheet" href="/css/meme.min.a31a4b7aa92479f5f86fe95a52b51220612c5da4459346eb89db7da4ce628675.css" integrity="sha256-oxpLeqkkefX4b&#43;laUrUSIGEsXaRFk0bridt9pM5ihnU=" />
+
+    
+    
+        <script src="/js/meme.min.434274bb2302fe029f98d3d29ae57dab1566be565436f52a6dd93089085533c4.js" integrity="sha256-Q0J0uyMC/gKfmNPSmuV9qxVmvlZUNvUqbdkwiQhVM8Q="></script>
+
+    
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -58,6 +49,7 @@
 
     
     <link rel="canonical" href="https://blog.littleghost.ml/" />
+    
 
 <script type="application/ld+json">
     {
@@ -236,8 +228,6 @@
                 
                 <summary class="summary">
                     第二章-用户接口与作业管理 作业的组成：包括程序、数据、作业控制信息 作业调度:高级调度……
-    
-    
                 </summary>
                 
                     <div class="read-more-container">
@@ -289,8 +279,6 @@
                 
                 <summary class="summary">
                     实验一 已知notepad.exe的各节区的RVA地址/RAW偏移范围如下： 节区名称 R……
-    
-    
                 </summary>
                 
                     <div class="read-more-container">
@@ -342,8 +330,6 @@
                 
                 <summary class="summary">
                     第一章（公钥） 信息系统面临的人为攻击主可分为哪两类？每一类各包括哪几种攻击。 主动攻击……
-    
-    
                 </summary>
                 
                     <div class="read-more-container">
@@ -395,8 +381,6 @@
                 
                 <summary class="summary">
                     实现RSA算法 实验摘要 利用Python实现RSA的公钥加密、私钥解密过程，运用了扩展……
-    
-    
                 </summary>
                 
                     <div class="read-more-container">
@@ -448,8 +432,6 @@
                 
                 <summary class="summary">
                     第一部分-概论 消息是信息的表现形式，信息是消息的内涵。消息的传输载体、电表示形式。 信……
-    
-    
                 </summary>
                 
                     <div class="read-more-container">
@@ -502,9 +484,7 @@
 
 
         </div>
-        <script src="/js/meme.min.8eeb1784bd2ee50e5dadc087eca94dc8d496f0e502c20b56b8215eb9e5e815cc.js" integrity="sha256-jusXhL0u5Q5drcCH7KlNyNSW8OUCwgtWuCFeueXoFcw="></script>
-
-
+        
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 
 <script>
@@ -521,18 +501,18 @@
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.5.2/dist/mermaid.min.js"></script>
 <script>
-    var config = {
+    let mermaidConfig = {
         startOnLoad: true,
         flowchart: {
             useMaxWidth: false,
             htmlLabels: true
-        }
+        },
+        theme: 'default'
     };
-    mermaid.initialize(config);
+    mermaid.initialize(mermaidConfig);
 </script>
-
 
 
 
