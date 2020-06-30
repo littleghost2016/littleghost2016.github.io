@@ -23,10 +23,79 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Mon, 29 Jun 2020 23:14:05 &#43;0800</lastBuildDate>
+        <lastBuildDate>Tue, 30 Jun 2020 23:13:54 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://blog.littleghost.ml/rss.xml" />
         
+        
+            <item>
+                <title>《2015 SIGCOMM BlindBox：Deep Packet Inspection Over Encrypted Traffic》</title>
+                <link>https://blog.littleghost.ml/posts/2015-SIGCOMM-BlindBoxDeep-Packet-Inspection-over-Encrypted-Traffic/</link>
+                <guid isPermaLink="true">https://blog.littleghost.ml/posts/2015-SIGCOMM-BlindBoxDeep-Packet-Inspection-over-Encrypted-Traffic/</guid>
+                <pubDate>Tue, 30 Jun 2020 22:59:39 &#43;0800</pubDate>
+                
+                    <author>785340571@qq.com (LittleGhost)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                <description>BlindBox: Deep Packet Inspection over Encrypted Traffic Justine Sherry UC Berkeley Chang Lan UC Berkeley Raluca Ada Popa ETH Zürich and UC Berkeley Sylvia Ratnasamy UC Berkeley ABSTRACT Many network middleb……</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E8%AE%BA%E6%96%87/">论文</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/tags/%E6%B7%B1%E5%BA%A6%E5%8C%85%E6%A3%80%E6%B5%8B/">深度包检测</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/tags/DPI/">DPI</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/">中间件</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/tags/middlebox/">middlebox</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/tags/%E5%8F%AF%E6%90%9C%E7%B4%A2%E5%8A%A0%E5%AF%86/">可搜索加密</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/tags/searchable-encryption/">searchable encryption</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>信息论及其应用小作业 数据压缩</title>

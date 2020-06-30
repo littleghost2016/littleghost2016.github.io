@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">LittleGhost的博客</title>
     <subtitle type="html">本站采用MemE模板，MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</subtitle>
-    <updated>2020-06-29T23:14:05&#43;08:00</updated>
+    <updated>2020-06-30T23:13:54&#43;08:00</updated>
     <id>https://blog.littleghost.ml/</id>
     <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blog.littleghost.ml/atom.xml" />
@@ -16,6 +16,77 @@
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.73.0">Hugo</generator>
+        <entry>
+            <title type="text">《2015 SIGCOMM BlindBox：Deep Packet Inspection Over Encrypted Traffic》</title>
+            <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/posts/2015-SIGCOMM-BlindBoxDeep-Packet-Inspection-over-Encrypted-Traffic/" />
+            <id>https://blog.littleghost.ml/posts/2015-SIGCOMM-BlindBoxDeep-Packet-Inspection-over-Encrypted-Traffic/</id>
+            <updated>2020-06-30T23:11:12&#43;08:00</updated>
+            <published>2020-06-30T22:59:39&#43;08:00</published>
+            <author>
+                    <name>LittleGhost</name>
+                    <uri>https://blog.littleghost.ml</uri>
+                    <email>785340571@qq.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">BlindBox: Deep Packet Inspection over Encrypted Traffic Justine Sherry UC Berkeley Chang Lan UC Berkeley Raluca Ada Popa ETH Zürich and UC Berkeley Sylvia Ratnasamy UC Berkeley ABSTRACT Many network middleb……</summary>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/categories/%E8%AE%BA%E6%96%87/" term="论文" label="论文" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/tags/%E6%B7%B1%E5%BA%A6%E5%8C%85%E6%A3%80%E6%B5%8B/" term="深度包检测" label="深度包检测" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/tags/DPI/" term="DPI" label="DPI" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/" term="中间件" label="中间件" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/tags/middlebox/" term="middlebox" label="middlebox" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/tags/%E5%8F%AF%E6%90%9C%E7%B4%A2%E5%8A%A0%E5%AF%86/" term="可搜索加密" label="可搜索加密" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/tags/searchable-encryption/" term="searchable encryption" label="searchable encryption" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">信息论及其应用小作业 数据压缩</title>
             <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/posts/%E4%BF%A1%E6%81%AF%E8%AE%BA%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8%E5%B0%8F%E4%BD%9C%E4%B8%9A-%E6%95%B0%E6%8D%AE%E5%8E%8B%E7%BC%A9/" />
@@ -67,7 +138,7 @@
             <title type="text">《A new approach to intrusion detection based on an evolutionary》</title>
             <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/posts/A-new-approach-to-intrusion-detection-based-on-an-evolutionary/" />
             <id>https://blog.littleghost.ml/posts/A-new-approach-to-intrusion-detection-based-on-an-evolutionary/</id>
-            <updated>2020-06-19T20:56:29&#43;08:00</updated>
+            <updated>2020-06-30T23:13:28&#43;08:00</updated>
             <published>2020-06-06T15:52:19&#43;08:00</published>
             <author>
                     <name>LittleGhost</name>
