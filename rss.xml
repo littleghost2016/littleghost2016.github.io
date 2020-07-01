@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Wed, 01 Jul 2020 20:10:46 &#43;0800</lastBuildDate>
+        <lastBuildDate>Wed, 01 Jul 2020 20:34:30 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://blog.littleghost.ml/rss.xml" />
         
@@ -90,6 +90,69 @@
                                 
                                 
                                     <category domain="https://blog.littleghost.ml/tags/searchable-encryption/">searchable encryption</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>《基于熵理论的无线网络安全的模糊风险评估》</title>
+                <link>https://blog.littleghost.ml/posts/%E5%9F%BA%E4%BA%8E%E7%86%B5%E7%90%86%E8%AE%BA%E7%9A%84%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%9A%84%E6%A8%A1%E7%B3%8A%E9%A3%8E%E9%99%A9%E8%AF%84%E4%BC%B0/</link>
+                <guid isPermaLink="true">https://blog.littleghost.ml/posts/%E5%9F%BA%E4%BA%8E%E7%86%B5%E7%90%86%E8%AE%BA%E7%9A%84%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%9A%84%E6%A8%A1%E7%B3%8A%E9%A3%8E%E9%99%A9%E8%AF%84%E4%BC%B0/</guid>
+                <pubDate>Mon, 22 Jun 2020 20:27:25 &#43;0800</pubDate>
+                
+                    <author>785340571@qq.com (LittleGhost)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                <description>阅读信息论相关论文，《基于熵理论的无线网络安全的模糊风险评估》。 随着无线网络的迅速发……</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E8%AE%BA%E6%96%87/">论文</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/tags/%E4%BF%A1%E6%81%AF%E8%AE%BA/">信息论</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/tags/%E9%A3%8E%E9%99%A9%E8%AF%84%E4%BC%B0/">风险评估</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/tags/%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C/">无线网络</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/tags/%E6%A8%A1%E7%B3%8A%E9%80%BB%E8%BE%91/">模糊逻辑</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/tags/%E7%86%B5%E6%9D%83%E7%B3%BB%E6%95%B0/">熵权系数</category>
                                 
                             
                         

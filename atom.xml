@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">LittleGhost的博客</title>
     <subtitle type="html">本站采用MemE模板，MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</subtitle>
-    <updated>2020-07-01T20:10:13&#43;08:00</updated>
+    <updated>2020-07-01T20:34:30&#43;08:00</updated>
     <id>https://blog.littleghost.ml/</id>
     <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blog.littleghost.ml/atom.xml" />
@@ -80,6 +80,71 @@
                             
                             
                                 <category scheme="https://blog.littleghost.ml/tags/searchable-encryption/" term="searchable encryption" label="searchable encryption" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">《基于熵理论的无线网络安全的模糊风险评估》</title>
+            <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/posts/%E5%9F%BA%E4%BA%8E%E7%86%B5%E7%90%86%E8%AE%BA%E7%9A%84%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%9A%84%E6%A8%A1%E7%B3%8A%E9%A3%8E%E9%99%A9%E8%AF%84%E4%BC%B0/" />
+            <id>https://blog.littleghost.ml/posts/%E5%9F%BA%E4%BA%8E%E7%86%B5%E7%90%86%E8%AE%BA%E7%9A%84%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%9A%84%E6%A8%A1%E7%B3%8A%E9%A3%8E%E9%99%A9%E8%AF%84%E4%BC%B0/</id>
+            <updated>2020-07-01T20:33:55&#43;08:00</updated>
+            <published>2020-06-22T20:27:25&#43;08:00</published>
+            <author>
+                    <name>LittleGhost</name>
+                    <uri>https://blog.littleghost.ml</uri>
+                    <email>785340571@qq.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">阅读信息论相关论文，《基于熵理论的无线网络安全的模糊风险评估》。 随着无线网络的迅速发……</summary>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/categories/%E8%AE%BA%E6%96%87/" term="论文" label="论文" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/tags/%E4%BF%A1%E6%81%AF%E8%AE%BA/" term="信息论" label="信息论" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/tags/%E9%A3%8E%E9%99%A9%E8%AF%84%E4%BC%B0/" term="风险评估" label="风险评估" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/tags/%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C/" term="无线网络" label="无线网络" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/tags/%E6%A8%A1%E7%B3%8A%E9%80%BB%E8%BE%91/" term="模糊逻辑" label="模糊逻辑" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/tags/%E7%86%B5%E6%9D%83%E7%B3%BB%E6%95%B0/" term="熵权系数" label="熵权系数" />
                             
                         
                     
