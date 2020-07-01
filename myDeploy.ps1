@@ -43,7 +43,7 @@ Copy-Item -Path ..\.gitmodules -Recurse -Destination .\
 Copy-Item -Path ..\config.toml -Recurse -Destination .\
 Copy-Item -Path ..\myDeploy.ps1 -Recurse -Destination .\
 Copy-Item -Path ..\myDeploy.sh -Recurse -Destination .\
-Copy-Item -Path ..\themes -Recurse -Destination .\
+Copy-Item -Path ..\themes\meme\static -Recurse -Destination .\
 
 git add -A
 git commit -m $currentTime
