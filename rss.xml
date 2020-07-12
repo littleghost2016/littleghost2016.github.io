@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Wed, 01 Jul 2020 20:34:30 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sun, 12 Jul 2020 20:28:19 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://blog.littleghost.ml/rss.xml" />
         
@@ -90,6 +90,57 @@
                                 
                                 
                                     <category domain="https://blog.littleghost.ml/tags/searchable-encryption/">searchable encryption</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>通过API自动更新Aliyun的DNS解析 Go语言版本</title>
+                <link>https://blog.littleghost.ml/posts/%E9%80%9A%E8%BF%87API%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0Aliyun%E7%9A%84DNS%E8%A7%A3%E6%9E%90-Go%E8%AF%AD%E8%A8%80%E7%89%88%E6%9C%AC/</link>
+                <guid isPermaLink="true">https://blog.littleghost.ml/posts/%E9%80%9A%E8%BF%87API%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0Aliyun%E7%9A%84DNS%E8%A7%A3%E6%9E%90-Go%E8%AF%AD%E8%A8%80%E7%89%88%E6%9C%AC/</guid>
+                <pubDate>Mon, 29 Jun 2020 20:23:49 &#43;0800</pubDate>
+                
+                    <author>785340571@qq.com (LittleGhost)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                <description>原来一直使用cloudflare做域名解析，还写过通过API自动更新Cloudfla……</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/tags/dns/">dns</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/tags/go/">go</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/tags/%E7%88%AC%E8%99%AB/">爬虫</category>
                                 
                             
                         
