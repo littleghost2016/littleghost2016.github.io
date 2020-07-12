@@ -5,7 +5,7 @@ tags: ["dns", "go", "爬虫"]
 categories: ["技术"]
 ---
 
-原来一直使用cloudflare做域名解析，还写过[通过API自动更新Cloudflare的DNS解析-Go语言版本]([https://blog.littleghost.ml/posts/%E9%80%9A%E8%BF%87API%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0Cloudflare%E7%9A%84DNS%E8%A7%A3%E6%9E%90-Go%E8%AF%AD%E8%A8%80%E7%89%88%E6%9C%AC/](https://blog.littleghost.ml/posts/通过API自动更新Cloudflare的DNS解析-Go语言版本/))，但从哪一天开始域名无法正确更新，根据回显提示：
+原来一直使用cloudflare做域名解析，还写过[通过API自动更新Cloudflare的DNS解析-Go语言版本](https://blog.littleghost.ml/posts/通过API自动更新Cloudflare的DNS解析-Go语言版本/)，但从哪一天开始域名无法正确更新，根据回显提示：
 
 > Check the log file and find the error message: “error”: "You cannot use this API for domains (top-level domains) with .cf, .ga, .gq, .ml or .tk TLDs. DNS settings for this domain, please Use the Cloudflare dashboard.
 
