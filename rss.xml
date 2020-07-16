@@ -23,10 +23,49 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Thu, 16 Jul 2020 21:27:56 &#43;0800</lastBuildDate>
+        <lastBuildDate>Thu, 16 Jul 2020 21:41:46 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://blog.littleghost.ml/rss.xml" />
         
+        
+            <item>
+                <title>通过两道题学习go的fmt</title>
+                <link>https://blog.littleghost.ml/posts/%E9%80%9A%E8%BF%87%E4%B8%A4%E9%81%93%E9%A2%98%E5%AD%A6%E4%B9%A0go%E7%9A%84fmt.Scan/</link>
+                <guid isPermaLink="true">https://blog.littleghost.ml/posts/%E9%80%9A%E8%BF%87%E4%B8%A4%E9%81%93%E9%A2%98%E5%AD%A6%E4%B9%A0go%E7%9A%84fmt.Scan/</guid>
+                <pubDate>Thu, 16 Jul 2020 21:35:00 &#43;0800</pubDate>
+                
+                    <author>785340571@qq.com (LittleGhost)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                <description>今天实验室师兄晚上有华为笔试，凑着看了两道用于笔试前练习的题。主要用于练习标准输入，……</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/tags/go/">go</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>学习scikit-Learn</title>

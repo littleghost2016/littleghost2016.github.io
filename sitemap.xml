@@ -4,17 +4,37 @@
   
   <url>
     <loc>https://blog.littleghost.ml/categories/</loc>
-    <lastmod>2020-07-16T21:26:53+08:00</lastmod>
+    <lastmod>2020-07-16T21:41:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.littleghost.ml/tags/go/</loc>
+    <lastmod>2020-07-16T21:41:39+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.littleghost.ml/</loc>
-    <lastmod>2020-07-16T21:26:53+08:00</lastmod>
+    <lastmod>2020-07-16T21:41:39+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.littleghost.ml/posts/</loc>
-    <lastmod>2020-07-16T21:26:53+08:00</lastmod>
+    <lastmod>2020-07-16T21:41:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.littleghost.ml/tags/</loc>
+    <lastmod>2020-07-16T21:41:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2020-07-16T21:41:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.littleghost.ml/posts/%E9%80%9A%E8%BF%87%E4%B8%A4%E9%81%93%E9%A2%98%E5%AD%A6%E4%B9%A0go%E7%9A%84fmt.Scan/</loc>
+    <lastmod>2020-07-16T21:41:39+08:00</lastmod>
   </url>
   
   <url>
@@ -23,17 +43,7 @@
   </url>
   
   <url>
-    <loc>https://blog.littleghost.ml/tags/</loc>
-    <lastmod>2020-07-16T21:26:53+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.littleghost.ml/posts/%E5%AD%A6%E4%B9%A0scikit-learn/</loc>
-    <lastmod>2020-07-16T21:26:53+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2020-07-16T21:26:53+08:00</lastmod>
   </url>
   
@@ -84,11 +94,6 @@
   
   <url>
     <loc>https://blog.littleghost.ml/tags/dns/</loc>
-    <lastmod>2020-07-12T20:31:58+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.littleghost.ml/tags/go/</loc>
     <lastmod>2020-07-12T20:31:58+08:00</lastmod>
   </url>
   
