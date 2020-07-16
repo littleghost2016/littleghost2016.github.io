@@ -4,7 +4,42 @@
   
   <url>
     <loc>https://blog.littleghost.ml/categories/</loc>
-    <lastmod>2020-07-12T20:31:58+08:00</lastmod>
+    <lastmod>2020-07-16T21:26:53+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.littleghost.ml/</loc>
+    <lastmod>2020-07-16T21:26:53+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.littleghost.ml/posts/</loc>
+    <lastmod>2020-07-16T21:26:53+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.littleghost.ml/tags/sklearn/</loc>
+    <lastmod>2020-07-16T21:26:53+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.littleghost.ml/tags/</loc>
+    <lastmod>2020-07-16T21:26:53+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.littleghost.ml/posts/%E5%AD%A6%E4%B9%A0scikit-learn/</loc>
+    <lastmod>2020-07-16T21:26:53+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2020-07-16T21:26:53+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.littleghost.ml/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2020-07-16T21:26:53+08:00</lastmod>
   </url>
   
   <url>
@@ -13,28 +48,13 @@
   </url>
   
   <url>
-    <loc>https://blog.littleghost.ml/</loc>
-    <lastmod>2020-07-12T20:31:58+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.littleghost.ml/tags/middlebox/</loc>
     <lastmod>2020-07-01T20:07:41+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.littleghost.ml/posts/</loc>
-    <lastmod>2020-07-12T20:31:58+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.littleghost.ml/tags/searchable-encryption/</loc>
     <lastmod>2020-07-01T20:07:41+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.littleghost.ml/tags/</loc>
-    <lastmod>2020-07-12T20:31:58+08:00</lastmod>
   </url>
   
   <url>
@@ -69,11 +89,6 @@
   
   <url>
     <loc>https://blog.littleghost.ml/tags/go/</loc>
-    <lastmod>2020-07-12T20:31:58+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2020-07-12T20:31:58+08:00</lastmod>
   </url>
   
