@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Thu, 16 Jul 2020 21:49:03 &#43;0800</lastBuildDate>
+        <lastBuildDate>Thu, 16 Jul 2020 22:29:58 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://blog.littleghost.ml/rss.xml" />
         
@@ -2258,6 +2258,45 @@ Quick Start Create a new post 1  $ hexo new &amp;#34;My New Post&amp;#34;   More
                                 
                                 
                                     <category domain="https://blog.littleghost.ml/tags/java/">java</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>概率论大作业</title>
+                <link>https://blog.littleghost.ml/posts/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%A4%A7%E4%BD%9C%E4%B8%9A/</link>
+                <guid isPermaLink="true">https://blog.littleghost.ml/posts/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%A4%A7%E4%BD%9C%E4%B8%9A/</guid>
+                <pubDate>Sun, 25 Dec 2016 20:11:14 &#43;0800</pubDate>
+                
+                    <author>785340571@qq.com (LittleGhost)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                <description>一、题概述和分析 （1）实验内容说明： （验证性实验）某地某年高考后随机抽得15名男生、……</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/">概率论</category>
                                 
                             
                         

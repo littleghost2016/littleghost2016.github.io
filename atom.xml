@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">LittleGhost的博客</title>
     <subtitle type="html">本站采用MemE模板，MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</subtitle>
-    <updated>2020-07-16T21:42:56&#43;08:00</updated>
+    <updated>2020-07-16T22:29:58&#43;08:00</updated>
     <id>https://blog.littleghost.ml/</id>
     <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blog.littleghost.ml/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">通过两道题学习go的fmt</title>
             <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/posts/%E9%80%9A%E8%BF%87%E4%B8%A4%E9%81%93%E9%A2%98%E5%AD%A6%E4%B9%A0go%E7%9A%84fmt.Scan/" />
             <id>https://blog.littleghost.ml/posts/%E9%80%9A%E8%BF%87%E4%B8%A4%E9%81%93%E9%A2%98%E5%AD%A6%E4%B9%A0go%E7%9A%84fmt.Scan/</id>
-            <updated>2020-07-16T21:42:52&#43;08:00</updated>
+            <updated>2020-07-16T21:49:00&#43;08:00</updated>
             <published>2020-07-15T21:35:00&#43;08:00</published>
             <author>
                     <name>LittleGhost</name>
@@ -2350,6 +2350,47 @@ Quick Start Create a new post 1  $ hexo new &amp;#34;My New Post&amp;#34;   More
                             
                             
                                 <category scheme="https://blog.littleghost.ml/tags/java/" term="java" label="java" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">概率论大作业</title>
+            <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/posts/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%A4%A7%E4%BD%9C%E4%B8%9A/" />
+            <id>https://blog.littleghost.ml/posts/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%A4%A7%E4%BD%9C%E4%B8%9A/</id>
+            <updated>2020-07-16T22:29:44&#43;08:00</updated>
+            <published>2016-12-25T20:11:14&#43;08:00</published>
+            <author>
+                    <name>LittleGhost</name>
+                    <uri>https://blog.littleghost.ml</uri>
+                    <email>785340571@qq.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">一、题概述和分析 （1）实验内容说明： （验证性实验）某地某年高考后随机抽得15名男生、……</summary>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/" term="技术" label="技术" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/" term="概率论" label="概率论" />
                             
                         
                     
