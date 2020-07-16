@@ -9,8 +9,9 @@ categories: ["技术"]
 
 # 题目一
 
-链接：https://ac.nowcoder.com/acm/contest/5646/E
 来源：牛客网
+
+[题目链接](https://ac.nowcoder.com/acm/contest/5646/E)
 
 ## 题目描述
 
@@ -77,8 +78,9 @@ func main() {
 
 # 题目二
 
-链接：https://ac.nowcoder.com/acm/contest/5646/F
 来源：牛客网
+
+[题目链接](https://ac.nowcoder.com/acm/contest/5646/F)
 
 ## 题目描述
 
