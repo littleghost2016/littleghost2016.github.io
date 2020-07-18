@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">LittleGhost的博客</title>
     <subtitle type="html">本站采用MemE模板，MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</subtitle>
-    <updated>2020-07-16T22:29:58&#43;08:00</updated>
+    <updated>2020-07-18T15:04:39&#43;08:00</updated>
     <id>https://blog.littleghost.ml/</id>
     <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blog.littleghost.ml/atom.xml" />
@@ -2016,6 +2016,59 @@ Quick Start Create a new post 1  $ hexo new &amp;#34;My New Post&amp;#34;   More
                             
                             
                                 <category scheme="https://blog.littleghost.ml/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/" term="密码学" label="密码学" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">网络安全基础上机实验</title>
+            <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/posts/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%9F%BA%E7%A1%80%E4%B8%8A%E6%9C%BA%E5%AE%9E%E9%AA%8C/" />
+            <id>https://blog.littleghost.ml/posts/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%9F%BA%E7%A1%80%E4%B8%8A%E6%9C%BA%E5%AE%9E%E9%AA%8C/</id>
+            <updated>2020-07-18T15:04:19&#43;08:00</updated>
+            <published>2017-12-29T21:23:25&#43;08:00</published>
+            <author>
+                    <name>LittleGhost</name>
+                    <uri>https://blog.littleghost.ml</uri>
+                    <email>785340571@qq.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">实验1：VPN、IPSec分析 1) 实验内容 基于REDHAT9.0搭建OPENSWAN实……</summary>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/" term="技术" label="技术" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/tags/ipsec/" term="ipsec" label="ipsec" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/tags/ssl/" term="ssl" label="ssl" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/tags/iptables/" term="iptables" label="iptables" />
                             
                         
                     
