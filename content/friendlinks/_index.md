@@ -6,7 +6,7 @@ draft: flase
 
 ![](https://avatars3.githubusercontent.com/u/13461535?s=88&v=4)
 
-[**SewellDinG** 老锥](https://ai-sewell.me)
+[**SewellDinG** 老锥](https://getshell.icu)
 
 陌生的人请给我一支兰州
 
