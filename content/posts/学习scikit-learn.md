@@ -1,5 +1,5 @@
 ---
-title: "学习scikit-Learn"
+title: "学习scikit-learn"
 date: 2020-07-14T21:23:07+08:00
 tags: ["机器学习", "sklearn"]
 categories: ["技术"]
