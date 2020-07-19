@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">LittleGhost的博客</title>
     <subtitle type="html">本站采用MemE模板，MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</subtitle>
-    <updated>2020-07-18T19:38:43&#43;08:00</updated>
+    <updated>2020-07-19T08:43:59&#43;08:00</updated>
     <id>https://blog.littleghost.ml/</id>
     <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blog.littleghost.ml/atom.xml" />
@@ -15,7 +15,7 @@
                 <email>785340571@qq.com</email>
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
-    <generator uri="https://gohugo.io/" version="0.74.1">Hugo</generator>
+    <generator uri="https://gohugo.io/" version="0.74.2">Hugo</generator>
         <entry>
             <title type="text">通过两道题学习go的fmt</title>
             <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/posts/%E9%80%9A%E8%BF%87%E4%B8%A4%E9%81%93%E9%A2%98%E5%AD%A6%E4%B9%A0go%E7%9A%84fmt.Scan/" />
@@ -58,10 +58,10 @@
         </entry>
     
         <entry>
-            <title type="text">学习scikit-Learn</title>
+            <title type="text">学习scikit-learn</title>
             <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/posts/%E5%AD%A6%E4%B9%A0scikit-learn/" />
             <id>https://blog.littleghost.ml/posts/%E5%AD%A6%E4%B9%A0scikit-learn/</id>
-            <updated>2020-07-16T21:26:53&#43;08:00</updated>
+            <updated>2020-07-18T20:45:06&#43;08:00</updated>
             <published>2020-07-14T21:23:07&#43;08:00</published>
             <author>
                     <name>LittleGhost</name>
@@ -1380,7 +1380,7 @@
             <title type="text">K2P同时校园网和翼讯</title>
             <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/posts/K2P%E5%90%8C%E6%97%B6%E6%A0%A1%E5%9B%AD%E7%BD%91%E5%92%8C%E7%BF%BC%E8%AE%AF/" />
             <id>https://blog.littleghost.ml/posts/K2P%E5%90%8C%E6%97%B6%E6%A0%A1%E5%9B%AD%E7%BD%91%E5%92%8C%E7%BF%BC%E8%AE%AF/</id>
-            <updated>2020-05-25T19:28:09&#43;08:00</updated>
+            <updated>2020-07-18T20:50:03&#43;08:00</updated>
             <published>2019-07-11T03:16:47&#43;00:00</published>
             <author>
                     <name>LittleGhost</name>

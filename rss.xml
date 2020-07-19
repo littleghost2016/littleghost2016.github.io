@@ -10,7 +10,7 @@
         <title>LittleGhost的博客</title>
         <link>https://blog.littleghost.ml/</link>
         <description>本站采用MemE模板，MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</description>
-        <generator>Hugo 0.74.1 https://gohugo.io/</generator>
+        <generator>Hugo 0.74.2 https://gohugo.io/</generator>
         
             <language>zh-CN</language>
         
@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sat, 18 Jul 2020 19:38:43 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sun, 19 Jul 2020 08:43:59 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://blog.littleghost.ml/rss.xml" />
         
@@ -68,7 +68,7 @@
             </item>
         
             <item>
-                <title>学习scikit-Learn</title>
+                <title>学习scikit-learn</title>
                 <link>https://blog.littleghost.ml/posts/%E5%AD%A6%E4%B9%A0scikit-learn/</link>
                 <guid isPermaLink="true">https://blog.littleghost.ml/posts/%E5%AD%A6%E4%B9%A0scikit-learn/</guid>
                 <pubDate>Tue, 14 Jul 2020 21:23:07 &#43;0800</pubDate>
