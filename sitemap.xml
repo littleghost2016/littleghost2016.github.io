@@ -4,37 +4,7 @@
   
   <url>
     <loc>https://blog.littleghost.ml/categories/</loc>
-    <lastmod>2020-08-08T15:28:53+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.littleghost.ml/</loc>
-    <lastmod>2020-08-08T15:28:53+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.littleghost.ml/posts/</loc>
-    <lastmod>2020-08-08T15:28:53+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.littleghost.ml/tags/</loc>
-    <lastmod>2020-08-08T15:28:53+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2020-08-08T15:28:53+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.littleghost.ml/tags/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/</loc>
-    <lastmod>2020-08-08T15:28:53+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.littleghost.ml/posts/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E5%A4%A7%E4%BD%9C%E4%B8%9A/</loc>
-    <lastmod>2020-08-08T15:28:53+08:00</lastmod>
+    <lastmod>2020-08-08T15:38:17+08:00</lastmod>
   </url>
   
   <url>
@@ -43,8 +13,23 @@
   </url>
   
   <url>
+    <loc>https://blog.littleghost.ml/</loc>
+    <lastmod>2020-08-08T15:38:17+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://blog.littleghost.ml/tags/NLP/</loc>
     <lastmod>2020-08-08T15:21:50+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.littleghost.ml/posts/</loc>
+    <lastmod>2020-08-08T15:38:17+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.littleghost.ml/tags/</loc>
+    <lastmod>2020-08-08T15:38:17+08:00</lastmod>
   </url>
   
   <url>
@@ -70,6 +55,11 @@
   <url>
     <loc>https://blog.littleghost.ml/tags/go/</loc>
     <lastmod>2020-07-16T21:49:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2020-08-08T15:38:17+08:00</lastmod>
   </url>
   
   <url>
@@ -510,6 +500,16 @@
   <url>
     <loc>https://blog.littleghost.ml/posts/hello-world/</loc>
     <lastmod>2020-05-22T09:33:36+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.littleghost.ml/tags/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/</loc>
+    <lastmod>2020-08-08T15:38:17+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.littleghost.ml/posts/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E5%A4%A7%E4%BD%9C%E4%B8%9A/</loc>
+    <lastmod>2020-08-08T15:38:17+08:00</lastmod>
   </url>
   
   <url>
