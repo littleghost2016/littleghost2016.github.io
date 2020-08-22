@@ -49,7 +49,7 @@ iputils-tracepath:		Nerwork -> iputils-tracepath
 $ opkg update && opkg install kmod-ipt-nat6 && opkg install kmod-macvlan && opkg install iputils-tracepath
 ```
 
-在安装是可能会提示内核版本与插件版本不符合，请尝试使用`--force-depends`以强制安装，例如
+在安装时可能会提示内核版本与插件版本不符合，请尝试使用`--force-depends`以强制安装，例如
 
 ```bash
 $ opkg install --force-depends kmod-ipt-nat6
