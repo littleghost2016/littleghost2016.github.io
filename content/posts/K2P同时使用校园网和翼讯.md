@@ -6,7 +6,7 @@ categories: ["技术"]
 
 ---
 
-> [文章](http://rs.xidian.edu.cn/forum.php?mod=viewthread&tid=906698&highlight=ipv6)原创为西电睿思的小忧伤，感谢大佬提供技术和文章授权！本文在原文章的基础上做了部分修改，更新了NAT6转发部分的内容以适应新固件。
+> [文章](http://rs.xidian.edu.cn/forum.php?mod=viewthread&tid=906698&highlight=ipv6)原创为西电睿思的小忧伤，感谢大佬提供技术！本文在原文章的基础上做了部分修改，更新了NAT6转发部分的内容以适应新固件。
 
 > 最后效果为IPv4流量计算在翼讯，IPv6流量计算在校园网。
 
