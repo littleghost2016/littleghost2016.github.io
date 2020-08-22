@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">LittleGhost的博客</title>
     <subtitle type="html">本站采用MemE模板，MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</subtitle>
-    <updated>2020-08-22T14:29:31&#43;08:00</updated>
+    <updated>2020-08-22T14:46:04&#43;08:00</updated>
     <id>https://blog.littleghost.ml/</id>
     <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blog.littleghost.ml/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">K2P同时使用校园网和翼讯</title>
             <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/posts/K2P%E5%90%8C%E6%97%B6%E4%BD%BF%E7%94%A8%E6%A0%A1%E5%9B%AD%E7%BD%91%E5%92%8C%E7%BF%BC%E8%AE%AF/" />
             <id>https://blog.littleghost.ml/posts/K2P%E5%90%8C%E6%97%B6%E4%BD%BF%E7%94%A8%E6%A0%A1%E5%9B%AD%E7%BD%91%E5%92%8C%E7%BF%BC%E8%AE%AF/</id>
-            <updated>2020-08-22T14:27:59&#43;08:00</updated>
+            <updated>2020-08-22T14:46:01&#43;08:00</updated>
             <published>2020-08-22T12:59:47&#43;08:00</published>
             <author>
                     <name>LittleGhost</name>
