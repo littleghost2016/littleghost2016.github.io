@@ -16,7 +16,7 @@ categories: ["技术"]
 
 ## 包含插件
 
-- XXR Plus+
+- $$R Plus+
   - $$
   - v2ray
   - socks
