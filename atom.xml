@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">LittleGhost的博客</title>
     <subtitle type="html">本站采用MemE模板，MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</subtitle>
-    <updated>2020-08-08T15:29:25&#43;08:00</updated>
+    <updated>2020-08-22T13:15:05&#43;08:00</updated>
     <id>https://blog.littleghost.ml/</id>
     <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blog.littleghost.ml/atom.xml" />
@@ -17,17 +17,17 @@
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.74.3">Hugo</generator>
         <entry>
-            <title type="text">课程设计大作业</title>
-            <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/posts/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E5%A4%A7%E4%BD%9C%E4%B8%9A/" />
-            <id>https://blog.littleghost.ml/posts/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E5%A4%A7%E4%BD%9C%E4%B8%9A/</id>
-            <updated>2020-08-08T15:28:53&#43;08:00</updated>
-            <published>2020-08-08T15:27:04&#43;08:00</published>
+            <title type="text">K2P同时使用校园网和翼讯</title>
+            <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/posts/K2P%E5%90%8C%E6%97%B6%E4%BD%BF%E7%94%A8%E6%A0%A1%E5%9B%AD%E7%BD%91%E5%92%8C%E7%BF%BC%E8%AE%AF/" />
+            <id>https://blog.littleghost.ml/posts/K2P%E5%90%8C%E6%97%B6%E4%BD%BF%E7%94%A8%E6%A0%A1%E5%9B%AD%E7%BD%91%E5%92%8C%E7%BF%BC%E8%AE%AF/</id>
+            <updated>2020-08-22T13:12:59&#43;08:00</updated>
+            <published>2020-08-22T12:59:47&#43;08:00</published>
             <author>
                     <name>LittleGhost</name>
                     <uri>https://blog.littleghost.ml</uri>
                     <email>785340571@qq.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">基于Flask框架的动态代理池系统 一、项目简介 如今是网络与信息时代，互联网成为了大量……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">文章原创为西电睿思的小忧伤，感谢大佬提供技术和文章授权！本文在原文章的基础上做了部分……</summary>
             
             
             
@@ -49,7 +49,13 @@
                             
                             
                             
-                                <category scheme="https://blog.littleghost.ml/tags/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/" term="课程设计" label="课程设计" />
+                                <category scheme="https://blog.littleghost.ml/tags/k2p/" term="k2p" label="k2p" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/tags/ipv6/" term="ipv6" label="ipv6" />
                             
                         
                     
@@ -1477,47 +1483,6 @@
         </entry>
     
         <entry>
-            <title type="text">K2P同时校园网和翼讯</title>
-            <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/posts/K2P%E5%90%8C%E6%97%B6%E6%A0%A1%E5%9B%AD%E7%BD%91%E5%92%8C%E7%BF%BC%E8%AE%AF/" />
-            <id>https://blog.littleghost.ml/posts/K2P%E5%90%8C%E6%97%B6%E6%A0%A1%E5%9B%AD%E7%BD%91%E5%92%8C%E7%BF%BC%E8%AE%AF/</id>
-            <updated>2020-07-18T20:50:03&#43;08:00</updated>
-            <published>2019-07-11T03:16:47&#43;00:00</published>
-            <author>
-                    <name>LittleGhost</name>
-                    <uri>https://blog.littleghost.ml</uri>
-                    <email>785340571@qq.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">文章原创为西电睿思的小忧伤，感谢大佬提供技术和文章授权！ 最后可以实现连入路由器的电脑……</summary>
-            
-            
-            
-            
-            
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/" term="技术" label="技术" />
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://blog.littleghost.ml/tags/K2P/" term="K2P" label="K2P" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        <entry>
             <title type="text">zsh报错command not found compdef</title>
             <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/posts/zsh%E6%8A%A5%E9%94%99command-not-found-compdef/" />
             <id>https://blog.littleghost.ml/posts/zsh%E6%8A%A5%E9%94%99command-not-found-compdef/</id>
@@ -1620,6 +1585,47 @@ Quick Start Create a new post 1  $ hexo new &amp;#34;My New Post&amp;#34;   More
                 
                     
                 
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">课程设计大作业</title>
+            <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/posts/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E5%A4%A7%E4%BD%9C%E4%B8%9A/" />
+            <id>https://blog.littleghost.ml/posts/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E5%A4%A7%E4%BD%9C%E4%B8%9A/</id>
+            <updated>2020-08-08T15:38:17&#43;08:00</updated>
+            <published>2019-01-10T11:41:04&#43;08:00</published>
+            <author>
+                    <name>LittleGhost</name>
+                    <uri>https://blog.littleghost.ml</uri>
+                    <email>785340571@qq.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">基于Flask框架的动态代理池系统 一、项目简介 如今是网络与信息时代，互联网成为了大量……</summary>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/" term="技术" label="技术" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/tags/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/" term="课程设计" label="课程设计" />
+                            
+                        
                     
                 
             

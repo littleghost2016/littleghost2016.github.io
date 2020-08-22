@@ -4,7 +4,42 @@
   
   <url>
     <loc>https://blog.littleghost.ml/categories/</loc>
-    <lastmod>2020-08-08T15:38:17+08:00</lastmod>
+    <lastmod>2020-08-22T13:12:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.littleghost.ml/tags/ipv6/</loc>
+    <lastmod>2020-08-22T13:12:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.littleghost.ml/tags/k2p/</loc>
+    <lastmod>2020-08-22T13:12:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.littleghost.ml/posts/K2P%E5%90%8C%E6%97%B6%E4%BD%BF%E7%94%A8%E6%A0%A1%E5%9B%AD%E7%BD%91%E5%92%8C%E7%BF%BC%E8%AE%AF/</loc>
+    <lastmod>2020-08-22T13:12:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.littleghost.ml/</loc>
+    <lastmod>2020-08-22T13:12:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.littleghost.ml/posts/</loc>
+    <lastmod>2020-08-22T13:12:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.littleghost.ml/tags/</loc>
+    <lastmod>2020-08-22T13:12:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2020-08-22T13:12:59+08:00</lastmod>
   </url>
   
   <url>
@@ -13,23 +48,8 @@
   </url>
   
   <url>
-    <loc>https://blog.littleghost.ml/</loc>
-    <lastmod>2020-08-08T15:38:17+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.littleghost.ml/tags/NLP/</loc>
     <lastmod>2020-08-08T15:21:50+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.littleghost.ml/posts/</loc>
-    <lastmod>2020-08-08T15:38:17+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.littleghost.ml/tags/</loc>
-    <lastmod>2020-08-08T15:38:17+08:00</lastmod>
   </url>
   
   <url>
@@ -55,11 +75,6 @@
   <url>
     <loc>https://blog.littleghost.ml/tags/go/</loc>
     <lastmod>2020-07-16T21:49:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2020-08-08T15:38:17+08:00</lastmod>
   </url>
   
   <url>
@@ -328,11 +343,6 @@
   </url>
   
   <url>
-    <loc>https://blog.littleghost.ml/tags/ipv6/</loc>
-    <lastmod>2020-05-25T19:30:02+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.littleghost.ml/tags/linux/</loc>
     <lastmod>2020-05-25T19:31:27+08:00</lastmod>
   </url>
@@ -465,16 +475,6 @@
   <url>
     <loc>https://blog.littleghost.ml/posts/hexo%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2020-05-25T19:27:54+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.littleghost.ml/tags/K2P/</loc>
-    <lastmod>2020-07-18T20:50:03+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.littleghost.ml/posts/K2P%E5%90%8C%E6%97%B6%E6%A0%A1%E5%9B%AD%E7%BD%91%E5%92%8C%E7%BF%BC%E8%AE%AF/</loc>
-    <lastmod>2020-07-18T20:50:03+08:00</lastmod>
   </url>
   
   <url>
