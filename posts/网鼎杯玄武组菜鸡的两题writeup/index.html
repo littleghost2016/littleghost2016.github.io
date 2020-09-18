@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.74.3" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.75.1" /><meta name="theme-color" content="#fff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -14,7 +14,7 @@
 
     <title>网鼎杯玄武组菜鸡的两题writeup | LittleGhost的博客</title>
 
-    <link rel="stylesheet" href="/css/meme.min.a31a4b7aa92479f5f86fe95a52b51220612c5da4459346eb89db7da4ce628675.css" integrity="sha256-oxpLeqkkefX4b&#43;laUrUSIGEsXaRFk0bridt9pM5ihnU=" />
+    <link rel="stylesheet" href="/css/meme.min.6a2f3c2660bd358615bca24d6293d87c824a625998b69cbd505a1b7a626b2fbc.css" integrity="sha256-ai88JmC9NYYVvKJNYpPYfIJKYlmYtpy9UFobemJrL7w=" />
 
     
     
@@ -62,7 +62,7 @@
         "description": "签到题 操作内容 此题writeup来自队友。 进入容器，首先按 Ctrl+U 查看页面源码，发现存在j……\n    \n    ",
         "inLanguage" : "zh-CN",
         "articleSection": "posts",
-        "wordCount":  3184 ,
+        "wordCount":  3180 ,
         "image": ["https://blog.littleghost.ml/clip_image002.jpg","https://blog.littleghost.ml/clip_image004.jpg","https://blog.littleghost.ml/apl.jpg"],
         "author": {
             "@type": "Person",
@@ -238,7 +238,7 @@
     
     
         
-        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;3184</span>
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;3180</span>
     
     
         
@@ -265,7 +265,7 @@
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-php" data-lang="php">var token=prompt(&#34;\x70\x6c\x65\x61\x73\x65 \x69\x6e\x70\x75\x74 \x79\x6f\x75\x72 \x74\x65\x61\x6d \x54\x6f\x6b\x65\x6e\x3a&#34;)
+<pre class="chroma"><code class="language-php" data-lang="php"><span class="k">var</span> <span class="nx">token</span><span class="o">=</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\x70\x6c\x65\x61\x73\x65</span><span class="s2"> </span><span class="se">\x69\x6e\x70\x75\x74</span><span class="s2"> </span><span class="se">\x79\x6f\x75\x72</span><span class="s2"> </span><span class="se">\x74\x65\x61\x6d</span><span class="s2"> </span><span class="se">\x54\x6f\x6b\x65\x6e\x3a</span><span class="s2">&#34;</span><span class="p">)</span>
 </code></pre></td></tr></table></div>
 </div>
 </div><p>解码后为：please input your team Token。故token的值为本队的token。然后success输入data，获取flag。</p>
