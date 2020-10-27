@@ -10,7 +10,7 @@
         <title>LittleGhost的博客</title>
         <link>https://blog.littleghost.ml/</link>
         <description>本站采用MemE模板，MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</description>
-        <generator>Hugo 0.76.4 https://gohugo.io/</generator>
+        <generator>Hugo 0.76.5 https://gohugo.io/</generator>
         
             <language>zh-CN</language>
         
@@ -23,10 +23,92 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Tue, 13 Oct 2020 15:37:26 &#43;0800</lastBuildDate>
+        <lastBuildDate>Wed, 28 Oct 2020 00:45:03 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://blog.littleghost.ml/rss.xml" />
         
+        
+            <item>
+                <title>PowerShell计算文件Hash</title>
+                <link>https://blog.littleghost.ml/posts/PowerShell%E8%AE%A1%E7%AE%97%E6%96%87%E4%BB%B6Hash/</link>
+                <guid isPermaLink="true">https://blog.littleghost.ml/posts/PowerShell%E8%AE%A1%E7%AE%97%E6%96%87%E4%BB%B6Hash/</guid>
+                <pubDate>Thu, 22 Oct 2020 00:38:24 &#43;0800</pubDate>
+                
+                    <author>785340571@qq.com (LittleGhost)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                <description>废话少说，直接上命令。 命令 1 Get-FileHash C:\Windows\notepad.exe -Algorithm MD5| Format-List 其中MD5可使用以下选项进行替换 SHA1 SHA256……
+    
+    </description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/tags/powershell/">powershell</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>Flask中获取body数据的方法</title>
+                <link>https://blog.littleghost.ml/posts/flask%E4%B8%AD%E8%8E%B7%E5%8F%96body%E6%95%B0%E6%8D%AE%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+                <guid isPermaLink="true">https://blog.littleghost.ml/posts/flask%E4%B8%AD%E8%8E%B7%E5%8F%96body%E6%95%B0%E6%8D%AE%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
+                <pubDate>Mon, 19 Oct 2020 11:30:46 &#43;0800</pubDate>
+                
+                    <author>785340571@qq.com (LittleGhost)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                <description>在Flask中，使用POST、PATCH等方法进行数据的接收时，有以下几种接受方法。……
+    
+    </description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/tags/flask/">flask</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>Ctf之sql注入流量之二分查找</title>

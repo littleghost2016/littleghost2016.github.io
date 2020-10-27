@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">LittleGhost的博客</title>
     <subtitle type="html">本站采用MemE模板，MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</subtitle>
-    <updated>2020-10-01T12:41:34&#43;08:00</updated>
+    <updated>2020-10-28T00:45:03&#43;08:00</updated>
     <id>https://blog.littleghost.ml/</id>
     <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blog.littleghost.ml/atom.xml" />
@@ -15,7 +15,93 @@
                 <email>785340571@qq.com</email>
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
-    <generator uri="https://gohugo.io/" version="0.75.1">Hugo</generator>
+    <generator uri="https://gohugo.io/" version="0.76.5">Hugo</generator>
+        <entry>
+            <title type="text">PowerShell计算文件Hash</title>
+            <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/posts/PowerShell%E8%AE%A1%E7%AE%97%E6%96%87%E4%BB%B6Hash/" />
+            <id>https://blog.littleghost.ml/posts/PowerShell%E8%AE%A1%E7%AE%97%E6%96%87%E4%BB%B6Hash/</id>
+            <updated>2020-10-28T00:44:29&#43;08:00</updated>
+            <published>2020-10-22T00:38:24&#43;08:00</published>
+            <author>
+                    <name>LittleGhost</name>
+                    <uri>https://blog.littleghost.ml</uri>
+                    <email>785340571@qq.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">废话少说，直接上命令。 命令 1 Get-FileHash C:\Windows\notepad.exe -Algorithm MD5| Format-List 其中MD5可使用以下选项进行替换 SHA1 SHA256……
+    
+    </summary>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/" term="技术" label="技术" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/tags/powershell/" term="powershell" label="powershell" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">Flask中获取body数据的方法</title>
+            <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/posts/flask%E4%B8%AD%E8%8E%B7%E5%8F%96body%E6%95%B0%E6%8D%AE%E7%9A%84%E6%96%B9%E6%B3%95/" />
+            <id>https://blog.littleghost.ml/posts/flask%E4%B8%AD%E8%8E%B7%E5%8F%96body%E6%95%B0%E6%8D%AE%E7%9A%84%E6%96%B9%E6%B3%95/</id>
+            <updated>2020-10-28T00:38:04&#43;08:00</updated>
+            <published>2020-10-19T11:30:46&#43;08:00</published>
+            <author>
+                    <name>LittleGhost</name>
+                    <uri>https://blog.littleghost.ml</uri>
+                    <email>785340571@qq.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">在Flask中，使用POST、PATCH等方法进行数据的接收时，有以下几种接受方法。……
+    
+    </summary>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/" term="技术" label="技术" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/tags/flask/" term="flask" label="flask" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">Ctf之sql注入流量之二分查找</title>
             <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/posts/ctf%E4%B9%8Bsql%E6%B3%A8%E5%85%A5%E6%B5%81%E9%87%8F%E4%B9%8B%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" />
