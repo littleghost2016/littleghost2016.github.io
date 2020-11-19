@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">LittleGhost的博客</title>
     <subtitle type="html">本站采用MemE模板，MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</subtitle>
-    <updated>2020-11-06T21:33:32&#43;08:00</updated>
+    <updated>2020-11-19T23:21:54&#43;08:00</updated>
     <id>https://blog.littleghost.ml/</id>
     <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blog.littleghost.ml/atom.xml" />
@@ -15,7 +15,7 @@
                 <email>785340571@qq.com</email>
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
-    <generator uri="https://gohugo.io/" version="0.78.1">Hugo</generator>
+    <generator uri="https://gohugo.io/" version="0.78.2">Hugo</generator>
         <entry>
             <title type="text">PowerShell计算文件Hash</title>
             <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/posts/PowerShell%E8%AE%A1%E7%AE%97%E6%96%87%E4%BB%B6Hash/" />
