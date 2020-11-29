@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+    <meta charset="UTF-8" />
+
+    <meta name="generator" content="Hugo 0.79.0" /><meta name="theme-color" content="#fff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <title>《Network Slicing Security Challenges and Directions》 | LittleGhost的博客</title>
+
+    <link rel="stylesheet" href="/css/meme.min.6a2f3c2660bd358615bca24d6293d87c824a625998b69cbd505a1b7a626b2fbc.css" integrity="sha256-ai88JmC9NYYVvKJNYpPYfIJKYlmYtpy9UFobemJrL7w=" />
+
+    
+    
+        <script src="/js/meme.min.434274bb2302fe029f98d3d29ae57dab1566be565436f52a6dd93089085533c4.js" integrity="sha256-Q0J0uyMC/gKfmNPSmuV9qxVmvlZUNvUqbdkwiQhVM8Q="></script>
+
+    
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" media="print" onload="this.media='all'" />
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" /></noscript>
+
+    <meta name="author" content="LittleGhost" /><meta name="description" content="[TOC] 缩略语 缩写 全称 中文翻译 NSM Network Slice Manager 网络分片管理 NFV Network Functions Virtualization 网络功能虚拟化 NSI Network Slice Instances 网络分片示……
+    
+    " />
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="LittleGhost的博客" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="LittleGhost的博客" />
+    <meta name="msapplication-starturl" content="../../" />
+    <meta name="msapplication-TileColor" content="#fff" />
+    <meta name="msapplication-TileImage" content="../../icons/mstile-150x150.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    
+    
+
+    
+    <link rel="canonical" href="https://blog.littleghost.ml/posts/Network-Slicing-Security-Challenges-and-Directions/" />
+    
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "datePublished": "2020-11-03T12:06:04+08:00",
+        "dateModified": "2020-11-29T22:02:26+08:00",
+        "url": "https://blog.littleghost.ml/posts/Network-Slicing-Security-Challenges-and-Directions/",
+        "headline": "《Network Slicing Security Challenges and Directions》",
+        "description": "[TOC] 缩略语 缩写 全称 中文翻译 NSM Network Slice Manager 网络分片管理 NFV Network Functions Virtualization 网络功能虚拟化 NSI Network Slice Instances 网络分片示……\n    \n    ",
+        "inLanguage" : "zh-CN",
+        "articleSection": "posts",
+        "wordCount":  6470 ,
+        "image": "https://blog.littleghost.ml/icons/22980536.jfif",
+        "author": {
+            "@type": "Person",
+            "description": "新晋的信息安全小鬼头",
+            "email": "785340571@qq.com",
+            "image": "https://blog.littleghost.ml/icons/22980536.jfif",
+            "url": "https://blog.littleghost.ml",
+            "name": "LittleGhost"
+        },
+        "license": "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)",
+        "publisher": {
+            "@type": "Organization",
+            "name": "LittleGhost的博客",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://blog.littleghost.ml/icons/22980536.jfif"
+            },
+            "url": "https://blog.littleghost.ml/"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebSite",
+            "@id": "https://blog.littleghost.ml/"
+        }
+    }
+</script>
+
+    
+
+<meta name="twitter:card" content="summary" />
+
+
+    
+
+
+
+<meta property="og:title" content="《Network Slicing Security Challenges and Directions》" />
+<meta property="og:description" content="[TOC] 缩略语 缩写 全称 中文翻译 NSM Network Slice Manager 网络分片管理 NFV Network Functions Virtualization 网络功能虚拟化 NSI Network Slice Instances 网络分片示……
+    
+    " />
+<meta property="og:url" content="https://blog.littleghost.ml/posts/Network-Slicing-Security-Challenges-and-Directions/" />
+<meta property="og:site_name" content="LittleGhost的博客" />
+<meta property="og:locale" content="zh" /><meta property="og:image" content="https://blog.littleghost.ml/icons/22980536.jfif" />
+    <meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2020-11-03T12:06:04&#43;08:00" />
+    <meta property="article:modified_time" content="2020-11-29T22:02:26&#43;08:00" />
+    
+    <meta property="article:section" content="posts" />
+
+
+
+    
+</head>
+
+    <body>
+        <div class="container">
+            
+    <header class="header" data-scroll-header>
+        
+            <div class="header-wrapper">
+                <div class="header-inner single">
+                    
+    <div class="site-brand">
+        
+            <a href="/" class="brand">LittleGhost的博客</a>
+        
+    </div>
+
+                    <nav class="nav">
+    <ul class="menu" id="menu">
+        
+            
+        
+        
+        
+        
+            
+                <li class="menu-item"><a href="/posts/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon archive"><path d="M32 448c0 17.7 14.3 32 32 32h384c17.7 0 32-14.3 32-32V160H32v288zm160-212c0-6.6 5.4-12 12-12h104c6.6 0 12 5.4 12 12v8c0 6.6-5.4 12-12 12H204c-6.6 0-12-5.4-12-12v-8zM480 32H32C14.3 32 0 46.3 0 64v48c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16V64c0-17.7-14.3-32-32-32z"/></svg><span class="menu-item-name">文章</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="/categories/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon th"><path d="M149.333 56v80c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V56c0-13.255 10.745-24 24-24h101.333c13.255 0 24 10.745 24 24zm181.334 240v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm32-240v80c0 13.255 10.745 24 24 24H488c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24zm-32 80V56c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm-205.334 56H24c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24zM0 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24zm386.667-56H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zm0 160H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zM181.333 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24z"/></svg><span class="menu-item-name">分类</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="/tags/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="icon tags"><path d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"/></svg><span class="menu-item-name">标签</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="/about/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon user-circle"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"/></svg><span class="menu-item-name">关于</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="/friendlinks/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon user"><path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"/></svg><span class="menu-item-name">友链</span></a>
+                </li>
+            
+        
+            
+                
+                    
+                    
+                        <li class="menu-item">
+                            <a id="theme-switcher" href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon theme-icon-light"><path d="M193.2 104.5l48.8-97.5a18 18 0 0128 0l48.8 97.5 103.4 -34.5a18 18 0 0119.8 19.8l-34.5 103.4l97.5 48.8a18 18 0 010 28l-97.5 48.8 34.5 103.4a18 18 0 01-19.8 19.8l-103.4-34.5-48.8 97.5a18 18 0 01-28 0l-48.8-97.5l-103.4 34.5a18 18 0 01-19.8-19.8l34.5-103.4-97.5-48.8a18 18 0 010-28l97.5-48.8-34.5-103.4a18 18 0 0119.8-19.8zM256 128a128 128 0 10.01 0M256 160a96 96 0 10.01 0"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon theme-icon-dark"><path d="M27 412a256 256 0 10154-407a11.5 11.5 0 00-5 20a201.5 201.5 0 01-134 374a11.5 11.5 0 00-15 13"/></svg></a>
+                        </li>
+                    
+                
+            
+        
+            
+                
+            
+        
+    </ul>
+</nav>
+
+                    
+                </div>
+            </div>
+            
+    <input type="checkbox" id="nav-toggle" aria-hidden="true" />
+    <label for="nav-toggle" class="nav-toggle"></label>
+    <label for="nav-toggle" class="nav-curtain"></label>
+
+
+        
+    </header>
+
+
+
+
+            
+            
+    <main class="main single" id="main">
+    <div class="main-inner">
+
+        
+
+        <article class="content post" data-align="justify" data-type="posts" data-toc-num="true">
+
+            <h1 class="post-title">《Network Slicing Security Challenges and Directions》</h1>
+
+            
+
+            
+                
+            
+
+            
+                
+
+<div class="post-meta">
+    
+        
+        <time datetime="2020-11-03T12:06:04&#43;08:00" class="post-meta-item published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;2020.11.3</time>
+    
+    
+        
+        <time datetime="2020-11-29T22:02:26&#43;08:00" class="post-meta-item modified"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2020.11.29</time>
+    
+    
+    
+        
+        
+        
+            
+                <span class="post-meta-item category"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M464 128H272l-54.63-54.63c-6-6-14.14-9.37-22.63-9.37H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48zm0 272H48V112h140.12l54.63 54.63c6 6 14.14 9.37 22.63 9.37H464v224z"/></svg>&nbsp;<a href="/categories/%E8%AE%BA%E6%96%87/" class="category-link">论文</a></span>
+            
+        
+    
+    
+        
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;6470</span>
+    
+    
+        
+        <span class="post-meta-item reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;13&nbsp;分钟</span>
+    
+    
+        
+            
+            <span class="post-meta-item busuanzi-page-pv" id="busuanzi_container_page_pv"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon post-meta-icon"><path d="M288 144a110.94 110.94 0 0 0-31.24 5 55.4 55.4 0 0 1 7.24 27 56 56 0 0 1-56 56 55.4 55.4 0 0 1-27-7.24A111.71 111.71 0 1 0 288 144zm284.52 97.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400c-98.65 0-189.09-55-237.93-144C98.91 167 189.34 112 288 112s189.09 55 237.93 144C477.1 345 386.66 400 288 400z"/></svg>&nbsp;<span id="busuanzi_value_page_pv"></span></span>
+        
+    
+    
+</div>
+
+            
+
+            <div class="post-body">
+              <p>[TOC]</p>
+<h1 id="缩略语"><a href="#缩略语" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>缩略语</h1>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th style="text-align:center">缩写</th>
+<th style="text-align:center">全称</th>
+<th style="text-align:center">中文翻译</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">NSM</td>
+<td style="text-align:center">Network Slice Manager</td>
+<td style="text-align:center">网络分片管理</td>
+</tr>
+<tr>
+<td style="text-align:center">NFV</td>
+<td style="text-align:center">Network Functions Virtualization</td>
+<td style="text-align:center">网络功能虚拟化</td>
+</tr>
+<tr>
+<td style="text-align:center">NSI</td>
+<td style="text-align:center">Network Slice Instances</td>
+<td style="text-align:center">网络分片示例</td>
+</tr>
+<tr>
+<td style="text-align:center">RAN</td>
+<td style="text-align:center">Radio Access Network</td>
+<td style="text-align:center">无线电接入网</td>
+</tr>
+<tr>
+<td style="text-align:center">BSS</td>
+<td style="text-align:center">Business support system</td>
+<td style="text-align:center">业务支撑系统</td>
+</tr>
+<tr>
+<td style="text-align:center">OSS</td>
+<td style="text-align:center">Operation support system</td>
+<td style="text-align:center">运营支撑系统</td>
+</tr>
+<tr>
+<td style="text-align:center">MSS</td>
+<td style="text-align:center">Management Support System</td>
+<td style="text-align:center">管理支撑系统</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>BSS/OSS又合称<strong>BOSS</strong>: Business and Operation support system</em></p>
+<h1 id="abstract"><a href="#abstract" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Abstract</h1>
+<p>Network slicing emerges as a key technology in next generation networks, boosted by the integration of software‐defined networking and network functions virtualization. However, while allowing resource sharing among multiple tenants, such networks must also ensure the security requirements needed for the scenarios they are employed. This letter presents the leading security challenges on the use of network slices at the packet core, the solutions that academy and industry are proposing to address them, pointing out some directions that should be considered. This article is protected by copyright. All rights reserved.</p>
+<h1 id="1-introduction"><a href="#1-introduction" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>1. INTRODUCTION</h1>
+<p>The <u>heterogeneity（异质性）</u> of network services <u>coexisting（共存）</u> in the same infrastructure requires networks to be designed to achieve a multitude of requirements that can be conﬂicting. Furthermore, such services are very dynamic and subject to unpredictable demands. Additionally, it is expected that networks will reach a much bigger scale in the coming years, mostly driven by the growth of the Internet of Things (IoT). This shift in scale will raise the network demands drastically, including 1000 times more data volume, from 10 to 100 times more devices, 5 times lower latency, and high bit rates per user. These new demands will require higher spectrum eﬃciency, better coverage, supporting an increasing number of heterogeneous devices, while being <u>cost-eﬀective（成本效益）</u><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">[1]</a></sup>. To support this, the concept of Network Slicing arises, allowing network operators to split their physical infrastructure into multiple logical networks, each one <u>orchestrated（被安排）</u> according to its speciﬁc characteristics. As depicted in Fig. 1a, each slice represents an independent end-to-end network and can be owned by distinct <u>tenants（租户）</u> (or <u>vertical markets（网络销售）</u>) that control physical, virtualized, and service layers, with distinct Key Performance Indicators (KPIs). Examples of KPIs are Latency, Data Security, Energy Eﬃciency, Mobility, <u>Massive Connectivity（大规模连接）</u>, Reachability, Quality of Service (QoS), and <u>Throughput（吞吐量）</u>, as illustrated in Fig. 1b.</p>
+<p>Taking recent advancements in virtualization and network control, such as Software Deﬁned Networking (SDN) for networking and Network Functions Virtualization (NFV) for function virtualization, network slicing creates virtual networks that deliver a customized network experience <u>tailored（量身订制）</u> to relevant KPIs. The management view, shown in Fig. 1c, illustrates how the orchestration of Network Slices can be done end-to-end by slice’s owners, articulating the diﬀerent slice-enabled <u>telcos（电信公司）</u> that provide the infrastructure. Inspired by the ETSI<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">[2]</a></sup>, the telco should have a Network Slice Manager (NSM) on top of its NFV orchestration, being the controls of the NSM exposed through the <u>Customer Service Portal（客户服务门户）</u> (CSP) or other interfaces with the OSS/BSS.</p>
+<p>While Network Slicing emerges as a key technology for new softwarized networks, including 5G, it also <u>raises security concerns（引起了安全方面的担忧）</u> because of the impact that a vulnerability may have in such scenarios. Because slicing builds <u>atop（在...上面）</u> other technologies, there are known security challenges attributed to the underlying SDN and NFV technologies, as well as the access networks. The goal of this letter is to focus on Network Slicing in a general packet core, <u>conveying（传达）</u> an <u>applied view（应用观点）</u> of the security challenges that arise from the network slicing deﬁnition, presenting the existing solutions and possible directions.</p>
+<p>![image-20201103154643013](《Network Slicing Security Challenges and Directions》/image-20201103154643013.png)</p>
+<p><strong>(a)</strong> Business overview  <strong>(b)</strong> Slice KPIs (GSM Alliance<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">[3]</a></sup>)  **(c)**Management architecture(ETSI inspired<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">[2]</a></sup>)</p>
+<h6 id="figure-1-the-different-perspectives-of-the-asset-to-be-secured"><a href="#figure-1-the-different-perspectives-of-the-asset-to-be-secured" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><strong>FIGURE 1</strong> The different perspectives of the asset to be secured</h6>
+<h1 id="2-security-issues-introduced-by-network-slicing"><a href="#2-security-issues-introduced-by-network-slicing" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>2. SECURITY ISSUES INTRODUCED BY NETWORK SLICING</h1>
+<p><u>Isolation（隔离）</u> is a fundamental feature of Network Slicing. The better the isolation, the more reliable the slicing solution is. A “slicing system” that can only ever have a single slice is actually a regular non-sliced network, i.e., an already well-researched topic. Therefore, by definition, multiple slices will ( at some point) have to coexist by sharing the same infrastructure. This coexistence is determined by the minimum requirements set for each slice. As long as these are delivered, <u>interference does not occur（干扰不会发生）</u>, therefore <u>preserving（保持）</u> isolation. Defining <u>what constitutes interference（什么构成了干扰）</u> for that slice, setting the minimum requirements, and <u>enforcing（实施）</u> them is the critical part of security in network slicing.</p>
+<p>Kotulski et al.<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">[4]</a></sup> state that it is necessary to <u>identify isolation attributes（识别隔离属性）</u>, create a kind of <u>abstraction（抽象）</u> layer to assure end-to-end isolation on a certain strength level, and introduce adequate security policies. In their survey, the authors conclude that currently no common description of isolation capabilities could be used for automatic deployment. Then, it is important to define the expected initial isolation level (<em>e.g.</em>, security) as well as designing dynamic isolation mechanisms that can enforce the isolation level of any given service. Our work builds upon this to do a deeper <u>assessment（评估）</u> of Network Slice security challenges in a general packet core, presenting the existing solutions, as well as show future directions (in the form of not addressed issues).</p>
+<p>Prominent bodies, such as NGMN, issued recommendations for Network Slicing security in 5G<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">[5]</a></sup>, which <u>aided（帮助）</u> the identification of threats in the general packet core. Recommendations in underlying technologies were also considered, such as ETSI’s for NFV<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">[6]</a></sup>, which surveys the potential areas of security concern across the VNF life-cycle. Because of <u>space constraints（空间限制）</u>, we <u>omit（忽略）</u> 3GPP’s TR 33.811 study of Network Slicing security for 5G, since for our general packet core purposes the NGMN document already <u>covers（涵盖）</u> the same points. Similarly, ETSI NFV-SEC also covers essential aspects of the ONF SDN security whitepaper.</p>
+<h2 id="21-security-principles-on-network-slicing"><a href="#21-security-principles-on-network-slicing" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>2.1 Security Principles on Network Slicing</h2>
+<p>Each slice has its isolation constraints, which are set by its KPIs. Therefore, interference can be broadly defined as anything that breaks the ability to deliver the KPIs of a given slice. Such interference can be attributed to different origins, <em>e.g.</em>, the KPIs may have been poorly selected for the slice application, the service <u>provisioning（供应）</u> may be insufficient to deliver those security-related KPIs, or there may be adversaries who are disrupting services. As a consequence, an effective network slicing solution needs to address management, performance, and security as a whole.</p>
+<p>It is crucial that <u>attacks performed against（对...实施的攻击）</u> one slice do not affect the others, therefore requiring that security functions act independently. The NSM must be able to <u>track（追踪）</u> <u>flows（流）</u> and <u>function interactions（功能交互）</u> across slices, within their administrative domains. The NSM is responsible for the abstracted virtual network and interacting functions, within the slice. However, the same NSM is not responsible for the orchestration or correctness of services provided by the slices. Secure network slicing solutions must ensure the main security principles, traditionally categorized into confidentiality, authentication, authorization, availability, and integrity. In such a context, when associated with network slicing, these principles translate:</p>
+<ol>
+<li>confidentiality: must ensure that packets are not made available outside of the slice that generated them, or the slices which are allowed to interconnect. Additionally, the data carried in those packets or held within the Network Functions (NFs) that process them must not be available to anyone other than the authorized elements or end-users.</li>
+<li><u>authentication（身份鉴别）</u>: must <u>unequivocally（毫不含糊地）</u> identify and validate the persons, accounts, or elements that are interacting with the system. When an OSS/BSS interacts with the NSM, both parties must be able to verify and authenticate themselves mutually. The same <u>requirement（需求）</u> <u>applies（适应）</u> to OSS/BSS interactions made on behalf of Slice-Owners, the ones with the Management and Orchestrator (MANO), in order to manage network elements and others triggered by end-users.</li>
+<li><u>authorization（授权）</u>: must determine whether an attempted interaction is allowed to go through. End-Users, Slice-Owners, Infrastructure Providers, and elements such aes the NSM or NFs have different capabilities within the system. End-Users may only be allowed to interact with slices that the Slice-Owners have granted access to. Slice-Owners must only manage their own slices, or control the allowed interactions with other slices. Infrastructure Providers must have full control over the NSM and the accounting of slices. The NSM has full control over the Network Slice Instances (NSIs) and their NFs. Lastly, the NFs have control over the resources and data that are provided to tehem.</li>
+<li><u>availability（可用性）</u>: the system must be reachable and working as expected when it is required. This means that the NSM and NFs must remain accessible at all time, while the slices and application part of the NFs must be accessible as long as the <u>contracted infrastructure resources（合同基础设施资源）</u> <u>are not exceeded（不超过）</u>. Another important aspect is the processing and response times, which must remain under the <u>threshold（阈值）</u> as specified in the <u>Service Level Agreement（服务水平协议）</u>.</li>
+<li><u>integrity（完整性）</u>: the system must not be able to be <u>subverted（遭到破坏）</u>, either by tampering with data or by replacing its functionality. In other words, only Slice-Owners may change the application part of their NFs, define what is the flow processing within the slices, or change the <u>inter-slice configurations（片间配置）</u>. <u>Cross-talk（串扰）</u> between slices cannot be allowed, inter-slice communications must only happen through their <u>respective interfaces（各自的接口）</u>.</li>
+</ol>
+<p>The primary challenge when developing a network slicing solution is to fulfill all requirements per the slice owner while ensuring the security of each slice independently. In the next section, we discuss how malicious users can exploit some slicing features in order to defeat the whole system.</p>
+<h2 id="22-security-threats-on-network-slicing"><a href="#22-security-threats-on-network-slicing" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>2.2 Security Threats on Network Slicing</h2>
+<p>Network slicing relies on assuring a required level of isolation, which depends on the actual requirements of a slice. As the NSM has full control over all telco slices, <u>compromising（损害）</u> the NSM functionality will eventually affect the whole system. If an attacker monitors the traffic in the <u>northbound or southbound interfaces（北向或南向接口）</u>, he/she may be able to understand the configurations performed in the system, <u>breaching（违反）</u> <u>confidentiality（机密性）</u>. This allows the attacker to independently create a snapshot of the system’s status, a vital part of the <u>enumeration phase（枚举阶段）</u> in which all <u>ingress vectors（入口向量）</u> are identified, <u>along with（以及）</u> the possible <u>vulnerabilities（漏洞）</u>. A breach in confidentiality by monitoring these interfaces may quickly <u>escalate（升级）</u> to a breach of <u>authentication（认证）</u> or <u>authorization（授权）</u>, <u>as（因为）</u> the attacker may capture a way to <u>impersonate（模仿）</u> an element or <u>acquire（获得）</u> a token that allows performing some action <u>transiently（暂时地）</u>.</p>
+<p>Also, if the attacker is able to inject traffic into those interfaces, then the system may also have a breach of integrity or availability. The same threats to the NSM’s southbound interface also apply to the MANO’s NFV Orchestrator (NFVO), as both are exposed. The difference in the case of the NFVO is the breadth of its scope, that is, the consequences of a breach/disruption of the NFVO only affect a subset of the elements controlled by the NSM. Unsurprisingly, if an attacker manages to get a <u>foothold（立足点）</u> <u>within the control plane of the operator（在操作员的控制平面内）</u> (as was described above), that has the potential for broader consequences over the system. However, most Network Slice users will be constrained to just the data-plane, being the control-plane only indirectly exposed through well-defined configuration primitives (in the northbound interfaces of both NSM and NFVO). The incorrect validation in the northbound interfaces may allow legitimate users to compromise the system’s integrity.</p>
+<p>By itself, the data-plane is void of any configuration capabilities, therefore limiting the attack surface over the system. <u>Notwithstanding（尽管如此）</u>, while that is the definition as in SDN-like networks, in reality, the control-plane is not entirely <u>decoupled（解耦）</u> from the data-plane. The functions in the data-plane usually interact with the southbound interface of their manager (a part of the controlplane), through which the <u>management primitives（管理原语）</u> reconfigure and generally control the NF. <u>Voiding（有效的）</u> data-plane access to the southbound interface partially relies on the function securing itself. Locally-stored credentials to the control-plane capabilities need to be protected by the NF itself. A <u>compromise（折衷）</u> of any of those functions may allow access to control-plane functionality, which would breach the system’s integrity, exposing through the data-plane the same attack vectors of the control-plane.</p>
+<h6 id="table-1-threats-impact-on-the-security-principles"><a href="#table-1-threats-impact-on-the-security-principles" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>TABLE 1 Threats impact on the Security Principles</h6>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:left">Security Threat</th>
+<th style="text-align:center">Confidentiality</th>
+<th style="text-align:center">Integrity</th>
+<th style="text-align:center">Authentication</th>
+<th style="text-align:center">Authorization</th>
+<th style="text-align:center">Availability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Classical</td>
+<td style="text-align:left">Monitor interfaces</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">(✓)</td>
+<td style="text-align:center">(✓)</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:left">Inject traffic into interfaces</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✓</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:left">NSM impersonation</td>
+<td style="text-align:center">(✓)</td>
+<td style="text-align:center">(✓)</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">(✓)</td>
+<td style="text-align:center">(✓)</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:left">Host platform impersonation</td>
+<td style="text-align:center">(✓)</td>
+<td style="text-align:center">(✓)</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">(✓)</td>
+<td style="text-align:center">(✓)</td>
+</tr>
+<tr>
+<td style="text-align:center">Non-trivial</td>
+<td style="text-align:left">Compromise of the function</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✓</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:left">Passive side channel</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:left">Active side channel</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✓</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:left">End devices vulnerabilities</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">✓</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Legend: empty</strong> – unaffected ✓– Direct Impact (✓) – Immediate Consequences</p>
+<p>Due to the nature of shared environments, even if the slice is well behaved and does not allow access to another slice’s data-plane/control-plane, it may still allow establishing side-channels across slices that share resources. In this context, typical side-channels are time-based attacks that leverage various system caches. An example of such an attack is an oracle, which infers data from another slice by introducing in the same (shared) CPU known combinations of data until one is processed faster than the rest, allowing the attacker to infer that such data was already in cache (therefore in another slice). This leads to a breach of confidentiality, with varying levels of severity. The availability (or even integrity) may also be compromised by a side-channel, for instance, a noisy-neighbor whose <u>workload（工作负载）</u> selectively introduces <u>jitter（抖动）</u> in a <u>time-constrained（有时间限制的）</u> service that shares its resources.</p>
+<p>We must note that a user may connect <u>simultaneously（同时地）</u> to more than one slice. Nevertheless, end devices <u>are prone to（容易）</u> security vulnerabilities and various kinds of attacks. For example, they can be <u>contaminated（污染）</u> by malware or turned into a bot within a Distributed Denial of Service (DDoS) attack. Also, they are subject to <u>hardware tampering（硬件篡改）</u> or sensor errors. In such a case, it is critical to be aware that compromised end devices may, <u>even unintentionally（尽管不是有意地）</u>, allow inter-slice communication. Thus, some security principles will be <u>violated（违反）</u>: confidentiality, because data from a given slice may flow out to another one via the compromised device; and authorization, whereas unauthorized users may use the affected end-point to access a protected slice.</p>
+<p>On the infrastructure side, the NSM will be responsible for securing the inter-slice communications (when permitted, according to the rules defined for that instance). The successful <u>impersonation（假冒）</u> of the NSM itself would allow to fully <u>subvert（颠覆）</u> the slices isolation, allowing for unauthorized access to other slices. This results in a breach of authentication that could then result in a breach of system integrity and confidentiality. NFs may also serve more than one slice, in which case an exploit of the NF may allow for unauthorized inter-slice communication, breaching the system’s integrity and potentially confidentiality.</p>
+<p>In another scenario, an attacker may impersonate the host platforms. In this case, the NSM can be deceived and led to believe that the host platform on which a network slice will run is an operator authorized platform. In such a scenario, an impersonation attack can have significant consequences as operators will <u>expose（暴露）</u> the network and private services within that network to an attacker. This breach impacts the confidentiality, since private data can be revealed, as well as integrity, since data may be corrupted, and availability, since service may be interrupted and data be removed.</p>
+<p>An essential factor to take into consideration is that Network Slices will have resource <u>quotas（配额）</u> which a malicious user may try to <u>abuse（滥用）</u>, <u>disrupting（破坏）</u> the service of that single slice (<u>compromising availability（损害可用性）</u>). The malicious user may do so by merely shaping its usage patterns of the slice in a way that is the most expensive for its functions, <u>invalidating（使无效）</u> the previously required resource calculations, forcing the Network Slice to either <u>take more resources（获取更多资源）</u> from the pool or <u>fail to keep with the demand（无法满足需求）</u>. Additionally, NFs that are shared across slices will also run with a limited resource quota. This allows an <u>ill-intentioned（恶意的）</u> user to break isolation and <u>perturb（扰乱）</u> the operation of the other slice by disrupting that shared NF, compromising the system integrity.</p>
+<p>Threats are summarized in Table 1, which is divided into two categories, classical and <u>non-trivial（非脆弱威胁）</u>. Classical <u>denotes（代表）</u> <u>well researched（充分研究）</u> and <u>long-standing（长期存在的）</u> threats, common in other network systems. Non-trivial <u>designates（指明）</u> open research topics, in which a clear and general solution is still not available.</p>
+<h1 id="3--security-in-network-slices"><a href="#3--security-in-network-slices" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>3.  SECURITY IN NETWORK SLICES</h1>
+<p>Academy and industry researched the main threats against network slicing and proposed solutions to either solve or <u>mitigate（减轻）</u> the impact of such threats. Table 2 summarizes the key research speciﬁc to Network Slicing Security. When the speciﬁc research does not address an issue, we resort to the solutions proposed in the <u>broader ﬁelds（更广阔的领域）</u> of computing and networking. As such,Table 2 is grouped into three categories: Radio Access Network (RAN)’s slice, Core’s slice, and General Solutions. The ﬁrst, RAN’s slice, is the speciﬁc research that focuses on radio access. Although <u>highly relevant（相关度很高）</u>, works in this ﬁeld <u>fall outside（超出范围）</u> of the  scope of the packet core. Because of that, their ﬁndings are presented only <u>in regards to（有关）</u> their <u>applicability（适用性）</u> to the scope of this letter, which is the packet core. The second, Core’s slice, presents the works that directly <u>fall within（属于）</u> our scope. Lastly, General Solutions address open issues in ﬁeld-speciﬁc research with broader works.</p>
+<h6 id="table-2-network-slicing-defenses-against-the-security-threats"><a href="#table-2-network-slicing-defenses-against-the-security-threats" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>TABLE 2 Network Slicing defenses against the Security Threats</h6>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:left"></th>
+<th style="text-align:center">RAN’s Slice</th>
+<th style="text-align:center"></th>
+<th style="text-align:center">Core’s Slice</th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center">General Solutions</th>
+<th style="text-align:center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:left">Security Threat</td>
+<td style="text-align:center">Mareca et al.<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">[7]</a></sup></td>
+<td style="text-align:center">Bordel et al.<sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">[8]</a></sup></td>
+<td style="text-align:center">Ni et al.<sup id="fnref:9"><a href="#fn:9" class="footnote-ref" role="doc-noteref">[9]</a></sup></td>
+<td style="text-align:center">Liu et al.<sup id="fnref:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">[10]</a></sup></td>
+<td style="text-align:center">Ehrlich et al.<sup id="fnref:11"><a href="#fn:11" class="footnote-ref" role="doc-noteref">[11]</a></sup></td>
+<td style="text-align:center">Kotuski et al.<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">[4]</a></sup></td>
+<td style="text-align:center">Canella et al.<sup id="fnref:12"><a href="#fn:12" class="footnote-ref" role="doc-noteref">[12]</a></sup></td>
+<td style="text-align:center">Hutchins et al.<sup id="fnref:13"><a href="#fn:13" class="footnote-ref" role="doc-noteref">[13]</a></sup></td>
+</tr>
+<tr>
+<td style="text-align:center">Classical</td>
+<td style="text-align:left">Monitor interfaces</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✓✓</td>
+<td style="text-align:center">✓✓✓</td>
+<td style="text-align:center">✓✓✓</td>
+<td style="text-align:center">✓✓</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✗</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:left">Inject traffic into interfaces</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✓✓✓</td>
+<td style="text-align:center">✓✓✓</td>
+<td style="text-align:center">✓✓</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✗</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:left">NSM impersonation</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✓✓✓</td>
+<td style="text-align:center">✓✓✓</td>
+<td style="text-align:center">✓✓</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✗</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:left">Host platform impersonation ✗</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✓✓✓</td>
+<td style="text-align:center">✓✓✓</td>
+<td style="text-align:center">✓✓</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✗</td>
+</tr>
+<tr>
+<td style="text-align:center">Non-trivial</td>
+<td style="text-align:left">Compromise of the function</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✓✓</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:left">Passive side channel</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">✗</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:left">Active side channel</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">✗</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:left">End devices vulnerabilities</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✗</td>
+<td style="text-align:center">✓✓</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Legend</strong>: ✗– Not applicable ✓– Describes or References ✓✓– Applicable methods or controls ✓✓✓– Directly addresses issue</p>
+<p>Mareca et al.<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">[7]</a></sup>and Bordel et al.<sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">[8]</a></sup> proposed solutions to protect data ﬂow between end devices and the base stations. Both solutions consider only RAN and, as a consequence, do not address the issues that threaten core slices. The former employed chaos-based cryptography for privacy preservation, which relied on the actual radio signal and properties of media access, therefore hard to apply to the packet core. The latter proposed a stream cipher to protect intra-slice communications, based on a simple lightweight <u>pseudo（伪）</u>-random number generator. Dubbed as the Trifork<sup id="fnref:14"><a href="#fn:14" class="footnote-ref" role="doc-noteref">[14]</a></sup> , it may be used in <u>resource-constrained（资源受限）</u> devices as it requires lower computational power. Unlike Mareca et al., this approach may <u>be ported to（移植到）</u> be used in the packet core.</p>
+<p>There are also some solutions that addressed security in core slicing <sup id="fnref:9"><a href="#fn:9" class="footnote-ref" role="doc-noteref">[9]</a></sup><sup id="fnref:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">[10]</a></sup><sup id="fnref:11"><a href="#fn:11" class="footnote-ref" role="doc-noteref">[11]</a></sup> . Thus, such solutions are more suitable to protect against the threats discussed in the previous section. Ni et al.<sup id="fnref:9"><a href="#fn:9" class="footnote-ref" role="doc-noteref">[9]</a></sup>presented ES<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">[2]</a></sup>A, an eﬃcient and secure <u>service-oriented（服务至上）</u> authentication framework supporting network slicing for 5G-enabled IoT services. By using ES<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">[2]</a></sup>A, users can establish connections with the 5G core network and anonymously access IoT services under their delegation through proper network slices. Also,users’ privacy is ensured in terms of slice conﬁguration and access. Authors employed group signatures to provide anonymous service-oriented authentication. In addition, session keys, based on Diﬃe-Hellman key agreement, are employed to guarantee secure access to service data. As a result, all the classical threats are directly addressed by the solution.</p>
+<p>Cryptography is also employed to protect inter-slice communication. Liu et al.<sup id="fnref:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">[10]</a></sup> proposed a <u>mutual（相互）</u> <u>heterogeneous（异构）</u> <u>signcryption（签密）</u> scheme to ensure the secure communications between 5G network slices, in diﬀerent public crypto systems – Public Key Infrastructure (PKI) and CertiﬁcateLess Cryptography (CLC). The authors present a scenario in which users of a 5G Mobile Internet slice, using a PKI, want to securely communicate with users of a 5G Vehicle Internet slice, using a CLC. The solution is more eﬃcient than the traditional signature-than-encrypt approach, in which a user ﬁrst signs a message and then encrypts it before sending to another user. This allows secure communication between two slices using diﬀerent cryptography techniques. As Ni et al. framework, the security schema proposed by Liu et al. protects the Network Slice against the classical threats.</p>
+<p>Ehrlich et al.<sup id="fnref:11"><a href="#fn:11" class="footnote-ref" role="doc-noteref">[11]</a></sup> approached the security controls required for core slicing addressing, in particular, the classical threats. The authors propose a dynamic, machine-readable, automatic, continuous, and <u>future-proof（永不过时的）</u> approach to model and describe cyber-security QoS requirements to support network slicing on SDN. They assess what is essential to describe and map non-functional QoS requirements of cyber security to the 5G Network Slices paradigms. The ISO/IEC 62443 security standard was used to model and describe the cyber security maturity of the high-level application requirements and the underlying networking capabilities in order to support network management. Seven Foundational Requirements (FRs) are evaluated with four predeﬁned Security Levels (SLs), which results in a numerical speciﬁcation of the cyber-security maturity of the given application requirements or networking capabilities.</p>
+<p>Finally, Kotulski et al.<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">[4]</a></sup>discuss a dynamic isolation <u>mechanism（机制）</u> that creates isolated resources with proper capabilities, which also addresses inter-slicing communication with shared virtual resources across slices without breaching global security policy rules. Although the proposed tasks cover a wide range of issues related to secure network slicing, they do not present solutions to address security issues directly. <u>Nonetheless（尽管如此）</u>, the authors describe some ways to meet secure environments.</p>
+<p>Note that neither solutions that consider only RAN nor those that consider core slicing address the non-trivial threats. As stated, non-trivial threats are still open issues that need more attention. However, it is assumed that general security solutions of other environments may be transposed to network slice scenarios. For instance, Canella et al.<sup id="fnref:12"><a href="#fn:12" class="footnote-ref" role="doc-noteref">[12]</a></sup> describe diﬀerent types of <u>Spectre and Meltdown attacks（幽灵和熔毁攻击）</u>, an architectural side-channel that aﬀects many CPUs. While not directly surveyed within Network Slicing, the ﬁndings are highly relevant for <u>shared（共享的）</u> <u>softwarized and virtualized（软件和虚拟化）</u> environments, such as those used by NFV and SDN. Lockheed Martin<sup id="fnref:13"><a href="#fn:13" class="footnote-ref" role="doc-noteref">[13]</a></sup> characterized the network attack process, which would later be known as the “Cyber Kill Chain.” This methodology is readily applicable to NFs that take part of the slice, being also relevant to deﬁne the controls needed in the end-user terminals.</p>
+<h1 id="4-conclusion"><a href="#4-conclusion" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>4. CONCLUSION</h1>
+<p>We have brieﬂy reviewed the most pressing challenges of Network Slicing Security, in the scope of the general packet core networks. The gathered challenges can be classiﬁed as classical and non-trivial. The classical challenges are already addressed in some form, as they encompass well-researched topics, such as mutual authentication protocols, encryption mechanisms,and data integrity/authentication measures. We were able to ﬁnd research already in the ﬁeld of Network Slicing Security that delivered solutions to these classical challenges. On the other hand, non-trivial issues, such as avoiding the compromise of a network function, defending against side-channels, or dealing with end-devices vulnerabilities, still lack research that addressed the needs of Network Slicing. In fact, side-channel attacks such as Spectre and Meltdown still have open issues in the broader sense of general computing, with new (unmitigated) variants of the attack still being discovered. Nevertheless, challenges such as avoiding the compromise of a network function or dealing with end-devices vulnerabilities may be addressable employing the same methodology of general computing/networking (for instance, the “Cyber Kill Chain”). While it still lacks the <u>holistic（整体）</u> approach that allows for the integration with the diﬀerent components that make a Network Slicing system, future research may build upon the methodology, unlocking more eﬃcient solutions that are aware of the KPIs and the <u>ramiﬁcations（庆祝活动）</u> of the resource sharing in these softwarized and virtualized environments.</p>
+<h1 id="acknowledgment"><a href="#acknowledgment" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>ACKNOWLEDGMENT</h1>
+<p>Supported by the FEDER, through COMPETE 2020 of the Portugal 2020 framework [Project Smart EnterCom with Nr. 021949],and by FCT/MEC [Project 5GCONTACT PTDC/EEI-TEL/30685/2017].</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>Afzal M K, Zikria Y B, Mumtaz S, et al. Unlocking 5G spectrum potential for intelligent IoT: Opportunities, challenges, and solutions[J]. IEEE Communications Magazine, 2018, 56(10): 92-93. <a href="#fnref:1" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>Galis A, Makhijani K. Network Slicing Landscape: A holistic architectural approach, orchestration and management with applicability in mobile and fixed networks and clouds[J]. 2018. <a href="#fnref:2" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p>Alliance G S M. An Introduction to Network Slicing[J]. White Paper, 2017. <a href="#fnref:3" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:4" role="doc-endnote">
+<p>Kotulski Z, Nowak T W, Sepczuk M, et al. Towards constructive approach to end-to-end slice isolation in 5G networks[J]. EURASIP Journal on Information Security, 2018, 2018(1): 2. <a href="#fnref:4" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:5" role="doc-endnote">
+<p>NGMN Alliance . 5G Security Recommendations Package #2: Network Slicing. NGMN 2016. <a href="#fnref:5" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:6" role="doc-endnote">
+<p>ETSI NFV. Network Functions Virtualisation (NFV); NFV Security; Problem Statement. ETSI GS NFV-SEC-001 2014. <a href="#fnref:6" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:7" role="doc-endnote">
+<ol start="7">
+<li>Mareca P, Bordel B. An Intra-Slice Chaotic-based Security Solution for Privacy Preservation in Future 5G Systems. In: A. Rocha and H. Adeli and L. Reis and S. Costanzo, eds. Advances in Intelligent Systems and Computing. 746. Springer, Cham. 2018 (pp. 144–154)</li>
+</ol>
+ <a href="#fnref:7" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></li>
+<li id="fn:8" role="doc-endnote">
+<ol start="8">
+<li>Bordel B, Orue AB, Alcarria R, Rivera S.-dD. An Intra-Slice Security Solution for Emerging 5G Networks Based on Pseudo-Random Number Generators. IEEE Access 2018; 6(March): 16149–16164.</li>
+</ol>
+ <a href="#fnref:8" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></li>
+<li id="fn:9" role="doc-endnote">
+<ol start="9">
+<li>Ni J, Lin X, Shen X. Efficient and Secure Service-oriented Authentication Supporting Network Slicing for 5G-enabled IoT. IEEE Journal on Selected Areas in Communications 2018.</li>
+</ol>
+ <a href="#fnref:9" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></li>
+<li id="fn:10" role="doc-endnote">
+<ol start="10">
+<li>Liu J, Zhang L, Sun R, Du X, Guizani M. Mutual Heterogeneous Signcryption Schemes for 5G Network Slicings. IEEE Access 2018; 6: 7854–7863.</li>
+</ol>
+ <a href="#fnref:10" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></li>
+<li id="fn:11" role="doc-endnote">
+<ol start="11">
+<li>Ehrlich M, Wisniewski L, Trsek H, Mahrenholz D, Jasperneite J. Automatic Mapping of Cyber Security Requirements to Support Network Slicing in Software-defined Networks. In: Proceedings of the 22nd IEEE ETFA. IEEE Industrial Electronics Society; 2017; Limassol, Cyprus</li>
+</ol>
+ <a href="#fnref:11" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></li>
+<li id="fn:12" role="doc-endnote">
+<ol start="12">
+<li>Canella C, Van Bulck J, Schwarz M, et al. A Systematic Evaluation of Transient Execution Attacks and Defenses. arXiv 1811.05441, 2018.</li>
+</ol>
+ <a href="#fnref:12" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></li>
+<li id="fn:13" role="doc-endnote">
+<p>Hutchins EM, Cloppert MJ, Amin RM. Intelligence-Driven Computer Network Defense Informed by Analysis of Adversary Campaigns and Intrusion Kill Chains. Proceedings of the 6th International Conference on Information Warfare and Security 2011. <a href="#fnref:13" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:14" role="doc-endnote">
+<ol start="14">
+<li>Orue AB, Montoya F, Encinas LH. Trifork, a New Pseudorandom Number Generator Based on Lagged Fibonacci Maps. Journal of Computer Science and Engeenering 2010; 2(2): 46–51.</li>
+</ol>
+ <a href="#fnref:14" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></li>
+</ol>
+</section>
+
+            </div>
+
+        </article>
+
+        
+
+        
+    
+    
+        <ul class="post-copyright">
+            <li class="copyright-item author"><span class="copyright-item-text">作者</span>：<a href="https://blog.littleghost.ml" target="_blank" rel="noopener">LittleGhost</a></li>
+            
+                
+                
+                
+                
+                <li class="copyright-item link"><span class="copyright-item-text">链接</span>：<a href="/posts/Network-Slicing-Security-Challenges-and-Directions/" target="_blank" rel="noopener">https://blog.littleghost.ml/posts/Network-Slicing-Security-Challenges-and-Directions/</a></li>
+            
+            <li class="copyright-item license"><span class="copyright-item-text">许可</span>：<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></li>
+            
+        </ul>
+    
+
+
+
+        
+    <div class="updated-badge-container">
+        <span title="Updated @ 2020-11-29 22:02:26 CST" style="cursor:help">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2020-11-29</text><text x="915" y="140" textLength="650" transform="scale(.1)">2020-11-29</text></g></svg>
+        </span></div>
+
+
+
+        
+
+
+        <div class="post-share">
+
+        
+
+        <div class="share-items">
+
+            
+
+            
+
+            
+
+            
+
+            
+                <div class="share-item weibo">
+                    
+                    <a href="https://service.weibo.com/share/share.php?&amp;url=https://blog.littleghost.ml/posts/Network-Slicing-Security-Challenges-and-Directions/&amp;title=%e3%80%8aNetwork%20Slicing%20Security%20Challenges%20and%20Directions%e3%80%8b&amp;pic=https://blog.littleghost.ml/icons/22980536.jfif&amp;searchPic=false" title="分享到「新浪微博」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon weibo-icon"><path d="M407 177.6c7.6-24-13.4-46.8-37.4-41.7-22 4.8-28.8-28.1-7.1-32.8 50.1-10.9 92.3 37.1 76.5 84.8-6.8 21.2-38.8 10.8-32-10.3zM214.8 446.7C108.5 446.7 0 395.3 0 310.4c0-44.3 28-95.4 76.3-143.7C176 67 279.5 65.8 249.9 161c-4 13.1 12.3 5.7 12.3 6 79.5-33.6 140.5-16.8 114 51.4-3.7 9.4 1.1 10.9 8.3 13.1 135.7 42.3 34.8 215.2-169.7 215.2zm143.7-146.3c-5.4-55.7-78.5-94-163.4-85.7-84.8 8.6-148.8 60.3-143.4 116s78.5 94 163.4 85.7c84.8-8.6 148.8-60.3 143.4-116zM347.9 35.1c-25.9 5.6-16.8 43.7 8.3 38.3 72.3-15.2 134.8 52.8 111.7 124-7.4 24.2 29.1 37 37.4 12 31.9-99.8-55.1-195.9-157.4-174.3zm-78.5 311c-17.1 38.8-66.8 60-109.1 46.3-40.8-13.1-58-53.4-40.3-89.7 17.7-35.4 63.1-55.4 103.4-45.1 42 10.8 63.1 50.2 46 88.5zm-86.3-30c-12.9-5.4-30 .3-38 12.9-8.3 12.9-4.3 28 8.6 34 13.1 6 30.8.3 39.1-12.9 8-13.1 3.7-28.3-9.7-34zm32.6-13.4c-5.1-1.7-11.4.6-14.3 5.4-2.9 5.1-1.4 10.6 3.7 12.9 5.1 2 11.7-.3 14.6-5.4 2.8-5.2 1.1-10.9-4-12.9z"/></svg></a>
+                </div>
+            
+
+            
+                <div class="share-item douban">
+                    
+                    <a href="https://www.douban.com/share/service?href=https://blog.littleghost.ml/posts/Network-Slicing-Security-Challenges-and-Directions/&amp;name=%e3%80%8aNetwork%20Slicing%20Security%20Challenges%20and%20Directions%e3%80%8b&amp;text=[TOC]%20%e7%bc%a9%e7%95%a5%e8%af%ad%20%e7%bc%a9%e5%86%99%20%e5%85%a8%e7%a7%b0%20%e4%b8%ad%e6%96%87%e7%bf%bb%e8%af%91%20NSM%20Network%20Slice%20Manager%20%e7%bd%91%e7%bb%9c%e5%88%86%e7%89%87%e7%ae%a1%e7%90%86%20NFV%20Network%20Functions%20Virtualization%20%e7%bd%91%e7%bb%9c%e5%8a%9f%e8%83%bd%e8%99%9a%e6%8b%9f%e5%8c%96%20NSI%20Network%20Slice%20Instances%20%e7%bd%91%e7%bb%9c%e5%88%86%e7%89%87%e7%a4%ba%e2%80%a6%e2%80%a6%0a%20%20%20%20%0a%20%20%20%20" title="分享到「豆瓣」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon douban-icon"><path d="M.643.92v2.412h22.714V.92H.643zm1.974 4.926v9.42h18.764v-9.42H2.617zm2.72 2.408H18.69v4.605H5.338V8.254zm1.657 7.412l-2.512.938c1.037 1.461 1.87 2.825 2.512 4.091H0v2.385h24v-2.385h-6.678c.818-1.176 1.589-2.543 2.303-4.091l-2.73-.938a29.952 29.952 0 01-2.479 5.03h-4.75c-.786-1.962-1.677-3.641-2.672-5.03Z"/></svg></a>
+                </div>
+            
+
+            
+                <div class="share-item qq">
+                    
+                    <a href="https://connect.qq.com/widget/shareqq/index.html?url=https://blog.littleghost.ml/posts/Network-Slicing-Security-Challenges-and-Directions/&amp;title=%e3%80%8aNetwork%20Slicing%20Security%20Challenges%20and%20Directions%e3%80%8b&amp;summary=[TOC]%20%e7%bc%a9%e7%95%a5%e8%af%ad%20%e7%bc%a9%e5%86%99%20%e5%85%a8%e7%a7%b0%20%e4%b8%ad%e6%96%87%e7%bf%bb%e8%af%91%20NSM%20Network%20Slice%20Manager%20%e7%bd%91%e7%bb%9c%e5%88%86%e7%89%87%e7%ae%a1%e7%90%86%20NFV%20Network%20Functions%20Virtualization%20%e7%bd%91%e7%bb%9c%e5%8a%9f%e8%83%bd%e8%99%9a%e6%8b%9f%e5%8c%96%20NSI%20Network%20Slice%20Instances%20%e7%bd%91%e7%bb%9c%e5%88%86%e7%89%87%e7%a4%ba%e2%80%a6%e2%80%a6%0a%20%20%20%20%0a%20%20%20%20&amp;pics=https://blog.littleghost.ml/icons/22980536.jfif&amp;site=LittleGhost%e7%9a%84%e5%8d%9a%e5%ae%a2" title="分享到「QQ」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon qq-icon"><path d="M433.754 420.445c-11.526 1.393-44.86-52.741-44.86-52.741 0 31.345-16.136 72.247-51.051 101.786 16.842 5.192 54.843 19.167 45.803 34.421-7.316 12.343-125.51 7.881-159.632 4.037-34.122 3.844-152.316 8.306-159.632-4.037-9.045-15.25 28.918-29.214 45.783-34.415-34.92-29.539-51.059-70.445-51.059-101.792 0 0-33.334 54.134-44.859 52.741-5.37-.65-12.424-29.644 9.347-99.704 10.261-33.024 21.995-60.478 40.144-105.779C60.683 98.063 108.982.006 224 0c113.737.006 163.156 96.133 160.264 214.963 18.118 45.223 29.912 72.85 40.144 105.778 21.768 70.06 14.716 99.053 9.346 99.704z"/></svg></a>
+                </div>
+            
+
+            
+                <div class="share-item qzone">
+                    
+                    <a href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.littleghost.ml/posts/Network-Slicing-Security-Challenges-and-Directions/&amp;title=%e3%80%8aNetwork%20Slicing%20Security%20Challenges%20and%20Directions%e3%80%8b&amp;summary=[TOC]%20%e7%bc%a9%e7%95%a5%e8%af%ad%20%e7%bc%a9%e5%86%99%20%e5%85%a8%e7%a7%b0%20%e4%b8%ad%e6%96%87%e7%bf%bb%e8%af%91%20NSM%20Network%20Slice%20Manager%20%e7%bd%91%e7%bb%9c%e5%88%86%e7%89%87%e7%ae%a1%e7%90%86%20NFV%20Network%20Functions%20Virtualization%20%e7%bd%91%e7%bb%9c%e5%8a%9f%e8%83%bd%e8%99%9a%e6%8b%9f%e5%8c%96%20NSI%20Network%20Slice%20Instances%20%e7%bd%91%e7%bb%9c%e5%88%86%e7%89%87%e7%a4%ba%e2%80%a6%e2%80%a6%0a%20%20%20%20%0a%20%20%20%20&amp;pics=https://blog.littleghost.ml/icons/22980536.jfif&amp;site=LittleGhost%e7%9a%84%e5%8d%9a%e5%ae%a2" title="分享到「QQ 空间」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon qzone-icon"><path d="M23.985 9.202c-.032-.099-.127-.223-.334-.258-.207-.036-7.351-1.406-7.351-1.406s-.105-.022-.198-.07c-.092-.047-.127-.167-.127-.167S12.447.956 12.349.77C12.25.583 12.104.532 12 .532c-.104 0-.251.051-.349.238-.098.186-3.626 6.531-3.626 6.531s-.035.12-.128.167c-.092.047-.197.07-.197.07S.556 8.908.348 8.943c-.208.036-.302.16-.333.258a.477.477 0 0 0 .125.449l5.362 5.49s.072.08.119.172c.016.104.005.21.005.21s-1.189 7.242-1.22 7.45.075.369.159.43c.083.062.233.106.421.013.189-.093 6.812-3.261 6.812-3.261s.098-.044.201-.061c.103-.017.201.061.201.061s6.623 3.168 6.812 3.261c.188.094.338.049.421-.013a.463.463 0 0 0 .159-.43c-.021-.14-.93-5.677-.93-5.677.876-.54 1.425-1.039 1.849-1.747-2.594.969-6.006 1.717-9.415 1.866-.915.041-2.41.097-3.473-.015-.678-.071-1.17-.144-1.243-.438-.053-.215.054-.46.545-.831a2640.5 2640.5 0 0 1 2.861-2.155c1.285-.968 3.559-2.47 3.559-2.731 0-.285-2.144-.781-4.037-.781-1.945 0-2.275.132-2.811.168-.488.034-.769.005-.804-.138-.06-.248.183-.389.588-.568.709-.314 1.86-.594 1.984-.626.194-.052 3.082-.805 5.618-.535 1.318.14 3.244.668 3.244 1.276 0 .342-1.721 1.494-3.225 2.597-1.149.843-2.217 1.561-2.217 1.688 0 .342 3.533 1.241 6.689 1.01l.003-.022c.048-.092.119-.172.119-.172l5.362-5.49a.477.477 0 0 0 .127-.449z"/></svg></a>
+                </div>
+            
+
+            
+                <div class="share-item qrcode">
+                    <div class="qrcode-container" title="通过「二维码」"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon qrcode-icon"><path d="M0 224h192V32H0v192zM64 96h64v64H64V96zm192-64v192h192V32H256zm128 128h-64V96h64v64zM0 480h192V288H0v192zm64-128h64v64H64v-64zm352-64h32v128h-96v-32h-32v96h-64V288h96v32h64v-32zm0 160h32v32h-32v-32zm-64 0h32v32h-32v-32z"/></svg><div id="qrcode-img"></div>
+                    </div>
+                    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+
+<script>
+    var typeNumber = 0;
+    var errorCorrectionLevel = 'L';
+    var qr = qrcode(typeNumber, errorCorrectionLevel);
+    qr.addData('https:\/\/blog.littleghost.ml\/posts\/Network-Slicing-Security-Challenges-and-Directions\/');
+    qr.make();
+    document.getElementById('qrcode-img').innerHTML = qr.createImgTag();
+</script>
+
+                </div>
+            
+
+        </div>
+
+    </div>
+
+
+
+
+        
+    
+    
+        <div class="related-posts">
+            <h2 class="related-title">相关文章：<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon related-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"/></svg></h2>
+            <ul class="related-list">
+                
+                    <li class="related-item">
+                        <a href="/posts/Into-the-Deep-Web-Understanding-E-commerce-Fraud-from-Autonomous-Chat-with-Cybercriminals/" class="related-link">《Into the Deep Web: Understanding E Commerce Fraud From Autonomous Chat With Cybercriminals》</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/posts/2015-SIGCOMM-BlindBoxDeep-Packet-Inspection-over-Encrypted-Traffic/" class="related-link">《2015 SIGCOMM BlindBox：Deep Packet Inspection Over Encrypted Traffic》</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/posts/%E5%9F%BA%E4%BA%8E%E7%86%B5%E7%90%86%E8%AE%BA%E7%9A%84%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%9A%84%E6%A8%A1%E7%B3%8A%E9%A3%8E%E9%99%A9%E8%AF%84%E4%BC%B0/" class="related-link">《基于熵理论的无线网络安全的模糊风险评估》</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/posts/A-new-approach-to-intrusion-detection-based-on-an-evolutionary/" class="related-link">《A new approach to intrusion detection based on an evolutionary》</a>
+                    </li>
+                
+            </ul>
+        </div>
+    
+
+
+
+        
+    
+        <div class="post-tags">
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/%E7%BD%91%E7%BB%9C%E5%88%86%E7%89%87/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>网络分片</a>
+                
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/%E5%AE%89%E5%85%A8/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>安全</a>
+                
+            
+        </div>
+    
+
+
+
+        
+
+
+        
+
+
+        
+    
+        
+        
+    
+    
+    
+    
+        <ul class="post-nav">
+            
+            
+                <li class="post-nav-next">
+                    <a href="/posts/PowerShell%E8%AE%A1%E7%AE%97%E6%96%87%E4%BB%B6Hash/" rel="next">PowerShell计算文件Hash &gt;</a>
+                </li>
+            
+        </ul>
+    
+
+
+
+        
+
+
+    </div>
+</main>
+
+
+            
+    <div id="back-to-top" class="back-to-top">
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon arrow-up"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg></a>
+    </div>
+
+
+            
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="site-info">©&nbsp;2016–2020&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon footer-icon"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg>&nbsp;LittleGhost</div><div class="powered-by">Powered by <a href="https://github.com/gohugoio/hugo" target="_blank" rel="noopener">Hugo</a> | Theme is <a href="https://github.com/reuixiy/hugo-theme-meme" target="_blank" rel="noopener">MemE</a></div><div class="site-copyright"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></div>
+                <div class="busuanzi-site-uv-and-pv">
+                    <span id="busuanzi_container_site_uv">本站访客数&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon busuanzi-site-uv"><path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"/></svg>&nbsp;<span id="busuanzi_value_site_uv"></span></span>&nbsp;|&nbsp;<span id="busuanzi_container_site_pv">本站访问量&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon busuanzi-site-pv"><path d="M288 144a110.94 110.94 0 0 0-31.24 5 55.4 55.4 0 0 1 7.24 27 56 56 0 0 1-56 56 55.4 55.4 0 0 1-27-7.24A111.71 111.71 0 1 0 288 144zm284.52 97.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400c-98.65 0-189.09-55-237.93-144C98.91 167 189.34 112 288 112s189.09 55 237.93 144C477.1 345 386.66 400 288 400z"/></svg>&nbsp;<span id="busuanzi_value_site_pv"></span></span>
+                </div>
+
+            
+
+
+            
+        </div>
+    </footer>
+
+
+        </div>
+        
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+<script>
+    var scroll = new SmoothScroll('a[href*="#"]', {
+        speedAsDuration: true,
+        header: '[data-scroll-header]'
+    });
+</script>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.5.2/dist/mermaid.min.js"></script>
+<script>
+    let mermaidConfig = {
+        startOnLoad: true,
+        flowchart: {
+            useMaxWidth: false,
+            htmlLabels: true
+        },
+        theme: 'default'
+    };
+    mermaid.initialize(mermaidConfig);
+</script>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
+
+<script>
+    mediumZoom(document.querySelectorAll('div.post-body img'), {
+        background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
+    })
+</script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.min.js" type="module" defer></script>
+
+
+
+
+
+
+
+    
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+
+
+
+
+    </body>
+</html>

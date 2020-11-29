@@ -10,7 +10,7 @@
         <title>LittleGhost的博客</title>
         <link>https://blog.littleghost.ml/</link>
         <description>本站采用MemE模板，MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</description>
-        <generator>Hugo 0.78.2 https://gohugo.io/</generator>
+        <generator>Hugo 0.79.0 https://gohugo.io/</generator>
         
             <language>zh-CN</language>
         
@@ -23,10 +23,57 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Thu, 19 Nov 2020 23:21:54 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sun, 29 Nov 2020 22:03:02 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://blog.littleghost.ml/rss.xml" />
         
+        
+            <item>
+                <title>《Network Slicing Security Challenges and Directions》</title>
+                <link>https://blog.littleghost.ml/posts/Network-Slicing-Security-Challenges-and-Directions/</link>
+                <guid isPermaLink="true">https://blog.littleghost.ml/posts/Network-Slicing-Security-Challenges-and-Directions/</guid>
+                <pubDate>Tue, 03 Nov 2020 12:06:04 &#43;0800</pubDate>
+                
+                    <author>785340571@qq.com (LittleGhost)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                <description>[TOC] 缩略语 缩写 全称 中文翻译 NSM Network Slice Manager 网络分片管理 NFV Network Functions Virtualization 网络功能虚拟化 NSI Network Slice Instances 网络分片示……
+    
+    </description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E8%AE%BA%E6%96%87/">论文</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/tags/%E7%BD%91%E7%BB%9C%E5%88%86%E7%89%87/">网络分片</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/tags/%E5%AE%89%E5%85%A8/">安全</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>PowerShell计算文件Hash</title>
