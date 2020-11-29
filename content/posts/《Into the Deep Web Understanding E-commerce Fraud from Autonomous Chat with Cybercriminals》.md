@@ -439,7 +439,7 @@ In this section, we will demonstrate how Aubrey can be generalized to chat with 
 
 **Dialog management.** Suppose we are in the English language scenario, Dialog Manager needs to distinguish whether the responses of the fake reviewers are negative, interrogative, with or without the target intelligence. The negative and interrogative detection is designed for general purpose, which can be reused in the fake review scenario. Only new module for identifying fake review related intelligence should be designed based on the targeted artifacts to be gathered. 
 
-## C. Chatbot Model Optimization 
+## C. Chatbot Model Optimization
 
 Here we elaborate two methods to enhance the quality of ourconversational model. 
 
