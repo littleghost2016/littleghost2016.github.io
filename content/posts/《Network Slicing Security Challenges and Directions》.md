@@ -33,7 +33,7 @@ Taking recent advancements in virtualization and network control, such as Softwa
 
 While Network Slicing emerges as a key technology for new softwarized networks, including 5G, it also <u>raises security concerns（引起了安全方面的担忧）</u> because of the impact that a vulnerability may have in such scenarios. Because slicing builds <u>atop（在...上面）</u> other technologies, there are known security challenges attributed to the underlying SDN and NFV technologies, as well as the access networks. The goal of this letter is to focus on Network Slicing in a general packet core, <u>conveying（传达）</u> an <u>applied view（应用观点）</u> of the security challenges that arise from the network slicing deﬁnition, presenting the existing solutions and possible directions.
 
-![](《Network Slicing Security Challenges and Directions》/image-20201103154643013.png)
+![](Network-Slicing-Security-Challenges-and-Directions/image-20201103154643013.png)
 
 **(a)** Business overview  **(b)** Slice KPIs (GSM Alliance[^2])  **(c)**Management architecture(ETSI inspired[^3])
 

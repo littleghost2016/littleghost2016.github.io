@@ -125,7 +125,7 @@ However, the scalability of Shadow is limited by the resources available at a si
 
 Figure 1 presents the correlation between real time and virtual time for simulations of different sizes. The comparison is made for simulations running one virtual hour on a machine with the following processor: Intel(R) Xeon(R) CPU E5-4650 0 @ 2.70GHz. Note that the complexity of the simulation is shown to be non-linear, in particular for a large simulation size.
 
-![image-20201130211450345](《Tor Experimentation Tools》/image-20201130211450345.png)
+![image-20201130211450345](Tor-Experimentation-Tools/image-20201130211450345.png)
 
 ###### Fig. 1. The figure displays the performance of Shadow for different simulation sizes. It points out the difference between the real time and virtual time, where the comparison is made for simulations running one virtual hour. The virtual time reflects the amount of Tor activity (such as downloads and path constructions).
 
