@@ -114,9 +114,9 @@ The new attacks sample distributions on the test data with the corrected labels 
 |  R2L  |             10196              |          16189          |         63          |
 |       |             18729              |         250436          |         7.5         |
 
-![image-20200606171157494](A-new-approach-to-intrusion-detection-based-on-an-evolutionary/image-20200606171157494.png)
+![](image-20200606171157494.png)
 
-Fig. 1. The Mamdani fuzzy inference system using min and max for T-norm and T-conorm operators, respectively[^13].
+###### Fig. 1. The Mamdani fuzzy inference system using min and max for T-norm and T-conorm operators, respectively[^13].
 
 # 4. Fuzzy and neuro-fuzzy
 
@@ -157,9 +157,9 @@ where A and B are input fuzzy sets in antecedent and usually $z = f(x,y)$ a zero
 
 Fuzzy reasoning procedure for the first order Sugeno fuzzy model is shown in Fig. 2a. Here, defuzzification procedure in the Mamdani fuzzy model is replaced by the operation of weighted average（加权平均运算） in order to avoid the timeconsuming procedure of the former（避免了前者耗时的过程）[^13].
 
-![image-20200606171343930](A-new-approach-to-intrusion-detection-based-on-an-evolutionary/image-20200606171343930-1607857165413.png)
+![image-20200606171343930](image-20200606171343930-1607857165413.png)
 
-Fig. 2. (a) The Sugeno fuzzy model reasoning; (b) equivalent ANFIS structure[^13].
+###### Fig. 2. (a) The Sugeno fuzzy model reasoning; (b) equivalent ANFIS structure[^13].
 
 ## 4.2. Adaptive neuro-fuzzy inference system (ANFIS)
 
@@ -217,9 +217,9 @@ Second, a Fuzzy Inference module, based on <u>empirical knowledge（经验知识
 
 In order to attain the best results, genetic algorithm (GA) is used to optimize the structure of the fuzzy decision-making engine. The GA structure is discussed in more depth later. Fig. 3 depicts the schematic block diagram of the proposed system architecture.
 
-![image-20200606172417321](A-new-approach-to-intrusion-detection-based-on-an-evolutionary/image-20200606172417321.png)
+![image-20200606172417321](image-20200606172417321.png)
 
-Fig. 3. System architecture block diagram.
+###### Fig. 3. System architecture block diagram.
 
 ## 5.2. The data sources
 
@@ -314,9 +314,9 @@ where CM and C are <u>confusion matrix（混淆矩阵）</u> and <u>Cost Matrix�
 
 Cost Matrix values employed for the KDD’99 classifier learning contest are shown in Table 8a[^17]. <u>Lower values for cost per example measure show better classification for the intrusion detection system（每个例子的消耗越低，说明入侵检测的分类效果越好）</u>.
 
-![image-20200606174153523](A-new-approach-to-intrusion-detection-based-on-an-evolutionary/image-20200606174153523.png)
+![image-20200606174153523](image-20200606174153523.png)
 
-Fig. 4. Schematic decoding process of the individual chromosome.
+###### Fig. 4. Schematic decoding process of the individual chromosome.
 
 ### 5.5.1. Fitness functions
 
