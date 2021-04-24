@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">LittleGhost的博客</title>
     <subtitle type="html">本站采用MemE模板，MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</subtitle>
-    <updated>2021-04-24T11:12:43&#43;08:00</updated>
+    <updated>2021-04-24T11:16:31&#43;08:00</updated>
     <id>https://blog.littleghost.ml/</id>
     <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blog.littleghost.ml/atom.xml" />
@@ -16,6 +16,47 @@
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.82.1">Hugo</generator>
+        <entry>
+            <title type="text">20210401组会</title>
+            <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/posts/20210401%E7%BB%84%E4%BC%9A/" />
+            <id>https://blog.littleghost.ml/posts/20210401%E7%BB%84%E4%BC%9A/</id>
+            <updated>2021-04-24T11:12:12&#43;08:00</updated>
+            <published>2021-04-01T09:30:20&#43;08:00</published>
+            <author>
+                    <name>LittleGhost</name>
+                    <uri>https://blog.littleghost.ml</uri>
+                    <email>785340571@qq.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">1. 深度学习&amp;amp;流量识别 文章写于2017年 1.1 卷积神经网络 流量识别 常用端口号识别 基……</summary>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/categories/%E5%BC%80%E4%BC%9A/" term="开会" label="开会" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" term="深度学习" label="深度学习" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">《Tor Experimentation Tools》</title>
             <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/posts/Tor-Experimentation-Tools/" />
@@ -1281,53 +1322,6 @@
                             
                             
                                 <category scheme="https://blog.littleghost.ml/tags/linux/" term="linux" label="linux" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text">git-stash学习</title>
-            <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/posts/20210401%E7%BB%84%E4%BC%9A/" />
-            <id>https://blog.littleghost.ml/posts/20210401%E7%BB%84%E4%BC%9A/</id>
-            <updated>2020-05-25T19:27:43&#43;08:00</updated>
-            <published>2019-11-04T20:24:20&#43;08:00</published>
-            <author>
-                    <name>LittleGhost</name>
-                    <uri>https://blog.littleghost.ml</uri>
-                    <email>785340571@qq.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">背景 昨天继续部署hexo的时候发现自己使用的主题fexo在Github上有新的com……</summary>
-            
-            
-            
-            
-            
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/" term="技术" label="技术" />
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://blog.littleghost.ml/tags/git/" term="git" label="git" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://blog.littleghost.ml/tags/hexo/" term="hexo" label="hexo" />
                             
                         
                     
