@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">LittleGhost的博客</title>
     <subtitle type="html">本站采用MemE模板，MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</subtitle>
-    <updated>2021-04-24T11:16:31&#43;08:00</updated>
+    <updated>2021-04-24T11:19:04&#43;08:00</updated>
     <id>https://blog.littleghost.ml/</id>
     <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blog.littleghost.ml/atom.xml" />
@@ -16,6 +16,53 @@
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.82.1">Hugo</generator>
+        <entry>
+            <title type="text">20210423组会</title>
+            <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/posts/20210423f%E7%BB%84%E4%BC%9A/" />
+            <id>https://blog.littleghost.ml/posts/20210423f%E7%BB%84%E4%BC%9A/</id>
+            <updated>2021-04-24T11:19:00&#43;08:00</updated>
+            <published>2021-04-23T12:00:20&#43;08:00</published>
+            <author>
+                    <name>LittleGhost</name>
+                    <uri>https://blog.littleghost.ml</uri>
+                    <email>785340571@qq.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">典型校园网拓扑 两层/QinQ VLAN数据隔离 好处：隔离（内层）、定位（外层） 上网过程……</summary>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/categories/%E5%BC%80%E4%BC%9A/" term="开会" label="开会" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/tags/%E6%A0%A1%E5%9B%AD%E7%BD%91/" term="校园网" label="校园网" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://blog.littleghost.ml/tags/%E5%AE%89%E5%85%A8/" term="安全" label="安全" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">20210401组会</title>
             <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/posts/20210401%E7%BB%84%E4%BC%9A/" />

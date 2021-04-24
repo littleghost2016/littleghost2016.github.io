@@ -23,10 +23,55 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sat, 24 Apr 2021 11:16:31 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sat, 24 Apr 2021 11:19:04 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://blog.littleghost.ml/rss.xml" />
         
+        
+            <item>
+                <title>20210423组会</title>
+                <link>https://blog.littleghost.ml/posts/20210423f%E7%BB%84%E4%BC%9A/</link>
+                <guid isPermaLink="true">https://blog.littleghost.ml/posts/20210423f%E7%BB%84%E4%BC%9A/</guid>
+                <pubDate>Fri, 23 Apr 2021 12:00:20 &#43;0800</pubDate>
+                
+                    <author>785340571@qq.com (LittleGhost)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                <description>典型校园网拓扑 两层/QinQ VLAN数据隔离 好处：隔离（内层）、定位（外层） 上网过程……</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E5%BC%80%E4%BC%9A/">开会</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/tags/%E6%A0%A1%E5%9B%AD%E7%BD%91/">校园网</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/tags/%E5%AE%89%E5%85%A8/">安全</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>20210401组会</title>
