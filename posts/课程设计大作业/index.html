@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.82.1" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.84.3" /><meta name="theme-color" content="#fff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -14,7 +14,7 @@
 
     <title>课程设计大作业 | LittleGhost的博客</title>
 
-    <link rel="stylesheet" href="/css/meme.min.5b2b8ad2f3ecea2b01c7feec68bda7e181ac4f5bdfacf2baf2918624d39e7e4b.css"/>
+    <link rel="stylesheet" href="/css/meme.min.7602f8482b2a9d9d98625bcb30f3fd9e4d8da2c0a36e759163d16d5293920832.css"/>
 
     
     
@@ -60,7 +60,7 @@
         "description": "基于Flask框架的动态代理池系统 一、项目简介 如今是网络与信息时代，互联网成为了大量……",
         "inLanguage" : "zh-CN",
         "articleSection": "posts",
-        "wordCount":  3139 ,
+        "wordCount":  3134 ,
         "image": ["https://blog.littleghost.ml/image-20200805194131008.png","https://blog.littleghost.ml/image-20200805194556784.png","https://blog.littleghost.ml/image-20200805194848002.png"],
         "author": {
             "@type": "Person",
@@ -237,7 +237,7 @@
     
     
         
-        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;3139</span>
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;3134</span>
     
     
         
@@ -370,7 +370,7 @@
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="nd">@app.route</span><span class="p">(</span><span class="s1">&#39;/get/&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">])</span>
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/get/&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">])</span>
 <span class="k">def</span> <span class="nf">get</span><span class="p">():</span>
     <span class="c1"># 判断是否为GET请求</span>
     <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;GET&#39;</span><span class="p">:</span>
@@ -400,7 +400,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">get_proxy</span><span class="p">(</span><span class="n">number</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="s1">&#39;http&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
-    <span class="n">zset_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;proxy_{}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">)</span>
+    <span class="n">zset_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;proxy_</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">)</span>
     
     <span class="c1"># 数据库查询函数</span>
     <span class="n">proxy_list</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">zrevrangebyscore</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">zset_name</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="s1">&#39;+inf&#39;</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span> <span class="n">number</span><span class="p">]</span>
@@ -481,10 +481,10 @@
 
 <span class="c1"># 向数据库中写入检测结果</span>
 <span class="k">def</span> <span class="nf">write_check_result</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">checkd_host_info</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
-    <span class="n">host</span> <span class="o">=</span> <span class="s1">&#39;{}:{}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">checkd_host_info</span><span class="p">[</span><span class="s1">&#39;ip&#39;</span><span class="p">],</span> <span class="n">checkd_host_info</span><span class="p">[</span><span class="s1">&#39;port&#39;</span><span class="p">])</span>
-    <span class="n">zset_name</span> <span class="o">=</span> <span class="s1">&#39;proxy_{}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">checkd_host_info</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">])</span>
+    <span class="n">host</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">:</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">checkd_host_info</span><span class="p">[</span><span class="s1">&#39;ip&#39;</span><span class="p">],</span> <span class="n">checkd_host_info</span><span class="p">[</span><span class="s1">&#39;port&#39;</span><span class="p">])</span>
+    <span class="n">zset_name</span> <span class="o">=</span> <span class="s1">&#39;proxy_</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">checkd_host_info</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">])</span>
     <span class="c1"># 检查是否需要进行检测</span>
-    <span class="k">if</span> <span class="n">checkd_host_info</span><span class="p">[</span><span class="s1">&#39;latest_status&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">checkd_host_info</span><span class="p">[</span><span class="s1">&#39;latest_status&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
         <span class="n">db</span><span class="o">.</span><span class="n">hset</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;proxy_delay&#39;</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">host</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">checkd_host_info</span><span class="p">[</span><span class="s1">&#39;delay&#39;</span><span class="p">])</span>
         <span class="n">db</span><span class="o">.</span><span class="n">hset</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;proxy_geo_info&#39;</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">host</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">GetGeoInfo</span><span class="p">(</span><span class="n">checkd_host_info</span><span class="p">[</span><span class="s1">&#39;ip&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">main</span><span class="p">())</span>
 
@@ -497,7 +497,7 @@
     <span class="k">elif</span> <span class="nb">float</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">zscore</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">zset_name</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">host</span><span class="p">))</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">200</span><span class="p">:</span>
         <span class="n">increment</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span>
         <span class="n">db</span><span class="o">.</span><span class="n">zincrby</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">zset_name</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">host</span><span class="p">,</span> <span class="n">amount</span><span class="o">=</span><span class="n">increment</span><span class="p">)</span>
-        <span class="n">db</span><span class="o">.</span><span class="n">hset</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;proxy_latest_status&#39;</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">host</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">hset</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;proxy_latest_status&#39;</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">host</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
     <span class="c1"># 分数过低时则剔除</span>
     <span class="k">else</span><span class="p">:</span>
@@ -519,8 +519,8 @@
 <span class="n">redis_port</span> <span class="o">=</span> <span class="mi">6379</span>
 
 <span class="c1"># 数据库连接</span>
-<span class="n">redis_connection</span> <span class="o">=</span> <span class="n">redis</span><span class="o">.</span><span class="n">Redis</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="n">redis_host</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="n">redis_port</span><span class="p">,</span> <span class="n">decode_responses</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-<span class="n">redis_connect_pool</span> <span class="o">=</span> <span class="n">redis</span><span class="o">.</span><span class="n">ConnectionPool</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="n">redis_host</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="n">redis_port</span><span class="p">,</span> <span class="n">decode_responses</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">redis_connection</span> <span class="o">=</span> <span class="n">redis</span><span class="o">.</span><span class="n">Redis</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="n">redis_host</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="n">redis_port</span><span class="p">,</span> <span class="n">decode_responses</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">redis_connect_pool</span> <span class="o">=</span> <span class="n">redis</span><span class="o">.</span><span class="n">ConnectionPool</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="n">redis_host</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="n">redis_port</span><span class="p">,</span> <span class="n">decode_responses</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></td></tr></table></div>
 </div>
 </div><h2 id="试验最终效果图"><a href="#试验最终效果图" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>试验最终效果图</h2>
@@ -532,19 +532,19 @@
 <hr>
 <ol>
 <li id="fn:1" role="doc-endnote">
-<p><a href="https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/5162711?fr=aladdin" target="_blank" rel="noopener">https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/5162711?fr=aladdin</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+<p><a href="https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/5162711?fr=aladdin" target="_blank" rel="noopener">https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/5162711?fr=aladdin</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
 </li>
 <li id="fn:2" role="doc-endnote">
-<p><a href="https://www.jianshu.com/p/5e7f8d75edbe" target="_blank" rel="noopener">https://www.jianshu.com/p/5e7f8d75edbe</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+<p><a href="https://www.jianshu.com/p/5e7f8d75edbe" target="_blank" rel="noopener">https://www.jianshu.com/p/5e7f8d75edbe</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
 </li>
 <li id="fn:3" role="doc-endnote">
-<p><a href="http://www.wanfangdata.com.cn/details/detail.do?_type=patent&amp;id=CN201810349987.6" target="_blank" rel="noopener">http://www.wanfangdata.com.cn/details/detail.do?_type=patent&amp;id=CN201810349987.6</a> <a href="#fnref:3" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+<p><a href="http://www.wanfangdata.com.cn/details/detail.do?_type=patent&amp;id=CN201810349987.6" target="_blank" rel="noopener">http://www.wanfangdata.com.cn/details/detail.do?_type=patent&amp;id=CN201810349987.6</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
 </li>
 <li id="fn:4" role="doc-endnote">
-<p><a href="http://www.wanfangdata.com.cn/details/detail.do?_type=patent&amp;id=CN201610874527.6" target="_blank" rel="noopener">http://www.wanfangdata.com.cn/details/detail.do?_type=patent&amp;id=CN201610874527.6</a> <a href="#fnref:4" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+<p><a href="http://www.wanfangdata.com.cn/details/detail.do?_type=patent&amp;id=CN201610874527.6" target="_blank" rel="noopener">http://www.wanfangdata.com.cn/details/detail.do?_type=patent&amp;id=CN201610874527.6</a>&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
 </li>
 <li id="fn:5" role="doc-endnote">
-<p><a href="https://github.com/Nyloner/ProxyPool" target="_blank" rel="noopener">https://github.com/Nyloner/ProxyPool</a> <a href="#fnref:5" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+<p><a href="https://github.com/Nyloner/ProxyPool" target="_blank" rel="noopener">https://github.com/Nyloner/ProxyPool</a>&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
 </li>
 </ol>
 </section>

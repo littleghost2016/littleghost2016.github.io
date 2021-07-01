@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.82.1" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.84.3" /><meta name="theme-color" content="#fff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -14,7 +14,7 @@
 
     <title>树莓派搭建aria2&#43;caddy&#43;filebrowser | LittleGhost的博客</title>
 
-    <link rel="stylesheet" href="/css/meme.min.5b2b8ad2f3ecea2b01c7feec68bda7e181ac4f5bdfacf2baf2918624d39e7e4b.css"/>
+    <link rel="stylesheet" href="/css/meme.min.7602f8482b2a9d9d98625bcb30f3fd9e4d8da2c0a36e759163d16d5293920832.css"/>
 
     
     
@@ -303,14 +303,14 @@ address=/mylab.com/10.173.XX.XX
 Description=Caddy Server
 After=syslog.target
 After=network.target
-    
+
 [Service]
 User=root
 Group=root
 LimitNOFILE=64000
 ExecStart=/home/ubuntu/caddy/caddy -log stdout -agree=true -conf=/home/ubuntu/caddy/config/Caddyfile -root=/home/ubuntu/caddy/www
 Restart=always
-    
+
 [Install]
 WantedBy=multi-user.target
 </code></pre><p><em>搭建过程中使用ubuntu作为User和Group会报错，尚未解决。</em></p>
@@ -321,7 +321,7 @@ WantedBy=multi-user.target
         root /home/ubuntu/caddy/www/download.com
         gzip
 }
-    
+
 http://filebrowser.com:80 {
         proxy / 127.0.0.1:7001
         gzip
@@ -515,12 +515,12 @@ listen-port<span class="o">=</span>50000-65000
 <pre><code>[Unit]
 Description=File Browser
 After=network.target
-    
+
 [Service]
 User=ubuntu
 Group=ubuntu
 ExecStart=/home/ubuntu/filebrowser/filebrowser -d /home/ubuntu/filebrowser/filebrowser.db
-    
+
 [Install]
 WantedBy=multi-user.target
 </code></pre><div class="highlight"><div class="chroma">
@@ -589,7 +589,7 @@ WantedBy=multi-user.target
         ├── robots.txt
         ├── tileicon.png
         └── touchicon.png
-    
+
 14 directories, 43 files
 </code></pre></li>
 </ol>

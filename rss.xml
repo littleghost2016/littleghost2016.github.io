@@ -10,7 +10,7 @@
         <title>LittleGhost的博客</title>
         <link>https://blog.littleghost.ml/</link>
         <description>本站采用MemE模板，MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</description>
-        <generator>Hugo 0.82.1 https://gohugo.io/</generator>
+        <generator>Hugo 0.84.3 https://gohugo.io/</generator>
         
             <language>zh-CN</language>
         
@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sat, 24 Apr 2021 11:34:46 &#43;0800</lastBuildDate>
+        <lastBuildDate>Thu, 01 Jul 2021 23:55:20 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://blog.littleghost.ml/rss.xml" />
         
@@ -2631,7 +2631,7 @@ Quick Start Create a new post 1  $ hexo new &amp;#34;My New Post&amp;#34;   More
                     <author>785340571@qq.com (LittleGhost)</author>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
-                <description>1 CREATE SCHEMA TEST AUTHORIZATION ZHANG; 1 DROP SCHEMA &amp;lt;模式名&amp;gt; &amp;lt;CASCADE | RESTRICT&amp;gt;; 1 2 DROP TABLE &amp;lt;表 名&amp;gt; &amp;lt;CASCADE | RESTRICT&amp;gt;; --……</description>
+                <description>1 CREATESCHEMATESTAUTHORIZATIONZHANG; 1 DROPSCHEMA&amp;lt;模式名&amp;gt;&amp;lt;CASCADE|RESTRI……</description>
                 
                 
                 

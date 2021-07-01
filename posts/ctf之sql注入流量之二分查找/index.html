@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.82.1" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.84.3" /><meta name="theme-color" content="#fff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -14,7 +14,7 @@
 
     <title>Ctf之sql注入流量之二分查找 | LittleGhost的博客</title>
 
-    <link rel="stylesheet" href="/css/meme.min.5b2b8ad2f3ecea2b01c7feec68bda7e181ac4f5bdfacf2baf2918624d39e7e4b.css"/>
+    <link rel="stylesheet" href="/css/meme.min.7602f8482b2a9d9d98625bcb30f3fd9e4d8da2c0a36e759163d16d5293920832.css"/>
 
     
     
@@ -378,7 +378,7 @@
         <span class="n">m1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
         <span class="n">m2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
         <span class="n">m3</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="k">if</span> <span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">!=</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">m3</span> <span class="o">=</span> <span class="mi">1</span>
         <span class="c1"># print(m3)</span>
         <span class="k">if</span>  <span class="n">m1</span> <span class="o">&gt;</span> <span class="n">strLen</span><span class="p">:</span>
@@ -408,7 +408,7 @@
                 <span class="n">resultDict</span><span class="p">[</span><span class="n">m1</span><span class="p">]</span> <span class="o">=</span> <span class="n">tempDict</span>
     <span class="c1"># print(strLen) # 长度为20</span>
     <span class="k">for</span> <span class="n">each</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">strLen</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="n">resultDict</span><span class="p">[</span><span class="n">each</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="s1">&#39;b&#39;</span><span class="p">]),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="n">resultDict</span><span class="p">[</span><span class="n">each</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="s1">&#39;b&#39;</span><span class="p">]),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
 
 
 

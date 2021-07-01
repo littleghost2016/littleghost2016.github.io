@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.82.1" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.84.3" /><meta name="theme-color" content="#fff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -14,7 +14,7 @@
 
     <title>现代密码学上机作业 | LittleGhost的博客</title>
 
-    <link rel="stylesheet" href="/css/meme.min.5b2b8ad2f3ecea2b01c7feec68bda7e181ac4f5bdfacf2baf2918624d39e7e4b.css"/>
+    <link rel="stylesheet" href="/css/meme.min.7602f8482b2a9d9d98625bcb30f3fd9e4d8da2c0a36e759163d16d5293920832.css"/>
 
     
     
@@ -345,7 +345,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">f_n</span> <span class="o">=</span><span class="p">(</span><span class="n">p</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">q</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">e</span> <span class="o">=</span> <span class="mi">4271</span>
         <span class="c1"># 4271</span>
-        <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
             <span class="n">func_choice</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;加密请输入1，解密请输入2：&#39;</span><span class="p">))</span>
             <span class="k">if</span> <span class="n">func_choice</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">display_str</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;求输入想进行操作的字符串：&#39;</span><span class="p">)</span>
@@ -354,14 +354,14 @@
                 <span class="bp">self</span><span class="o">.</span><span class="n">display_list</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;求输入密文，用英文逗号隔开，不需要输入中括号：&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">decrypt</span><span class="p">()</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="k">print</span><span class="p">(</span><span class="s1">&#39;你输入了错误的选项！&#39;</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;你输入了错误的选项！&#39;</span><span class="p">)</span>
     <span class="k">def</span> <span class="nf">encrypt</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">display_list</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">str_b64</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">b64encode</span><span class="p">(</span><span class="nb">bytes</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">display_str</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
         <span class="n">list_b64</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">str_b64</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">list_b64</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">display_list</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">i</span> <span class="o">**</span> <span class="bp">self</span><span class="o">.</span><span class="n">e</span><span class="p">)</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">n</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;密文为：&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">display_list</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;密文为：&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">display_list</span><span class="p">)</span>
         
     <span class="k">def</span> <span class="nf">decrypt</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">display_str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
@@ -370,7 +370,7 @@
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">display_list</span><span class="p">:</span>
             <span class="n">temp_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">chr</span><span class="p">((</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">**</span> <span class="n">d</span><span class="p">)</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">n</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">display_str</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">b64decode</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">temp_list</span><span class="p">))</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
-        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;明文为：&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">display_str</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;明文为：&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">display_str</span><span class="p">)</span>
         
     <span class="k">def</span> <span class="nf">createPrivateKey</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># 产生私钥d</span>
@@ -911,7 +911,7 @@
     <span class="c1"># print(mask_str)</span>
     <span class="n">mask</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">mask_str</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
     <span class="n">Temp</span> <span class="o">=</span> <span class="n">Point</span>
-    <span class="n">flag</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="n">flag</span> <span class="o">=</span> <span class="kc">False</span>
     <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">len_para</span> <span class="o">*</span> <span class="mi">4</span><span class="p">):</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">flag</span><span class="p">):</span>
             <span class="n">Temp</span> <span class="o">=</span> <span class="n">DoublePoint</span><span class="p">(</span><span class="n">Temp</span><span class="p">,</span><span class="n">len_para</span><span class="p">)</span>
@@ -919,7 +919,7 @@
             <span class="k">if</span> <span class="p">(</span><span class="n">flag</span><span class="p">):</span>
                 <span class="n">Temp</span> <span class="o">=</span> <span class="n">AddPoint</span><span class="p">(</span><span class="n">Temp</span><span class="p">,</span> <span class="n">Point</span><span class="p">,</span><span class="n">len_para</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="n">flag</span> <span class="o">=</span> <span class="bp">True</span>
+                <span class="n">flag</span> <span class="o">=</span> <span class="kc">True</span>
                 <span class="n">Temp</span> <span class="o">=</span> <span class="n">Point</span>
         <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span>
     <span class="k">return</span> <span class="n">ConvertJacb2Nor</span><span class="p">(</span><span class="n">Temp</span><span class="p">,</span><span class="n">len_para</span><span class="p">)</span>
@@ -930,7 +930,7 @@
     <span class="n">l</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">Point</span><span class="p">)</span>
     <span class="n">len_2</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">len_para</span>
     <span class="k">if</span> <span class="n">l</span><span class="o">&lt;</span> <span class="n">len_para</span><span class="o">*</span><span class="mi">2</span><span class="p">:</span>
-        <span class="k">return</span> <span class="bp">None</span>
+        <span class="k">return</span> <span class="kc">None</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">x1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">Point</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">len_para</span><span class="p">],</span> <span class="mi">16</span><span class="p">)</span>
         <span class="n">y1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">Point</span><span class="p">[</span><span class="n">len_para</span><span class="p">:</span><span class="n">len_2</span><span class="p">],</span> <span class="mi">16</span><span class="p">)</span>
@@ -974,7 +974,7 @@
     <span class="n">l1</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">P1</span><span class="p">)</span>
     <span class="n">l2</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">P2</span><span class="p">)</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">l1</span> <span class="o">&lt;</span> <span class="n">len_2</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">l2</span> <span class="o">&lt;</span> <span class="n">len_2</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">None</span>
+        <span class="k">return</span> <span class="kc">None</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">X1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">P1</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span> <span class="n">len_para</span><span class="p">],</span> <span class="mi">16</span><span class="p">)</span>
         <span class="n">Y1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">P1</span><span class="p">[</span><span class="n">len_para</span><span class="p">:</span> <span class="n">len_2</span><span class="p">],</span> <span class="mi">16</span><span class="p">)</span>
@@ -1104,7 +1104,7 @@
     <span class="n">t</span> <span class="o">=</span> <span class="n">SM3</span><span class="o">.</span><span class="n">KDF</span><span class="p">(</span><span class="n">xy</span><span class="p">,</span><span class="n">ml</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
     <span class="c1"># print(t)</span>
     <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="mi">16</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="bp">None</span>
+        <span class="k">return</span> <span class="kc">None</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">form</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%%</span><span class="s1">0</span><span class="si">%d</span><span class="s1">x&#39;</span> <span class="o">%</span> <span class="n">ml</span>
         <span class="n">C2</span> <span class="o">=</span> <span class="n">form</span> <span class="o">%</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span><span class="mi">16</span><span class="p">)</span> <span class="o">^</span> <span class="nb">int</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="mi">16</span><span class="p">))</span>
@@ -1131,7 +1131,7 @@
     <span class="n">t</span> <span class="o">=</span> <span class="n">SM3</span><span class="o">.</span><span class="n">KDF</span><span class="p">(</span><span class="n">xy</span><span class="p">,</span> <span class="n">cl</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
     <span class="c1"># print(&#39;t = %s&#39;%t)</span>
     <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="mi">16</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="bp">None</span>
+        <span class="k">return</span> <span class="kc">None</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">form</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%%</span><span class="s1">0</span><span class="si">%d</span><span class="s1">x&#39;</span> <span class="o">%</span> <span class="n">cl</span>
         <span class="n">M</span> <span class="o">=</span> <span class="n">form</span> <span class="o">%</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">C2</span><span class="p">,</span><span class="mi">16</span><span class="p">)</span> <span class="o">^</span> <span class="nb">int</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="mi">16</span><span class="p">))</span>
@@ -1140,7 +1140,7 @@
         <span class="k">if</span>  <span class="p">(</span><span class="n">u</span> <span class="o">==</span> <span class="n">C3</span><span class="p">):</span>
             <span class="k">return</span> <span class="n">M</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="bp">None</span>
+            <span class="k">return</span> <span class="kc">None</span>
 
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
@@ -1155,14 +1155,14 @@
     <span class="c1"># d = &#39;58892B807074F53FBF67288A1DFAA1AC313455FE60355AFD&#39;</span>
     <span class="n">Pa</span> <span class="o">=</span> <span class="n">kG</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="mi">16</span><span class="p">),</span> <span class="n">sm2_G</span><span class="p">,</span> <span class="n">len_para</span><span class="p">)</span>
     <span class="n">Sig</span> <span class="o">=</span> <span class="n">Sign</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">len_para</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">Verify</span><span class="p">(</span><span class="n">Sig</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">Pa</span><span class="p">,</span> <span class="n">len_para</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">Verify</span><span class="p">(</span><span class="n">Sig</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">Pa</span><span class="p">,</span> <span class="n">len_para</span><span class="p">))</span>
     <span class="c1"># print(Pa)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;M = </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">e</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;M = </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">e</span><span class="p">)</span>
     <span class="n">C</span> <span class="o">=</span> <span class="n">Encrypt</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">Pa</span><span class="p">,</span> <span class="n">len_para</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;C = </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">C</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Decrypt&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;C = </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">C</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Decrypt&#39;</span><span class="p">)</span>
     <span class="c1"># print(Decrypt(C, d, len_para))</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">Decrypt</span><span class="p">(</span><span class="n">C</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">len_para</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">Decrypt</span><span class="p">(</span><span class="n">C</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">len_para</span><span class="p">))</span>
 </code></pre></td></tr></table></div>
 </div>
 </div><p><img src="image-20200401190116841.png" alt="image-20200401190116841"></p>
@@ -1541,8 +1541,8 @@
 <span class="c1"># 打印输出</span>
 <span class="k">def</span> <span class="nf">out_hex</span><span class="p">(</span><span class="n">list1</span><span class="p">):</span>
    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">list1</span><span class="p">:</span>
-       <span class="k">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">%08x</span><span class="s2">&#34;</span> <span class="o">%</span> <span class="n">i</span><span class="p">)</span>
-   <span class="k">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">)</span>
+       <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">%08x</span><span class="s2">&#34;</span> <span class="o">%</span> <span class="n">i</span><span class="p">)</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">)</span>
 
 
 <span class="c1"># 循环左移</span>
@@ -1768,9 +1768,9 @@
 
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-   <span class="k">print</span><span class="p">(</span><span class="s1">&#39;liushengwen&#39;</span><span class="p">)</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;liushengwen&#39;</span><span class="p">)</span>
    <span class="n">y</span> <span class="o">=</span> <span class="n">Hash_sm3</span><span class="p">(</span><span class="s1">&#39;liushengwen&#39;</span><span class="p">)</span>
-   <span class="k">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+   <span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 
    <span class="c1"># # klen = 19</span>
    <span class="c1"># # print(KDF(&#34;57E7B63623FAE5F08CDA468E872A20AFA03DED41BF1403770E040DC83AF31A67991F2B01EBF9EFD8881F0A0493000603&#34;, klen))</span>

@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.82.1" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.84.3" /><meta name="theme-color" content="#fff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -14,7 +14,7 @@
 
     <title>操作系统上机作业 | LittleGhost的博客</title>
 
-    <link rel="stylesheet" href="/css/meme.min.5b2b8ad2f3ecea2b01c7feec68bda7e181ac4f5bdfacf2baf2918624d39e7e4b.css"/>
+    <link rel="stylesheet" href="/css/meme.min.7602f8482b2a9d9d98625bcb30f3fd9e4d8da2c0a36e759163d16d5293920832.css"/>
 
     
     
@@ -60,7 +60,7 @@
         "description": "实验一 题干 用两个进程来模拟汽车司机与售票员之间的协同关系：一方面只有售票员把车门关好……",
         "inLanguage" : "zh-CN",
         "articleSection": "posts",
-        "wordCount":  2311 ,
+        "wordCount":  2395 ,
         "image": ["https://blog.littleghost.ml/clip_image002.jpg","https://blog.littleghost.ml/clip_image003.png","https://blog.littleghost.ml/clip_image004.png","https://blog.littleghost.ml/clip_image002-1585663704698.jpg"],
         "author": {
             "@type": "Person",
@@ -237,7 +237,7 @@
     
     
         
-        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;2311</span>
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;2395</span>
     
     
         
@@ -378,7 +378,7 @@
 	<span class="s2">&#34;&#34;&#34;司机类&#34;&#34;&#34;</span>
 	<span class="c1"># 司机执行的程序</span>
 	<span class="k">def</span> <span class="nf">drive</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-		<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+		<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
 			<span class="bp">self</span><span class="o">.</span><span class="n">v</span><span class="p">()</span>
 			<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 			<span class="bp">self</span><span class="o">.</span><span class="n">p</span><span class="p">()</span>
@@ -392,7 +392,7 @@
 			<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
 		<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
 		<span class="n">s1</span> <span class="o">-=</span> <span class="mi">1</span>
-		<span class="k">print</span><span class="p">(</span><span class="s1">&#39;{}  司 机-汽车启动！&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">ctime</span><span class="p">()))</span>
+		<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">  司 机-汽车启动！&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">ctime</span><span class="p">()))</span>
 
 	<span class="c1"># 释放信号量s2</span>
 	<span class="k">def</span> <span class="nf">v</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -402,14 +402,14 @@
 			<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
 		<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
 		<span class="n">s2</span> <span class="o">+=</span> <span class="mi">1</span>
-		<span class="k">print</span><span class="p">(</span><span class="s1">&#39;{}  司 机-到站！&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">ctime</span><span class="p">()))</span>
+		<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">  司 机-到站！&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">ctime</span><span class="p">()))</span>
 
 
 <span class="k">class</span> <span class="nc">Conductor</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 	<span class="s2">&#34;&#34;&#34;售票员类&#34;&#34;&#34;</span>
 
 	<span class="k">def</span> <span class="nf">sellTicket</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-		<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+		<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
 			<span class="bp">self</span><span class="o">.</span><span class="n">p</span><span class="p">()</span>
 			<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 			<span class="bp">self</span><span class="o">.</span><span class="n">v</span><span class="p">()</span>
@@ -423,7 +423,7 @@
 			<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
 		<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
 		<span class="n">s2</span> <span class="o">-=</span> <span class="mi">1</span>
-		<span class="k">print</span><span class="p">(</span><span class="s1">&#39;{}  售票员-开车门！&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">ctime</span><span class="p">()))</span>
+		<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">  售票员-开车门！&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">ctime</span><span class="p">()))</span>
 
 	<span class="c1"># 释放信号量s1</span>
 	<span class="k">def</span> <span class="nf">v</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -433,7 +433,7 @@
 			<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
 		<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
 		<span class="n">s1</span> <span class="o">+=</span> <span class="mi">1</span>
-		<span class="k">print</span><span class="p">(</span><span class="s1">&#39;{}  售票员-关车门！&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">ctime</span><span class="p">()))</span>
+		<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">  售票员-关车门！&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">ctime</span><span class="p">()))</span>
 
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
@@ -606,7 +606,7 @@
 		<span class="c1"># start address--分区起始地址</span>
 		<span class="n">sa</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">190</span><span class="p">,</span> <span class="mi">290</span><span class="p">,</span> <span class="mi">390</span><span class="p">]</span>
 		<span class="c1"># 该分区是否可用的标志</span>
-		<span class="n">flag</span> <span class="o">=</span> <span class="p">[</span><span class="bp">False</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="p">]</span>
+		<span class="n">flag</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="p">]</span>
 
 		<span class="c1"># 将每个分区的属性写成分区表动态表</span>
 		<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">on</span><span class="p">:</span>
@@ -653,10 +653,10 @@
 		<span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find_a_place</span><span class="p">(</span><span class="n">given_size</span><span class="p">)</span>
 		<span class="c1"># 若找到一个可用的分区</span>
 		<span class="k">if</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-			<span class="k">print</span><span class="p">(</span><span class="s1">&#39;{}  {}工作已分配--{}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">ctime</span><span class="p">(),</span> <span class="n">given_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tablelist</span><span class="p">[</span><span class="n">result</span><span class="p">[</span><span class="mi">1</span><span class="p">]]))</span>
+			<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">  </span><span class="si">{}</span><span class="s1">工作已分配--</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">ctime</span><span class="p">(),</span> <span class="n">given_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tablelist</span><span class="p">[</span><span class="n">result</span><span class="p">[</span><span class="mi">1</span><span class="p">]]))</span>
 		<span class="c1"># 若没有找到则将所需空间加入到等待列表</span>
 		<span class="k">else</span><span class="p">:</span>
-			<span class="k">print</span><span class="p">(</span><span class="s1">&#39;{}  {}错误！没有空间存放！&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">ctime</span><span class="p">(),</span> <span class="n">given_size</span><span class="p">))</span>
+			<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">  </span><span class="si">{}</span><span class="s1">错误！没有空间存放！&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">ctime</span><span class="p">(),</span> <span class="n">given_size</span><span class="p">))</span>
 			<span class="bp">self</span><span class="o">.</span><span class="n">waitlist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">given_size</span><span class="p">)</span>
 			<span class="k">return</span> <span class="mi">0</span>
 
@@ -665,7 +665,7 @@
 
 		<span class="c1"># 释放分区</span>
 		<span class="bp">self</span><span class="o">.</span><span class="n">release_the_place</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-		<span class="k">print</span><span class="p">(</span><span class="s1">&#39;{}  {}空间已释放！&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">ctime</span><span class="p">(),</span> <span class="n">given_size</span><span class="p">))</span>
+		<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">  </span><span class="si">{}</span><span class="s1">空间已释放！&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">ctime</span><span class="p">(),</span> <span class="n">given_size</span><span class="p">))</span>
 
 	<span class="c1"># 查找有没有课分配的分区</span>
 	<span class="k">def</span> <span class="nf">find_a_place</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">given_size</span><span class="p">):</span>
@@ -674,7 +674,7 @@
 				<span class="c1"># 查找比所需分区大且可以被使用的分区</span>
 				<span class="k">if</span> <span class="n">given_size</span> <span class="o">&lt;=</span> <span class="n">i</span><span class="p">[</span><span class="s1">&#39;size&#39;</span><span class="p">]</span> <span class="ow">and</span> <span class="n">i</span><span class="p">[</span><span class="s1">&#39;flag&#39;</span><span class="p">]:</span>
 					<span class="c1"># 更改标志表示已被使用</span>
-					<span class="n">i</span><span class="p">[</span><span class="s1">&#39;flag&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">False</span>
+					<span class="n">i</span><span class="p">[</span><span class="s1">&#39;flag&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
 					<span class="c1"># 成功则返回1和序号</span>
 					<span class="k">return</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="p">[</span><span class="s1">&#39;on&#39;</span><span class="p">]]</span>
 		<span class="c1"># 失败则返回0和-1</span>
@@ -684,7 +684,7 @@
 	<span class="k">def</span> <span class="nf">release_the_place</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">given_on</span><span class="p">):</span>
 		<span class="k">with</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">():</span>
 			<span class="c1"># 更改标志后该分区又可被使用</span>
-			<span class="bp">self</span><span class="o">.</span><span class="n">tablelist</span><span class="p">[</span><span class="n">given_on</span><span class="p">][</span><span class="s1">&#39;flag&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span>
+			<span class="bp">self</span><span class="o">.</span><span class="n">tablelist</span><span class="p">[</span><span class="n">given_on</span><span class="p">][</span><span class="s1">&#39;flag&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
 		<span class="k">return</span> <span class="mi">1</span>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
