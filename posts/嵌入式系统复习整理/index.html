@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.84.3" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.86.1" /><meta name="theme-color" content="#fff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -377,7 +377,7 @@ Nor Flash读速度快，用来存储代码;Nand Flash常用来存储数据
 <p>系统设计：需求分析-&gt;总体设计-&gt;硬件开发及过程控制/代码生成-&gt;系统联调/程序固化</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -453,7 +453,7 @@ Nor Flash读速度快，用来存储代码;Nand Flash常用来存储数据
 </span><span class="lnt">74
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-asm" data-lang="asm"><span class="nf">AREA</span>  <span class="no">Block</span><span class="err">，</span><span class="no">CODE</span><span class="err">，</span><span class="no">READONLY</span> <span class="c">;设置本段程序的名						;称（Block）及属性
+<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="nf">AREA</span>  <span class="no">Block</span><span class="err">，</span><span class="no">CODE</span><span class="err">，</span><span class="no">READONLY</span> <span class="c">;设置本段程序的名						;称（Block）及属性
 </span><span class="c"></span><span class="no">num</span>	<span class="no">EQU</span>  <span class="mi">20</span>	   <span class="c">;设置将要复制的字数
 </span><span class="c"></span>     <span class="no">ENTRY</span>      	   <span class="c">;标识程序入口点
 </span><span class="c"></span><span class="no">Start</span>	<span class="no">LDR</span>  <span class="no">r0</span><span class="err">，=</span><span class="no">src</span>  <span class="c">;r0寄存器指向源数据区src

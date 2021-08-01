@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.84.3" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.86.1" /><meta name="theme-color" content="#fff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -261,17 +261,17 @@
 <p>进入容器，首先按 Ctrl+U 查看页面源码，发现存在js脚本<a href="http://578f4cd5c5f143e48046562a9ff01bdbc05a630dd1404d2c.cloudgame1.ichunqiu.com/css/game_manager.js" target="_blank" rel="noopener">css/game_manager.js</a>，点击查看内容，全局搜索php，寻找脚本文件，发现p14.php文件。为ajax请求，post方式提交token和success数据，在全局搜索token，寻找token从何而来，发现</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-php" data-lang="php"><span class="k">var</span> <span class="nx">token</span><span class="o">=</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\x70\x6c\x65\x61\x73\x65</span><span class="s2"> </span><span class="se">\x69\x6e\x70\x75\x74</span><span class="s2"> </span><span class="se">\x79\x6f\x75\x72</span><span class="s2"> </span><span class="se">\x74\x65\x61\x6d</span><span class="s2"> </span><span class="se">\x54\x6f\x6b\x65\x6e\x3a</span><span class="s2">&#34;</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="k">var</span> <span class="nx">token</span><span class="o">=</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\x70\x6c\x65\x61\x73\x65</span><span class="s2"> </span><span class="se">\x69\x6e\x70\x75\x74</span><span class="s2"> </span><span class="se">\x79\x6f\x75\x72</span><span class="s2"> </span><span class="se">\x74\x65\x61\x6d</span><span class="s2"> </span><span class="se">\x54\x6f\x6b\x65\x6e\x3a</span><span class="s2">&#34;</span><span class="p">)</span>
 </code></pre></td></tr></table></div>
 </div>
 </div><p>解码后为：please input your team Token。故token的值为本队的token。然后success输入data，获取flag。</p>
 <p><img src="clip_image002.jpg" alt="img"></p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -287,7 +287,7 @@
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">requests</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">requests</span>
 
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
@@ -657,7 +657,7 @@
 856743921917682534423159678571396482694821357382574196748915263235468719169237845
 </code></pre><div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -714,7 +714,7 @@
 </span><span class="lnt">55
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="c">#自己修改的5.ps1脚本</span>
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="c">#自己修改的5.ps1脚本</span>
 <span class="p">${</span><span class="n">84A</span><span class="p">`</span><span class="n">O</span><span class="p">`</span><span class="n">hZ</span><span class="p">}</span>  <span class="p">=</span> <span class="no">[tYPE]</span><span class="p">(</span><span class="s2">&#34;{10}{2}{7}{4}{8}{9}{1}{5}{0}{6}{3}&#34;</span> <span class="o">-F</span> <span class="s1">&#39;Lg&#39;</span><span class="p">,</span><span class="s1">&#39;HY.HAs&#39;</span><span class="p">,</span><span class="s1">&#39;Ystem.SE&#39;</span><span class="p">,</span><span class="s1">&#39;M&#39;</span><span class="p">,</span><span class="s1">&#39;.&#39;</span><span class="p">,</span><span class="s1">&#39;ha&#39;</span><span class="p">,</span><span class="s1">&#39;OrITH&#39;</span><span class="p">,</span><span class="s1">&#39;curITY&#39;</span><span class="p">,</span><span class="s1">&#39;CrYPtogRA&#39;</span><span class="p">,</span><span class="s1">&#39;P&#39;</span><span class="p">,</span><span class="s1">&#39;s&#39;</span><span class="p">);</span>  <span class="k">function</span> <span class="n">GEt</span><span class="p">-`</span><span class="n">ha</span><span class="p">`</span><span class="n">sh</span><span class="p">{</span>
 <span class="k">param</span><span class="p">(</span>
     <span class="no">[string]</span> <span class="p">${</span><span class="n">ST</span><span class="p">`</span><span class="n">Ri</span><span class="p">`</span><span class="n">NG</span><span class="p">}</span> <span class="p">=</span> <span class="p">$(</span><span class="k">throw</span> <span class="p">(</span><span class="s2">&#34;{3}{0}{2}{4}{1}&#34;</span> <span class="o">-f</span><span class="s1">&#39;tring&#39;</span><span class="p">,</span><span class="s1">&#39;ed&#39;</span><span class="p">,</span><span class="s1">&#39; is&#39;</span><span class="p">,</span><span class="s1">&#39;s&#39;</span><span class="p">,</span><span class="s1">&#39; requir&#39;</span><span class="p">)),</span>
@@ -780,7 +780,7 @@
 <p>enc.py</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -810,7 +810,7 @@
 </span><span class="lnt">28
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">secret</span> <span class="kn">import</span> <span class="n">flag</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">secret</span> <span class="kn">import</span> <span class="n">flag</span>
 <span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">urandom</span> <span class="k">as</span> <span class="n">ua</span>
 <span class="kn">from</span> <span class="nn">libnum</span> <span class="kn">import</span> <span class="n">s2n</span>
 <span class="n">hlen</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="nb">hex</span><span class="p">(</span><span class="n">x</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;L&#39;</span><span class="p">))</span>
@@ -844,7 +844,7 @@
 <p>ajax.js</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -882,7 +882,7 @@
 </span><span class="lnt">36
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">sendAjax</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">Ajax_obj</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">sendAjax</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">Ajax_obj</span><span class="p">)</span> <span class="p">{</span>
 	<span class="mi">_</span><span class="nx">defalut</span> <span class="o">=</span> <span class="p">{</span>
 		<span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;GET&#39;</span><span class="p">,</span>
 		<span class="nx">params</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
@@ -923,7 +923,7 @@
 </div><p>login.js</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -970,7 +970,7 @@
 </span><span class="lnt">45
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">login</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">login</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
     <span class="k">return</span> <span class="p">{</span>
 
         <span class="nx">init</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
@@ -1020,7 +1020,7 @@
 </div><p>star.js</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">  1
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
 </span><span class="lnt">  2
 </span><span class="lnt">  3
 </span><span class="lnt">  4
@@ -1217,7 +1217,7 @@
 </span><span class="lnt">195
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">Star</span><span class="p">(</span><span class="nx">ctx</span><span class="p">,</span><span class="nx">id</span><span class="p">,</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">Star</span><span class="p">(</span><span class="nx">ctx</span><span class="p">,</span><span class="nx">id</span><span class="p">,</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">this</span><span class="p">.</span><span class="nx">ctx</span> <span class="o">=</span> <span class="nx">ctx</span><span class="p">;</span>
   <span class="k">this</span><span class="p">.</span><span class="nx">id</span> <span class="o">=</span> <span class="nx">id</span><span class="p">;</span>
   <span class="k">this</span><span class="p">.</span><span class="nx">x</span> <span class="o">=</span> <span class="nx">x</span><span class="p">;</span>
@@ -1417,7 +1417,7 @@
 </div><h1 id="safe_box"><a href="#safe_box" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>safe_box</h1>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">  1
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
 </span><span class="lnt">  2
 </span><span class="lnt">  3
 </span><span class="lnt">  4
@@ -1579,7 +1579,7 @@
 </span><span class="lnt">160
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="ch">#!/usr/bin/python</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="ch">#!/usr/bin/python</span>
 <span class="c1"># encoding: utf-8</span>
 <span class="kn">import</span> <span class="nn">random</span>
 <span class="kn">import</span> <span class="nn">sys</span>

@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.84.3" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.86.1" /><meta name="theme-color" content="#fff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -269,10 +269,10 @@
 <p>设置内核参数sysctl.conf文件，开启路由转发</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ vim /etc/sysctl.conf
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ vim /etc/sysctl.conf
 </code></pre></td></tr></table></div>
 </div>
 </div><p>修改其中项目：</p>
@@ -284,10 +284,10 @@ sysctl -p
 </code></pre><p>安装Openswan：</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">yum install openswan
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">yum install openswan
 </code></pre></td></tr></table></div>
 </div>
 </div><p><em>Openswan支持许多不同的认证方式，包括RSA keys、pre-shared keys或x.509证书方式，以下以PSK为例进行实验</em></p>
@@ -320,10 +320,10 @@ conn l-r                                # 连接的名称，启动时需要指�
 </code></pre><p>编辑PSK的秘钥</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ vim /etc/ipsec.secrets
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ vim /etc/ipsec.secrets
 </code></pre></td></tr></table></div>
 </div>
 </div><p>Left-CentOS（192.168.249.136）：</p>
@@ -335,10 +335,10 @@ conn l-r                                # 连接的名称，启动时需要指�
 </code></pre><p>执行命令检查ipsec配置情况：</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ ipsec verify
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ ipsec verify
 </code></pre></td></tr></table></div>
 </div>
 </div><p><em>没有failed（失败）的项目</em></p>
@@ -349,10 +349,10 @@ conn l-r                                # 连接的名称，启动时需要指�
 <p>在Right-CentOS上执行</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ ipsec auto --up l-r
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ ipsec auto --up l-r
 </code></pre></td></tr></table></div>
 </div>
 </div><p>显示结果为，说明隧道建立成功</p>
@@ -380,12 +380,12 @@ conn l-r                                # 连接的名称，启动时需要指�
 </code></pre><p>在Left-CentOS上安装wireshark（原名Ethereal）并监听Right-CentOS发过来的流量</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ yum install wireshark
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ yum install wireshark
 $ yum install wireshark-gnome
 $ tshark -f <span class="s2">&#34;host:192.168.249.137&#34;</span>
 </code></pre></td></tr></table></div>
@@ -393,10 +393,10 @@ $ tshark -f <span class="s2">&#34;host:192.168.249.137&#34;</span>
 </div><p>在Right-CentOS上ping Left-CentOS：</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ ping 192.168.249.136
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ ping 192.168.249.136
 </code></pre></td></tr></table></div>
 </div>
 </div><p>Left-CentOS显示出如下结果</p>
@@ -433,21 +433,21 @@ $ tshark -f <span class="s2">&#34;host:192.168.249.137&#34;</span>
 <p>安装httpd httpd-devel mod_ssl openssl</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ yum install mod_ssl openssl
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ yum install mod_ssl openssl
 </code></pre></td></tr></table></div>
 </div>
 </div><p>然后执行以下命令生成证书</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ openssl genrsa -out ca.key <span class="m">1024</span> 										<span class="c1"># 生成证书私钥</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ openssl genrsa -out ca.key <span class="m">1024</span> 										<span class="c1"># 生成证书私钥</span>
 $ openssl req -new -key ca.key -out ca.csr 								<span class="c1"># 生成证书</span>
 $ openssl x509 -req -days <span class="m">365</span> -in ca.csr -signkey ca.key -out ca.crt 	<span class="c1"># 生成自签名证书</span>
 </code></pre></td></tr></table></div>
@@ -455,12 +455,12 @@ $ openssl x509 -req -days <span class="m">365</span> -in ca.csr -signkey ca.key 
 </div><p>将证书拷贝到指定文件夹</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ cp ca.crt /etc/pki/tls/certs
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ cp ca.crt /etc/pki/tls/certs
 $ cp ca.key /etc/pki/tls/private/ca.key
 $ cp ca.csr /etc/pki/tls/private/ca.csr
 </code></pre></td></tr></table></div>
@@ -468,10 +468,10 @@ $ cp ca.csr /etc/pki/tls/private/ca.csr
 </div><p>修改<code>/etc/httpd/conf.d/ssl.conf</code>的部分内容</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ vim /etc/httpd/conf.d/ssl.conf
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ vim /etc/httpd/conf.d/ssl.conf
 </code></pre></td></tr></table></div>
 </div>
 </div><pre><code>SSLCertificateFile /etc/pki/tls/certs/ca.crt
@@ -479,10 +479,10 @@ SSLCertificateKeyFile /etc/pki/tls/private/ca.key
 </code></pre><p>重新启动Apache服务器</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ service httpd restart
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ service httpd restart
 </code></pre></td></tr></table></div>
 </div>
 </div><p>在另外一台电脑上打开网址https://192.168.249.138/，发现可以使用HTTPS，实验完成。</p>
@@ -504,10 +504,10 @@ SSLCertificateKeyFile /etc/pki/tls/private/ca.key
 <p>虚拟机执行ping Windwos的命令，可以ping通：</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ ping 192.168.1.244
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ ping 192.168.1.244
 </code></pre></td></tr></table></div>
 </div>
 </div><pre><code>PING 192.168.1.244 (192.168.1.244) 56(84) bytes of data.
@@ -520,10 +520,10 @@ rtt min/avg/max/mdev = 2.286/2.997/4.402/0.994 ms
 </code></pre><p>Windows执行ping虚拟机的命令，可以ping通：</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="n">ping</span> <span class="n">192</span><span class="p">.</span><span class="n">168</span><span class="p">.</span><span class="n">249</span><span class="p">.</span><span class="n">138</span>
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="n">ping</span> <span class="n">192</span><span class="p">.</span><span class="n">168</span><span class="p">.</span><span class="n">249</span><span class="p">.</span><span class="n">138</span>
 </code></pre></td></tr></table></div>
 </div>
 </div><pre><code>正在 Ping 192.168.249.138 具有 32 字节的数据:
@@ -538,21 +538,21 @@ rtt min/avg/max/mdev = 2.286/2.997/4.402/0.994 ms
 </code></pre><p>虚拟机执行命令，禁止其他机器ping自己</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ iptables -F
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ iptables -F
 $ iptables -A INPUT -p icmp --icmp-type <span class="m">8</span> -s 0/0 -j DROP
 </code></pre></td></tr></table></div>
 </div>
 </div><p>显示如下，已ping不通，证明更改iptables已生效</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="n">ping</span> <span class="n">192</span><span class="p">.</span><span class="n">168</span><span class="p">.</span><span class="n">249</span><span class="p">.</span><span class="n">138</span>
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="n">ping</span> <span class="n">192</span><span class="p">.</span><span class="n">168</span><span class="p">.</span><span class="n">249</span><span class="p">.</span><span class="n">138</span>
 </code></pre></td></tr></table></div>
 </div>
 </div><pre><code>正在 Ping 192.168.249.138 具有 32 字节的数据:
