@@ -10,7 +10,7 @@
         <title>LittleGhost的博客</title>
         <link>https://blog.littleghost.ml/</link>
         <description>本站采用MemE模板，MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</description>
-        <generator>Hugo 0.86.1 https://gohugo.io/</generator>
+        <generator>Hugo 0.87.0 https://gohugo.io/</generator>
         
             <language>zh-CN</language>
         
@@ -23,10 +23,49 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sun, 01 Aug 2021 13:12:49 &#43;0800</lastBuildDate>
+        <lastBuildDate>Fri, 27 Aug 2021 16:04:46 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://blog.littleghost.ml/rss.xml" />
         
+        
+            <item>
+                <title>abd禁用应用</title>
+                <link>https://blog.littleghost.ml/posts/adb%E7%A6%81%E7%94%A8%E5%BA%94%E7%94%A8/</link>
+                <guid isPermaLink="true">https://blog.littleghost.ml/posts/adb%E7%A6%81%E7%94%A8%E5%BA%94%E7%94%A8/</guid>
+                <pubDate>Fri, 27 Aug 2021 15:58:13 &#43;0800</pubDate>
+                
+                    <author>785340571@qq.com (LittleGhost)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                <description>adb命令 1 adb shell pm disable-user XXX XXX是应用名称 自己的华为禁用列表 应用 名称 应用助手 com.huawei.gameassistant 系统更新 com.huawei.android.hwouc……</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/tags/adb/">adb</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>20210423组会</title>
