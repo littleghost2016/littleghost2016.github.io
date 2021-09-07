@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.87.0" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.88.1" /><meta name="theme-color" content="#fff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -276,10 +276,10 @@
 </code></pre></td></tr></table></div>
 </div>
 </div><p>修改其中项目：</p>
-<pre><code>net.ipv4.ip_forward = 1
+<pre tabindex="0"><code>net.ipv4.ip_forward = 1
 net.ipv4.conf.default.rp_filter = 0
 </code></pre><p>禁用icmp重定向，然后执行修改：</p>
-<pre><code>sysctl -a | egrep &quot;ipv4.*(accept|send)_redirects&quot; | awk -F &quot;=&quot; '{print $1&quot;=0&quot;}' &gt;&gt;/etc/sysctl.conf
+<pre tabindex="0"><code>sysctl -a | egrep &quot;ipv4.*(accept|send)_redirects&quot; | awk -F &quot;=&quot; '{print $1&quot;=0&quot;}' &gt;&gt;/etc/sysctl.conf
 sysctl -p
 </code></pre><p>安装Openswan：</p>
 <div class="highlight"><div class="chroma">
@@ -292,9 +292,9 @@ sysctl -p
 </div>
 </div><p><em>Openswan支持许多不同的认证方式，包括RSA keys、pre-shared keys或x.509证书方式，以下以PSK为例进行实验</em></p>
 <p>修改 /etc/ipsec.conf文件中的配置（以下设置可直接覆盖原内容使用）</p>
-<pre><code>vim /etc/ipsec.conf
+<pre tabindex="0"><code>vim /etc/ipsec.conf
 </code></pre><p>Left-CentOS（192.168.249.136）：</p>
-<pre><code>version 2.0                      # 必须有这句话, 并且不同的版本关键字不同
+<pre tabindex="0"><code>version 2.0                      # 必须有这句话, 并且不同的版本关键字不同
 config setup
         interfaces=%defaultroute # 自己的IP
         nat_traversal=yes        # 支持客户端在一个NAT设备下
@@ -306,7 +306,7 @@ conn l-r                         # 连接的名称，启动时需要指定
         type=tunnel
         auto=start               # start connection when pluto started
 </code></pre><p>Right-CentOS（192.168.249.137）：</p>
-<pre><code>version 2.0                             # 必须有这句话, 并且不同的版本关键字不同
+<pre tabindex="0"><code>version 2.0                             # 必须有这句话, 并且不同的版本关键字不同
 config setup
         interfaces=%defaultroute        # 自己的IP
         nat_traversal=yes               # 支持客户端在一个NAT设备下
@@ -327,10 +327,10 @@ conn l-r                                # 连接的名称，启动时需要指�
 </code></pre></td></tr></table></div>
 </div>
 </div><p>Left-CentOS（192.168.249.136）：</p>
-<pre><code>include /etc/ipsec.d/*.secrets
+<pre tabindex="0"><code>include /etc/ipsec.d/*.secrets
 192.168.249.136 192.168.249.137 : PSK &quot;abc&quot;
 </code></pre><p>Right-CentOS（192.168.249.137）：</p>
-<pre><code>include /etc/ipsec.d/*.secrets
+<pre tabindex="0"><code>include /etc/ipsec.d/*.secrets
 192.168.249.137 192.168.249.136 : PSK &quot;abc&quot;
 </code></pre><p>执行命令检查ipsec配置情况：</p>
 <div class="highlight"><div class="chroma">
@@ -356,7 +356,7 @@ conn l-r                                # 连接的名称，启动时需要指�
 </code></pre></td></tr></table></div>
 </div>
 </div><p>显示结果为，说明隧道建立成功</p>
-<pre><code>002 &quot;l-r&quot; #1: initiating Main Mode
+<pre tabindex="0"><code>002 &quot;l-r&quot; #1: initiating Main Mode
 104 &quot;l-r&quot; #1: STATE_MAIN_I1: initiate
 010 &quot;l-r&quot; #1: STATE_MAIN_I1: retransmission; will wait 500ms for response
 010 &quot;l-r&quot; #1: STATE_MAIN_I1: retransmission; will wait 1000ms for response
@@ -400,7 +400,7 @@ $ tshark -f <span class="s2">&#34;host:192.168.249.137&#34;</span>
 </code></pre></td></tr></table></div>
 </div>
 </div><p>Left-CentOS显示出如下结果</p>
-<pre><code>55.682200610 192.168.249.137 -&gt; 192.168.249.136 ESP 166 ESP (SPI=0x3ec74439)
+<pre tabindex="0"><code>55.682200610 192.168.249.137 -&gt; 192.168.249.136 ESP 166 ESP (SPI=0x3ec74439)
 55.682264330 192.168.249.136 -&gt; 192.168.249.137 ESP 262 ESP (SPI=0x45e21d40)
 56.683342687 192.168.249.137 -&gt; 192.168.249.136 ESP 166 ESP (SPI=0x3ec74439)
 56.683342687 192.168.249.137 -&gt; 192.168.249.136 ICMP 98 Echo (ping) request  id=0x860d, seq=2/512, ttl=64
@@ -474,7 +474,7 @@ $ cp ca.csr /etc/pki/tls/private/ca.csr
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ vim /etc/httpd/conf.d/ssl.conf
 </code></pre></td></tr></table></div>
 </div>
-</div><pre><code>SSLCertificateFile /etc/pki/tls/certs/ca.crt
+</div><pre tabindex="0"><code>SSLCertificateFile /etc/pki/tls/certs/ca.crt
 SSLCertificateKeyFile /etc/pki/tls/private/ca.key
 </code></pre><p>重新启动Apache服务器</p>
 <div class="highlight"><div class="chroma">
@@ -510,7 +510,7 @@ SSLCertificateKeyFile /etc/pki/tls/private/ca.key
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ ping 192.168.1.244
 </code></pre></td></tr></table></div>
 </div>
-</div><pre><code>PING 192.168.1.244 (192.168.1.244) 56(84) bytes of data.
+</div><pre tabindex="0"><code>PING 192.168.1.244 (192.168.1.244) 56(84) bytes of data.
 64 bytes from 192.168.1.244: icmp_seq=1 ttl=128 time=2.30 ms
 64 bytes from 192.168.1.244: icmp_seq=2 ttl=128 time=2.28 ms
 64 bytes from 192.168.1.244: icmp_seq=3 ttl=128 time=4.40 ms
@@ -526,7 +526,7 @@ rtt min/avg/max/mdev = 2.286/2.997/4.402/0.994 ms
 <pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="n">ping</span> <span class="n">192</span><span class="p">.</span><span class="n">168</span><span class="p">.</span><span class="n">249</span><span class="p">.</span><span class="n">138</span>
 </code></pre></td></tr></table></div>
 </div>
-</div><pre><code>正在 Ping 192.168.249.138 具有 32 字节的数据:
+</div><pre tabindex="0"><code>正在 Ping 192.168.249.138 具有 32 字节的数据:
 来自 192.168.249.138 的回复: 字节=32 时间&lt;1ms TTL=64
 来自 192.168.249.138 的回复: 字节=32 时间&lt;1ms TTL=64
 来自 192.168.249.138 的回复: 字节=32 时间&lt;1ms TTL=64
@@ -555,7 +555,7 @@ $ iptables -A INPUT -p icmp --icmp-type <span class="m">8</span> -s 0/0 -j DROP
 <pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="n">ping</span> <span class="n">192</span><span class="p">.</span><span class="n">168</span><span class="p">.</span><span class="n">249</span><span class="p">.</span><span class="n">138</span>
 </code></pre></td></tr></table></div>
 </div>
-</div><pre><code>正在 Ping 192.168.249.138 具有 32 字节的数据:
+</div><pre tabindex="0"><code>正在 Ping 192.168.249.138 具有 32 字节的数据:
 请求超时。
 请求超时。
 请求超时。

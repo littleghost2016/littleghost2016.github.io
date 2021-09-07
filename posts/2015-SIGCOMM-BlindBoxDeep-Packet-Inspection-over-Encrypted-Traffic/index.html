@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.87.0" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.88.1" /><meta name="theme-color" content="#fff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -402,7 +402,7 @@ $AES_k(x)$; else, it outputs $\perp$.</p>
 <p>This protocol supports a limited form of an IDS. Namely, it allows a rule to contain: (1) multiple keywords to be matched in the traffic, and (2) absolute and relative offset information within the packet. In our industrial dataset, the average <em>rule</em> contained three <em>keywords</em>; a rule is “matched” if <strong>all</strong> keywords are found within a flow.</p>
 <p>This protocol supports most of the functionality in the <em>rule</em> language of Snort <sup id="fnref:29"><a href="#fn:29" class="footnote-ref" role="doc-noteref">[29]</a></sup>. A few functional commands are not supported, the most notable being <em>pcre</em>, which allows <u>arbitrary regular expressions（任意正则表达式）</u> to be run over the payload. This command is supported by Protocol III.</p>
 <p>For example, consider rule number 2003296 from the Snort Emerging Threats ruleset:</p>
-<pre><code>alert tcp $EXTERNAL_NET $HTTP_PORTS -&gt; $HOME_NET 1025:5000 ( 
+<pre tabindex="0"><code>alert tcp $EXTERNAL_NET $HTTP_PORTS -&gt; $HOME_NET 1025:5000 ( 
 	flow: established,from_server; 
 	content: “Server|3a| nginx/0.”; 
 	offset: 17; depth: 19; 

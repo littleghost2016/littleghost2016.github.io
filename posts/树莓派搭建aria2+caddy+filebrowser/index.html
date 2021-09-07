@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.87.0" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.88.1" /><meta name="theme-color" content="#fff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -267,7 +267,7 @@
 </code></pre></td></tr></table></div>
 </div>
 </div><p>添加以下内容，三四两行自用于内网RDP，与本篇文章的内容无关</p>
-<pre><code>address=/download.com/192.168.2.198
+<pre tabindex="0"><code>address=/download.com/192.168.2.198
 address=/filebrowser.com/192.168.2.198
 address=/mylab6.com/2001::XXXX
 address=/mylab.com/10.173.XX.XX
@@ -299,7 +299,7 @@ address=/mylab.com/10.173.XX.XX
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ sudo vim /etc/systemd/system/caddy.service
 </code></pre></td></tr></table></div>
 </div>
-</div><pre><code>[Unit]
+</div><pre tabindex="0"><code>[Unit]
 Description=Caddy Server
 After=syslog.target
 After=network.target
@@ -317,7 +317,7 @@ WantedBy=multi-user.target
 </li>
 <li>
 <p>编辑配置文件<code>Caddyfile</code></p>
-<pre><code>http://download.com:80 {
+<pre tabindex="0"><code>http://download.com:80 {
         root /home/ubuntu/caddy/www/download.com
         gzip
 }
@@ -347,7 +347,7 @@ http://filebrowser.com:80 {
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ tree .
 </code></pre></td></tr></table></div>
 </div>
-</div><pre><code>.
+</div><pre tabindex="0"><code>.
 ├── config
 │   ├── aria2.conf
 │   └── aria2.session
@@ -373,7 +373,7 @@ http://filebrowser.com:80 {
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ sudo vim /etc/systemd/system/aria2.service
 </code></pre></td></tr></table></div>
 </div>
-</div><pre><code>[Unit]
+</div><pre tabindex="0"><code>[Unit]
 Description=aria2c -- file download manager
 After=network.target
 
@@ -512,7 +512,7 @@ listen-port<span class="o">=</span>50000-65000
 </li>
 <li>
 <p>使用<code>systemd</code>作进程守护</p>
-<pre><code>[Unit]
+<pre tabindex="0"><code>[Unit]
 Description=File Browser
 After=network.target
 
@@ -531,7 +531,7 @@ WantedBy=multi-user.target
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ tree .
 </code></pre></td></tr></table></div>
 </div>
-</div><pre><code>.
+</div><pre tabindex="0"><code>.
 ├── caddy
 ├── caddy_v1.0.3_linux_arm64.tar.gz
 ├── config

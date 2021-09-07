@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.87.0" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.88.1" /><meta name="theme-color" content="#fff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -256,7 +256,7 @@
 
             <div class="post-body e-content">
               <p>今天下午一个CTF比赛，师兄给了一个文件，内容大致如下</p>
-<pre><code>/index.php%3fid=1%20AND%20ORD%28MID%28%28SELECT%20IFNULL%28CAST%28flag_here%20AS%20CHAR%29%2C0x20%29%20FROM%20sqltest.flag%20ORDER%20BY%20flag_here%20LIMIT%200%2C1%29%2C17%2C1%29%29%3E108[K&lt;br&gt;&lt;br&gt;&lt;font color = &quot;red&quot;&gt;你当前执行的语句是:SELECT * from news where id =1 AND ORD(MID((SELECT IFNULL(CAST(flag_here AS CHAR),0x20) FROM sqltest.flag ORD[m[KER BY flag_here LIMIT 0,1),17,1))&gt;108&lt;/font&gt;&lt;br&gt;&lt;br&gt;   
+<pre tabindex="0"><code>/index.php%3fid=1%20AND%20ORD%28MID%28%28SELECT%20IFNULL%28CAST%28flag_here%20AS%20CHAR%29%2C0x20%29%20FROM%20sqltest.flag%20ORDER%20BY%20flag_here%20LIMIT%200%2C1%29%2C17%2C1%29%29%3E108[K&lt;br&gt;&lt;br&gt;&lt;font color = &quot;red&quot;&gt;你当前执行的语句是:SELECT * from news where id =1 AND ORD(MID((SELECT IFNULL(CAST(flag_here AS CHAR),0x20) FROM sqltest.flag ORD[m[KER BY flag_here LIMIT 0,1),17,1))&gt;108&lt;/font&gt;&lt;br&gt;&lt;br&gt;   
 /index.php%3fid=1%20AND%20ORD%28MID%28%28SELECT%20IFNULL%28CAST%28flag_here%20AS%20CHAR%29%2C0x20%29%20FROM%20sqltest.flag%20ORDER%20BY%20flag_here%20LIMIT%200%2C1%29%2C17%2C1%29%29%3E108   id：1&lt;br&gt;&lt;br&gt;
 /index.php%3fid=1%20AND%20ORD%28MID%28%28SELECT%20IFNULL%28CAST%28flag_here%20AS%20CHAR%29%2C0x20%29%20FROM%20sqltest.flag%20ORDER%20BY%20flag_here%20LIMIT%200%2C1%29%2C17%2C1%29%29%3E108 用户名:admin&lt;br&gt;&lt;br&gt;
 /index.php%3fid=1%20AND%20ORD%28MID%28%28SELECT%20IFNULL%28CAST%28flag_here%20AS%20CHAR%29%2C0x20%29%20FROM%20sqltest.flag%20ORDER%20BY%20flag_here%20LIMIT%200%2C1%29%2C17%2C1%29%29%3E108  Blog地址:www.duwentao.top&lt;br&gt;&lt;br&gt;
@@ -269,7 +269,7 @@
 /index.php%3fid=1%20AND%20ORD%28MID%28%28SELECT%20IFNULL%28CAST%28flag_here%20AS%20CHAR%29%2C0x20%29%20FROM%20sqltest.flag%20ORDER%20BY%20flag_here%20LIMIT%200%2C1%29%2C19%2C1%29%29%3E112 频道:&lt;font color = &quot;red&quot;&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCiO_qNDegcpV4cUhkFc22lA&quot;&gt;点此订阅&lt;/a&gt;&lt;/font&gt;
 </code></pre><p><em>以上省略接近1500行。</em></p>
 <p>文件是使用<code>sqlmap</code>进行<strong>二分查找</strong>盲注的流量包，太复杂看着晃眼，把重复的地方删除后整理成了如下格式</p>
-<pre><code>171%29%29%3E108[K你当前执行的语句是:SELECT * from news where id =1 AND ORD(MID((SELECT IFNULL(CAST(flag_here AS CHAR),0x20) FROM sqltest.flag ORD[m[KER BY flag_here LIMIT 0,1),17,1))&gt;108&lt;/font&gt;&lt;br&gt;&lt;br&gt;   
+<pre tabindex="0"><code>171%29%29%3E108[K你当前执行的语句是:SELECT * from news where id =1 AND ORD(MID((SELECT IFNULL(CAST(flag_here AS CHAR),0x20) FROM sqltest.flag ORD[m[KER BY flag_here LIMIT 0,1),17,1))&gt;108&lt;/font&gt;&lt;br&gt;&lt;br&gt;   
 171%29%29%3E108   id：1&lt;br&gt;&lt;br&gt;
 171%29%29%3E108 用户名:admin&lt;br&gt;&lt;br&gt;
 171%29%29%3E108  Blog地址:www.duwentao.top&lt;br&gt;&lt;br&gt;
@@ -281,7 +281,7 @@
 191%29%29%3E112  Blog地址:www.duwentao.top&lt;br&gt;&lt;br&gt;
 191%29%29%3E112 频道:&lt;font color = &quot;red&quot;&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCiO_qNDegcpV4cUhkFc22lA&quot;&gt;点此订阅&lt;/a&gt;&lt;/font&gt;
 </code></pre><p>流量大概每五行为一组，仔细观察每一组的第二行，例如</p>
-<pre><code>171%29%29%3E108   id：1&lt;br&gt;&lt;br&gt;
+<pre tabindex="0"><code>171%29%29%3E108   id：1&lt;br&gt;&lt;br&gt;
 </code></pre><p>可以分成这么几部分<code>17</code>、<code>1%29%29%3E</code>、<code>108</code>、<code>   id：</code>、<code>1</code>、<code>&lt;br&gt;&lt;br&gt;</code></p>
 <ul>
 <li><code>17</code>：第几位字符</li>
@@ -421,7 +421,7 @@
 <h1 id="结果输出截图"><a href="#结果输出截图" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>结果输出截图</h1>
 <p><img src="image-20200905182311352.png" alt="image-20200905182311352"></p>
 <h1 id="附录"><a href="#附录" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>附录</h1>
-<pre><code>/index.php%3fid=1%20AND%20ORD%28MID%28%28SELECT%20IFNULL%28CAST%28flag_here%20AS%20CHAR%29%2C0x20%29%20FROM%20sqltest.flag%20ORDER%20BY%20flag_here%20LIMIT%200%2C1%29%2C17%2C1%29%29%3E108[K&lt;br&gt;&lt;br&gt;&lt;font color = &quot;red&quot;&gt;你当前执行的语句是:SELECT * from news where id =1 AND ORD(MID((SELECT IFNULL(CAST(flag_here AS CHAR),0x20) FROM sqltest.flag ORD[m[KER BY flag_here LIMIT 0,1),17,1))&gt;108&lt;/font&gt;&lt;br&gt;&lt;br&gt;   
+<pre tabindex="0"><code>/index.php%3fid=1%20AND%20ORD%28MID%28%28SELECT%20IFNULL%28CAST%28flag_here%20AS%20CHAR%29%2C0x20%29%20FROM%20sqltest.flag%20ORDER%20BY%20flag_here%20LIMIT%200%2C1%29%2C17%2C1%29%29%3E108[K&lt;br&gt;&lt;br&gt;&lt;font color = &quot;red&quot;&gt;你当前执行的语句是:SELECT * from news where id =1 AND ORD(MID((SELECT IFNULL(CAST(flag_here AS CHAR),0x20) FROM sqltest.flag ORD[m[KER BY flag_here LIMIT 0,1),17,1))&gt;108&lt;/font&gt;&lt;br&gt;&lt;br&gt;   
 /index.php%3fid=1%20AND%20ORD%28MID%28%28SELECT%20IFNULL%28CAST%28flag_here%20AS%20CHAR%29%2C0x20%29%20FROM%20sqltest.flag%20ORDER%20BY%20flag_here%20LIMIT%200%2C1%29%2C17%2C1%29%29%3E108   id：1&lt;br&gt;&lt;br&gt;
 /index.php%3fid=1%20AND%20ORD%28MID%28%28SELECT%20IFNULL%28CAST%28flag_here%20AS%20CHAR%29%2C0x20%29%20FROM%20sqltest.flag%20ORDER%20BY%20flag_here%20LIMIT%200%2C1%29%2C17%2C1%29%29%3E108 用户名:admin&lt;br&gt;&lt;br&gt;
 /index.php%3fid=1%20AND%20ORD%28MID%28%28SELECT%20IFNULL%28CAST%28flag_here%20AS%20CHAR%29%2C0x20%29%20FROM%20sqltest.flag%20ORDER%20BY%20flag_here%20LIMIT%200%2C1%29%2C17%2C1%29%29%3E108  Blog地址:www.duwentao.top&lt;br&gt;&lt;br&gt;
