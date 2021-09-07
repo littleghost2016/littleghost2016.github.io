@@ -23,13 +23,13 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Tue, 07 Sep 2021 20:48:35 &#43;0800</lastBuildDate>
+        <lastBuildDate>Tue, 07 Sep 2021 20:58:29 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://blog.littleghost.ml/rss.xml" />
         
         
             <item>
-                <title>abd禁用应用</title>
+                <title>adb禁用应用</title>
                 <link>https://blog.littleghost.ml/posts/adb%E7%A6%81%E7%94%A8%E5%BA%94%E7%94%A8/</link>
                 <guid isPermaLink="true">https://blog.littleghost.ml/posts/adb%E7%A6%81%E7%94%A8%E5%BA%94%E7%94%A8/</guid>
                 <pubDate>Fri, 27 Aug 2021 15:58:13 &#43;0800</pubDate>

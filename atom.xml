@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">LittleGhost的博客</title>
     <subtitle type="html">本站采用MemE模板，MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</subtitle>
-    <updated>2021-09-07T20:48:35&#43;08:00</updated>
+    <updated>2021-09-07T20:58:29&#43;08:00</updated>
     <id>https://blog.littleghost.ml/</id>
     <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/" />
     <link rel="self" type="application/atom&#43;xml" href="https://blog.littleghost.ml/atom.xml" />
@@ -17,10 +17,10 @@
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.88.1">Hugo</generator>
         <entry>
-            <title type="text">abd禁用应用</title>
+            <title type="text">adb禁用应用</title>
             <link rel="alternate" type="text/html" href="https://blog.littleghost.ml/posts/adb%E7%A6%81%E7%94%A8%E5%BA%94%E7%94%A8/" />
             <id>https://blog.littleghost.ml/posts/adb%E7%A6%81%E7%94%A8%E5%BA%94%E7%94%A8/</id>
-            <updated>2021-08-27T16:04:17&#43;08:00</updated>
+            <updated>2021-09-07T20:58:27&#43;08:00</updated>
             <published>2021-08-27T15:58:13&#43;08:00</published>
             <author>
                     <name>LittleGhost</name>
