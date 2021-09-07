@@ -1,5 +1,5 @@
 ---
-title: abd禁用应用
+title: adb禁用应用
 date: 2021-08-27T15:58:13+08:00
 tags: ["adb"]
 categories: ["技术"]
