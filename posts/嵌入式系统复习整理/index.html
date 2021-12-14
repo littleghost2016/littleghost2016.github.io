@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.88.1" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.90.1" /><meta name="theme-color" content="#fff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -455,78 +455,78 @@ Nor Flash读速度快，用来存储代码;Nand Flash常用来存储数据
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="nf">AREA</span>  <span class="no">Block</span><span class="err">，</span><span class="no">CODE</span><span class="err">，</span><span class="no">READONLY</span> <span class="c">;设置本段程序的名						;称（Block）及属性
 </span><span class="c"></span><span class="no">num</span>	<span class="no">EQU</span>  <span class="mi">20</span>	   <span class="c">;设置将要复制的字数
-</span><span class="c"></span>     <span class="no">ENTRY</span>      	   <span class="c">;标识程序入口点
+</span><span class="c"></span>		<span class="no">ENTRY</span>      	   <span class="c">;标识程序入口点
 </span><span class="c"></span><span class="no">Start</span>	<span class="no">LDR</span>  <span class="no">r0</span><span class="err">，=</span><span class="no">src</span>  <span class="c">;r0寄存器指向源数据区src
-</span><span class="c"></span>     <span class="no">LDR</span>  <span class="no">r1</span><span class="err">，=</span><span class="no">dst</span>  <span class="c">;r1寄存器指向目标数据区dst
-</span><span class="c"></span>     <span class="no">MOV</span>  <span class="no">r2</span><span class="c">;#num ;r2指定将要复制的字数
-</span><span class="c"></span>     <span class="no">MOV</span>  <span class="no">sp</span><span class="err">，</span><span class="c">#0x400 ;设置数据栈指针（r13），
-</span><span class="c"></span>              <span class="c">;用于保存工作寄存器数值
+</span><span class="c"></span>		<span class="no">LDR</span>  <span class="no">r1</span><span class="err">，=</span><span class="no">dst</span>  <span class="c">;r1寄存器指向目标数据区dst
+</span><span class="c"></span>		<span class="no">MOV</span>  <span class="no">r2</span><span class="c">;#num ;r2指定将要复制的字数
+</span><span class="c"></span>		<span class="no">MOV</span>  <span class="no">sp</span><span class="err">，</span><span class="c">#0x400 ;设置数据栈指针（r13），
+</span><span class="c"></span>				 <span class="c">;用于保存工作寄存器数值
 </span><span class="c"></span><span class="no">Blockcopy</span>            	<span class="c">;进行以8个字为单位的数据复制
-</span><span class="c"></span>         <span class="no">MOVS</span>  <span class="no">r3</span><span class="err">，</span><span class="no">r2</span><span class="err">，</span><span class="no">LSR</span> <span class="err">＃</span><span class="mi">3</span> <span class="c">;需要进行的以8个字
-</span><span class="c"></span>                 <span class="c">;为单位的复制次数
-</span><span class="c"></span>     <span class="no">BEQ</span>   <span class="no">Copywords</span> 	<span class="c">;对于剩下不足8个字的数据，
-</span><span class="c"></span>                 <span class="c">;跳转到copywords，以字为单位复制
-</span><span class="c"></span>     <span class="no">STMFD</span>  <span class="no">sp</span><span class="p">!</span><span class="err">，｛</span><span class="no">r4-r11</span><span class="err">｝</span><span class="c">;保存工作寄存器
+</span><span class="c"></span>  		<span class="no">MOVS</span>  <span class="no">r3</span><span class="err">，</span><span class="no">r2</span><span class="err">，</span><span class="no">LSR</span> <span class="err">＃</span><span class="mi">3</span> <span class="c">;需要进行的以8个字
+</span><span class="c"></span>					<span class="c">;为单位的复制次数
+</span><span class="c"></span>		<span class="no">BEQ</span>   <span class="no">Copywords</span> 	<span class="c">;对于剩下不足8个字的数据，
+</span><span class="c"></span>					<span class="c">;跳转到copywords，以字为单位复制
+</span><span class="c"></span>   	<span class="no">STMFD</span>  <span class="no">sp</span><span class="p">!</span><span class="err">，｛</span><span class="no">r4-r11</span><span class="err">｝</span><span class="c">;保存工作寄存器
 </span><span class="c"></span>
 <span class="nf">Octcopy</span>
-     <span class="nf">LDMIA</span>  <span class="no">r0</span><span class="p">!</span><span class="err">，｛</span><span class="no">r4-r11</span><span class="err">｝</span><span class="c">;从源数据区读取8个字的数据， 
-</span><span class="c"></span>             <span class="c">;放到8个寄存器中，并更新源数据区指针r0
-</span><span class="c"></span>     <span class="no">STMIA</span>  <span class="no">r1</span><span class="p">!</span><span class="err">，｛</span><span class="no">r4-r11</span><span class="err">｝</span><span class="c">;将这8个字数据写入到目标数据
-</span><span class="c"></span>                 <span class="c">;区中，并更新目标数据区指针r1
-</span><span class="c"></span>     <span class="no">SUBS</span>  <span class="no">r3</span><span class="err">，</span><span class="no">r3</span><span class="err">，</span><span class="c">#1      ;将块复制次数减1
-</span><span class="c"></span>     <span class="no">BNE</span>   <span class="no">Octcopy</span>    <span class="c">;循环，直到完成以8个字为单位的块复制
-</span><span class="c"></span>     <span class="no">LDMFD</span>  <span class="no">sp</span><span class="p">!</span><span class="err">，{</span><span class="no">r4-r11</span><span class="err">}</span>  <span class="c">;恢复工作寄存器值
+		<span class="nf">LDMIA</span>  <span class="no">r0</span><span class="p">!</span><span class="err">，｛</span><span class="no">r4-r11</span><span class="err">｝</span><span class="c">;从源数据区读取8个字的数据， 
+</span><span class="c"></span>				<span class="c">;放到8个寄存器中，并更新源数据区指针r0
+</span><span class="c"></span>		<span class="no">STMIA</span>  <span class="no">r1</span><span class="p">!</span><span class="err">，｛</span><span class="no">r4-r11</span><span class="err">｝</span><span class="c">;将这8个字数据写入到目标数据
+</span><span class="c"></span>					<span class="c">;区中，并更新目标数据区指针r1
+</span><span class="c"></span>		<span class="no">SUBS</span>  <span class="no">r3</span><span class="err">，</span><span class="no">r3</span><span class="err">，</span><span class="c">#1      ;将块复制次数减1
+</span><span class="c"></span>		<span class="no">BNE</span>   <span class="no">Octcopy</span>    <span class="c">;循环，直到完成以8个字为单位的块复制
+</span><span class="c"></span>		<span class="no">LDMFD</span>  <span class="no">sp</span><span class="p">!</span><span class="err">，{</span><span class="no">r4-r11</span><span class="err">}</span>  <span class="c">;恢复工作寄存器值
 </span><span class="c"></span><span class="no">Copywords</span>
-     <span class="nf">ANDS</span>  <span class="no">r2</span><span class="err">，</span><span class="no">r2</span><span class="err">，</span><span class="c">#7       ;剩下不足8个字的数据的字数
-</span><span class="c"></span>     <span class="no">BEQ</span>   <span class="no">Stop</span>             <span class="c">;数据复制完成
+		<span class="nf">ANDS</span>  <span class="no">r2</span><span class="err">，</span><span class="no">r2</span><span class="err">，</span><span class="c">#7       ;剩下不足8个字的数据的字数
+</span><span class="c"></span>		<span class="no">BEQ</span>   <span class="no">Stop</span>             <span class="c">;数据复制完成
 </span><span class="c"></span><span class="no">Wordcopy</span>
-     <span class="nf">LDR</span>   <span class="no">r3</span><span class="err">，</span><span class="p">[</span><span class="no">r0</span><span class="p">]</span><span class="err">，＃</span><span class="mi">4</span> <span class="c">;从源数据区读取1个字的数据，
-</span><span class="c"></span>             <span class="c">;放到r3寄存器中并更新目标数据区指针r0
+		<span class="nf">LDR</span>   <span class="no">r3</span><span class="err">，</span><span class="p">[</span><span class="no">r0</span><span class="p">]</span><span class="err">，＃</span><span class="mi">4</span> <span class="c">;从源数据区读取1个字的数据，
+</span><span class="c"></span>				<span class="c">;放到r3寄存器中并更新目标数据区指针r0
 </span><span class="c"></span>
-     <span class="nf">STR</span>  <span class="no">r3</span><span class="err">，［</span><span class="no">r1</span><span class="err">］，＃</span><span class="mi">4</span> 	<span class="c">;将这r3中数据写入到目标数据区中，
-</span><span class="c"></span>                 <span class="c">;并更新目标数据区指针r1
-</span><span class="c"></span>     <span class="no">SUBS</span> <span class="no">r2</span><span class="err">，</span><span class="no">r2</span><span class="err">，＃</span><span class="no">l</span> 	<span class="c">;将字数减l
-</span><span class="c"></span>     <span class="no">BNE</span>  <span class="no">Wordcopy</span>   	<span class="c">;循环，直到完成以字为单位的数据复制
+		<span class="nf">STR</span>  <span class="no">r3</span><span class="err">，［</span><span class="no">r1</span><span class="err">］，＃</span><span class="mi">4</span> 	<span class="c">;将这r3中数据写入到目标数据区中，
+</span><span class="c"></span>					<span class="c">;并更新目标数据区指针r1
+</span><span class="c"></span>		<span class="no">SUBS</span> <span class="no">r2</span><span class="err">，</span><span class="no">r2</span><span class="err">，＃</span><span class="no">l</span> 	<span class="c">;将字数减l
+</span><span class="c"></span>		<span class="no">BNE</span>  <span class="no">Wordcopy</span>   	<span class="c">;循环，直到完成以字为单位的数据复制
 </span><span class="c"></span><span class="no">Stop</span>	<span class="no">MOV</span>  <span class="no">r0</span><span class="err">，</span> <span class="c">#0x18	;程序退出
-</span><span class="c"></span>     <span class="no">LDR</span>  <span class="no">r1</span><span class="err">，=</span><span class="mi">0x20026</span>
-     <span class="nf">SWI</span>  <span class="mi">0x123456</span>
+</span><span class="c"></span>		<span class="no">LDR</span>  <span class="no">r1</span><span class="err">，=</span><span class="mi">0x20026</span>
+		<span class="nf">SWI</span>  <span class="mi">0x123456</span>
 
-     <span class="nf">AREA</span>  <span class="no">BlockData</span> <span class="err">，</span><span class="no">DATA</span><span class="err">，</span><span class="no">READWRITE</span> <span class="c">;定义数据区
+		<span class="nf">AREA</span>  <span class="no">BlockData</span> <span class="err">，</span><span class="no">DATA</span><span class="err">，</span><span class="no">READWRITE</span> <span class="c">;定义数据区
 </span><span class="c"></span><span class="no">Src</span>	<span class="no">DCD</span>  <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span>  <span class="c">;定义源数据区src
 </span><span class="c"></span><span class="no">Dst</span>	<span class="no">DCD</span>  <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>  <span class="c">;定义目标数据区dst
-</span><span class="c"></span>     <span class="no">END</span>  			<span class="c">;结束汇编
+</span><span class="c"></span>		<span class="no">END</span>  			<span class="c">;结束汇编
 </span><span class="c"></span>
 
 <span class="nf">AREA</span>  <span class="no">Jump</span><span class="err">，</span><span class="no">CODE</span><span class="err">，</span><span class="no">READONLY</span> 		<span class="c">;设置本段程序的
-</span><span class="c"></span>                                 <span class="c">;名称（Jump）及属性
+</span><span class="c"></span>									<span class="c">;名称（Jump）及属性
 </span><span class="c"></span><span class="no">num</span>	<span class="no">EQU</span>  <span class="mi">2</span> 							<span class="c">;跳转表中的子程序个数
-</span><span class="c"></span>     <span class="no">ENTRY</span>        				<span class="c">;程序执行的入口点
+</span><span class="c"></span>		<span class="no">ENTRY</span>        				<span class="c">;程序执行的入口点
 </span><span class="c"></span><span class="no">Start</span>
-     <span class="nf">MOV</span>   <span class="no">r0</span><span class="err">，</span><span class="c">#0 				;设置3个参数，然后调用子程序										;arithfunc，进行算术运算
-</span><span class="c"></span>     <span class="no">MOV</span>   <span class="no">r1</span><span class="err">，</span><span class="c">#3 
-</span><span class="c"></span>     <span class="no">MOV</span>   <span class="no">r2</span><span class="err">，</span><span class="c">#2
-</span><span class="c"></span>     <span class="no">BL</span>    <span class="no">arithfunc</span>  				<span class="c">;调用子程序arithfunc
+		<span class="nf">MOV</span>   <span class="no">r0</span><span class="err">，</span><span class="c">#0 				;设置3个参数，然后调用子程序										;arithfunc，进行算术运算
+</span><span class="c"></span>		<span class="no">MOV</span>   <span class="no">r1</span><span class="err">，</span><span class="c">#3 
+</span><span class="c"></span>		<span class="no">MOV</span>   <span class="no">r2</span><span class="err">，</span><span class="c">#2
+</span><span class="c"></span>		<span class="no">BL</span>    <span class="no">arithfunc</span>  				<span class="c">;调用子程序arithfunc
 </span><span class="c"></span><span class="no">Stop</span>									<span class="c">;程序退出
-</span><span class="c"></span>     <span class="no">MOV</span>  <span class="no">r0</span><span class="err">，</span> <span class="c">#0x18
-</span><span class="c"></span>     <span class="no">LDR</span>  <span class="no">r1</span><span class="err">，=</span><span class="mi">0x20026</span>
-     <span class="nf">SWI</span>  <span class="mi">0x123456</span>
+</span><span class="c"></span>		<span class="no">MOV</span>  <span class="no">r0</span><span class="err">，</span> <span class="c">#0x18
+</span><span class="c"></span>		<span class="no">LDR</span>  <span class="no">r1</span><span class="err">，=</span><span class="mi">0x20026</span>
+		<span class="nf">SWI</span>  <span class="mi">0x123456</span>
 <span class="nf">Arithfunc</span>			  					<span class="c">;子程序arithfunc入口点
-</span><span class="c"></span>     <span class="no">CMP</span>   	<span class="no">r0</span><span class="err">，</span><span class="c">#num      	  	;判断选择子程序的参数是否在
-</span><span class="c"></span>                                 <span class="c">;有效范围之内
-</span><span class="c"></span>     <span class="no">MOVHS</span> 	<span class="no">pc</span><span class="err">，</span><span class="no">lr</span>   	  		<span class="c">;若不在，则直接返回
-</span><span class="c"></span>     <span class="no">ADR</span>		<span class="no">r3</span><span class="err">，</span><span class="no">JumpTable</span>   	<span class="c">;读取跳转表的基地址（ADR是伪指令）
-</span><span class="c"></span>     <span class="no">LDR</span>		<span class="no">pc</span><span class="err">，</span><span class="p">[</span><span class="no">r3</span><span class="err">，</span><span class="no">r0</span><span class="err">，</span><span class="no">LSL</span> <span class="c">#2] 	;根据参数r0的值跳转到
-</span><span class="c"></span>                                 <span class="c">;相应的子程序
+</span><span class="c"></span>		<span class="no">CMP</span>   	<span class="no">r0</span><span class="err">，</span><span class="c">#num      	  	;判断选择子程序的参数是否在
+</span><span class="c"></span>					  				<span class="c">;有效范围之内
+</span><span class="c"></span>		<span class="no">MOVHS</span> 	<span class="no">pc</span><span class="err">，</span><span class="no">lr</span>   	  		<span class="c">;若不在，则直接返回
+</span><span class="c"></span>		<span class="no">ADR</span>		<span class="no">r3</span><span class="err">，</span><span class="no">JumpTable</span>   	<span class="c">;读取跳转表的基地址（ADR是伪指令）
+</span><span class="c"></span>		<span class="no">LDR</span>		<span class="no">pc</span><span class="err">，</span><span class="p">[</span><span class="no">r3</span><span class="err">，</span><span class="no">r0</span><span class="err">，</span><span class="no">LSL</span> <span class="c">#2] 	;根据参数r0的值跳转到
+</span><span class="c"></span>									<span class="c">;相应的子程序
 </span><span class="c"></span><span class="no">JumpTable</span>
-     <span class="nf">DCD</span>		<span class="no">DoAdd</span>
-     <span class="nf">DCD</span>		<span class="no">DoSub</span>
+		<span class="nf">DCD</span>		<span class="no">DoAdd</span>
+		<span class="nf">DCD</span>		<span class="no">DoSub</span>
 <span class="nf">DoAdd</span>    							<span class="c">;子程序DoAdd执行加法操作
-</span><span class="c"></span>         <span class="no">ADD</span>	<span class="no">r0</span><span class="err">，</span><span class="no">r1</span><span class="err">，</span><span class="no">r2</span>
-         <span class="nf">MOV</span>	<span class="no">pc</span><span class="err">，</span><span class="no">lr</span>
+</span><span class="c"></span> 		<span class="no">ADD</span>	<span class="no">r0</span><span class="err">，</span><span class="no">r1</span><span class="err">，</span><span class="no">r2</span>
+ 		<span class="nf">MOV</span>	<span class="no">pc</span><span class="err">，</span><span class="no">lr</span>
 <span class="nf">DoSub</span> 								<span class="c">;子程序DoSub执行减法操作
-</span><span class="c"></span>         <span class="no">SUB</span>	<span class="no">r0</span><span class="err">，</span><span class="no">r1</span><span class="err">，</span><span class="no">r2</span>
-     <span class="nf">MOV</span>	<span class="no">pc</span><span class="err">，</span><span class="no">lr</span>
-     <span class="nf">END</span>           				<span class="c">;结束汇编
+</span><span class="c"></span> 		<span class="no">SUB</span>	<span class="no">r0</span><span class="err">，</span><span class="no">r1</span><span class="err">，</span><span class="no">r2</span>
+		<span class="nf">MOV</span>	<span class="no">pc</span><span class="err">，</span><span class="no">lr</span>
+		<span class="nf">END</span>           				<span class="c">;结束汇编
 </span></code></pre></td></tr></table></div>
 </div>
 </div></li>
