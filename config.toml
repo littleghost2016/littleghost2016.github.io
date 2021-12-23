@@ -98,7 +98,7 @@ uglyURLs = false
     # 座右铭或简介
     motto = "新晋的信息安全小鬼头"
     # 头像
-    avatar = "/icons/22980536.jfif"
+    avatar = "/icons/apple-touch-icon.png"
     # 网站（默认值：baseURL）
     website = "https://blog.littleghost.ml"
 
@@ -398,7 +398,7 @@ uglyURLs = false
     # 列表页面
 
     # 宽度
-    listWidth = 36
+    listWidth = ""
     # 说明：如果留空（""），则用 42 作为默认值
     #      单位：em
 
@@ -697,7 +697,7 @@ uglyURLs = false
     # 注意：只支持 HSL 颜色值
 
     # 文章的内容宽度
-    postWidth = 36
+    postWidth = ""
     # 说明：如果留空（""），则用 42 作为默认值
     #      单位：em
 
@@ -1265,7 +1265,7 @@ uglyURLs = false
     # 是否开启竖直滚动
     enableOverflowY = true
     # 最大高度
-    maxHeight = 20
+    maxHeight = 50
     # 单位：em
 
     # 是否开启复制
