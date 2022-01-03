@@ -18,7 +18,7 @@ $ sudo apt-get update; sudo apt-get install make build-essential libssl-dev zlib
 亲测debian11安装python3.10.1只需要执行以下apt命令
 
 ```bash
-$ sudo apt install gcc make zlib1g-dev libbz2-dev libreadline-dev libssl-dev
+$ sudo apt install gcc make zlib1g-dev libbz2-dev libreadline-dev libssl-dev libsqlite3-dev
 ```
 
 # 使用项目自带脚本安装pyenv
