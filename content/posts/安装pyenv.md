@@ -19,6 +19,12 @@ categories: ["技术"]
 $ sudo apt-get update; sudo apt-get install make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
 ```
 
+# 常见安装错误
+
+> [Ubuntu 18.04 Pyenv Build Python 3.7 Common Error | Lua Software Code](https://code.luasoftware.com/tutorials/linux/ubuntu-pyenv-build-python-37-common-error/)
+>
+> [Common build problems · pyenv/pyenv Wiki (github.com)](https://github.com/pyenv/pyenv/wiki/common-build-problems)
+
 # 使用项目自带脚本安装pyenv
 
 ```bash
