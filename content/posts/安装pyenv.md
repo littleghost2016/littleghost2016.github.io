@@ -9,16 +9,14 @@ categories: ["技术"]
 
 > https://github.com/pyenv/pyenv
 
+# 安装手册
+
+> [Home · pyenv/pyenv Wiki (github.com)](https://github.com/pyenv/pyenv/wiki)
+
 # 安装编译Python所需的依赖
 
 ```bash
 $ sudo apt-get update; sudo apt-get install make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
-```
-
-亲测debian11安装python3.10.1只需要执行以下apt命令
-
-```bash
-$ sudo apt install gcc make zlib1g-dev libbz2-dev libreadline-dev libssl-dev libsqlite3-dev
 ```
 
 # 使用项目自带脚本安装pyenv
