@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Mon, 03 Jan 2022 11:09:55 &#43;0800</lastBuildDate>
+        <lastBuildDate>Mon, 03 Jan 2022 11:20:38 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://blog.littleghost.ml/rss.xml" />
         
@@ -42,6 +42,10 @@
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/pyenv/pyenv&#34;&gt;https://github.com/pyenv/pyenv&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;h1 id=&#34;安装手册&#34;&gt;安装手册&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/pyenv/pyenv/wiki&#34;&gt;Home · pyenv/pyenv Wiki (github.com)&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h1 id=&#34;安装编译python所需的依赖&#34;&gt;安装编译Python所需的依赖&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -49,15 +53,6 @@
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo apt-get update&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; sudo apt-get install make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
-&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;亲测debian11安装python3.10.1只需要执行以下apt命令&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo apt install gcc make zlib1g-dev libbz2-dev libreadline-dev libssl-dev libsqlite3-dev
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h1 id=&#34;使用项目自带脚本安装pyenv&#34;&gt;使用项目自带脚本安装pyenv&lt;/h1&gt;
