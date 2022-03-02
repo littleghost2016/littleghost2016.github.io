@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.92.2" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.93.0" /><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -21,7 +21,7 @@
 
     
     
-        <script src="/js/meme.min.8cbe976441b5181abfd3093c9beee209b19cdbb1fa77c48d225a83ba81fa3fb1.js"></script>
+        <script src="/js/meme.min.45a777da25d0b1805991f984be4e9ae5e17f3ea94097882dff058256fa34eb17.js"></script>
 
     
 
@@ -431,173 +431,173 @@
 </span><span class="lnt">166
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
-
-<span class="kn">import</span> <span class="p">(</span>
-	<span class="s">&#34;fmt&#34;</span>
-	<span class="s">&#34;io/ioutil&#34;</span>
-	<span class="s">&#34;log&#34;</span>
-	<span class="s">&#34;net&#34;</span>
-	<span class="s">&#34;net/http&#34;</span>
-	<span class="s">&#34;net/http/cookiejar&#34;</span>
-	<span class="s">&#34;regexp&#34;</span>
-	<span class="s">&#34;strings&#34;</span>
-
-	<span class="s">&#34;github.com/aliyun/alibaba-cloud-sdk-go/services/alidns&#34;</span>
-	<span class="s">&#34;github.com/tidwall/gjson&#34;</span>
-<span class="p">)</span>
-
-<span class="kd">const</span> <span class="p">(</span>
-	<span class="nx">REGION_ID</span>         <span class="p">=</span> <span class="s">&#34;cn-hangzhou&#34;</span>
-	<span class="nx">ACCESS_KEY_ID</span>     <span class="p">=</span> <span class="s">&#34;自行更改&#34;</span>
-	<span class="nx">ACCESS_KEY_SECRET</span> <span class="p">=</span> <span class="s">&#34;自行更改&#34;</span>
-<span class="p">)</span>
-
-<span class="kd">func</span> <span class="nf">getRecordIdAndIp</span><span class="p">(</span><span class="nx">subDomainName</span> <span class="kt">string</span><span class="p">)</span> <span class="p">(</span><span class="nx">recordId</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">ip</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">err</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
-
-	<span class="nx">client</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">alidns</span><span class="p">.</span><span class="nf">NewClientWithAccessKey</span><span class="p">(</span><span class="nx">REGION_ID</span><span class="p">,</span> <span class="nx">ACCESS_KEY_ID</span><span class="p">,</span> <span class="nx">ACCESS_KEY_SECRET</span><span class="p">)</span>
-	<span class="nx">request</span> <span class="o">:=</span> <span class="nx">alidns</span><span class="p">.</span><span class="nf">CreateDescribeSubDomainRecordsRequest</span><span class="p">()</span>
-	<span class="nx">request</span><span class="p">.</span><span class="nx">SubDomain</span> <span class="p">=</span> <span class="nx">subDomainName</span>
-
-	<span class="nx">response</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">client</span><span class="p">.</span><span class="nf">DescribeSubDomainRecords</span><span class="p">(</span><span class="nx">request</span><span class="p">)</span>
-	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nf">Error</span><span class="p">())</span>
-	<span class="p">}</span>
-	<span class="c1">// response是个切片,索引0对应一个结构体，[{10.173.9.101 600  littleghost.ml lab 0 19722069506535424 ENABLE false 1 default A}]
-</span><span class="c1"></span>	<span class="nx">recordId</span> <span class="p">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">DomainRecords</span><span class="p">.</span><span class="nx">Record</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">RecordId</span>
-	<span class="nx">ip</span> <span class="p">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">DomainRecords</span><span class="p">.</span><span class="nx">Record</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">Value</span>
-	<span class="nx">err</span> <span class="p">=</span> <span class="kc">nil</span>
-	<span class="k">return</span>
-<span class="p">}</span>
-
-<span class="kd">func</span> <span class="nf">checkIp</span><span class="p">(</span><span class="nx">ip</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">ipType</span> <span class="kt">string</span><span class="p">)</span> <span class="p">(</span><span class="nx">nativeIp</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">updateFlag</span> <span class="kt">bool</span><span class="p">)</span> <span class="p">{</span>
-	<span class="k">if</span> <span class="nx">ipType</span> <span class="o">==</span> <span class="s">&#34;ipv4&#34;</span> <span class="p">{</span>
-		<span class="nx">nativeIpv4</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nf">getNativeIp</span><span class="p">(</span><span class="s">&#34;ipv4&#34;</span><span class="p">)</span>
-		<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-			<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
-			<span class="nx">updateFlag</span> <span class="p">=</span> <span class="kc">false</span>
-		<span class="p">}</span>
-		<span class="k">if</span> <span class="nx">ip</span> <span class="o">!=</span> <span class="nx">nativeIpv4</span> <span class="p">{</span>
-			<span class="nx">nativeIp</span> <span class="p">=</span> <span class="nx">nativeIpv4</span>
-			<span class="nx">updateFlag</span> <span class="p">=</span> <span class="kc">true</span>
-		<span class="p">}</span>
-	<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="nx">ipType</span> <span class="o">==</span> <span class="s">&#34;ipv6&#34;</span> <span class="p">{</span>
-		<span class="nx">nativeIpv6</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nf">getNativeIp</span><span class="p">(</span><span class="s">&#34;ipv6&#34;</span><span class="p">)</span>
-		<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-			<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
-			<span class="nx">updateFlag</span> <span class="p">=</span> <span class="kc">false</span>
-		<span class="p">}</span>
-
-		<span class="k">if</span> <span class="nx">ip</span> <span class="o">!=</span> <span class="nx">nativeIpv6</span> <span class="p">{</span>
-			<span class="nx">nativeIp</span> <span class="p">=</span> <span class="nx">nativeIpv6</span>
-			<span class="nx">updateFlag</span> <span class="p">=</span> <span class="kc">true</span>
-		<span class="p">}</span>
-	<span class="p">}</span>
-	<span class="k">return</span>
-<span class="p">}</span>
-
-<span class="c1">// 获取本机的IPv4和IPv6地址
-</span><span class="c1"></span><span class="kd">func</span> <span class="nf">getNativeIp</span><span class="p">(</span><span class="nx">ipType</span> <span class="kt">string</span><span class="p">)</span> <span class="p">(</span><span class="nx">ip</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">err</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
-	<span class="k">if</span> <span class="nx">ipType</span> <span class="o">==</span> <span class="s">&#34;ipv4&#34;</span> <span class="p">{</span>
-
-		<span class="nx">jar</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">cookiejar</span><span class="p">.</span><span class="nf">New</span><span class="p">(</span><span class="kc">nil</span><span class="p">)</span>
-		<span class="nx">httpClient</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="nx">http</span><span class="p">.</span><span class="nx">Client</span><span class="p">{</span>
-			<span class="nx">Jar</span><span class="p">:</span> <span class="nx">jar</span><span class="p">,</span>
-		<span class="p">}</span>
-		<span class="nx">loginUrl</span> <span class="o">:=</span> <span class="s">&#34;http://192.168.1.1/&#34;</span>
-		<span class="nx">req</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">http</span><span class="p">.</span><span class="nf">NewRequest</span><span class="p">(</span><span class="s">&#34;POST&#34;</span><span class="p">,</span> <span class="nx">loginUrl</span><span class="p">,</span> <span class="nx">strings</span><span class="p">.</span><span class="nf">NewReader</span><span class="p">(</span><span class="s">`{&#34;method&#34;:&#34;do&#34;,&#34;login&#34;:{&#34;password&#34;:&#34;自行更改&#34;}}`</span><span class="p">))</span>
-		<span class="nx">res</span><span class="p">,</span> <span class="nx">httpError</span> <span class="o">:=</span> <span class="nx">httpClient</span><span class="p">.</span><span class="nf">Do</span><span class="p">(</span><span class="nx">req</span><span class="p">)</span>
-		<span class="k">if</span> <span class="nx">httpError</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-			<span class="nx">log</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="nx">httpError</span><span class="p">)</span>
-			<span class="nx">err</span> <span class="p">=</span> <span class="nx">httpError</span>
-		<span class="p">}</span>
-
-		<span class="k">defer</span> <span class="nx">res</span><span class="p">.</span><span class="nx">Body</span><span class="p">.</span><span class="nf">Close</span><span class="p">()</span>
-
-		<span class="nx">body</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">ioutil</span><span class="p">.</span><span class="nf">ReadAll</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">Body</span><span class="p">)</span>
-		<span class="nx">stok</span> <span class="o">:=</span> <span class="nx">gjson</span><span class="p">.</span><span class="nf">Get</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">body</span><span class="p">),</span> <span class="s">&#34;stok&#34;</span><span class="p">).</span><span class="nf">String</span><span class="p">()</span>
-
-		<span class="nx">contentUrl</span> <span class="o">:=</span> <span class="nx">fmt</span><span class="p">.</span><span class="nf">Sprintf</span><span class="p">(</span><span class="s">&#34;http://192.168.1.1/stok=%s/ds&#34;</span><span class="p">,</span> <span class="nx">stok</span><span class="p">)</span>
-		<span class="nx">req</span><span class="p">,</span> <span class="nx">_</span> <span class="p">=</span> <span class="nx">http</span><span class="p">.</span><span class="nf">NewRequest</span><span class="p">(</span><span class="s">&#34;POST&#34;</span><span class="p">,</span> <span class="nx">contentUrl</span><span class="p">,</span> <span class="nx">strings</span><span class="p">.</span><span class="nf">NewReader</span><span class="p">(</span><span class="s">`{&#34;network&#34;:{&#34;name&#34;:[&#34;wan_status&#34;]},&#34;method&#34;:&#34;get&#34;}`</span><span class="p">))</span>
-		<span class="nx">res</span><span class="p">,</span> <span class="nx">httpError</span> <span class="p">=</span> <span class="nx">httpClient</span><span class="p">.</span><span class="nf">Do</span><span class="p">(</span><span class="nx">req</span><span class="p">)</span>
-		<span class="k">if</span> <span class="nx">httpError</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-			<span class="nx">log</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="nx">httpError</span><span class="p">)</span>
-			<span class="nx">err</span> <span class="p">=</span> <span class="nx">httpError</span>
-		<span class="p">}</span>
-
-		<span class="k">defer</span> <span class="nx">res</span><span class="p">.</span><span class="nx">Body</span><span class="p">.</span><span class="nf">Close</span><span class="p">()</span>
-
-		<span class="nx">body</span><span class="p">,</span> <span class="nx">_</span> <span class="p">=</span> <span class="nx">ioutil</span><span class="p">.</span><span class="nf">ReadAll</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">Body</span><span class="p">)</span>
-		<span class="nx">ip</span> <span class="p">=</span> <span class="nx">gjson</span><span class="p">.</span><span class="nf">Get</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">body</span><span class="p">),</span> <span class="s">&#34;network&#34;</span><span class="p">).</span><span class="nf">Get</span><span class="p">(</span><span class="s">&#34;wan_status&#34;</span><span class="p">).</span><span class="nf">Get</span><span class="p">(</span><span class="s">&#34;ipaddr&#34;</span><span class="p">).</span><span class="nf">String</span><span class="p">()</span>
-
-		<span class="k">return</span> <span class="nx">ip</span><span class="p">,</span> <span class="kc">nil</span>
-	<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="nx">ipType</span> <span class="o">==</span> <span class="s">&#34;ipv6&#34;</span> <span class="p">{</span>
-		<span class="nx">addrs</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">net</span><span class="p">.</span><span class="nf">InterfaceAddrs</span><span class="p">()</span>
-		<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-			<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
-			<span class="k">return</span> <span class="s">&#34;&#34;</span><span class="p">,</span> <span class="nx">err</span>
-		<span class="p">}</span>
-		<span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">address</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">addrs</span> <span class="p">{</span>
-			<span class="nx">ipnet</span><span class="p">,</span> <span class="nx">ok</span> <span class="o">:=</span> <span class="nx">address</span><span class="p">.(</span><span class="o">*</span><span class="nx">net</span><span class="p">.</span><span class="nx">IPNet</span><span class="p">)</span>
-			<span class="k">if</span> <span class="nx">ok</span> <span class="o">&amp;&amp;</span> <span class="p">!</span><span class="nx">ipnet</span><span class="p">.</span><span class="nx">IP</span><span class="p">.</span><span class="nf">IsLoopback</span><span class="p">()</span> <span class="p">{</span>
-				<span class="nx">ip</span> <span class="p">=</span> <span class="nx">ipnet</span><span class="p">.</span><span class="nx">IP</span><span class="p">.</span><span class="nf">String</span><span class="p">()</span>
-				<span class="nx">matchFlag</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">regexp</span><span class="p">.</span><span class="nf">MatchString</span><span class="p">(</span><span class="s">&#34;2001&#34;</span><span class="p">,</span> <span class="nx">ip</span><span class="p">)</span>
-				<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-					<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
-					<span class="k">return</span> <span class="s">&#34;&#34;</span><span class="p">,</span> <span class="nx">err</span>
-				<span class="p">}</span>
-				<span class="k">if</span> <span class="nx">ip</span> <span class="o">!=</span> <span class="s">&#34;&#34;</span> <span class="o">&amp;&amp;</span> <span class="nx">matchFlag</span> <span class="p">{</span>
-					<span class="k">break</span>
-				<span class="p">}</span>
-			<span class="p">}</span>
-		<span class="p">}</span>
-	<span class="p">}</span>
-	<span class="k">return</span> <span class="nx">ip</span><span class="p">,</span> <span class="kc">nil</span>
-<span class="p">}</span>
-
-<span class="kd">func</span> <span class="nf">updateAliyunDns</span><span class="p">(</span><span class="nx">recordId</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">ip</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">subDomain</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">dnsType</span> <span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
-	<span class="nx">client</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">alidns</span><span class="p">.</span><span class="nf">NewClientWithAccessKey</span><span class="p">(</span><span class="s">&#34;cn-hangzhou&#34;</span><span class="p">,</span> <span class="nx">ACCESS_KEY_ID</span><span class="p">,</span> <span class="nx">ACCESS_KEY_SECRET</span><span class="p">)</span>
-	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
-	<span class="p">}</span>
-
-	<span class="nx">request</span> <span class="o">:=</span> <span class="nx">alidns</span><span class="p">.</span><span class="nf">CreateUpdateDomainRecordRequest</span><span class="p">()</span>
-	<span class="nx">request</span><span class="p">.</span><span class="nx">Scheme</span> <span class="p">=</span> <span class="s">&#34;https&#34;</span>
-	<span class="nx">request</span><span class="p">.</span><span class="nx">Value</span> <span class="p">=</span> <span class="nx">ip</span>
-	<span class="nx">request</span><span class="p">.</span><span class="nx">Type</span> <span class="p">=</span> <span class="nx">dnsType</span>
-	<span class="nx">request</span><span class="p">.</span><span class="nx">RR</span> <span class="p">=</span> <span class="nx">subDomain</span>
-	<span class="nx">request</span><span class="p">.</span><span class="nx">RecordId</span> <span class="p">=</span> <span class="nx">recordId</span>
-
-	<span class="nx">_</span><span class="p">,</span> <span class="nx">err</span> <span class="p">=</span> <span class="nx">client</span><span class="p">.</span><span class="nf">UpdateDomainRecord</span><span class="p">(</span><span class="nx">request</span><span class="p">)</span>
-	<span class="c1">// fmt.Println(response)
-</span><span class="c1"></span><span class="p">}</span>
-
-<span class="c1">// 程序入口
-</span><span class="c1"></span><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-
-	<span class="nx">recordId</span><span class="p">,</span> <span class="nx">ip</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nf">getRecordIdAndIp</span><span class="p">(</span><span class="s">&#34;lab6.littleghost.ml&#34;</span><span class="p">)</span>
-	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;getRecordIdAndIp has error&#34;</span><span class="p">)</span>
-	<span class="p">}</span>
-
-	<span class="nx">nativeIp</span><span class="p">,</span> <span class="nx">updateFlag</span> <span class="o">:=</span> <span class="nf">checkIp</span><span class="p">(</span><span class="nx">ip</span><span class="p">,</span> <span class="s">&#34;ipv6&#34;</span><span class="p">)</span>
-	<span class="k">if</span> <span class="nx">updateFlag</span> <span class="p">{</span>
-		<span class="nf">updateAliyunDns</span><span class="p">(</span><span class="nx">recordId</span><span class="p">,</span> <span class="nx">nativeIp</span><span class="p">,</span> <span class="s">&#34;lab6&#34;</span><span class="p">,</span> <span class="s">&#34;AAAA&#34;</span><span class="p">)</span>
-		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;更新了新ip&#34;</span><span class="p">,</span> <span class="nx">nativeIp</span><span class="p">)</span>
-	<span class="p">}</span>
-
-	<span class="nx">recordId</span><span class="p">,</span> <span class="nx">ip</span><span class="p">,</span> <span class="nx">err</span> <span class="p">=</span> <span class="nf">getRecordIdAndIp</span><span class="p">(</span><span class="s">&#34;lab.littleghost.ml&#34;</span><span class="p">)</span>
-	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;getRecordIdAndIp has error&#34;</span><span class="p">)</span>
-	<span class="p">}</span>
-
-	<span class="nx">nativeIp</span><span class="p">,</span> <span class="nx">updateFlag</span> <span class="p">=</span> <span class="nf">checkIp</span><span class="p">(</span><span class="nx">ip</span><span class="p">,</span> <span class="s">&#34;ipv4&#34;</span><span class="p">)</span>
-	<span class="k">if</span> <span class="nx">updateFlag</span> <span class="p">{</span>
-		<span class="nf">updateAliyunDns</span><span class="p">(</span><span class="nx">recordId</span><span class="p">,</span> <span class="nx">nativeIp</span><span class="p">,</span> <span class="s">&#34;lab&#34;</span><span class="p">,</span> <span class="s">&#34;A&#34;</span><span class="p">)</span>
-		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;更新了新ip&#34;</span><span class="p">,</span> <span class="nx">nativeIp</span><span class="p">)</span>
-	<span class="p">}</span>
-<span class="p">}</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kn">package</span> <span class="nx">main</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;fmt&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;io/ioutil&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;log&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;net&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;net/http&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;net/http/cookiejar&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;regexp&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;strings&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;github.com/aliyun/alibaba-cloud-sdk-go/services/alidns&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;github.com/tidwall/gjson&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">const</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">REGION_ID</span>         <span class="p">=</span> <span class="s">&#34;cn-hangzhou&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">ACCESS_KEY_ID</span>     <span class="p">=</span> <span class="s">&#34;自行更改&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">ACCESS_KEY_SECRET</span> <span class="p">=</span> <span class="s">&#34;自行更改&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">getRecordIdAndIp</span><span class="p">(</span><span class="nx">subDomainName</span> <span class="kt">string</span><span class="p">)</span> <span class="p">(</span><span class="nx">recordId</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">ip</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">err</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nx">client</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">alidns</span><span class="p">.</span><span class="nf">NewClientWithAccessKey</span><span class="p">(</span><span class="nx">REGION_ID</span><span class="p">,</span> <span class="nx">ACCESS_KEY_ID</span><span class="p">,</span> <span class="nx">ACCESS_KEY_SECRET</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">request</span> <span class="o">:=</span> <span class="nx">alidns</span><span class="p">.</span><span class="nf">CreateDescribeSubDomainRecordsRequest</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">request</span><span class="p">.</span><span class="nx">SubDomain</span> <span class="p">=</span> <span class="nx">subDomainName</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nx">response</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">client</span><span class="p">.</span><span class="nf">DescribeSubDomainRecords</span><span class="p">(</span><span class="nx">request</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nf">Error</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// response是个切片,索引0对应一个结构体，[{10.173.9.101 600  littleghost.ml lab 0 19722069506535424 ENABLE false 1 default A}]
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">recordId</span> <span class="p">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">DomainRecords</span><span class="p">.</span><span class="nx">Record</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">RecordId</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">ip</span> <span class="p">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">DomainRecords</span><span class="p">.</span><span class="nx">Record</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">Value</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">err</span> <span class="p">=</span> <span class="kc">nil</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">checkIp</span><span class="p">(</span><span class="nx">ip</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">ipType</span> <span class="kt">string</span><span class="p">)</span> <span class="p">(</span><span class="nx">nativeIp</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">updateFlag</span> <span class="kt">bool</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">ipType</span> <span class="o">==</span> <span class="s">&#34;ipv4&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">nativeIpv4</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nf">getNativeIp</span><span class="p">(</span><span class="s">&#34;ipv4&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">updateFlag</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="nx">ip</span> <span class="o">!=</span> <span class="nx">nativeIpv4</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">nativeIp</span> <span class="p">=</span> <span class="nx">nativeIpv4</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">updateFlag</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="nx">ipType</span> <span class="o">==</span> <span class="s">&#34;ipv6&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">nativeIpv6</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nf">getNativeIp</span><span class="p">(</span><span class="s">&#34;ipv6&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">updateFlag</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="nx">ip</span> <span class="o">!=</span> <span class="nx">nativeIpv6</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">nativeIp</span> <span class="p">=</span> <span class="nx">nativeIpv6</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">updateFlag</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 获取本机的IPv4和IPv6地址
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">func</span> <span class="nf">getNativeIp</span><span class="p">(</span><span class="nx">ipType</span> <span class="kt">string</span><span class="p">)</span> <span class="p">(</span><span class="nx">ip</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">err</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">ipType</span> <span class="o">==</span> <span class="s">&#34;ipv4&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="nx">jar</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">cookiejar</span><span class="p">.</span><span class="nf">New</span><span class="p">(</span><span class="kc">nil</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">httpClient</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="nx">http</span><span class="p">.</span><span class="nx">Client</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">Jar</span><span class="p">:</span> <span class="nx">jar</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">loginUrl</span> <span class="o">:=</span> <span class="s">&#34;http://192.168.1.1/&#34;</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">req</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">http</span><span class="p">.</span><span class="nf">NewRequest</span><span class="p">(</span><span class="s">&#34;POST&#34;</span><span class="p">,</span> <span class="nx">loginUrl</span><span class="p">,</span> <span class="nx">strings</span><span class="p">.</span><span class="nf">NewReader</span><span class="p">(</span><span class="s">`{&#34;method&#34;:&#34;do&#34;,&#34;login&#34;:{&#34;password&#34;:&#34;自行更改&#34;}}`</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">res</span><span class="p">,</span> <span class="nx">httpError</span> <span class="o">:=</span> <span class="nx">httpClient</span><span class="p">.</span><span class="nf">Do</span><span class="p">(</span><span class="nx">req</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="nx">httpError</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">log</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="nx">httpError</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">err</span> <span class="p">=</span> <span class="nx">httpError</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="k">defer</span> <span class="nx">res</span><span class="p">.</span><span class="nx">Body</span><span class="p">.</span><span class="nf">Close</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="nx">body</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">ioutil</span><span class="p">.</span><span class="nf">ReadAll</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">Body</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">stok</span> <span class="o">:=</span> <span class="nx">gjson</span><span class="p">.</span><span class="nf">Get</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">body</span><span class="p">),</span> <span class="s">&#34;stok&#34;</span><span class="p">).</span><span class="nf">String</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="nx">contentUrl</span> <span class="o">:=</span> <span class="nx">fmt</span><span class="p">.</span><span class="nf">Sprintf</span><span class="p">(</span><span class="s">&#34;http://192.168.1.1/stok=%s/ds&#34;</span><span class="p">,</span> <span class="nx">stok</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">req</span><span class="p">,</span> <span class="nx">_</span> <span class="p">=</span> <span class="nx">http</span><span class="p">.</span><span class="nf">NewRequest</span><span class="p">(</span><span class="s">&#34;POST&#34;</span><span class="p">,</span> <span class="nx">contentUrl</span><span class="p">,</span> <span class="nx">strings</span><span class="p">.</span><span class="nf">NewReader</span><span class="p">(</span><span class="s">`{&#34;network&#34;:{&#34;name&#34;:[&#34;wan_status&#34;]},&#34;method&#34;:&#34;get&#34;}`</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">res</span><span class="p">,</span> <span class="nx">httpError</span> <span class="p">=</span> <span class="nx">httpClient</span><span class="p">.</span><span class="nf">Do</span><span class="p">(</span><span class="nx">req</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="nx">httpError</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">log</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="nx">httpError</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">err</span> <span class="p">=</span> <span class="nx">httpError</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="k">defer</span> <span class="nx">res</span><span class="p">.</span><span class="nx">Body</span><span class="p">.</span><span class="nf">Close</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="nx">body</span><span class="p">,</span> <span class="nx">_</span> <span class="p">=</span> <span class="nx">ioutil</span><span class="p">.</span><span class="nf">ReadAll</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">Body</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">ip</span> <span class="p">=</span> <span class="nx">gjson</span><span class="p">.</span><span class="nf">Get</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">body</span><span class="p">),</span> <span class="s">&#34;network&#34;</span><span class="p">).</span><span class="nf">Get</span><span class="p">(</span><span class="s">&#34;wan_status&#34;</span><span class="p">).</span><span class="nf">Get</span><span class="p">(</span><span class="s">&#34;ipaddr&#34;</span><span class="p">).</span><span class="nf">String</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="nx">ip</span><span class="p">,</span> <span class="kc">nil</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="nx">ipType</span> <span class="o">==</span> <span class="s">&#34;ipv6&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">addrs</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">net</span><span class="p">.</span><span class="nf">InterfaceAddrs</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="k">return</span> <span class="s">&#34;&#34;</span><span class="p">,</span> <span class="nx">err</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">address</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">addrs</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">ipnet</span><span class="p">,</span> <span class="nx">ok</span> <span class="o">:=</span> <span class="nx">address</span><span class="p">.(</span><span class="o">*</span><span class="nx">net</span><span class="p">.</span><span class="nx">IPNet</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="k">if</span> <span class="nx">ok</span> <span class="o">&amp;&amp;</span> <span class="p">!</span><span class="nx">ipnet</span><span class="p">.</span><span class="nx">IP</span><span class="p">.</span><span class="nf">IsLoopback</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="nx">ip</span> <span class="p">=</span> <span class="nx">ipnet</span><span class="p">.</span><span class="nx">IP</span><span class="p">.</span><span class="nf">String</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">				<span class="nx">matchFlag</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">regexp</span><span class="p">.</span><span class="nf">MatchString</span><span class="p">(</span><span class="s">&#34;2001&#34;</span><span class="p">,</span> <span class="nx">ip</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">				<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">					<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">					<span class="k">return</span> <span class="s">&#34;&#34;</span><span class="p">,</span> <span class="nx">err</span>
+</span></span><span class="line"><span class="cl">				<span class="p">}</span>
+</span></span><span class="line"><span class="cl">				<span class="k">if</span> <span class="nx">ip</span> <span class="o">!=</span> <span class="s">&#34;&#34;</span> <span class="o">&amp;&amp;</span> <span class="nx">matchFlag</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">					<span class="k">break</span>
+</span></span><span class="line"><span class="cl">				<span class="p">}</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="nx">ip</span><span class="p">,</span> <span class="kc">nil</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">updateAliyunDns</span><span class="p">(</span><span class="nx">recordId</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">ip</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">subDomain</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">dnsType</span> <span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">client</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">alidns</span><span class="p">.</span><span class="nf">NewClientWithAccessKey</span><span class="p">(</span><span class="s">&#34;cn-hangzhou&#34;</span><span class="p">,</span> <span class="nx">ACCESS_KEY_ID</span><span class="p">,</span> <span class="nx">ACCESS_KEY_SECRET</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nx">request</span> <span class="o">:=</span> <span class="nx">alidns</span><span class="p">.</span><span class="nf">CreateUpdateDomainRecordRequest</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">request</span><span class="p">.</span><span class="nx">Scheme</span> <span class="p">=</span> <span class="s">&#34;https&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">request</span><span class="p">.</span><span class="nx">Value</span> <span class="p">=</span> <span class="nx">ip</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">request</span><span class="p">.</span><span class="nx">Type</span> <span class="p">=</span> <span class="nx">dnsType</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">request</span><span class="p">.</span><span class="nx">RR</span> <span class="p">=</span> <span class="nx">subDomain</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">request</span><span class="p">.</span><span class="nx">RecordId</span> <span class="p">=</span> <span class="nx">recordId</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nx">_</span><span class="p">,</span> <span class="nx">err</span> <span class="p">=</span> <span class="nx">client</span><span class="p">.</span><span class="nf">UpdateDomainRecord</span><span class="p">(</span><span class="nx">request</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// fmt.Println(response)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 程序入口
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nx">recordId</span><span class="p">,</span> <span class="nx">ip</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nf">getRecordIdAndIp</span><span class="p">(</span><span class="s">&#34;lab6.littleghost.ml&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;getRecordIdAndIp has error&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nx">nativeIp</span><span class="p">,</span> <span class="nx">updateFlag</span> <span class="o">:=</span> <span class="nf">checkIp</span><span class="p">(</span><span class="nx">ip</span><span class="p">,</span> <span class="s">&#34;ipv6&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">updateFlag</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">updateAliyunDns</span><span class="p">(</span><span class="nx">recordId</span><span class="p">,</span> <span class="nx">nativeIp</span><span class="p">,</span> <span class="s">&#34;lab6&#34;</span><span class="p">,</span> <span class="s">&#34;AAAA&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;更新了新ip&#34;</span><span class="p">,</span> <span class="nx">nativeIp</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nx">recordId</span><span class="p">,</span> <span class="nx">ip</span><span class="p">,</span> <span class="nx">err</span> <span class="p">=</span> <span class="nf">getRecordIdAndIp</span><span class="p">(</span><span class="s">&#34;lab.littleghost.ml&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;getRecordIdAndIp has error&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nx">nativeIp</span><span class="p">,</span> <span class="nx">updateFlag</span> <span class="p">=</span> <span class="nf">checkIp</span><span class="p">(</span><span class="nx">ip</span><span class="p">,</span> <span class="s">&#34;ipv4&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">updateFlag</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">updateAliyunDns</span><span class="p">(</span><span class="nx">recordId</span><span class="p">,</span> <span class="nx">nativeIp</span><span class="p">,</span> <span class="s">&#34;lab&#34;</span><span class="p">,</span> <span class="s">&#34;A&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;更新了新ip&#34;</span><span class="p">,</span> <span class="nx">nativeIp</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>域名更新恢复正常。</p>
 

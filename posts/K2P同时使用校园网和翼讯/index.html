@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.92.2" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.93.0" /><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -21,7 +21,7 @@
 
     
     
-        <script src="/js/meme.min.8cbe976441b5181abfd3093c9beee209b19cdbb1fa77c48d225a83ba81fa3fb1.js"></script>
+        <script src="/js/meme.min.45a777da25d0b1805991f984be4e9ae5e17f3ea94097882dff058256fa34eb17.js"></script>
 
     
 
@@ -289,8 +289,8 @@ iputils-tracepath:		Nerwork -&gt; iputils-tracepath
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ opkg update <span class="o">&amp;&amp;</span> opkg install kmod-ipt-nat6 <span class="o">&amp;&amp;</span> opkg install kmod-macvlan <span class="o">&amp;&amp;</span> opkg install iputils-tracepath
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ opkg update <span class="o">&amp;&amp;</span> opkg install kmod-ipt-nat6 <span class="o">&amp;&amp;</span> opkg install kmod-macvlan <span class="o">&amp;&amp;</span> opkg install iputils-tracepath
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>在安装时可能会提示内核版本与插件版本不符合，请尝试使用<code>--force-depends</code>以强制安装，例如</p>
 <div class="highlight"><div class="chroma">
@@ -298,8 +298,8 @@ iputils-tracepath:		Nerwork -&gt; iputils-tracepath
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ opkg install --force-depends kmod-ipt-nat6
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ opkg install --force-depends kmod-ipt-nat6
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h1 id="三同时拨号校园网与翼讯"><a href="#三同时拨号校园网与翼讯" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>三、同时拨号校园网与翼讯</h1>
 <h2 id="1设置wan接口为校园网"><a href="#1设置wan接口为校园网" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>1.设置<code>WAN</code>接口为校园网</h2>
@@ -314,9 +314,9 @@ iputils-tracepath:		Nerwork -&gt; iputils-tracepath
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ ip link add link eth0.2 name veth02 <span class="nb">type</span> macvlan
-$ ifconfig veth02 up
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ip link add link eth0.2 name veth02 <span class="nb">type</span> macvlan
+</span></span><span class="line"><span class="cl">$ ifconfig veth02 up
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p><code>保存并应用</code>。</p>
 <p><strong>注意</strong>：一定是用自己的网卡名称替换第一条命令中的<code>eth0.2</code>，当然如果你的也是<code>eth0.2</code>，那可真是太巧了...</p>
@@ -331,11 +331,11 @@ $ ifconfig veth02 up
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 在最后一行exit 0之前添加以下内容</span>
-sleep <span class="m">20</span>
-ip link add link eth0.2 name veth02 <span class="nb">type</span> macvlan
-ifconfig veth02 up
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 在最后一行exit 0之前添加以下内容</span>
+</span></span><span class="line"><span class="cl">sleep <span class="m">20</span>
+</span></span><span class="line"><span class="cl">ip link add link eth0.2 name veth02 <span class="nb">type</span> macvlan
+</span></span><span class="line"><span class="cl">ifconfig veth02 up
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p><code>保存并应用</code>。</p>
 <h3 id="或者"><a href="#或者" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>或者</h3>
@@ -355,9 +355,9 @@ ifconfig veth02 up
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ uci <span class="nb">set</span> network.globals.ula_prefix<span class="o">=</span><span class="s2">&#34;</span><span class="k">$(</span>uci get network.globals.ula_prefix <span class="p">|</span> sed <span class="s1">&#39;s/^./d/&#39;</span><span class="k">)</span><span class="s2">&#34;</span>
-$ uci commit network
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ uci <span class="nb">set</span> network.globals.ula_prefix<span class="o">=</span><span class="s2">&#34;</span><span class="k">$(</span>uci get network.globals.ula_prefix <span class="p">|</span> sed <span class="s1">&#39;s/^./d/&#39;</span><span class="k">)</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">$ uci commit network
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p><em>将 IPv6 LAN 内网地址由 fd 开头变成 dd 开头。</em></p>
 <h2 id="2让dhcp服务器总是通告默认路由"><a href="#2让dhcp服务器总是通告默认路由" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>2.让DHCP服务器总是通告默认路由</h2>
@@ -367,9 +367,9 @@ $ uci commit network
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ uci <span class="nb">set</span> dhcp.lan.ra_default<span class="o">=</span><span class="s1">&#39;1&#39;</span>
-$ uci commit dhcp
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ uci <span class="nb">set</span> dhcp.lan.ra_default<span class="o">=</span><span class="s1">&#39;1&#39;</span>
+</span></span><span class="line"><span class="cl">$ uci commit dhcp
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h2 id="3添加nat6脚本"><a href="#3添加nat6脚本" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>3.添加NAT6脚本</h2>
 <div class="highlight"><div class="chroma">
@@ -377,8 +377,8 @@ $ uci commit dhcp
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ vim /etc/init.d/nat6
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ vim /etc/init.d/nat6
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h3 id="脚本内容"><a href="#脚本内容" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>脚本内容</h3>
 <div class="highlight"><div class="chroma">
@@ -477,99 +477,99 @@ $ uci commit dhcp
 </span><span class="lnt">92
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/sh /etc/rc.common
-</span><span class="cp"></span><span class="c1"># NAT6 init script for OpenWrt // Depends on package: kmod-ipt-nat6</span>
-
-<span class="c1"># edited by Sad Pencil at 2020-02-09</span>
-<span class="c1"># replace route command with ip command to solve issues on new OpenWRT</span>
-
-<span class="nv">START</span><span class="o">=</span><span class="m">55</span>
-
-<span class="c1"># Options</span>
-<span class="c1"># -------</span>
-
-<span class="c1"># Use temporary addresses (IPv6 privacy extensions) for outgoing connections? Yes: 1 / No: 0</span>
-<span class="nv">PRIVACY</span><span class="o">=</span><span class="m">1</span>
-
-<span class="c1"># Maximum number of attempts before this script will stop in case no IPv6 route is available</span>
-<span class="c1"># This limits the execution time of the IPv6 route lookup to (MAX_TRIES+1)*(MAX_TRIES/2) seconds. The default (15) equals 120 seconds.</span>
-<span class="nv">MAX_TRIES</span><span class="o">=</span><span class="m">15</span>
-
-<span class="c1"># An initial delay (in seconds) helps to avoid looking for the IPv6 network too early. Ideally, the first probe is successful.</span>
-<span class="c1"># This would be the case if the time passed between the system log messages &#34;Probing IPv6 route&#34; and &#34;Setting up NAT6&#34; is 1 second.</span>
-<span class="nv">DELAY</span><span class="o">=</span><span class="m">5</span>
-
-<span class="c1"># Logical interface name of outbound IPv6 connection</span>
-<span class="c1"># There should be no need to modify this, unless you changed the default network interface names</span>
-<span class="c1"># Edit by Vincent: I never changed my default network interface names, but still I have to change the WAN6_NAME to &#34;wan&#34; instead of &#34;wan6&#34;</span>
-<span class="nv">WAN6_NAME</span><span class="o">=</span><span class="s2">&#34;wan6&#34;</span>
-
-<span class="c1"># ---------------------------------------------------</span>
-<span class="c1"># Options end here - no need to change anything below</span>
-
-boot<span class="o">()</span> <span class="o">{</span>
-        <span class="o">[</span> <span class="nv">$DELAY</span> -gt <span class="m">0</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> sleep <span class="nv">$DELAY</span>
-        <span class="nv">WAN6_INTERFACE</span><span class="o">=</span><span class="k">$(</span>uci get <span class="s2">&#34;network.</span><span class="nv">$WAN6_NAME</span><span class="s2">.ifname&#34;</span><span class="k">)</span>
-        logger -t NAT6 <span class="s2">&#34;Probing IPv6 route&#34;</span>
-        <span class="nv">PROBE</span><span class="o">=</span><span class="m">0</span>
-        <span class="nv">COUNT</span><span class="o">=</span><span class="m">1</span>
-        <span class="k">while</span> <span class="o">[</span> <span class="nv">$PROBE</span> -eq <span class="m">0</span> <span class="o">]</span>
-        <span class="k">do</span>
-                <span class="k">if</span> <span class="o">[</span> <span class="nv">$COUNT</span> -gt <span class="nv">$MAX_TRIES</span> <span class="o">]</span>
-                <span class="k">then</span>
-                        logger -t NAT6 <span class="s2">&#34;Fatal error: No IPv6 route found (reached retry limit)&#34;</span> <span class="o">&amp;&amp;</span> <span class="nb">exit</span> <span class="m">1</span>
-                <span class="k">fi</span>
-                sleep <span class="nv">$COUNT</span>
-                <span class="nv">COUNT</span><span class="o">=</span><span class="k">$((</span>COUNT+1<span class="k">))</span>
-                <span class="nv">PROBE</span><span class="o">=</span><span class="k">$(</span>ip -6 route <span class="p">|</span> grep -i <span class="s1">&#39;^default.*via&#39;</span> <span class="p">|</span> grep -i -F <span class="s2">&#34;dev </span><span class="nv">$WAN6_INTERFACE</span><span class="s2">&#34;</span> <span class="p">|</span> grep -i -o <span class="s1">&#39;via.*&#39;</span> <span class="p">|</span> wc -l<span class="k">)</span>
-        <span class="k">done</span>
-
-        logger -t NAT6 <span class="s2">&#34;Setting up NAT6&#34;</span>
-
-        <span class="k">if</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$WAN6_INTERFACE</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="o">||</span> <span class="o">[</span> ! -e <span class="s2">&#34;/sys/class/net/</span><span class="nv">$WAN6_INTERFACE</span><span class="s2">/&#34;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
-                logger -t NAT6 <span class="s2">&#34;Fatal error: Lookup of </span><span class="nv">$WAN6_NAME</span><span class="s2"> interface failed. Were the default interface names changed?&#34;</span> <span class="o">&amp;&amp;</span> <span class="nb">exit</span> <span class="m">1</span>
-        <span class="k">fi</span>
-        <span class="nv">WAN6_GATEWAY</span><span class="o">=</span><span class="k">$(</span>ip -6 route <span class="p">|</span> grep -i <span class="s1">&#39;^default.*via&#39;</span> <span class="p">|</span> grep -i -F <span class="s2">&#34;dev </span><span class="nv">$WAN6_INTERFACE</span><span class="s2">&#34;</span> <span class="p">|</span> grep -i -o <span class="s1">&#39;via.*&#39;</span> <span class="p">|</span> cut -d <span class="s1">&#39; &#39;</span> -f <span class="m">2</span> <span class="p">|</span> head -n 1<span class="k">)</span>
-        <span class="k">if</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$WAN6_GATEWAY</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
-                logger -t NAT6 <span class="s2">&#34;Fatal error: No IPv6 gateway for </span><span class="nv">$WAN6_INTERFACE</span><span class="s2"> found&#34;</span> <span class="o">&amp;&amp;</span> <span class="nb">exit</span> <span class="m">1</span>
-        <span class="k">fi</span>
-        <span class="nv">LAN_ULA_PREFIX</span><span class="o">=</span><span class="k">$(</span>uci get network.globals.ula_prefix<span class="k">)</span>
-        <span class="k">if</span> <span class="o">[</span> <span class="k">$(</span><span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$LAN_ULA_PREFIX</span><span class="s2">&#34;</span> <span class="p">|</span> grep -c -E <span class="s2">&#34;^([0-9a-fA-F]{4}):([0-9a-fA-F]{0,4}):&#34;</span><span class="k">)</span> -ne <span class="m">1</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
-                logger -t NAT6 <span class="s2">&#34;Fatal error: IPv6 ULA prefix </span><span class="nv">$LAN_ULA_PREFIX</span><span class="s2"> seems invalid. Please verify that a prefix is set and valid.&#34;</span> <span class="o">&amp;&amp;</span> <span class="nb">exit</span> <span class="m">1</span>
-        <span class="k">fi</span>
-
-        ip6tables -t nat -I POSTROUTING -s <span class="s2">&#34;</span><span class="nv">$LAN_ULA_PREFIX</span><span class="s2">&#34;</span> -o <span class="s2">&#34;</span><span class="nv">$WAN6_INTERFACE</span><span class="s2">&#34;</span> -j MASQUERADE
-        <span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -eq <span class="m">0</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
-                logger -t NAT6 <span class="s2">&#34;Added IPv6 masquerading rule to the firewall (Src: </span><span class="nv">$LAN_ULA_PREFIX</span><span class="s2"> - Dst: </span><span class="nv">$WAN6_INTERFACE</span><span class="s2">)&#34;</span>
-        <span class="k">else</span>
-                logger -t NAT6 <span class="s2">&#34;Fatal error: Failed to add IPv6 masquerading rule to the firewall (Src: </span><span class="nv">$LAN_ULA_PREFIX</span><span class="s2"> - Dst: </span><span class="nv">$WAN6_INTERFACE</span><span class="s2">)&#34;</span> <span class="o">&amp;&amp;</span> <span class="nb">exit</span> <span class="m">1</span>
-        <span class="k">fi</span>
-
-        ip -6 route add 2000::/3 via <span class="s2">&#34;</span><span class="nv">$WAN6_GATEWAY</span><span class="s2">&#34;</span> dev <span class="s2">&#34;</span><span class="nv">$WAN6_INTERFACE</span><span class="s2">&#34;</span>
-        <span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -eq <span class="m">0</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
-                logger -t NAT6 <span class="s2">&#34;Added </span><span class="nv">$WAN6_GATEWAY</span><span class="s2"> to routing table as gateway on </span><span class="nv">$WAN6_INTERFACE</span><span class="s2"> for outgoing connections&#34;</span>
-        <span class="k">else</span>
-                logger -t NAT6 <span class="s2">&#34;Error: Failed to add </span><span class="nv">$WAN6_GATEWAY</span><span class="s2"> to routing table as gateway on </span><span class="nv">$WAN6_INTERFACE</span><span class="s2"> for outgoing connections&#34;</span>
-        <span class="k">fi</span>
-
-        <span class="k">if</span> <span class="o">[</span> <span class="nv">$PRIVACY</span> -eq <span class="m">1</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
-                <span class="nb">echo</span> <span class="m">2</span> &gt; <span class="s2">&#34;/proc/sys/net/ipv6/conf/</span><span class="nv">$WAN6_INTERFACE</span><span class="s2">/accept_ra&#34;</span>
-                <span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -eq <span class="m">0</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
-                        logger -t NAT6 <span class="s2">&#34;Accepting router advertisements on </span><span class="nv">$WAN6_INTERFACE</span><span class="s2"> even if forwarding is enabled (required for temporary addresses)&#34;</span>
-                <span class="k">else</span>
-                        logger -t NAT6 <span class="s2">&#34;Error: Failed to change router advertisements accept policy on </span><span class="nv">$WAN6_INTERFACE</span><span class="s2"> (required for temporary addresses)&#34;</span>
-                <span class="k">fi</span>
-                <span class="nb">echo</span> <span class="m">2</span> &gt; <span class="s2">&#34;/proc/sys/net/ipv6/conf/</span><span class="nv">$WAN6_INTERFACE</span><span class="s2">/use_tempaddr&#34;</span>
-                <span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -eq <span class="m">0</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
-                        logger -t NAT6 <span class="s2">&#34;Using temporary addresses for outgoing connections on interface </span><span class="nv">$WAN6_INTERFACE</span><span class="s2">&#34;</span>
-                <span class="k">else</span>
-                        logger -t NAT6 <span class="s2">&#34;Error: Failed to enable temporary addresses for outgoing connections on interface </span><span class="nv">$WAN6_INTERFACE</span><span class="s2">&#34;</span>
-                <span class="k">fi</span>
-        <span class="k">fi</span>
-
-        <span class="nb">exit</span> <span class="m">0</span>
-<span class="o">}</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/sh /etc/rc.common
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="c1"># NAT6 init script for OpenWrt // Depends on package: kmod-ipt-nat6</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># edited by Sad Pencil at 2020-02-09</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># replace route command with ip command to solve issues on new OpenWRT</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">START</span><span class="o">=</span><span class="m">55</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Options</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -------</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Use temporary addresses (IPv6 privacy extensions) for outgoing connections? Yes: 1 / No: 0</span>
+</span></span><span class="line"><span class="cl"><span class="nv">PRIVACY</span><span class="o">=</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Maximum number of attempts before this script will stop in case no IPv6 route is available</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># This limits the execution time of the IPv6 route lookup to (MAX_TRIES+1)*(MAX_TRIES/2) seconds. The default (15) equals 120 seconds.</span>
+</span></span><span class="line"><span class="cl"><span class="nv">MAX_TRIES</span><span class="o">=</span><span class="m">15</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># An initial delay (in seconds) helps to avoid looking for the IPv6 network too early. Ideally, the first probe is successful.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># This would be the case if the time passed between the system log messages &#34;Probing IPv6 route&#34; and &#34;Setting up NAT6&#34; is 1 second.</span>
+</span></span><span class="line"><span class="cl"><span class="nv">DELAY</span><span class="o">=</span><span class="m">5</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Logical interface name of outbound IPv6 connection</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># There should be no need to modify this, unless you changed the default network interface names</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Edit by Vincent: I never changed my default network interface names, but still I have to change the WAN6_NAME to &#34;wan&#34; instead of &#34;wan6&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">WAN6_NAME</span><span class="o">=</span><span class="s2">&#34;wan6&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ---------------------------------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Options end here - no need to change anything below</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">boot<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="o">[</span> <span class="nv">$DELAY</span> -gt <span class="m">0</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> sleep <span class="nv">$DELAY</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">WAN6_INTERFACE</span><span class="o">=</span><span class="k">$(</span>uci get <span class="s2">&#34;network.</span><span class="nv">$WAN6_NAME</span><span class="s2">.ifname&#34;</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl">        logger -t NAT6 <span class="s2">&#34;Probing IPv6 route&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">PROBE</span><span class="o">=</span><span class="m">0</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">COUNT</span><span class="o">=</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="o">[</span> <span class="nv">$PROBE</span> -eq <span class="m">0</span> <span class="o">]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">do</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="o">[</span> <span class="nv">$COUNT</span> -gt <span class="nv">$MAX_TRIES</span> <span class="o">]</span>
+</span></span><span class="line"><span class="cl">                <span class="k">then</span>
+</span></span><span class="line"><span class="cl">                        logger -t NAT6 <span class="s2">&#34;Fatal error: No IPv6 route found (reached retry limit)&#34;</span> <span class="o">&amp;&amp;</span> <span class="nb">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl">                <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">                sleep <span class="nv">$COUNT</span>
+</span></span><span class="line"><span class="cl">                <span class="nv">COUNT</span><span class="o">=</span><span class="k">$((</span>COUNT+1<span class="k">))</span>
+</span></span><span class="line"><span class="cl">                <span class="nv">PROBE</span><span class="o">=</span><span class="k">$(</span>ip -6 route <span class="p">|</span> grep -i <span class="s1">&#39;^default.*via&#39;</span> <span class="p">|</span> grep -i -F <span class="s2">&#34;dev </span><span class="nv">$WAN6_INTERFACE</span><span class="s2">&#34;</span> <span class="p">|</span> grep -i -o <span class="s1">&#39;via.*&#39;</span> <span class="p">|</span> wc -l<span class="k">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">done</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        logger -t NAT6 <span class="s2">&#34;Setting up NAT6&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$WAN6_INTERFACE</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="o">||</span> <span class="o">[</span> ! -e <span class="s2">&#34;/sys/class/net/</span><span class="nv">$WAN6_INTERFACE</span><span class="s2">/&#34;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">                logger -t NAT6 <span class="s2">&#34;Fatal error: Lookup of </span><span class="nv">$WAN6_NAME</span><span class="s2"> interface failed. Were the default interface names changed?&#34;</span> <span class="o">&amp;&amp;</span> <span class="nb">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl">        <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">WAN6_GATEWAY</span><span class="o">=</span><span class="k">$(</span>ip -6 route <span class="p">|</span> grep -i <span class="s1">&#39;^default.*via&#39;</span> <span class="p">|</span> grep -i -F <span class="s2">&#34;dev </span><span class="nv">$WAN6_INTERFACE</span><span class="s2">&#34;</span> <span class="p">|</span> grep -i -o <span class="s1">&#39;via.*&#39;</span> <span class="p">|</span> cut -d <span class="s1">&#39; &#39;</span> -f <span class="m">2</span> <span class="p">|</span> head -n 1<span class="k">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$WAN6_GATEWAY</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">                logger -t NAT6 <span class="s2">&#34;Fatal error: No IPv6 gateway for </span><span class="nv">$WAN6_INTERFACE</span><span class="s2"> found&#34;</span> <span class="o">&amp;&amp;</span> <span class="nb">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl">        <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">LAN_ULA_PREFIX</span><span class="o">=</span><span class="k">$(</span>uci get network.globals.ula_prefix<span class="k">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">[</span> <span class="k">$(</span><span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$LAN_ULA_PREFIX</span><span class="s2">&#34;</span> <span class="p">|</span> grep -c -E <span class="s2">&#34;^([0-9a-fA-F]{4}):([0-9a-fA-F]{0,4}):&#34;</span><span class="k">)</span> -ne <span class="m">1</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">                logger -t NAT6 <span class="s2">&#34;Fatal error: IPv6 ULA prefix </span><span class="nv">$LAN_ULA_PREFIX</span><span class="s2"> seems invalid. Please verify that a prefix is set and valid.&#34;</span> <span class="o">&amp;&amp;</span> <span class="nb">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl">        <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        ip6tables -t nat -I POSTROUTING -s <span class="s2">&#34;</span><span class="nv">$LAN_ULA_PREFIX</span><span class="s2">&#34;</span> -o <span class="s2">&#34;</span><span class="nv">$WAN6_INTERFACE</span><span class="s2">&#34;</span> -j MASQUERADE
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -eq <span class="m">0</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">                logger -t NAT6 <span class="s2">&#34;Added IPv6 masquerading rule to the firewall (Src: </span><span class="nv">$LAN_ULA_PREFIX</span><span class="s2"> - Dst: </span><span class="nv">$WAN6_INTERFACE</span><span class="s2">)&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span>
+</span></span><span class="line"><span class="cl">                logger -t NAT6 <span class="s2">&#34;Fatal error: Failed to add IPv6 masquerading rule to the firewall (Src: </span><span class="nv">$LAN_ULA_PREFIX</span><span class="s2"> - Dst: </span><span class="nv">$WAN6_INTERFACE</span><span class="s2">)&#34;</span> <span class="o">&amp;&amp;</span> <span class="nb">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl">        <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        ip -6 route add 2000::/3 via <span class="s2">&#34;</span><span class="nv">$WAN6_GATEWAY</span><span class="s2">&#34;</span> dev <span class="s2">&#34;</span><span class="nv">$WAN6_INTERFACE</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -eq <span class="m">0</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">                logger -t NAT6 <span class="s2">&#34;Added </span><span class="nv">$WAN6_GATEWAY</span><span class="s2"> to routing table as gateway on </span><span class="nv">$WAN6_INTERFACE</span><span class="s2"> for outgoing connections&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span>
+</span></span><span class="line"><span class="cl">                logger -t NAT6 <span class="s2">&#34;Error: Failed to add </span><span class="nv">$WAN6_GATEWAY</span><span class="s2"> to routing table as gateway on </span><span class="nv">$WAN6_INTERFACE</span><span class="s2"> for outgoing connections&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">[</span> <span class="nv">$PRIVACY</span> -eq <span class="m">1</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">echo</span> <span class="m">2</span> &gt; <span class="s2">&#34;/proc/sys/net/ipv6/conf/</span><span class="nv">$WAN6_INTERFACE</span><span class="s2">/accept_ra&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -eq <span class="m">0</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">                        logger -t NAT6 <span class="s2">&#34;Accepting router advertisements on </span><span class="nv">$WAN6_INTERFACE</span><span class="s2"> even if forwarding is enabled (required for temporary addresses)&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="k">else</span>
+</span></span><span class="line"><span class="cl">                        logger -t NAT6 <span class="s2">&#34;Error: Failed to change router advertisements accept policy on </span><span class="nv">$WAN6_INTERFACE</span><span class="s2"> (required for temporary addresses)&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">echo</span> <span class="m">2</span> &gt; <span class="s2">&#34;/proc/sys/net/ipv6/conf/</span><span class="nv">$WAN6_INTERFACE</span><span class="s2">/use_tempaddr&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -eq <span class="m">0</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">                        logger -t NAT6 <span class="s2">&#34;Using temporary addresses for outgoing connections on interface </span><span class="nv">$WAN6_INTERFACE</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="k">else</span>
+</span></span><span class="line"><span class="cl">                        logger -t NAT6 <span class="s2">&#34;Error: Failed to enable temporary addresses for outgoing connections on interface </span><span class="nv">$WAN6_INTERFACE</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">        <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nb">exit</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h3 id="增加执行权限"><a href="#增加执行权限" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>增加执行权限</h3>
 <div class="highlight"><div class="chroma">
@@ -577,8 +577,8 @@ boot<span class="o">()</span> <span class="o">{</span>
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ chmod +x /etc/init.d/nat6
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ chmod +x /etc/init.d/nat6
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h3 id="配置脚本开机启动"><a href="#配置脚本开机启动" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>配置脚本开机启动</h3>
 <div class="highlight"><div class="chroma">
@@ -586,8 +586,8 @@ boot<span class="o">()</span> <span class="o">{</span>
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ /etc/init.d/nat6 <span class="nb">enable</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ /etc/init.d/nat6 <span class="nb">enable</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h2 id="4修改内核"><a href="#4修改内核" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>4.修改内核</h2>
 <p><strong>接收广播并开启IPv6转发</strong></p>
@@ -596,8 +596,8 @@ boot<span class="o">()</span> <span class="o">{</span>
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ vim /etc/sysctl.conf
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ vim /etc/sysctl.conf
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>添加内容</p>
 <pre tabindex="0"><code>net.ipv6.conf.default.forwarding=2
@@ -611,9 +611,9 @@ net.ipv6.conf.all.accept_ra=2
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ <span class="nb">echo</span> <span class="s2">&#34;ip6tables -t nat -I POSTROUTING -s </span><span class="k">$(</span>uci get network.globals.ula_prefix<span class="k">)</span><span class="s2"> -j MASQUERADE&#34;</span> &gt;&gt; /etc/firewall.user
-$ /etc/init.d/firewall restart
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="s2">&#34;ip6tables -t nat -I POSTROUTING -s </span><span class="k">$(</span>uci get network.globals.ula_prefix<span class="k">)</span><span class="s2"> -j MASQUERADE&#34;</span> &gt;&gt; /etc/firewall.user
+</span></span><span class="line"><span class="cl">$ /etc/init.d/firewall restart
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h2 id="6启动并重启"><a href="#6启动并重启" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>6.启动并重启</h2>
 <div class="highlight"><div class="chroma">
@@ -621,8 +621,8 @@ $ /etc/init.d/firewall restart
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ reboot
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ reboot
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>理论上每台连接这个路由器的设备都能同时使用IPv4和IPv6了。</p>
 

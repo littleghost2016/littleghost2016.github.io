@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.92.2" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.93.0" /><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -21,7 +21,7 @@
 
     
     
-        <script src="/js/meme.min.8cbe976441b5181abfd3093c9beee209b19cdbb1fa77c48d225a83ba81fa3fb1.js"></script>
+        <script src="/js/meme.min.45a777da25d0b1805991f984be4e9ae5e17f3ea94097882dff058256fa34eb17.js"></script>
 
     
 
@@ -294,16 +294,16 @@
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">TreeNode</span> <span class="kd">struct</span> <span class="p">{</span>
-    <span class="nx">Character</span>  <span class="kt">byte</span>      <span class="s">`json:&#34;character&#34;`</span>  <span class="c1">// 字母
-</span><span class="c1"></span>    <span class="nx">Weight</span>     <span class="kt">uint32</span>    <span class="s">`json:&#34;weight&#34;`</span>     <span class="c1">// 权重
-</span><span class="c1"></span>    <span class="nx">FNode</span>      <span class="o">*</span><span class="nx">TreeNode</span> <span class="s">`json:&#34;fnode&#34;`</span>      <span class="c1">// 父节点
-</span><span class="c1"></span>    <span class="nx">LNode</span>      <span class="o">*</span><span class="nx">TreeNode</span> <span class="s">`json:&#34;lnode&#34;`</span>      <span class="c1">// 左节点
-</span><span class="c1"></span>    <span class="nx">RNode</span>      <span class="o">*</span><span class="nx">TreeNode</span> <span class="s">`json:&#34;rnode&#34;`</span>      <span class="c1">// 右节点
-</span><span class="c1"></span>    <span class="nx">Code</span>       <span class="kt">string</span>    <span class="s">`json:&#34;code&#34;`</span>       <span class="c1">// 编码
-</span><span class="c1"></span>    <span class="nx">IsLeafNode</span> <span class="kt">bool</span>      <span class="s">`json:&#34;isleafnode&#34;`</span> <span class="c1">// 为叶节点
-</span><span class="c1"></span><span class="p">}</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">TreeNode</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Character</span>  <span class="kt">byte</span>      <span class="s">`json:&#34;character&#34;`</span>  <span class="c1">// 字母
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">Weight</span>     <span class="kt">uint32</span>    <span class="s">`json:&#34;weight&#34;`</span>     <span class="c1">// 权重
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">FNode</span>      <span class="o">*</span><span class="nx">TreeNode</span> <span class="s">`json:&#34;fnode&#34;`</span>      <span class="c1">// 父节点
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">LNode</span>      <span class="o">*</span><span class="nx">TreeNode</span> <span class="s">`json:&#34;lnode&#34;`</span>      <span class="c1">// 左节点
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">RNode</span>      <span class="o">*</span><span class="nx">TreeNode</span> <span class="s">`json:&#34;rnode&#34;`</span>      <span class="c1">// 右节点
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">Code</span>       <span class="kt">string</span>    <span class="s">`json:&#34;code&#34;`</span>       <span class="c1">// 编码
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">IsLeafNode</span> <span class="kt">bool</span>      <span class="s">`json:&#34;isleafnode&#34;`</span> <span class="c1">// 为叶节点
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h2 id="编码流程"><a href="#编码流程" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>编码流程</h2>
 <div class="highlight"><div class="chroma">
@@ -339,36 +339,36 @@
 </span><span class="lnt">29
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">EncodeHandler</span><span class="p">(</span><span class="nx">filePath</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">textByteSlice</span> <span class="p">[]</span><span class="kt">byte</span><span class="p">)</span> <span class="p">{</span>
-
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nx">textByteSlice</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
-        <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;There is no character in text!&#34;</span><span class="p">)</span>
-        <span class="nx">os</span><span class="p">.</span><span class="nf">Exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-    <span class="p">}</span>
-
-    <span class="c1">// 统计字符出现次数
-</span><span class="c1"></span>    <span class="nx">characterFrequencyMap</span> <span class="o">:=</span> <span class="nx">util</span><span class="p">.</span><span class="nf">CountCharacterFromText</span><span class="p">(</span><span class="nx">textByteSlice</span><span class="p">)</span>
-
-    <span class="c1">// 生成霍夫曼树节点
-</span><span class="c1"></span>    <span class="nx">treeNodeMap</span> <span class="o">:=</span> <span class="nf">GenerateHuffmanTreeNode</span><span class="p">(</span><span class="nx">characterFrequencyMap</span><span class="p">)</span>
-
-    <span class="c1">// 生成霍夫曼树
-</span><span class="c1"></span>    <span class="nf">GenerateHuffmanTree</span><span class="p">(</span><span class="nx">treeNodeMap</span><span class="p">)</span>
-
-    <span class="c1">// 仅做测试用
-</span><span class="c1"></span>    <span class="c1">// PrintTreeMap(treeNodeMap)
-</span><span class="c1"></span>
-    <span class="nx">byteChannelToFile</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">chan</span> <span class="kt">byte</span><span class="p">,</span> <span class="mi">64</span><span class="p">)</span>
-
-    <span class="c1">// 准备二进制文件所需的数据
-</span><span class="c1"></span>    <span class="k">go</span> <span class="nf">writeBinaryFile</span><span class="p">(</span><span class="nx">treeNodeMap</span><span class="p">,</span> <span class="nx">characterFrequencyMap</span><span class="p">,</span> <span class="nx">textByteSlice</span><span class="p">,</span> <span class="nx">byteChannelToFile</span><span class="p">)</span>
-
-    <span class="c1">// 构造输出文件名
-</span><span class="c1"></span>    <span class="nx">binaryFileName</span> <span class="o">:=</span> <span class="nx">fmt</span><span class="p">.</span><span class="nf">Sprintf</span><span class="p">(</span><span class="s">&#34;%s.bin&#34;</span><span class="p">,</span> <span class="nx">filePath</span><span class="p">)</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;binaryFileName&#34;</span><span class="p">,</span> <span class="nx">binaryFileName</span><span class="p">)</span>
-    <span class="nx">util</span><span class="p">.</span><span class="nf">WriteByteToFile</span><span class="p">(</span><span class="nx">binaryFileName</span><span class="p">,</span> <span class="nx">byteChannelToFile</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">EncodeHandler</span><span class="p">(</span><span class="nx">filePath</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">textByteSlice</span> <span class="p">[]</span><span class="kt">byte</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nx">textByteSlice</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;There is no character in text!&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">os</span><span class="p">.</span><span class="nf">Exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 统计字符出现次数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">characterFrequencyMap</span> <span class="o">:=</span> <span class="nx">util</span><span class="p">.</span><span class="nf">CountCharacterFromText</span><span class="p">(</span><span class="nx">textByteSlice</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 生成霍夫曼树节点
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">treeNodeMap</span> <span class="o">:=</span> <span class="nf">GenerateHuffmanTreeNode</span><span class="p">(</span><span class="nx">characterFrequencyMap</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 生成霍夫曼树
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">GenerateHuffmanTree</span><span class="p">(</span><span class="nx">treeNodeMap</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 仅做测试用
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// PrintTreeMap(treeNodeMap)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="nx">byteChannelToFile</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">chan</span> <span class="kt">byte</span><span class="p">,</span> <span class="mi">64</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 准备二进制文件所需的数据
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">go</span> <span class="nf">writeBinaryFile</span><span class="p">(</span><span class="nx">treeNodeMap</span><span class="p">,</span> <span class="nx">characterFrequencyMap</span><span class="p">,</span> <span class="nx">textByteSlice</span><span class="p">,</span> <span class="nx">byteChannelToFile</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 构造输出文件名
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">binaryFileName</span> <span class="o">:=</span> <span class="nx">fmt</span><span class="p">.</span><span class="nf">Sprintf</span><span class="p">(</span><span class="s">&#34;%s.bin&#34;</span><span class="p">,</span> <span class="nx">filePath</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;binaryFileName&#34;</span><span class="p">,</span> <span class="nx">binaryFileName</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">util</span><span class="p">.</span><span class="nf">WriteByteToFile</span><span class="p">(</span><span class="nx">binaryFileName</span><span class="p">,</span> <span class="nx">byteChannelToFile</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h2 id="初始化组成霍夫曼树的节点"><a href="#初始化组成霍夫曼树的节点" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>初始化组成霍夫曼树的节点</h2>
 <div class="highlight"><div class="chroma">
@@ -392,24 +392,24 @@
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">GenerateHuffmanTreeNode</span><span class="p">(</span><span class="nx">characterFrequencyMap</span> <span class="kd">map</span><span class="p">[</span><span class="kt">byte</span><span class="p">]</span><span class="kt">uint32</span><span class="p">)</span> <span class="p">(</span><span class="nx">treeNodeMap</span> <span class="kd">map</span><span class="p">[</span><span class="kt">byte</span><span class="p">]</span><span class="o">*</span><span class="nx">TreeNode</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">treeNodeMap</span> <span class="p">=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">byte</span><span class="p">]</span><span class="o">*</span><span class="nx">TreeNode</span><span class="p">)</span>
-    <span class="k">for</span> <span class="nx">k</span><span class="p">,</span> <span class="nx">v</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">characterFrequencyMap</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">ok</span> <span class="o">:=</span> <span class="nx">treeNodeMap</span><span class="p">[</span><span class="nx">k</span><span class="p">];</span> <span class="p">!</span><span class="nx">ok</span> <span class="p">{</span>
-            <span class="nx">treeNodeMap</span><span class="p">[</span><span class="nx">k</span><span class="p">]</span> <span class="p">=</span> <span class="o">&amp;</span><span class="nx">TreeNode</span><span class="p">{</span>
-                <span class="nx">Character</span><span class="p">:</span>  <span class="nx">k</span><span class="p">,</span>
-                <span class="nx">Weight</span><span class="p">:</span>     <span class="nx">v</span><span class="p">,</span>
-                <span class="nx">FNode</span><span class="p">:</span>      <span class="kc">nil</span><span class="p">,</span>
-                <span class="nx">LNode</span><span class="p">:</span>      <span class="kc">nil</span><span class="p">,</span>
-                <span class="nx">RNode</span><span class="p">:</span>      <span class="kc">nil</span><span class="p">,</span>
-                <span class="nx">Code</span><span class="p">:</span>       <span class="s">&#34;&#34;</span><span class="p">,</span>
-                <span class="nx">IsLeafNode</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-    <span class="k">return</span>
-<span class="p">}</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">GenerateHuffmanTreeNode</span><span class="p">(</span><span class="nx">characterFrequencyMap</span> <span class="kd">map</span><span class="p">[</span><span class="kt">byte</span><span class="p">]</span><span class="kt">uint32</span><span class="p">)</span> <span class="p">(</span><span class="nx">treeNodeMap</span> <span class="kd">map</span><span class="p">[</span><span class="kt">byte</span><span class="p">]</span><span class="o">*</span><span class="nx">TreeNode</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">treeNodeMap</span> <span class="p">=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">byte</span><span class="p">]</span><span class="o">*</span><span class="nx">TreeNode</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="nx">k</span><span class="p">,</span> <span class="nx">v</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">characterFrequencyMap</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">ok</span> <span class="o">:=</span> <span class="nx">treeNodeMap</span><span class="p">[</span><span class="nx">k</span><span class="p">];</span> <span class="p">!</span><span class="nx">ok</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">treeNodeMap</span><span class="p">[</span><span class="nx">k</span><span class="p">]</span> <span class="p">=</span> <span class="o">&amp;</span><span class="nx">TreeNode</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">Character</span><span class="p">:</span>  <span class="nx">k</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">Weight</span><span class="p">:</span>     <span class="nx">v</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">FNode</span><span class="p">:</span>      <span class="kc">nil</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">LNode</span><span class="p">:</span>      <span class="kc">nil</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">RNode</span><span class="p">:</span>      <span class="kc">nil</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">Code</span><span class="p">:</span>       <span class="s">&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">IsLeafNode</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h2 id="生成霍夫曼树"><a href="#生成霍夫曼树" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>生成霍夫曼树</h2>
 <div class="highlight"><div class="chroma">
@@ -455,46 +455,46 @@
 </span><span class="lnt">39
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">GenerateHuffmanTree</span><span class="p">(</span><span class="nx">treeNodeMap</span> <span class="kd">map</span><span class="p">[</span><span class="kt">byte</span><span class="p">]</span><span class="o">*</span><span class="nx">TreeNode</span><span class="p">)</span> <span class="p">(</span><span class="nx">rootNode</span> <span class="o">*</span><span class="nx">TreeNode</span><span class="p">)</span> <span class="p">{</span>
-
-    <span class="c1">// 验证：map是无序的
-</span><span class="c1"></span>    <span class="c1">// for k, v := range treeNodeMap {
-</span><span class="c1"></span>    <span class="c1">//  fmt.Println(k, v)
-</span><span class="c1"></span>    <span class="c1">// }
-</span><span class="c1"></span>
-    <span class="c1">// 转换成Slice便于排序
-</span><span class="c1"></span>    <span class="nx">tns</span> <span class="o">:=</span> <span class="nf">treeNodeMapToTreeNodeSlice</span><span class="p">(</span><span class="nx">treeNodeMap</span><span class="p">)</span>
-    <span class="c1">// 排序，当排序完成后，出现次数小的在前面
-</span><span class="c1"></span>    <span class="c1">// 出现次数相同时，ASCII码小的排在前面
-</span><span class="c1"></span>    <span class="nx">sort</span><span class="p">.</span><span class="nf">Sort</span><span class="p">(</span><span class="nf">TreeNodeSlice</span><span class="p">(</span><span class="nx">tns</span><span class="p">))</span>
-
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nx">tns</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">{</span>
-        <span class="nb">panic</span><span class="p">(</span><span class="s">&#34;There is none in TreeNodeSlice!&#34;</span><span class="p">)</span>
-    <span class="p">}</span>
-
-    <span class="k">for</span> <span class="nb">len</span><span class="p">(</span><span class="nx">tns</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">1</span> <span class="p">{</span>
-        <span class="nx">tempNode</span> <span class="o">:=</span> <span class="nx">TreeNode</span><span class="p">{</span>
-            <span class="nx">Character</span><span class="p">:</span>  <span class="mi">0</span><span class="p">,</span> <span class="c1">// 非叶节点均为0
-</span><span class="c1"></span>            <span class="nx">Weight</span><span class="p">:</span>     <span class="nx">tns</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">Weight</span> <span class="o">+</span> <span class="nx">tns</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">Weight</span><span class="p">,</span> <span class="c1">// 合并权重最小的两个节点
-</span><span class="c1"></span>            <span class="nx">LNode</span><span class="p">:</span>      <span class="nx">tns</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="c1">// 默认左节点权重比右边小，若权重相等，则默认左节点的ASCII值比右节点小
-</span><span class="c1"></span>            <span class="nx">RNode</span><span class="p">:</span>      <span class="nx">tns</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
-            <span class="nx">FNode</span><span class="p">:</span>      <span class="kc">nil</span><span class="p">,</span>
-            <span class="nx">Code</span><span class="p">:</span>       <span class="s">&#34;&#34;</span><span class="p">,</span>
-            <span class="nx">IsLeafNode</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="p">}</span>
-        <span class="nx">tns</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">FNode</span> <span class="p">=</span> <span class="o">&amp;</span><span class="nx">tempNode</span> <span class="c1">// 注意取地址
-</span><span class="c1"></span>        <span class="nx">tns</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">FNode</span> <span class="p">=</span> <span class="nx">tns</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">FNode</span>
-        <span class="nx">tns</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">tns</span><span class="p">[</span><span class="mi">2</span><span class="p">:],</span> <span class="o">&amp;</span><span class="nx">tempNode</span><span class="p">)</span> <span class="c1">// 新节点添加进切片，并删除已经被合并的两个权重最小的两个节点
-</span><span class="c1"></span>        <span class="c1">// 再次排序
-</span><span class="c1"></span>        <span class="nx">sort</span><span class="p">.</span><span class="nf">Sort</span><span class="p">(</span><span class="nf">TreeNodeSlice</span><span class="p">(</span><span class="nx">tns</span><span class="p">))</span>
-    <span class="p">}</span>
-
-    <span class="nx">rootNode</span> <span class="p">=</span> <span class="nx">tns</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="nf">distributeCode</span><span class="p">(</span><span class="nx">rootNode</span><span class="p">)</span>
-
-    <span class="k">return</span>
-<span class="p">}</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">GenerateHuffmanTree</span><span class="p">(</span><span class="nx">treeNodeMap</span> <span class="kd">map</span><span class="p">[</span><span class="kt">byte</span><span class="p">]</span><span class="o">*</span><span class="nx">TreeNode</span><span class="p">)</span> <span class="p">(</span><span class="nx">rootNode</span> <span class="o">*</span><span class="nx">TreeNode</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 验证：map是无序的
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// for k, v := range treeNodeMap {
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">//  fmt.Println(k, v)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// }
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 转换成Slice便于排序
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">tns</span> <span class="o">:=</span> <span class="nf">treeNodeMapToTreeNodeSlice</span><span class="p">(</span><span class="nx">treeNodeMap</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 排序，当排序完成后，出现次数小的在前面
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 出现次数相同时，ASCII码小的排在前面
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">sort</span><span class="p">.</span><span class="nf">Sort</span><span class="p">(</span><span class="nf">TreeNodeSlice</span><span class="p">(</span><span class="nx">tns</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nx">tns</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">panic</span><span class="p">(</span><span class="s">&#34;There is none in TreeNodeSlice!&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="nb">len</span><span class="p">(</span><span class="nx">tns</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">1</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">tempNode</span> <span class="o">:=</span> <span class="nx">TreeNode</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">Character</span><span class="p">:</span>  <span class="mi">0</span><span class="p">,</span> <span class="c1">// 非叶节点均为0
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">Weight</span><span class="p">:</span>     <span class="nx">tns</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">Weight</span> <span class="o">+</span> <span class="nx">tns</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">Weight</span><span class="p">,</span> <span class="c1">// 合并权重最小的两个节点
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">LNode</span><span class="p">:</span>      <span class="nx">tns</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="c1">// 默认左节点权重比右边小，若权重相等，则默认左节点的ASCII值比右节点小
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">RNode</span><span class="p">:</span>      <span class="nx">tns</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">FNode</span><span class="p">:</span>      <span class="kc">nil</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">Code</span><span class="p">:</span>       <span class="s">&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">IsLeafNode</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">tns</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">FNode</span> <span class="p">=</span> <span class="o">&amp;</span><span class="nx">tempNode</span> <span class="c1">// 注意取地址
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">tns</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">FNode</span> <span class="p">=</span> <span class="nx">tns</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">FNode</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">tns</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">tns</span><span class="p">[</span><span class="mi">2</span><span class="p">:],</span> <span class="o">&amp;</span><span class="nx">tempNode</span><span class="p">)</span> <span class="c1">// 新节点添加进切片，并删除已经被合并的两个权重最小的两个节点
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// 再次排序
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">sort</span><span class="p">.</span><span class="nf">Sort</span><span class="p">(</span><span class="nf">TreeNodeSlice</span><span class="p">(</span><span class="nx">tns</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">rootNode</span> <span class="p">=</span> <span class="nx">tns</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">distributeCode</span><span class="p">(</span><span class="nx">rootNode</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h2 id="根据霍夫曼树递归分配节点的编码"><a href="#根据霍夫曼树递归分配节点的编码" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>根据霍夫曼树递归分配节点的编码</h2>
 <div class="highlight"><div class="chroma">
@@ -512,18 +512,18 @@
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">distributeCode</span><span class="p">(</span><span class="nx">node</span> <span class="o">*</span><span class="nx">TreeNode</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="nx">node</span><span class="p">.</span><span class="nx">LNode</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-        <span class="nx">node</span><span class="p">.</span><span class="nx">LNode</span><span class="p">.</span><span class="nx">Code</span> <span class="p">=</span> <span class="nx">fmt</span><span class="p">.</span><span class="nf">Sprintf</span><span class="p">(</span><span class="s">&#34;%s%d&#34;</span><span class="p">,</span> <span class="nx">node</span><span class="p">.</span><span class="nx">Code</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-        <span class="nf">distributeCode</span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">LNode</span><span class="p">)</span>
-    <span class="p">}</span>
-    <span class="k">if</span> <span class="nx">node</span><span class="p">.</span><span class="nx">RNode</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-        <span class="nx">node</span><span class="p">.</span><span class="nx">RNode</span><span class="p">.</span><span class="nx">Code</span> <span class="p">=</span> <span class="nx">fmt</span><span class="p">.</span><span class="nf">Sprintf</span><span class="p">(</span><span class="s">&#34;%s%d&#34;</span><span class="p">,</span> <span class="nx">node</span><span class="p">.</span><span class="nx">Code</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-        <span class="nf">distributeCode</span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">RNode</span><span class="p">)</span>
-    <span class="p">}</span>
-    <span class="k">return</span>
-<span class="p">}</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">distributeCode</span><span class="p">(</span><span class="nx">node</span> <span class="o">*</span><span class="nx">TreeNode</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nx">node</span><span class="p">.</span><span class="nx">LNode</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">node</span><span class="p">.</span><span class="nx">LNode</span><span class="p">.</span><span class="nx">Code</span> <span class="p">=</span> <span class="nx">fmt</span><span class="p">.</span><span class="nf">Sprintf</span><span class="p">(</span><span class="s">&#34;%s%d&#34;</span><span class="p">,</span> <span class="nx">node</span><span class="p">.</span><span class="nx">Code</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">distributeCode</span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">LNode</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nx">node</span><span class="p">.</span><span class="nx">RNode</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">node</span><span class="p">.</span><span class="nx">RNode</span><span class="p">.</span><span class="nx">Code</span> <span class="p">=</span> <span class="nx">fmt</span><span class="p">.</span><span class="nf">Sprintf</span><span class="p">(</span><span class="s">&#34;%s%d&#34;</span><span class="p">,</span> <span class="nx">node</span><span class="p">.</span><span class="nx">Code</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">distributeCode</span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">RNode</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h2 id="解码流程"><a href="#解码流程" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>解码流程</h2>
 <div class="highlight"><div class="chroma">
@@ -571,48 +571,48 @@
 </span><span class="lnt">41
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">DecodeHandler</span><span class="p">(</span><span class="nx">filePath</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">fileContent</span> <span class="p">[]</span><span class="kt">byte</span><span class="p">)</span> <span class="p">{</span>
-
-    <span class="nx">byteChannelFromBinaryFile</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">chan</span> <span class="kt">byte</span><span class="p">,</span> <span class="mi">1024</span><span class="p">)</span>
-
-    <span class="c1">// 读取文件
-</span><span class="c1"></span>    <span class="k">go</span> <span class="kd">func</span><span class="p">(</span><span class="nx">byteChannelFromBinaryFile</span> <span class="kd">chan</span><span class="o">&lt;-</span> <span class="kt">byte</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">eachByte</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">fileContent</span> <span class="p">{</span>
-            <span class="nx">byteChannelFromBinaryFile</span> <span class="o">&lt;-</span> <span class="nx">eachByte</span>
-        <span class="p">}</span>
-        <span class="nb">close</span><span class="p">(</span><span class="nx">byteChannelFromBinaryFile</span><span class="p">)</span>
-    <span class="p">}(</span><span class="nx">byteChannelFromBinaryFile</span><span class="p">)</span>
-
-    <span class="nx">codeNumber</span> <span class="o">:=</span> <span class="nx">util</span><span class="p">.</span><span class="nf">ReadCodeNumber</span><span class="p">(</span><span class="nx">byteChannelFromBinaryFile</span><span class="p">)</span>
-    <span class="nx">characterFrequencyMap</span> <span class="o">:=</span> <span class="nf">readCodeFrequencyAndGenerateCharacterFrequencyMap</span><span class="p">(</span><span class="nx">codeNumber</span><span class="p">,</span> <span class="nx">byteChannelFromBinaryFile</span><span class="p">)</span>
-
-    <span class="c1">// 生成霍夫曼树节点
-</span><span class="c1"></span>    <span class="nx">treeNodeMap</span> <span class="o">:=</span> <span class="nf">GenerateHuffmanTreeNode</span><span class="p">(</span><span class="nx">characterFrequencyMap</span><span class="p">)</span>
-    <span class="c1">// 生成霍夫曼树
-</span><span class="c1"></span>    <span class="nx">rootNode</span> <span class="o">:=</span> <span class="nf">GenerateHuffmanTree</span><span class="p">(</span><span class="nx">treeNodeMap</span><span class="p">)</span>
-
-    <span class="c1">// 仅做测试用
-</span><span class="c1"></span>    <span class="c1">// PrintTreeMap(treeNodeMap)
-</span><span class="c1"></span>
-    <span class="c1">// 获得填充长度
-</span><span class="c1"></span>    <span class="nx">paddingLength</span> <span class="o">:=</span> <span class="nx">util</span><span class="p">.</span><span class="nf">ReadPaddingLength</span><span class="p">(</span><span class="nx">byteChannelFromBinaryFile</span><span class="p">)</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;paddingLength&#34;</span><span class="p">,</span> <span class="nx">paddingLength</span><span class="p">)</span>
-
-    <span class="nx">bitChannel</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">chan</span> <span class="kt">bool</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="nx">math</span><span class="p">.</span><span class="nf">Pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">16</span><span class="p">)))</span>
-
-    <span class="c1">// 读取编码文件的编码部分
-</span><span class="c1"></span>    <span class="k">go</span> <span class="nx">util</span><span class="p">.</span><span class="nf">ConvertCodeByteToCodeBit</span><span class="p">(</span><span class="nx">paddingLength</span><span class="p">,</span> <span class="nx">byteChannelFromBinaryFile</span><span class="p">,</span> <span class="nx">bitChannel</span><span class="p">)</span>
-    
-    <span class="nx">byteChannelToTextFile</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">chan</span> <span class="kt">byte</span><span class="p">,</span> <span class="mi">1024</span><span class="p">)</span>
-    
-    <span class="c1">// 译码
-</span><span class="c1"></span>    <span class="k">go</span> <span class="nf">decodeTextFromTreeNodeMap</span><span class="p">(</span><span class="nx">rootNode</span><span class="p">,</span> <span class="nx">bitChannel</span><span class="p">,</span> <span class="nx">byteChannelToTextFile</span><span class="p">)</span>
-
-    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;filePath&#34;</span><span class="p">,</span> <span class="nx">filePath</span><span class="p">)</span>
-    <span class="c1">// 译码内容写入文件
-</span><span class="c1"></span>    <span class="nx">util</span><span class="p">.</span><span class="nf">WriteByteToFile</span><span class="p">(</span><span class="nx">filePath</span><span class="p">,</span> <span class="nx">byteChannelToTextFile</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">DecodeHandler</span><span class="p">(</span><span class="nx">filePath</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">fileContent</span> <span class="p">[]</span><span class="kt">byte</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">byteChannelFromBinaryFile</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">chan</span> <span class="kt">byte</span><span class="p">,</span> <span class="mi">1024</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 读取文件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">go</span> <span class="kd">func</span><span class="p">(</span><span class="nx">byteChannelFromBinaryFile</span> <span class="kd">chan</span><span class="o">&lt;-</span> <span class="kt">byte</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">eachByte</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">fileContent</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">byteChannelFromBinaryFile</span> <span class="o">&lt;-</span> <span class="nx">eachByte</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">close</span><span class="p">(</span><span class="nx">byteChannelFromBinaryFile</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}(</span><span class="nx">byteChannelFromBinaryFile</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">codeNumber</span> <span class="o">:=</span> <span class="nx">util</span><span class="p">.</span><span class="nf">ReadCodeNumber</span><span class="p">(</span><span class="nx">byteChannelFromBinaryFile</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">characterFrequencyMap</span> <span class="o">:=</span> <span class="nf">readCodeFrequencyAndGenerateCharacterFrequencyMap</span><span class="p">(</span><span class="nx">codeNumber</span><span class="p">,</span> <span class="nx">byteChannelFromBinaryFile</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 生成霍夫曼树节点
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">treeNodeMap</span> <span class="o">:=</span> <span class="nf">GenerateHuffmanTreeNode</span><span class="p">(</span><span class="nx">characterFrequencyMap</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 生成霍夫曼树
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">rootNode</span> <span class="o">:=</span> <span class="nf">GenerateHuffmanTree</span><span class="p">(</span><span class="nx">treeNodeMap</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 仅做测试用
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// PrintTreeMap(treeNodeMap)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 获得填充长度
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">paddingLength</span> <span class="o">:=</span> <span class="nx">util</span><span class="p">.</span><span class="nf">ReadPaddingLength</span><span class="p">(</span><span class="nx">byteChannelFromBinaryFile</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;paddingLength&#34;</span><span class="p">,</span> <span class="nx">paddingLength</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">bitChannel</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">chan</span> <span class="kt">bool</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="nx">math</span><span class="p">.</span><span class="nf">Pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">16</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 读取编码文件的编码部分
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">go</span> <span class="nx">util</span><span class="p">.</span><span class="nf">ConvertCodeByteToCodeBit</span><span class="p">(</span><span class="nx">paddingLength</span><span class="p">,</span> <span class="nx">byteChannelFromBinaryFile</span><span class="p">,</span> <span class="nx">bitChannel</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="nx">byteChannelToTextFile</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">chan</span> <span class="kt">byte</span><span class="p">,</span> <span class="mi">1024</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// 译码
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">go</span> <span class="nf">decodeTextFromTreeNodeMap</span><span class="p">(</span><span class="nx">rootNode</span><span class="p">,</span> <span class="nx">bitChannel</span><span class="p">,</span> <span class="nx">byteChannelToTextFile</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;filePath&#34;</span><span class="p">,</span> <span class="nx">filePath</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 译码内容写入文件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">util</span><span class="p">.</span><span class="nf">WriteByteToFile</span><span class="p">(</span><span class="nx">filePath</span><span class="p">,</span> <span class="nx">byteChannelToTextFile</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h2 id="根据霍夫曼树将比特流译码成字符"><a href="#根据霍夫曼树将比特流译码成字符" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>根据霍夫曼树将比特流译码成字符</h2>
 <div class="highlight"><div class="chroma">
@@ -637,25 +637,25 @@
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">decodeTextFromTreeNodeMap</span><span class="p">(</span><span class="nx">rootNode</span> <span class="o">*</span><span class="nx">TreeNode</span><span class="p">,</span> <span class="nx">bitChannel</span> <span class="o">&lt;-</span><span class="kd">chan</span> <span class="kt">bool</span><span class="p">,</span> <span class="nx">byteChannel</span> <span class="kd">chan</span><span class="o">&lt;-</span> <span class="kt">byte</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">currentNode</span> <span class="o">:=</span> <span class="nx">rootNode</span>
-    <span class="k">for</span> <span class="nx">each</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">bitChannel</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="nx">each</span> <span class="o">==</span> <span class="kc">false</span> <span class="p">{</span>
-            <span class="c1">// 0则进入左子树
-</span><span class="c1"></span>            <span class="nx">currentNode</span> <span class="p">=</span> <span class="nx">currentNode</span><span class="p">.</span><span class="nx">LNode</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-            <span class="c1">// 1则进入右子树
-</span><span class="c1"></span>            <span class="nx">currentNode</span> <span class="p">=</span> <span class="nx">currentNode</span><span class="p">.</span><span class="nx">RNode</span>
-        <span class="p">}</span>
-        <span class="c1">// 若是叶节点则输出字符
-</span><span class="c1"></span>        <span class="k">if</span> <span class="nx">currentNode</span><span class="p">.</span><span class="nx">IsLeafNode</span> <span class="p">{</span>
-            <span class="nx">byteChannel</span> <span class="o">&lt;-</span> <span class="nx">currentNode</span><span class="p">.</span><span class="nx">Character</span>
-            <span class="nx">currentNode</span> <span class="p">=</span> <span class="nx">rootNode</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-    <span class="nb">close</span><span class="p">(</span><span class="nx">byteChannel</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">decodeTextFromTreeNodeMap</span><span class="p">(</span><span class="nx">rootNode</span> <span class="o">*</span><span class="nx">TreeNode</span><span class="p">,</span> <span class="nx">bitChannel</span> <span class="o">&lt;-</span><span class="kd">chan</span> <span class="kt">bool</span><span class="p">,</span> <span class="nx">byteChannel</span> <span class="kd">chan</span><span class="o">&lt;-</span> <span class="kt">byte</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">currentNode</span> <span class="o">:=</span> <span class="nx">rootNode</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="nx">each</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">bitChannel</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="nx">each</span> <span class="o">==</span> <span class="kc">false</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 0则进入左子树
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">currentNode</span> <span class="p">=</span> <span class="nx">currentNode</span><span class="p">.</span><span class="nx">LNode</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 1则进入右子树
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">currentNode</span> <span class="p">=</span> <span class="nx">currentNode</span><span class="p">.</span><span class="nx">RNode</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 若是叶节点则输出字符
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span> <span class="nx">currentNode</span><span class="p">.</span><span class="nx">IsLeafNode</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">byteChannel</span> <span class="o">&lt;-</span> <span class="nx">currentNode</span><span class="p">.</span><span class="nx">Character</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">currentNode</span> <span class="p">=</span> <span class="nx">rootNode</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">close</span><span class="p">(</span><span class="nx">byteChannel</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h2 id="将bit串类型的编码转变成可写入文件的byte"><a href="#将bit串类型的编码转变成可写入文件的byte" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>将bit串类型的编码转变成可写入文件的Byte</h2>
 <div class="highlight"><div class="chroma">
@@ -700,45 +700,45 @@
 </span><span class="lnt">38
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">ConvertCodeStringToCodeByte</span><span class="p">(</span><span class="nx">bc</span> <span class="o">&lt;-</span><span class="kd">chan</span> <span class="kt">bool</span><span class="p">,</span> <span class="nx">byteChannelToFile</span> <span class="kd">chan</span><span class="o">&lt;-</span> <span class="kt">byte</span><span class="p">)</span> <span class="p">(</span><span class="nx">paddingLength</span> <span class="kt">uint8</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">byteLength</span> <span class="o">:=</span> <span class="nb">uint8</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-    <span class="nx">tempByte</span> <span class="o">:=</span> <span class="nb">uint8</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="c1">// 结合tempBytePointer
-</span><span class="c1"></span>
-    <span class="kd">var</span> <span class="nx">tempBytePointer</span> <span class="o">*</span><span class="kt">uint8</span> <span class="p">=</span> <span class="o">&amp;</span><span class="nx">tempByte</span> <span class="c1">// 重复使用
-</span><span class="c1"></span>    <span class="k">for</span> <span class="p">{</span>
-        <span class="nx">receivedBit</span><span class="p">,</span> <span class="nx">ok</span> <span class="o">:=</span> <span class="o">&lt;-</span><span class="nx">bc</span>
-        <span class="k">if</span> <span class="nx">ok</span> <span class="p">{</span>
-            <span class="k">switch</span> <span class="nx">receivedBit</span> <span class="p">{</span>
-            <span class="k">case</span> <span class="kc">false</span><span class="p">:</span>
-                <span class="c1">// 左移一位，末尾默认补0
-</span><span class="c1"></span>                <span class="o">*</span><span class="nx">tempBytePointer</span> <span class="o">&lt;&lt;=</span> <span class="mi">1</span>
-            <span class="k">case</span> <span class="kc">true</span><span class="p">:</span>
-                <span class="c1">// 左移一位，末尾补零后再加1
-</span><span class="c1"></span>                <span class="o">*</span><span class="nx">tempBytePointer</span> <span class="p">=</span> <span class="p">(</span><span class="o">*</span><span class="nx">tempBytePointer</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
-            <span class="p">}</span>
-            <span class="nx">byteLength</span><span class="o">++</span>
-            <span class="c1">// 满8位bit则输出一个Byte
-</span><span class="c1"></span>            <span class="k">if</span> <span class="nx">byteLength</span> <span class="o">==</span> <span class="mi">8</span> <span class="p">{</span>
-                <span class="nx">byteChannelToFile</span> <span class="o">&lt;-</span> <span class="o">*</span><span class="nx">tempBytePointer</span>
-                <span class="o">*</span><span class="nx">tempBytePointer</span> <span class="p">=</span> <span class="mi">0</span>
-                <span class="nx">byteLength</span> <span class="p">=</span> <span class="mi">0</span>
-            <span class="p">}</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-            <span class="c1">// 没有更多的bit时，检查需要填充0以补满8位的个数
-</span><span class="c1"></span>            <span class="k">if</span> <span class="nx">byteLength</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">{</span>
-                <span class="nx">paddingLength</span> <span class="p">=</span> <span class="mi">8</span> <span class="o">-</span> <span class="nx">byteLength</span>
-                <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="nx">byteLength</span><span class="p">;</span> <span class="nx">i</span> <span class="o">!=</span> <span class="mi">8</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
-                    <span class="o">*</span><span class="nx">tempBytePointer</span> <span class="o">&lt;&lt;=</span> <span class="mi">1</span>
-                <span class="p">}</span>
-                <span class="nx">byteChannelToFile</span> <span class="o">&lt;-</span> <span class="o">*</span><span class="nx">tempBytePointer</span>
-            <span class="p">}</span>
-            <span class="nb">close</span><span class="p">(</span><span class="nx">byteChannelToFile</span><span class="p">)</span>
-            <span class="k">break</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-    <span class="k">return</span>
-<span class="p">}</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">ConvertCodeStringToCodeByte</span><span class="p">(</span><span class="nx">bc</span> <span class="o">&lt;-</span><span class="kd">chan</span> <span class="kt">bool</span><span class="p">,</span> <span class="nx">byteChannelToFile</span> <span class="kd">chan</span><span class="o">&lt;-</span> <span class="kt">byte</span><span class="p">)</span> <span class="p">(</span><span class="nx">paddingLength</span> <span class="kt">uint8</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">byteLength</span> <span class="o">:=</span> <span class="nb">uint8</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">tempByte</span> <span class="o">:=</span> <span class="nb">uint8</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="c1">// 结合tempBytePointer
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">tempBytePointer</span> <span class="o">*</span><span class="kt">uint8</span> <span class="p">=</span> <span class="o">&amp;</span><span class="nx">tempByte</span> <span class="c1">// 重复使用
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">for</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">receivedBit</span><span class="p">,</span> <span class="nx">ok</span> <span class="o">:=</span> <span class="o">&lt;-</span><span class="nx">bc</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="nx">ok</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">switch</span> <span class="nx">receivedBit</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">case</span> <span class="kc">false</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">// 左移一位，末尾默认补0
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="o">*</span><span class="nx">tempBytePointer</span> <span class="o">&lt;&lt;=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">            <span class="k">case</span> <span class="kc">true</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">// 左移一位，末尾补零后再加1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="o">*</span><span class="nx">tempBytePointer</span> <span class="p">=</span> <span class="p">(</span><span class="o">*</span><span class="nx">tempBytePointer</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">byteLength</span><span class="o">++</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 满8位bit则输出一个Byte
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">if</span> <span class="nx">byteLength</span> <span class="o">==</span> <span class="mi">8</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">byteChannelToFile</span> <span class="o">&lt;-</span> <span class="o">*</span><span class="nx">tempBytePointer</span>
+</span></span><span class="line"><span class="cl">                <span class="o">*</span><span class="nx">tempBytePointer</span> <span class="p">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">byteLength</span> <span class="p">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 没有更多的bit时，检查需要填充0以补满8位的个数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">if</span> <span class="nx">byteLength</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">paddingLength</span> <span class="p">=</span> <span class="mi">8</span> <span class="o">-</span> <span class="nx">byteLength</span>
+</span></span><span class="line"><span class="cl">                <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="nx">byteLength</span><span class="p">;</span> <span class="nx">i</span> <span class="o">!=</span> <span class="mi">8</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="o">*</span><span class="nx">tempBytePointer</span> <span class="o">&lt;&lt;=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">byteChannelToFile</span> <span class="o">&lt;-</span> <span class="o">*</span><span class="nx">tempBytePointer</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">close</span><span class="p">(</span><span class="nx">byteChannelToFile</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">break</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h2 id="将byte类型的编码转变成bit以供解码"><a href="#将byte类型的编码转变成bit以供解码" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>将Byte类型的编码转变成bit以供解码</h2>
 <div class="highlight"><div class="chroma">
@@ -777,39 +777,39 @@
 </span><span class="lnt">32
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">ConvertCodeByteToCodeBit</span><span class="p">(</span><span class="nx">paddingLength</span> <span class="kt">uint8</span><span class="p">,</span> <span class="nx">inByteChannel</span> <span class="o">&lt;-</span><span class="kd">chan</span> <span class="kt">byte</span><span class="p">,</span> <span class="nx">outBitChannel</span> <span class="kd">chan</span><span class="o">&lt;-</span> <span class="kt">bool</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nx">tempByte</span> <span class="kt">byte</span>
-    <span class="nx">receivedByte1</span><span class="p">,</span> <span class="nx">ok1</span> <span class="o">:=</span> <span class="o">&lt;-</span><span class="nx">inByteChannel</span>
-    <span class="nx">receivedByte2</span><span class="p">,</span> <span class="nx">ok2</span> <span class="o">:=</span> <span class="o">&lt;-</span><span class="nx">inByteChannel</span>
-    <span class="k">for</span> <span class="p">{</span>
-        <span class="c1">// 对于receivedByte1来说，若还能取到下一个，则receivedByte1不需要根据填充数对bit进行截断
-</span><span class="c1"></span>        <span class="k">if</span> <span class="nx">ok1</span> <span class="o">&amp;&amp;</span> <span class="nx">ok2</span> <span class="p">{</span>
-            <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="nb">uint8</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span> <span class="nx">i</span> <span class="p">&gt;</span> <span class="nb">uint8</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="nx">i</span><span class="o">--</span> <span class="p">{</span>
-                <span class="nx">tempByte</span> <span class="p">=</span> <span class="nx">receivedByte1</span> <span class="o">&amp;</span> <span class="p">(</span><span class="nb">uint8</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="nx">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span>
-                <span class="k">if</span> <span class="nx">tempByte</span> <span class="o">!=</span> <span class="nb">uint8</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-                    <span class="nx">outBitChannel</span> <span class="o">&lt;-</span> <span class="kc">true</span>
-                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-                    <span class="nx">outBitChannel</span> <span class="o">&lt;-</span> <span class="kc">false</span>
-                <span class="p">}</span>
-            <span class="p">}</span>
-            <span class="nx">receivedByte1</span><span class="p">,</span> <span class="nx">ok1</span> <span class="p">=</span> <span class="nx">receivedByte2</span><span class="p">,</span> <span class="kc">true</span>
-            <span class="nx">receivedByte2</span><span class="p">,</span> <span class="nx">ok2</span> <span class="p">=</span> <span class="o">&lt;-</span><span class="nx">inByteChannel</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-            <span class="c1">// 否则需要进行截断，即根据paddingLength舍弃填充的0
-</span><span class="c1"></span>            <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="nb">uint8</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span> <span class="nx">i</span> <span class="p">&gt;</span> <span class="nx">paddingLength</span><span class="p">;</span> <span class="nx">i</span><span class="o">--</span> <span class="p">{</span>
-                <span class="nx">tempByte</span> <span class="p">=</span> <span class="nx">receivedByte1</span> <span class="o">&amp;</span> <span class="p">(</span><span class="nb">uint8</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="nx">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span>
-                <span class="k">if</span> <span class="nx">tempByte</span> <span class="o">!=</span> <span class="nb">uint8</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-                    <span class="nx">outBitChannel</span> <span class="o">&lt;-</span> <span class="kc">true</span>
-                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-                    <span class="nx">outBitChannel</span> <span class="o">&lt;-</span> <span class="kc">false</span>
-                <span class="p">}</span>
-            <span class="p">}</span>
-            <span class="nb">close</span><span class="p">(</span><span class="nx">outBitChannel</span><span class="p">)</span>
-            <span class="k">break</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">ConvertCodeByteToCodeBit</span><span class="p">(</span><span class="nx">paddingLength</span> <span class="kt">uint8</span><span class="p">,</span> <span class="nx">inByteChannel</span> <span class="o">&lt;-</span><span class="kd">chan</span> <span class="kt">byte</span><span class="p">,</span> <span class="nx">outBitChannel</span> <span class="kd">chan</span><span class="o">&lt;-</span> <span class="kt">bool</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">tempByte</span> <span class="kt">byte</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">receivedByte1</span><span class="p">,</span> <span class="nx">ok1</span> <span class="o">:=</span> <span class="o">&lt;-</span><span class="nx">inByteChannel</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">receivedByte2</span><span class="p">,</span> <span class="nx">ok2</span> <span class="o">:=</span> <span class="o">&lt;-</span><span class="nx">inByteChannel</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 对于receivedByte1来说，若还能取到下一个，则receivedByte1不需要根据填充数对bit进行截断
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span> <span class="nx">ok1</span> <span class="o">&amp;&amp;</span> <span class="nx">ok2</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="nb">uint8</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span> <span class="nx">i</span> <span class="p">&gt;</span> <span class="nb">uint8</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="nx">i</span><span class="o">--</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">tempByte</span> <span class="p">=</span> <span class="nx">receivedByte1</span> <span class="o">&amp;</span> <span class="p">(</span><span class="nb">uint8</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="nx">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="nx">tempByte</span> <span class="o">!=</span> <span class="nb">uint8</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">outBitChannel</span> <span class="o">&lt;-</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">outBitChannel</span> <span class="o">&lt;-</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">receivedByte1</span><span class="p">,</span> <span class="nx">ok1</span> <span class="p">=</span> <span class="nx">receivedByte2</span><span class="p">,</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">receivedByte2</span><span class="p">,</span> <span class="nx">ok2</span> <span class="p">=</span> <span class="o">&lt;-</span><span class="nx">inByteChannel</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 否则需要进行截断，即根据paddingLength舍弃填充的0
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="nb">uint8</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span> <span class="nx">i</span> <span class="p">&gt;</span> <span class="nx">paddingLength</span><span class="p">;</span> <span class="nx">i</span><span class="o">--</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">tempByte</span> <span class="p">=</span> <span class="nx">receivedByte1</span> <span class="o">&amp;</span> <span class="p">(</span><span class="nb">uint8</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="nx">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="nx">tempByte</span> <span class="o">!=</span> <span class="nb">uint8</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">outBitChannel</span> <span class="o">&lt;-</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">outBitChannel</span> <span class="o">&lt;-</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">close</span><span class="p">(</span><span class="nx">outBitChannel</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">break</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h2 id="入口main函数"><a href="#入口main函数" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>入口main函数</h2>
 <div class="highlight"><div class="chroma">
@@ -851,42 +851,42 @@
 </span><span class="lnt">35
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-
-    <span class="kd">var</span> <span class="nx">filePath</span> <span class="kt">string</span>
-    <span class="c1">// os.Args[0]是二进制文件自身的路径
-</span><span class="c1"></span>    <span class="c1">// os.Args[1]是拖拽到二进制文件上 文件的路径
-</span><span class="c1"></span>    <span class="nx">filePath</span> <span class="p">=</span> <span class="nx">os</span><span class="p">.</span><span class="nx">Args</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-
-    <span class="c1">// 以下两行做测试用
-</span><span class="c1"></span>    <span class="c1">// filePath = &#34;files/test2.txt.0&#34;
-</span><span class="c1"></span>    <span class="c1">// filePath = &#34;files/test2.txt.0.bin&#34;
-</span><span class="c1"></span>
-    <span class="nx">fileContent</span> <span class="o">:=</span> <span class="nx">util</span><span class="p">.</span><span class="nf">ReadFromFile</span><span class="p">(</span><span class="nx">filePath</span><span class="p">)</span>
-
-    <span class="c1">// 检测是否0x19 0x15开头
-</span><span class="c1"></span>    <span class="nx">flagExist</span> <span class="o">:=</span> <span class="nx">util</span><span class="p">.</span><span class="nf">ReadFlag</span><span class="p">(</span><span class="nx">fileContent</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
-    <span class="c1">// fmt.Println(flagExist)
-</span><span class="c1"></span>
-    <span class="k">if</span> <span class="nx">flagExist</span> <span class="p">{</span>
-        <span class="nx">CodeType</span> <span class="o">:=</span> <span class="nx">util</span><span class="p">.</span><span class="nf">ReadCodeType</span><span class="p">(</span><span class="nx">fileContent</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
-        <span class="nx">filePath</span> <span class="p">=</span> <span class="nx">filePath</span><span class="p">[</span><span class="mi">0</span> <span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="nx">filePath</span><span class="p">)</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span>
-        <span class="k">switch</span> <span class="nx">CodeType</span> <span class="p">{</span>
-        <span class="k">case</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="c1">// 霍夫曼编码
-</span><span class="c1"></span>            <span class="nx">huffman</span><span class="p">.</span><span class="nf">DecodeHandler</span><span class="p">(</span><span class="nx">filePath</span><span class="p">,</span> <span class="nx">fileContent</span><span class="p">[</span><span class="mi">3</span><span class="p">:])</span>
-        <span class="p">}</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="nx">filePathStringSlice</span> <span class="o">:=</span> <span class="nx">strings</span><span class="p">.</span><span class="nf">Split</span><span class="p">(</span><span class="nx">filePath</span><span class="p">,</span> <span class="s">&#34;.&#34;</span><span class="p">)</span>
-        <span class="nx">encodeType</span> <span class="o">:=</span> <span class="nx">filePathStringSlice</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="nx">filePathStringSlice</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-        <span class="k">switch</span> <span class="nx">encodeType</span> <span class="p">{</span>
-        <span class="k">case</span> <span class="s">&#34;0&#34;</span><span class="p">:</span>
-            <span class="c1">// 霍夫曼解码
-</span><span class="c1"></span>            <span class="nx">huffman</span><span class="p">.</span><span class="nf">EncodeHandler</span><span class="p">(</span><span class="nx">filePath</span><span class="p">,</span> <span class="nx">fileContent</span><span class="p">)</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">filePath</span> <span class="kt">string</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// os.Args[0]是二进制文件自身的路径
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// os.Args[1]是拖拽到二进制文件上 文件的路径
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">filePath</span> <span class="p">=</span> <span class="nx">os</span><span class="p">.</span><span class="nx">Args</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 以下两行做测试用
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// filePath = &#34;files/test2.txt.0&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// filePath = &#34;files/test2.txt.0.bin&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="nx">fileContent</span> <span class="o">:=</span> <span class="nx">util</span><span class="p">.</span><span class="nf">ReadFromFile</span><span class="p">(</span><span class="nx">filePath</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 检测是否0x19 0x15开头
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">flagExist</span> <span class="o">:=</span> <span class="nx">util</span><span class="p">.</span><span class="nf">ReadFlag</span><span class="p">(</span><span class="nx">fileContent</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// fmt.Println(flagExist)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nx">flagExist</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">CodeType</span> <span class="o">:=</span> <span class="nx">util</span><span class="p">.</span><span class="nf">ReadCodeType</span><span class="p">(</span><span class="nx">fileContent</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">filePath</span> <span class="p">=</span> <span class="nx">filePath</span><span class="p">[</span><span class="mi">0</span> <span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="nx">filePath</span><span class="p">)</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">switch</span> <span class="nx">CodeType</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 霍夫曼编码
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">huffman</span><span class="p">.</span><span class="nf">DecodeHandler</span><span class="p">(</span><span class="nx">filePath</span><span class="p">,</span> <span class="nx">fileContent</span><span class="p">[</span><span class="mi">3</span><span class="p">:])</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">filePathStringSlice</span> <span class="o">:=</span> <span class="nx">strings</span><span class="p">.</span><span class="nf">Split</span><span class="p">(</span><span class="nx">filePath</span><span class="p">,</span> <span class="s">&#34;.&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">encodeType</span> <span class="o">:=</span> <span class="nx">filePathStringSlice</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="nx">filePathStringSlice</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">switch</span> <span class="nx">encodeType</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="s">&#34;0&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 霍夫曼解码
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">huffman</span><span class="p">.</span><span class="nf">EncodeHandler</span><span class="p">(</span><span class="nx">filePath</span><span class="p">,</span> <span class="nx">fileContent</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h1 id="系统测试"><a href="#系统测试" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>系统测试</h1>
 <div class="table-container"><table>

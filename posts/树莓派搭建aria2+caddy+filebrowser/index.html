@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.92.2" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.93.0" /><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -21,7 +21,7 @@
 
     
     
-        <script src="/js/meme.min.8cbe976441b5181abfd3093c9beee209b19cdbb1fa77c48d225a83ba81fa3fb1.js"></script>
+        <script src="/js/meme.min.45a777da25d0b1805991f984be4e9ae5e17f3ea94097882dff058256fa34eb17.js"></script>
 
     
 
@@ -259,8 +259,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ vim /etc/dnsmasq.conf
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ vim /etc/dnsmasq.conf
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>添加以下内容，三四两行自用于内网RDP，与本篇文章的内容无关</p>
 <pre tabindex="0"><code>address=/download.com/192.168.2.198
@@ -273,8 +273,8 @@ address=/mylab.com/10.173.XX.XX
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ /etc/init.d/dnsmasq restart
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ /etc/init.d/dnsmasq restart
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h1 id="caddy部分"><a href="#caddy部分" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>caddy部分</h1>
 <blockquote>
@@ -292,8 +292,8 @@ address=/mylab.com/10.173.XX.XX
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ sudo vim /etc/systemd/system/caddy.service
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo vim /etc/systemd/system/caddy.service
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><pre tabindex="0"><code>[Unit]
 Description=Caddy Server
@@ -332,16 +332,16 @@ http://filebrowser.com:80 {
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ sudo apt install aria2
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo apt install aria2
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ tree .
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ tree .
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><pre tabindex="0"><code>.
 ├── config
@@ -366,8 +366,8 @@ http://filebrowser.com:80 {
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ sudo vim /etc/systemd/system/aria2.service
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo vim /etc/systemd/system/aria2.service
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><pre tabindex="0"><code>[Unit]
 Description=aria2c -- file download manager
@@ -389,8 +389,8 @@ WantedBy=multi-user.target
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ vim /home/ubuntu/aria2/config/aria2.conf
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ vim /home/ubuntu/aria2/config/aria2.conf
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
@@ -447,58 +447,58 @@ WantedBy=multi-user.target
 </span><span class="lnt">51
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">#RPC</span>
-enable-rpc<span class="o">=</span><span class="nb">true</span>
-rpc-allow-origin-all<span class="o">=</span><span class="nb">true</span>
-rpc-listen-all<span class="o">=</span><span class="nb">true</span>
-<span class="c1">#rpc-listen-port=6800</span>
-<span class="c1">#require &amp;gt;1.15.2</span>
-<span class="c1">#rpc-user=ftp</span>
-<span class="c1">#rpc-passwd=ftp123</span>
-rpc-secret<span class="o">=</span>XXX
-
-<span class="c1">#RATE</span>
-max-concurrent-downloads<span class="o">=</span><span class="m">5</span>
-<span class="k">continue</span><span class="o">=</span><span class="nb">true</span>
-max-connection-per-server<span class="o">=</span><span class="m">5</span>
-min-split-size<span class="o">=</span>10M
-<span class="nv">split</span><span class="o">=</span><span class="m">10</span>
-max-overall-download-limit<span class="o">=</span><span class="m">0</span>
-max-download-limit<span class="o">=</span><span class="m">0</span>
-max-overall-upload-limit<span class="o">=</span><span class="m">0</span>
-max-upload-limit<span class="o">=</span><span class="m">0</span>
-
-<span class="c1">#B</span>
-<span class="c1">#PROGRESS</span>
-input-file<span class="o">=</span>/home/ubuntu/aria2/config/aria2.session
-save-session<span class="o">=</span>/home/ubuntu/aria2/config/aria2.session
-<span class="c1">#require &amp;gt;1.16.1</span>
-save-session-interval<span class="o">=</span><span class="m">120</span>
-
-<span class="c1">#DISK</span>
-<span class="nv">dir</span><span class="o">=</span>/home/ubuntu/aria2/downloads
-file-allocation<span class="o">=</span>prealloc
-
-<span class="c1">#BT</span>
-bt-enable-lpd<span class="o">=</span><span class="nb">true</span>
-bt-max-peers<span class="o">=</span><span class="m">80</span>
-bt-require-crypto<span class="o">=</span><span class="nb">true</span>
-follow-torrent<span class="o">=</span><span class="nb">true</span>
-<span class="c1">#listen-port=6881-6999</span>
-enable-dht<span class="o">=</span><span class="nb">false</span>
-bt-enable-lpd<span class="o">=</span><span class="nb">false</span>
-enable-peer-exchange<span class="o">=</span><span class="nb">false</span>
-peer-agent<span class="o">=</span>uTorrent/2210<span class="o">(</span>25130<span class="o">)</span>
-user-agent<span class="o">=</span>uTorrent/2210<span class="o">(</span>25130<span class="o">)</span>
-peer-id-prefix<span class="o">=</span>-UT2210-
-seed-ratio<span class="o">=</span><span class="m">0</span>
-force-save<span class="o">=</span><span class="nb">true</span>
-bt-hash-check-seed<span class="o">=</span><span class="nb">true</span>
-bt-seed-unverified<span class="o">=</span><span class="nb">true</span>
-bt-save-metadata<span class="o">=</span><span class="nb">true</span>
-
-listen-port<span class="o">=</span>50000-65000
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#RPC</span>
+</span></span><span class="line"><span class="cl">enable-rpc<span class="o">=</span><span class="nb">true</span>
+</span></span><span class="line"><span class="cl">rpc-allow-origin-all<span class="o">=</span><span class="nb">true</span>
+</span></span><span class="line"><span class="cl">rpc-listen-all<span class="o">=</span><span class="nb">true</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#rpc-listen-port=6800</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#require &amp;gt;1.15.2</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#rpc-user=ftp</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#rpc-passwd=ftp123</span>
+</span></span><span class="line"><span class="cl">rpc-secret<span class="o">=</span>XXX
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#RATE</span>
+</span></span><span class="line"><span class="cl">max-concurrent-downloads<span class="o">=</span><span class="m">5</span>
+</span></span><span class="line"><span class="cl"><span class="k">continue</span><span class="o">=</span><span class="nb">true</span>
+</span></span><span class="line"><span class="cl">max-connection-per-server<span class="o">=</span><span class="m">5</span>
+</span></span><span class="line"><span class="cl">min-split-size<span class="o">=</span>10M
+</span></span><span class="line"><span class="cl"><span class="nv">split</span><span class="o">=</span><span class="m">10</span>
+</span></span><span class="line"><span class="cl">max-overall-download-limit<span class="o">=</span><span class="m">0</span>
+</span></span><span class="line"><span class="cl">max-download-limit<span class="o">=</span><span class="m">0</span>
+</span></span><span class="line"><span class="cl">max-overall-upload-limit<span class="o">=</span><span class="m">0</span>
+</span></span><span class="line"><span class="cl">max-upload-limit<span class="o">=</span><span class="m">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#B</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#PROGRESS</span>
+</span></span><span class="line"><span class="cl">input-file<span class="o">=</span>/home/ubuntu/aria2/config/aria2.session
+</span></span><span class="line"><span class="cl">save-session<span class="o">=</span>/home/ubuntu/aria2/config/aria2.session
+</span></span><span class="line"><span class="cl"><span class="c1">#require &amp;gt;1.16.1</span>
+</span></span><span class="line"><span class="cl">save-session-interval<span class="o">=</span><span class="m">120</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#DISK</span>
+</span></span><span class="line"><span class="cl"><span class="nv">dir</span><span class="o">=</span>/home/ubuntu/aria2/downloads
+</span></span><span class="line"><span class="cl">file-allocation<span class="o">=</span>prealloc
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#BT</span>
+</span></span><span class="line"><span class="cl">bt-enable-lpd<span class="o">=</span><span class="nb">true</span>
+</span></span><span class="line"><span class="cl">bt-max-peers<span class="o">=</span><span class="m">80</span>
+</span></span><span class="line"><span class="cl">bt-require-crypto<span class="o">=</span><span class="nb">true</span>
+</span></span><span class="line"><span class="cl">follow-torrent<span class="o">=</span><span class="nb">true</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#listen-port=6881-6999</span>
+</span></span><span class="line"><span class="cl">enable-dht<span class="o">=</span><span class="nb">false</span>
+</span></span><span class="line"><span class="cl">bt-enable-lpd<span class="o">=</span><span class="nb">false</span>
+</span></span><span class="line"><span class="cl">enable-peer-exchange<span class="o">=</span><span class="nb">false</span>
+</span></span><span class="line"><span class="cl">peer-agent<span class="o">=</span>uTorrent/2210<span class="o">(</span>25130<span class="o">)</span>
+</span></span><span class="line"><span class="cl">user-agent<span class="o">=</span>uTorrent/2210<span class="o">(</span>25130<span class="o">)</span>
+</span></span><span class="line"><span class="cl">peer-id-prefix<span class="o">=</span>-UT2210-
+</span></span><span class="line"><span class="cl">seed-ratio<span class="o">=</span><span class="m">0</span>
+</span></span><span class="line"><span class="cl">force-save<span class="o">=</span><span class="nb">true</span>
+</span></span><span class="line"><span class="cl">bt-hash-check-seed<span class="o">=</span><span class="nb">true</span>
+</span></span><span class="line"><span class="cl">bt-seed-unverified<span class="o">=</span><span class="nb">true</span>
+</span></span><span class="line"><span class="cl">bt-save-metadata<span class="o">=</span><span class="nb">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">listen-port<span class="o">=</span>50000-65000
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>HTTP可以，校内PT站可以下载，但公网上的种子和磁力链接都是<code>0/0</code>，尚未解决。</p>
 <h1 id="filebrowser部分"><a href="#filebrowser部分" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>filebrowser部分</h1>
@@ -524,8 +524,8 @@ WantedBy=multi-user.target
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ tree .
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ tree .
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><pre tabindex="0"><code>.
 ├── caddy

@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.92.2" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.93.0" /><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -21,7 +21,7 @@
 
     
     
-        <script src="/js/meme.min.8cbe976441b5181abfd3093c9beee209b19cdbb1fa77c48d225a83ba81fa3fb1.js"></script>
+        <script src="/js/meme.min.45a777da25d0b1805991f984be4e9ae5e17f3ea94097882dff058256fa34eb17.js"></script>
 
     
 
@@ -259,11 +259,11 @@
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt-get install openssl libssl-dev
-sudo wget  http://xrl.us/cpanm  --no-check-certificate -O /sbin/cpanm <span class="o">&amp;&amp;</span> chmod +x  /sbin/cpanm
-sudo chmod <span class="m">755</span> /sbin/cpanm
-sudo cpanm Mojo::Webqq
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt-get install openssl libssl-dev
+</span></span><span class="line"><span class="cl">sudo wget  http://xrl.us/cpanm  --no-check-certificate -O /sbin/cpanm <span class="o">&amp;&amp;</span> chmod +x  /sbin/cpanm
+</span></span><span class="line"><span class="cl">sudo chmod <span class="m">755</span> /sbin/cpanm
+</span></span><span class="line"><span class="cl">sudo cpanm Mojo::Webqq
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h1 id="配置"><a href="#配置" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>配置</h1>
 <div class="highlight"><div class="chroma">
@@ -271,8 +271,8 @@ sudo cpanm Mojo::Webqq
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ vim Mojoqq/qq1.pl
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ vim Mojoqq/qq1.pl
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
@@ -299,28 +299,28 @@ sudo cpanm Mojo::Webqq
 </span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-perl" data-lang="perl"><span class="k">use</span> <span class="nn">Mojo::Webqq</span><span class="p">;</span>
-<span class="c1">#微信使用 use Mojo::Weixin</span>
-<span class="k">my</span> <span class="nv">$client</span> <span class="o">=</span> <span class="nn">Mojo::Webqq</span><span class="o">-&gt;</span><span class="k">new</span><span class="p">(</span><span class="n">log_encoding</span><span class="o">=&gt;</span><span class="s">&#34;utf-8&#34;</span><span class="p">);</span>
-<span class="nv">$client</span><span class="o">-&gt;</span><span class="n">load</span><span class="p">(</span><span class="s">&#34;ShowMsg&#34;</span><span class="p">);</span>
-
-<span class="c1">#以下为 MiPush 推送</span>
-<span class="nv">$client</span><span class="o">-&gt;</span><span class="n">load</span><span class="p">(</span><span class="s">&#34;MiPush&#34;</span><span class="p">,</span><span class="n">data</span><span class="o">=&gt;</span><span class="p">{</span>
-    <span class="n">registration_ids</span><span class="o">=&gt;</span><span class="p">[</span><span class="s">&#34;FP5FHPzvfB1p3lntV75WgycDuAVwWExmsHa8vQn0NuKniv4kjkHM1aIraZWYh/mF&#34;</span><span class="p">],</span>
-    <span class="c1"># allow_group=&gt;[&#34;&#34;],</span>
-    <span class="c1"># ban_group=&gt;[],</span>
-    <span class="c1"># allow_discuss=&gt;[],</span>
-    <span class="c1"># ban_discuss=&gt;[],</span>
-<span class="p">});</span>
-
-<span class="nv">$client</span><span class="o">-&gt;</span><span class="n">load</span><span class="p">(</span><span class="s">&#34;Openqq&#34;</span><span class="p">,</span><span class="n">data</span><span class="o">=&gt;</span><span class="p">{</span>
-    <span class="c1">#如果是微信改为 Openwx</span>
-    <span class="nb">listen</span> <span class="o">=&gt;</span> <span class="p">[{</span><span class="n">host</span><span class="o">=&gt;</span><span class="s">&#34;0.0.0.0&#34;</span><span class="p">,</span><span class="n">port</span><span class="o">=&gt;</span><span class="mi">1098</span><span class="p">},</span> <span class="p">]</span> <span class="p">,</span>
-    <span class="c1">#如果是推送微信的话需要保证端口不重复，并请保证所设定的端口已经在防火墙内放行，同时需要在 APP 内设定好推送服务器的地址和端口</span>
-<span class="p">});</span>
-<span class="c1">#不需要 APP 内回复功能请删除以上三行（不包括被 # 号注释掉的几行）</span>
-<span class="nv">$client</span><span class="o">-&gt;</span><span class="n">run</span><span class="p">();</span> 
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-perl" data-lang="perl"><span class="line"><span class="cl"><span class="k">use</span> <span class="nn">Mojo::Webqq</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#微信使用 use Mojo::Weixin</span>
+</span></span><span class="line"><span class="cl"><span class="k">my</span> <span class="nv">$client</span> <span class="o">=</span> <span class="nn">Mojo::Webqq</span><span class="o">-&gt;</span><span class="k">new</span><span class="p">(</span><span class="n">log_encoding</span><span class="o">=&gt;</span><span class="s">&#34;utf-8&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$client</span><span class="o">-&gt;</span><span class="n">load</span><span class="p">(</span><span class="s">&#34;ShowMsg&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#以下为 MiPush 推送</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$client</span><span class="o">-&gt;</span><span class="n">load</span><span class="p">(</span><span class="s">&#34;MiPush&#34;</span><span class="p">,</span><span class="n">data</span><span class="o">=&gt;</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">registration_ids</span><span class="o">=&gt;</span><span class="p">[</span><span class="s">&#34;FP5FHPzvfB1p3lntV75WgycDuAVwWExmsHa8vQn0NuKniv4kjkHM1aIraZWYh/mF&#34;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># allow_group=&gt;[&#34;&#34;],</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># ban_group=&gt;[],</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># allow_discuss=&gt;[],</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># ban_discuss=&gt;[],</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$client</span><span class="o">-&gt;</span><span class="n">load</span><span class="p">(</span><span class="s">&#34;Openqq&#34;</span><span class="p">,</span><span class="n">data</span><span class="o">=&gt;</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#如果是微信改为 Openwx</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">listen</span> <span class="o">=&gt;</span> <span class="p">[{</span><span class="n">host</span><span class="o">=&gt;</span><span class="s">&#34;0.0.0.0&#34;</span><span class="p">,</span><span class="n">port</span><span class="o">=&gt;</span><span class="mi">1098</span><span class="p">},</span> <span class="p">]</span> <span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#如果是推送微信的话需要保证端口不重复，并请保证所设定的端口已经在防火墙内放行，同时需要在 APP 内设定好推送服务器的地址和端口</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#不需要 APP 内回复功能请删除以上三行（不包括被 # 号注释掉的几行）</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$client</span><span class="o">-&gt;</span><span class="n">run</span><span class="p">();</span> 
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div>
             </div>

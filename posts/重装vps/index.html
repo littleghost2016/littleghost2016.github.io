@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.92.2" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.93.0" /><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -21,7 +21,7 @@
 
     
     
-        <script src="/js/meme.min.8cbe976441b5181abfd3093c9beee209b19cdbb1fa77c48d225a83ba81fa3fb1.js"></script>
+        <script src="/js/meme.min.45a777da25d0b1805991f984be4e9ae5e17f3ea94097882dff058256fa34eb17.js"></script>
 
     
 
@@ -299,8 +299,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ tree caddy -L <span class="m">2</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ tree caddy -L <span class="m">2</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><pre tabindex="0"><code>caddy
 ├── bin
@@ -331,8 +331,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ sudo vim ~/program/caddy/config/caddyfile
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo vim ~/program/caddy/config/caddyfile
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><pre tabindex="0"><code>blog.littleghost.ml/game {
     encode gzip zstd
@@ -363,8 +363,8 @@ www.littleghost.cn {
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ sudo vim /etc/systemd/system/caddy.service
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo vim /etc/systemd/system/caddy.service
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><pre tabindex="0"><code>[Unit]
 Description=Caddy Server
@@ -400,8 +400,8 @@ WantedBy=multi-user.target
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ tree v2ray -L <span class="m">2</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ tree v2ray -L <span class="m">2</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><pre tabindex="0"><code>.
 ├── bin
@@ -420,71 +420,71 @@ WantedBy=multi-user.target
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ vim ~/program/v2ray/config/config.json
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ vim ~/program/v2ray/config/config.json
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><pre tabindex="0"><code>{
-    &quot;log&quot;: {
-        &quot;loglevel&quot;: &quot;error&quot;
+    &#34;log&#34;: {
+        &#34;loglevel&#34;: &#34;error&#34;
     },
-    &quot;api&quot;: {
-        &quot;tag&quot;: &quot;api&quot;,
-        &quot;services&quot;: [
-            &quot;HandlerService&quot;,
-            &quot;LoggerService&quot;,
-            &quot;StatsService&quot;
+    &#34;api&#34;: {
+        &#34;tag&#34;: &#34;api&#34;,
+        &#34;services&#34;: [
+            &#34;HandlerService&#34;,
+            &#34;LoggerService&#34;,
+            &#34;StatsService&#34;
         ]
     },
-    &quot;stats&quot;: {},
-    &quot;inbounds&quot;: [
+    &#34;stats&#34;: {},
+    &#34;inbounds&#34;: [
         {
-            &quot;tag&quot;: &quot;proxy&quot;,
-            &quot;port&quot;: your_port,
-            &quot;protocol&quot;: &quot;vmess&quot;,
-            &quot;settings&quot;: {
-                &quot;clients&quot;: [
+            &#34;tag&#34;: &#34;proxy&#34;,
+            &#34;port&#34;: your_port,
+            &#34;protocol&#34;: &#34;vmess&#34;,
+            &#34;settings&#34;: {
+                &#34;clients&#34;: [
                     {
-                        &quot;id&quot;: &quot;your_uuid&quot;,
-                        &quot;level&quot;: 1,
-                        &quot;alterId&quot;: 10
+                        &#34;id&#34;: &#34;your_uuid&#34;,
+                        &#34;level&#34;: 1,
+                        &#34;alterId&#34;: 10
                     }
                 ]
             },
-            &quot;streamSettings&quot;: {
-                &quot;network&quot;: &quot;ws&quot;,
-                &quot;wsSettings&quot;: {
-                    &quot;path&quot;: &quot;/game&quot;
+            &#34;streamSettings&#34;: {
+                &#34;network&#34;: &#34;ws&#34;,
+                &#34;wsSettings&#34;: {
+                    &#34;path&#34;: &#34;/game&#34;
                 }
             }
         }
     ],
-    &quot;outbounds&quot;: [
+    &#34;outbounds&#34;: [
         {
-            &quot;protocol&quot;: &quot;freedom&quot;
+            &#34;protocol&#34;: &#34;freedom&#34;
         }
     ],
-    &quot;routing&quot;: {
-        &quot;rules&quot;: [
+    &#34;routing&#34;: {
+        &#34;rules&#34;: [
             {
-                &quot;type&quot;: &quot;field&quot;,
-                &quot;inboundTag&quot;: [
-                    &quot;api&quot;
+                &#34;type&#34;: &#34;field&#34;,
+                &#34;inboundTag&#34;: [
+                    &#34;api&#34;
                 ],
-                &quot;outboundTag&quot;: &quot;api&quot;
+                &#34;outboundTag&#34;: &#34;api&#34;
             }
         ],
-        &quot;strategy&quot;: &quot;rules&quot;
+        &#34;strategy&#34;: &#34;rules&#34;
     },
-    &quot;policy&quot;: {
-        &quot;levels&quot;: {
-            &quot;0&quot;: {
-                &quot;statsUserUplink&quot;: true,
-                &quot;statsUserDownlink&quot;: true
+    &#34;policy&#34;: {
+        &#34;levels&#34;: {
+            &#34;0&#34;: {
+                &#34;statsUserUplink&#34;: true,
+                &#34;statsUserDownlink&#34;: true
             }
         },
-        &quot;system&quot;: {
-            &quot;statsInboundUplink&quot;: true,
-            &quot;statsInboundDownlink&quot;: true
+        &#34;system&#34;: {
+            &#34;statsInboundUplink&#34;: true,
+            &#34;statsInboundDownlink&#34;: true
         }
     }
 }
@@ -506,8 +506,8 @@ WantedBy=multi-user.target
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ sudo vim /etc/systemd/system/v2ray.service
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo vim /etc/systemd/system/v2ray.service
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><pre tabindex="0"><code>[Unit]
 Description=V2Ray Service
@@ -525,7 +525,7 @@ PIDFile=/var/run/v2ray.pid
 ExecStart=/home/ubuntu/program/v2ray/bin/v2ray -config /home/ubuntu/program/v2ray/config/config.json
 Restart=on-failure
 
-# Don't restart in the case of configuration error
+# Don&#39;t restart in the case of configuration error
 RestartPreventExitStatus=23
 
 [Install]

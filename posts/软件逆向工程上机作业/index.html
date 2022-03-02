@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.92.2" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.93.0" /><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -21,7 +21,7 @@
 
     
     
-        <script src="/js/meme.min.8cbe976441b5181abfd3093c9beee209b19cdbb1fa77c48d225a83ba81fa3fb1.js"></script>
+        <script src="/js/meme.min.45a777da25d0b1805991f984be4e9ae5e17f3ea94097882dff058256fa34eb17.js"></script>
 
     
 
@@ -486,43 +486,43 @@
 </span><span class="lnt">36
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="c">; strchr.asm
-</span><span class="c"></span>
-<span class="nf">.386</span>
-<span class="na">.model</span> <span class="no">flat</span><span class="p">,</span> <span class="no">stdcall</span>
-
-<span class="nf">include</span> <span class="no">kernel32.inc</span>
-<span class="nf">includelib</span> <span class="no">kernel32.lib</span>
-
-<span class="nf">include</span> <span class="no">msvcrt.inc</span>
-<span class="nf">includelib</span> <span class="no">msvcrt.lib</span>
-
-<span class="na">.data</span>
-<span class="nf">szText</span>  <span class="no">db</span>  <span class="err">&#34;</span><span class="no">Reverse</span> <span class="no">Engineering</span><span class="err">&#34;</span><span class="p">,</span> <span class="mi">0</span>
-<span class="nf">chr</span>     <span class="no">db</span>  <span class="err">&#39;</span><span class="no">i</span><span class="err">&#39;</span>
-<span class="nf">format</span>  <span class="no">db</span>  <span class="err">&#34;</span><span class="nv">%d</span><span class="err">&#34;</span><span class="p">,</span> <span class="mi">0</span><span class="no">AH</span><span class="p">,</span> <span class="mi">0</span>
-
-<span class="na">.code</span>
-
-<span class="nf">main</span> <span class="no">PROC</span>
-    <span class="nf">LEA</span> <span class="no">EDI</span><span class="p">,</span> <span class="no">szText</span>             <span class="c">;将字符串偏移地址送给EDI
-</span><span class="c"></span>    <span class="no">MOV</span> <span class="no">ECX</span><span class="p">,</span><span class="mi">0</span><span class="no">FFFFFFFFH</span>          <span class="c">;ECX置为-1
-</span><span class="c"></span>    <span class="c">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-</span><span class="c"></span>    <span class="c">;strchr逻辑
-</span><span class="c"></span>    <span class="c">;SCAS:将AL/AX/EAX与[EDI]比较，并对EDI自增/自减
-</span><span class="c"></span>    <span class="no">MOV</span> <span class="no">AL</span><span class="p">,</span> <span class="no">chr</span>                 <span class="c">;将要比较的字符&#39;i&#39;送给AL
-</span><span class="c"></span>    <span class="no">MOV</span> <span class="no">EBX</span><span class="p">,</span> <span class="no">EDI</span>                <span class="c">;保存szText首地址
-</span><span class="c"></span>    <span class="no">REPNE</span> <span class="no">SCASB</span>                 <span class="c">;执行SCASB逻辑
-</span><span class="c"></span>    <span class="no">SUB</span> <span class="no">EDI</span><span class="p">,</span> <span class="no">EBX</span>                <span class="c">;&#39;i&#39;在字符串中的位置=EDI-EBX
-</span><span class="c"></span>
-    <span class="nf">INVOKE</span> <span class="no">crt_printf</span><span class="p">,</span> <span class="no">addr</span> <span class="no">format</span><span class="p">,</span> <span class="no">EDI</span><span class="c">;输出结果
-</span><span class="c"></span>    <span class="c">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-</span><span class="c"></span>    <span class="no">INVOKE</span> <span class="no">crt_getchar</span>
-    <span class="nf">INVOKE</span> <span class="no">ExitProcess</span><span class="p">,</span> <span class="mi">0</span>
-<span class="nf">main</span> <span class="no">ENDP</span>
-
-<span class="nf">END</span> <span class="no">main</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="line"><span class="cl"><span class="c">; strchr.asm
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>
+</span></span><span class="line"><span class="cl"><span class="nf">.386</span>
+</span></span><span class="line"><span class="cl"><span class="na">.model</span> <span class="no">flat</span><span class="p">,</span> <span class="no">stdcall</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">include</span> <span class="no">kernel32.inc</span>
+</span></span><span class="line"><span class="cl"><span class="nf">includelib</span> <span class="no">kernel32.lib</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">include</span> <span class="no">msvcrt.inc</span>
+</span></span><span class="line"><span class="cl"><span class="nf">includelib</span> <span class="no">msvcrt.lib</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="na">.data</span>
+</span></span><span class="line"><span class="cl"><span class="nf">szText</span>  <span class="no">db</span>  <span class="err">&#34;</span><span class="no">Reverse</span> <span class="no">Engineering</span><span class="err">&#34;</span><span class="p">,</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="nf">chr</span>     <span class="no">db</span>  <span class="err">&#39;</span><span class="no">i</span><span class="err">&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">format</span>  <span class="no">db</span>  <span class="err">&#34;</span><span class="nv">%d</span><span class="err">&#34;</span><span class="p">,</span> <span class="mi">0</span><span class="no">AH</span><span class="p">,</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="na">.code</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">main</span> <span class="no">PROC</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">LEA</span> <span class="no">EDI</span><span class="p">,</span> <span class="no">szText</span>             <span class="c">;将字符串偏移地址送给EDI
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>    <span class="no">MOV</span> <span class="no">ECX</span><span class="p">,</span><span class="mi">0</span><span class="no">FFFFFFFFH</span>          <span class="c">;ECX置为-1
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>    <span class="c">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>    <span class="c">;strchr逻辑
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>    <span class="c">;SCAS:将AL/AX/EAX与[EDI]比较，并对EDI自增/自减
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>    <span class="no">MOV</span> <span class="no">AL</span><span class="p">,</span> <span class="no">chr</span>                 <span class="c">;将要比较的字符&#39;i&#39;送给AL
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>    <span class="no">MOV</span> <span class="no">EBX</span><span class="p">,</span> <span class="no">EDI</span>                <span class="c">;保存szText首地址
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>    <span class="no">REPNE</span> <span class="no">SCASB</span>                 <span class="c">;执行SCASB逻辑
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>    <span class="no">SUB</span> <span class="no">EDI</span><span class="p">,</span> <span class="no">EBX</span>                <span class="c">;&#39;i&#39;在字符串中的位置=EDI-EBX
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>
+</span></span><span class="line"><span class="cl">    <span class="nf">INVOKE</span> <span class="no">crt_printf</span><span class="p">,</span> <span class="no">addr</span> <span class="no">format</span><span class="p">,</span> <span class="no">EDI</span><span class="c">;输出结果
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>    <span class="c">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>    <span class="no">INVOKE</span> <span class="no">crt_getchar</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">INVOKE</span> <span class="no">ExitProcess</span><span class="p">,</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="nf">main</span> <span class="no">ENDP</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">END</span> <span class="no">main</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p><img src="clip_image002.png" alt="img"></p>
 <h3 id="strcmp"><a href="#strcmp" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>strcmp</h3>
@@ -540,12 +540,12 @@ include msvcrt.inc
 includelib msvcrt.lib
 
 .data
-format      db  &quot;%d&quot;, 0AH, 0
-szText      db  &quot;Reverse Engineering&quot;, 0
-szText2     db  &quot;Reverse Engineering&quot;, 0    ;szText==szText2
-szText3     db  &quot;Reverse Eng&quot;, 0            ;szText&gt;szText3
-szText4     db  &quot;Reverse Engj&quot;, 0           ;szText&lt;szText4
-szText5     db  &quot;Reverse Engh&quot;, 0           ;szText&gt;szText5
+format      db  &#34;%d&#34;, 0AH, 0
+szText      db  &#34;Reverse Engineering&#34;, 0
+szText2     db  &#34;Reverse Engineering&#34;, 0    ;szText==szText2
+szText3     db  &#34;Reverse Eng&#34;, 0            ;szText&gt;szText3
+szText4     db  &#34;Reverse Engj&#34;, 0           ;szText&lt;szText4
+szText5     db  &#34;Reverse Engh&#34;, 0           ;szText&gt;szText5
 
 .code
 
@@ -609,8 +609,8 @@ include msvcrt.inc
 includelib msvcrt.lib
 
 .data
-szText  db  &quot;Reverse Engineering&quot;, 0
-format  db  &quot;length = %d&quot;, 0AH, 0
+szText  db  &#34;Reverse Engineering&#34;, 0
+format  db  &#34;length = %d&#34;, 0AH, 0
 
 .code
 
@@ -648,8 +648,8 @@ include msvcrt.inc
 includelib msvcrt.lib
 
 .data
-szText  db  &quot;Reverse Engineering&quot;, 0
-chr     db  'j'
+szText  db  &#34;Reverse Engineering&#34;, 0
+chr     db  &#39;j&#39;
 
 .code
 
@@ -701,16 +701,16 @@ END main
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">LRESULT</span> <span class="n">CALLBACK</span> <span class="nf">KeyboardProc</span><span class="p">(</span><span class="kt">int</span> <span class="n">nCode</span><span class="p">,</span> <span class="n">WPARAM</span> <span class="n">wParam</span><span class="p">,</span> <span class="n">LPARAM</span> <span class="n">lParam</span><span class="p">){</span>
-<span class="err">……</span>
-        <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="n">_stricmp</span><span class="p">(</span><span class="n">p</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&#34;notepad.exe&#34;</span><span class="p">)</span> <span class="p">)</span>
-                 <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
-                 <span class="c1">//**主要更改的逻辑在这里**
-</span><span class="c1"></span><span class="err">……</span>
-    <span class="c1">// 当前进程不是notepad.exe，将消息传递给下一个钩子
-</span><span class="c1"></span>        <span class="k">return</span> <span class="n">CallNextHookEx</span><span class="p">(</span><span class="n">g_hHook</span><span class="p">,</span> <span class="n">nCode</span><span class="p">,</span> <span class="n">wParam</span><span class="p">,</span> <span class="n">lParam</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="n">LRESULT</span> <span class="n">CALLBACK</span> <span class="nf">KeyboardProc</span><span class="p">(</span><span class="kt">int</span> <span class="n">nCode</span><span class="p">,</span> <span class="n">WPARAM</span> <span class="n">wParam</span><span class="p">,</span> <span class="n">LPARAM</span> <span class="n">lParam</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl"><span class="err">……</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="n">_stricmp</span><span class="p">(</span><span class="n">p</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&#34;notepad.exe&#34;</span><span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">                 <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                 <span class="c1">//**主要更改的逻辑在这里**
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="err">……</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 当前进程不是notepad.exe，将消息传递给下一个钩子
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">return</span> <span class="n">CallNextHookEx</span><span class="p">(</span><span class="n">g_hHook</span><span class="p">,</span> <span class="n">nCode</span><span class="p">,</span> <span class="n">wParam</span><span class="p">,</span> <span class="n">lParam</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p><code>return 1;</code>的意思是：如果进程是<code>notepad.exe</code>，则不会将消息传递给下一个钩子，而实验要求消息可以正常显示出来，并且将所打印的消息记录到另一个文件夹中，则可以将问题分解为2个：</p>
 <ol>
@@ -813,91 +813,91 @@ END main
 </span><span class="lnt">84
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&#34;stdio.h&#34;</span><span class="cp">
-</span><span class="cp">#include</span> <span class="cpf">&#34;windows.h&#34;</span><span class="cp">
-</span><span class="cp">#include</span> <span class="cpf">&#34;tchar.h&#34;</span><span class="cp">
-</span><span class="cp">#include</span> <span class="cpf">&#34;ctype.h&#34;</span><span class="cp">
-</span><span class="cp"></span>
-<span class="n">HINSTANCE</span> <span class="n">g_hInstance</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
-<span class="n">HHOOK</span> <span class="n">g_hHook</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
-<span class="n">HWND</span> <span class="n">g_hWnd</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
-
-<span class="n">BOOL</span> <span class="n">WINAPI</span> <span class="nf">DllMain</span><span class="p">(</span><span class="n">HINSTANCE</span> <span class="n">hinstDLL</span><span class="p">,</span> <span class="n">DWORD</span> <span class="n">dwReason</span><span class="p">,</span> <span class="n">LPVOID</span> <span class="n">lpvReserved</span><span class="p">)</span>
-<span class="p">{</span>
-	<span class="k">switch</span> <span class="p">(</span><span class="n">dwReason</span><span class="p">)</span>
-	<span class="p">{</span>
-	<span class="k">case</span> <span class="nl">DLL_PROCESS_ATTACH</span><span class="p">:</span>
-		<span class="n">g_hInstance</span> <span class="o">=</span> <span class="n">hinstDLL</span><span class="p">;</span>
-		<span class="k">break</span><span class="p">;</span>
-
-	<span class="k">case</span> <span class="nl">DLL_PROCESS_DETACH</span><span class="p">:</span>
-		<span class="k">break</span><span class="p">;</span>
-	<span class="p">}</span>
-	<span class="k">return</span> <span class="n">TRUE</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="n">LRESULT</span> <span class="n">CALLBACK</span> <span class="nf">KeyboardProc</span><span class="p">(</span><span class="kt">int</span> <span class="n">nCode</span><span class="p">,</span> <span class="n">WPARAM</span> <span class="n">wParam</span><span class="p">,</span> <span class="n">LPARAM</span> <span class="n">lParam</span><span class="p">)</span>
-<span class="p">{</span>
-	<span class="kt">char</span> <span class="n">szPath</span><span class="p">[</span><span class="n">MAX_PATH</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-		<span class="mi">0</span><span class="p">,</span>
-	<span class="p">};</span>
-	<span class="kt">char</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
-	<span class="kt">char</span> <span class="n">ch</span><span class="p">;</span>  <span class="c1">//ch存放按键的内容
-</span><span class="c1"></span>	<span class="n">FILE</span> <span class="o">*</span><span class="n">fp</span><span class="p">;</span> <span class="c1">//打开文件流
-</span><span class="c1"></span>	<span class="c1">//ToAscii函数参数
-</span><span class="c1"></span>	<span class="n">byte</span> <span class="n">ks</span><span class="p">[</span><span class="mi">256</span><span class="p">];</span>
-	<span class="n">GetKeyboardState</span><span class="p">(</span><span class="n">ks</span><span class="p">);</span> <span class="c1">//函数功能:该函数将256个虚拟键的状态拷贝到指定的缓冲区中
-</span><span class="c1"></span>	<span class="n">WORD</span> <span class="n">w</span><span class="p">;</span>
-	<span class="n">UINT</span> <span class="n">scan</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-
-	<span class="k">if</span> <span class="p">(</span><span class="n">nCode</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="c1">// bit 31 : 0 =&gt; press, 1 =&gt; release
-</span><span class="c1"></span>		<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">lParam</span> <span class="o">&amp;</span> <span class="mh">0x80000000</span><span class="p">))</span>
-		<span class="p">{</span>
-			<span class="n">GetModuleFileNameA</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="n">szPath</span><span class="p">,</span> <span class="n">MAX_PATH</span><span class="p">);</span>
-			<span class="n">p</span> <span class="o">=</span> <span class="n">strrchr</span><span class="p">(</span><span class="n">szPath</span><span class="p">,</span> <span class="sc">&#39;\\&#39;</span><span class="p">);</span>
-			<span class="c1">//若加载当前DLL的进程的可执行文件名称为notepad.exe，则消息不会传递给下一个钩子
-</span><span class="c1"></span>			<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">_stricmp</span><span class="p">(</span><span class="n">p</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&#34;notepad.exe&#34;</span><span class="p">))</span>
-			<span class="p">{</span>
-				<span class="n">ToAscii</span><span class="p">(</span><span class="n">wParam</span><span class="p">,</span> <span class="n">scan</span><span class="p">,</span> <span class="n">ks</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">w</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-				<span class="c1">//函数功能：该函数将指定的虚拟键码和键盘状态翻译为相应的字符或字符串。
-</span><span class="c1"></span>				<span class="c1">//该函数使用由给定的键盘布局句柄标识的物理键盘布局和输入语言来翻译代码。
-</span><span class="c1"></span>				<span class="c1">//函数原型：int ToAscii(UINT uVirtKey,UINT uScanCode,PBYTE lpKeyState,LPWORD lpChar,UINT uFlags);
-</span><span class="c1"></span>				<span class="n">ch</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="n">w</span><span class="p">;</span>
-
-				<span class="n">fp</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="s">&#34;input.txt&#34;</span><span class="p">,</span> <span class="s">&#34;a&#34;</span><span class="p">);</span> <span class="c1">//打开流
-</span><span class="c1"></span>				<span class="n">fprintf</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="s">&#34;%c&#34;</span><span class="p">,</span> <span class="n">ch</span><span class="p">);</span>		  <span class="c1">//写入文件操作
-</span><span class="c1"></span>				<span class="n">fclose</span><span class="p">(</span><span class="n">fp</span><span class="p">);</span>					  <span class="c1">//关闭流
-</span><span class="c1"></span>											  <span class="c1">//return 1;
-</span><span class="c1"></span>			<span class="p">}</span>
-		<span class="p">}</span>
-	<span class="p">}</span>
-	<span class="c1">// 当前进程不是notepad.exe，将消息传递给下一个钩子
-</span><span class="c1"></span>	<span class="k">return</span> <span class="n">CallNextHookEx</span><span class="p">(</span><span class="n">g_hHook</span><span class="p">,</span> <span class="n">nCode</span><span class="p">,</span> <span class="n">wParam</span><span class="p">,</span> <span class="n">lParam</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="cp">#ifdef __cplusplus
-</span><span class="cp"></span><span class="k">extern</span> <span class="s">&#34;C&#34;</span>
-<span class="p">{</span>
-<span class="cp">#endif
-</span><span class="cp"></span>	<span class="kr">__declspec</span><span class="p">(</span><span class="n">dllexport</span><span class="p">)</span> <span class="kt">void</span> <span class="n">HookStart</span><span class="p">()</span>
-	<span class="p">{</span>
-		<span class="n">g_hHook</span> <span class="o">=</span> <span class="n">SetWindowsHookEx</span><span class="p">(</span><span class="n">WH_KEYBOARD</span><span class="p">,</span> <span class="n">KeyboardProc</span><span class="p">,</span> <span class="n">g_hInstance</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-	<span class="p">}</span>
-
-	<span class="kr">__declspec</span><span class="p">(</span><span class="n">dllexport</span><span class="p">)</span> <span class="kt">void</span> <span class="n">HookStop</span><span class="p">()</span>
-	<span class="p">{</span>
-		<span class="k">if</span> <span class="p">(</span><span class="n">g_hHook</span><span class="p">)</span>
-		<span class="p">{</span>
-			<span class="n">UnhookWindowsHookEx</span><span class="p">(</span><span class="n">g_hHook</span><span class="p">);</span>
-			<span class="n">g_hHook</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
-		<span class="p">}</span>
-	<span class="p">}</span>
-<span class="cp">#ifdef __cplusplus
-</span><span class="cp"></span><span class="p">}</span>
-<span class="cp">#endif
-</span></code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;stdio.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;windows.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;tchar.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;ctype.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="n">HINSTANCE</span> <span class="n">g_hInstance</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">HHOOK</span> <span class="n">g_hHook</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">HWND</span> <span class="n">g_hWnd</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">BOOL</span> <span class="n">WINAPI</span> <span class="nf">DllMain</span><span class="p">(</span><span class="n">HINSTANCE</span> <span class="n">hinstDLL</span><span class="p">,</span> <span class="n">DWORD</span> <span class="n">dwReason</span><span class="p">,</span> <span class="n">LPVOID</span> <span class="n">lpvReserved</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">switch</span> <span class="p">(</span><span class="n">dwReason</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">case</span> <span class="nl">DLL_PROCESS_ATTACH</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">		<span class="n">g_hInstance</span> <span class="o">=</span> <span class="n">hinstDLL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">case</span> <span class="nl">DLL_PROCESS_DETACH</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">		<span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">TRUE</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">LRESULT</span> <span class="n">CALLBACK</span> <span class="nf">KeyboardProc</span><span class="p">(</span><span class="kt">int</span> <span class="n">nCode</span><span class="p">,</span> <span class="n">WPARAM</span> <span class="n">wParam</span><span class="p">,</span> <span class="n">LPARAM</span> <span class="n">lParam</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">char</span> <span class="n">szPath</span><span class="p">[</span><span class="n">MAX_PATH</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="p">};</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">char</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">char</span> <span class="n">ch</span><span class="p">;</span>  <span class="c1">//ch存放按键的内容
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">FILE</span> <span class="o">*</span><span class="n">fp</span><span class="p">;</span> <span class="c1">//打开文件流
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//ToAscii函数参数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">byte</span> <span class="n">ks</span><span class="p">[</span><span class="mi">256</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">	<span class="n">GetKeyboardState</span><span class="p">(</span><span class="n">ks</span><span class="p">);</span> <span class="c1">//函数功能:该函数将256个虚拟键的状态拷贝到指定的缓冲区中
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">WORD</span> <span class="n">w</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">UINT</span> <span class="n">scan</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">nCode</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// bit 31 : 0 =&gt; press, 1 =&gt; release
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">lParam</span> <span class="o">&amp;</span> <span class="mh">0x80000000</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="n">GetModuleFileNameA</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="n">szPath</span><span class="p">,</span> <span class="n">MAX_PATH</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">			<span class="n">p</span> <span class="o">=</span> <span class="n">strrchr</span><span class="p">(</span><span class="n">szPath</span><span class="p">,</span> <span class="sc">&#39;\\&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">			<span class="c1">//若加载当前DLL的进程的可执行文件名称为notepad.exe，则消息不会传递给下一个钩子
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">_stricmp</span><span class="p">(</span><span class="n">p</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&#34;notepad.exe&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">			<span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="n">ToAscii</span><span class="p">(</span><span class="n">wParam</span><span class="p">,</span> <span class="n">scan</span><span class="p">,</span> <span class="n">ks</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">w</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">				<span class="c1">//函数功能：该函数将指定的虚拟键码和键盘状态翻译为相应的字符或字符串。
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>				<span class="c1">//该函数使用由给定的键盘布局句柄标识的物理键盘布局和输入语言来翻译代码。
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>				<span class="c1">//函数原型：int ToAscii(UINT uVirtKey,UINT uScanCode,PBYTE lpKeyState,LPWORD lpChar,UINT uFlags);
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>				<span class="n">ch</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="n">w</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">				<span class="n">fp</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="s">&#34;input.txt&#34;</span><span class="p">,</span> <span class="s">&#34;a&#34;</span><span class="p">);</span> <span class="c1">//打开流
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>				<span class="n">fprintf</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="s">&#34;%c&#34;</span><span class="p">,</span> <span class="n">ch</span><span class="p">);</span>		  <span class="c1">//写入文件操作
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>				<span class="n">fclose</span><span class="p">(</span><span class="n">fp</span><span class="p">);</span>					  <span class="c1">//关闭流
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>											  <span class="c1">//return 1;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 当前进程不是notepad.exe，将消息传递给下一个钩子
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">return</span> <span class="n">CallNextHookEx</span><span class="p">(</span><span class="n">g_hHook</span><span class="p">,</span> <span class="n">nCode</span><span class="p">,</span> <span class="n">wParam</span><span class="p">,</span> <span class="n">lParam</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">#ifdef __cplusplus
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">extern</span> <span class="s">&#34;C&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#endif
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>	<span class="kr">__declspec</span><span class="p">(</span><span class="n">dllexport</span><span class="p">)</span> <span class="kt">void</span> <span class="n">HookStart</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">g_hHook</span> <span class="o">=</span> <span class="n">SetWindowsHookEx</span><span class="p">(</span><span class="n">WH_KEYBOARD</span><span class="p">,</span> <span class="n">KeyboardProc</span><span class="p">,</span> <span class="n">g_hInstance</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="kr">__declspec</span><span class="p">(</span><span class="n">dllexport</span><span class="p">)</span> <span class="kt">void</span> <span class="n">HookStop</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="p">(</span><span class="n">g_hHook</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="n">UnhookWindowsHookEx</span><span class="p">(</span><span class="n">g_hHook</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">			<span class="n">g_hHook</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#ifdef __cplusplus
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#endif
+</span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><h1 id="实验四"><a href="#实验四" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>实验四</h1>
 <h2 id="injectdllcpp"><a href="#injectdllcpp" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>InjectDll.cpp</h2>
@@ -1054,136 +1054,136 @@ END main
 </span><span class="lnt">129
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&#34;windows.h&#34;</span><span class="cp">
-</span><span class="cp">#include</span> <span class="cpf">&#34;tchar.h&#34;</span><span class="cp">
-</span><span class="cp"></span>
-<span class="n">BOOL</span> <span class="nf">SetPrivilege</span><span class="p">(</span><span class="n">LPCTSTR</span> <span class="n">lpszPrivilege</span><span class="p">,</span> <span class="n">BOOL</span> <span class="n">bEnablePrivilege</span><span class="p">)</span> 
-<span class="p">{</span>
-    <span class="n">TOKEN_PRIVILEGES</span> <span class="n">tp</span><span class="p">;</span>
-    <span class="n">HANDLE</span> <span class="n">hToken</span><span class="p">;</span>
-    <span class="n">LUID</span> <span class="n">luid</span><span class="p">;</span>
-    
-    <span class="c1">//OpenProcessToken-&gt;获取进程的令牌句柄
-</span><span class="c1"></span>    <span class="cm">/*
-</span><span class="cm">      参数：
-</span><span class="cm">        1.当前进程为GetCurrentProcess()
-</span><span class="cm">        2.访问令牌特权
-</span><span class="cm">        3.AdjustTokenPrivileges的第一个参数
-</span><span class="cm">    */</span>
-    <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="n">OpenProcessToken</span><span class="p">(</span><span class="n">GetCurrentProcess</span><span class="p">(),</span>
-                          <span class="n">TOKEN_ADJUST_PRIVILEGES</span> <span class="o">|</span> <span class="n">TOKEN_QUERY</span><span class="p">,</span> 
-                          <span class="o">&amp;</span><span class="n">hToken</span><span class="p">)</span> <span class="p">){</span>
-        <span class="n">_tprintf</span><span class="p">(</span><span class="sa">L</span><span class="s">&#34;OpenProcessToken error: %u</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">GetLastError</span><span class="p">());</span>
-        <span class="k">return</span> <span class="n">FALSE</span><span class="p">;</span>
-    <span class="p">}</span>
-
-
-    <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="n">LookupPrivilegeValue</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span>           <span class="c1">// lookup privilege on local system
-</span><span class="c1"></span>                              <span class="n">lpszPrivilege</span><span class="p">,</span>  <span class="c1">// privilege to lookup 
-</span><span class="c1"></span>                              <span class="o">&amp;</span><span class="n">luid</span><span class="p">)</span> <span class="p">)</span>        <span class="c1">// receives LUID of privilege
-</span><span class="c1"></span>    <span class="p">{</span>
-        <span class="n">_tprintf</span><span class="p">(</span><span class="sa">L</span><span class="s">&#34;LookupPrivilegeValue error: %u</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">GetLastError</span><span class="p">()</span> <span class="p">);</span> 
-        <span class="k">return</span> <span class="n">FALSE</span><span class="p">;</span> 
-    <span class="p">}</span>
-
-    <span class="n">tp</span><span class="p">.</span><span class="n">PrivilegeCount</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="n">tp</span><span class="p">.</span><span class="n">Privileges</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">Luid</span> <span class="o">=</span> <span class="n">luid</span><span class="p">;</span>
-    <span class="k">if</span><span class="p">(</span> <span class="n">bEnablePrivilege</span> <span class="p">)</span>
-        <span class="n">tp</span><span class="p">.</span><span class="n">Privileges</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">Attributes</span> <span class="o">=</span> <span class="n">SE_PRIVILEGE_ENABLED</span><span class="p">;</span>
-    <span class="k">else</span>
-        <span class="n">tp</span><span class="p">.</span><span class="n">Privileges</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">Attributes</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-
-    <span class="c1">// Enable the privilege or disable all privileges.
-</span><span class="c1"></span>    <span class="cm">/*
-</span><span class="cm">    AdjustTokenPrivilege
-</span><span class="cm">    BOOL WINAPI AdjustTokenPrivileges(   
-</span><span class="cm">                                __in          HANDLE TokenHandle,   
-</span><span class="cm">                                __in          BOOL DisableAllPrivileges,   
-</span><span class="cm">                                __in_opt      PTOKEN_PRIVILEGES NewState,   
-</span><span class="cm">                                __in          DWORD BufferLength,   
-</span><span class="cm">                                __out_opt     PTOKEN_PRIVILEGES PreviousState,   
-</span><span class="cm">                                __out_opt     PDWORD ReturnLength   
-</span><span class="cm">                                );  
-</span><span class="cm">                                1.OpenProcessToken第三个指针参数传出的句柄值
-</span><span class="cm">                                2.是否禁用所有所有的特权(这里填false)
-</span><span class="cm">                                3.新的TOKEN_PRIVILEGES的特权结构体指针
-</span><span class="cm">                                4.是上面结构体的字节长度(sizeof)
-</span><span class="cm">                                5.接受原先的特权的结构体
-</span><span class="cm">                                6.这个结构体的字节长度的指针
-</span><span class="cm">    */</span>
-    <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="n">AdjustTokenPrivileges</span><span class="p">(</span><span class="n">hToken</span><span class="p">,</span> 
-                               <span class="n">FALSE</span><span class="p">,</span> 
-                               <span class="o">&amp;</span><span class="n">tp</span><span class="p">,</span> 
-                               <span class="k">sizeof</span><span class="p">(</span><span class="n">TOKEN_PRIVILEGES</span><span class="p">),</span> 
-                               <span class="p">(</span><span class="n">PTOKEN_PRIVILEGES</span><span class="p">)</span> <span class="nb">NULL</span><span class="p">,</span> 
-                               <span class="p">(</span><span class="n">PDWORD</span><span class="p">)</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">)</span>
-    <span class="p">{</span> 
-        <span class="n">_tprintf</span><span class="p">(</span><span class="sa">L</span><span class="s">&#34;AdjustTokenPrivileges error: %u</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">GetLastError</span><span class="p">()</span> <span class="p">);</span> 
-        <span class="k">return</span> <span class="n">FALSE</span><span class="p">;</span> 
-    <span class="p">}</span> 
-
-    <span class="c1">//输出错误信息
-</span><span class="c1"></span>    <span class="k">if</span><span class="p">(</span> <span class="n">GetLastError</span><span class="p">()</span> <span class="o">==</span> <span class="n">ERROR_NOT_ALL_ASSIGNED</span> <span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">_tprintf</span><span class="p">(</span><span class="sa">L</span><span class="s">&#34;The token does not have the specified privilege. </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-        <span class="k">return</span> <span class="n">FALSE</span><span class="p">;</span>
-    <span class="p">}</span> 
-
-    <span class="k">return</span> <span class="n">TRUE</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="n">BOOL</span> <span class="nf">InjectDll</span><span class="p">(</span><span class="n">DWORD</span> <span class="n">dwPID</span><span class="p">,</span> <span class="n">LPCTSTR</span> <span class="n">szDllPath</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">HANDLE</span> <span class="n">hProcess</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">,</span> <span class="n">hThread</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
-    <span class="n">HMODULE</span> <span class="n">hMod</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
-    <span class="n">LPVOID</span> <span class="n">pRemoteBuf</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
-    <span class="n">DWORD</span> <span class="n">dwBufSize</span> <span class="o">=</span> <span class="p">(</span><span class="n">DWORD</span><span class="p">)(</span><span class="n">lstrlen</span><span class="p">(</span><span class="n">szDllPath</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">TCHAR</span><span class="p">);</span>
-    <span class="n">LPTHREAD_START_ROUTINE</span> <span class="n">pThreadProc</span><span class="p">;</span>
-
-    <span class="c1">// 获得dwPID进程ID对应的目标进程句柄
-</span><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="p">(</span><span class="n">hProcess</span> <span class="o">=</span> <span class="n">OpenProcess</span><span class="p">(</span><span class="n">PROCESS_ALL_ACCESS</span><span class="p">,</span> <span class="n">FALSE</span><span class="p">,</span> <span class="n">dwPID</span><span class="p">))</span> <span class="p">)</span>
-        <span class="k">return</span> <span class="n">FALSE</span><span class="p">;</span>
-
-    <span class="c1">// 在目标进程地址空间中为DLL路径名szDllPath开辟一块存储空间，将szDllPath路径字符串写入该空间
-</span><span class="c1"></span>    <span class="n">pRemoteBuf</span> <span class="o">=</span> <span class="n">VirtualAllocEx</span><span class="p">(</span><span class="n">hProcess</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="n">dwBufSize</span><span class="p">,</span> <span class="n">MEM_COMMIT</span><span class="p">,</span> <span class="n">PAGE_READWRITE</span><span class="p">);</span>
-    <span class="n">WriteProcessMemory</span><span class="p">(</span><span class="n">hProcess</span><span class="p">,</span> <span class="n">pRemoteBuf</span><span class="p">,</span> <span class="p">(</span><span class="n">LPVOID</span><span class="p">)</span><span class="n">szDllPath</span><span class="p">,</span> <span class="n">dwBufSize</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
-
-    <span class="c1">// 获取当前进程地址空间中LoadLibraryW()函数的地址，该函数由kernel32.dll导入
-</span><span class="c1"></span>    <span class="n">hMod</span> <span class="o">=</span> <span class="n">GetModuleHandle</span><span class="p">(</span><span class="sa">L</span><span class="s">&#34;kernel32.dll&#34;</span><span class="p">);</span>
-    <span class="n">pThreadProc</span> <span class="o">=</span> <span class="p">(</span><span class="n">LPTHREAD_START_ROUTINE</span><span class="p">)</span><span class="n">GetProcAddress</span><span class="p">(</span><span class="n">hMod</span><span class="p">,</span> <span class="s">&#34;LoadLibraryW&#34;</span><span class="p">);</span>
-    
-    <span class="c1">// 在目标进程中运行线程，该线程执行LoadLibraryW()函数并传入被注入DLL路径作为参数
-</span><span class="c1"></span>    <span class="n">hThread</span> <span class="o">=</span> <span class="n">CreateRemoteThread</span><span class="p">(</span><span class="n">hProcess</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">pThreadProc</span><span class="p">,</span> <span class="n">pRemoteBuf</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
-    <span class="n">WaitForSingleObject</span><span class="p">(</span><span class="n">hThread</span><span class="p">,</span> <span class="n">INFINITE</span><span class="p">);</span> 
-
-    <span class="n">CloseHandle</span><span class="p">(</span><span class="n">hThread</span><span class="p">);</span>
-    <span class="n">CloseHandle</span><span class="p">(</span><span class="n">hProcess</span><span class="p">);</span>
-
-    <span class="k">return</span> <span class="n">TRUE</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">int</span> <span class="nf">_tmain</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="n">TCHAR</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
-<span class="p">{</span><span class="c1">//程序入口
-</span><span class="c1"></span>
-    <span class="c1">//如果参数数量不对则退出并提示
-</span><span class="c1"></span>    <span class="k">if</span><span class="p">(</span> <span class="n">argc</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">_tprintf</span><span class="p">(</span><span class="sa">L</span><span class="s">&#34;USAGE : %s &lt;pid&gt; &lt;dll_path&gt;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
-        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="c1">//为程序提升权限
-</span><span class="c1"></span>    <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="n">SetPrivilege</span><span class="p">(</span><span class="n">SE_DEBUG_NAME</span><span class="p">,</span> <span class="n">TRUE</span><span class="p">)</span> <span class="p">)</span>
-        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
-
-    <span class="c1">// inject dll
-</span><span class="c1"></span>    <span class="k">if</span><span class="p">(</span> <span class="n">InjectDll</span><span class="p">((</span><span class="n">DWORD</span><span class="p">)</span><span class="n">_tstol</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="p">)</span>
-        <span class="n">_tprintf</span><span class="p">(</span><span class="sa">L</span><span class="s">&#34;InjectDll(</span><span class="se">\&#34;</span><span class="s">%s</span><span class="se">\&#34;</span><span class="s">) success.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
-    <span class="k">else</span>
-        <span class="n">_tprintf</span><span class="p">(</span><span class="sa">L</span><span class="s">&#34;InjectDll(</span><span class="se">\&#34;</span><span class="s">%s</span><span class="se">\&#34;</span><span class="s">) failed.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
-
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;windows.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;tchar.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="n">BOOL</span> <span class="nf">SetPrivilege</span><span class="p">(</span><span class="n">LPCTSTR</span> <span class="n">lpszPrivilege</span><span class="p">,</span> <span class="n">BOOL</span> <span class="n">bEnablePrivilege</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">TOKEN_PRIVILEGES</span> <span class="n">tp</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">HANDLE</span> <span class="n">hToken</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">LUID</span> <span class="n">luid</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">//OpenProcessToken-&gt;获取进程的令牌句柄
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="cm">/*
+</span></span></span><span class="line"><span class="cl"><span class="cm">      参数：
+</span></span></span><span class="line"><span class="cl"><span class="cm">        1.当前进程为GetCurrentProcess()
+</span></span></span><span class="line"><span class="cl"><span class="cm">        2.访问令牌特权
+</span></span></span><span class="line"><span class="cl"><span class="cm">        3.AdjustTokenPrivileges的第一个参数
+</span></span></span><span class="line"><span class="cl"><span class="cm">    */</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="n">OpenProcessToken</span><span class="p">(</span><span class="n">GetCurrentProcess</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">TOKEN_ADJUST_PRIVILEGES</span> <span class="o">|</span> <span class="n">TOKEN_QUERY</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                          <span class="o">&amp;</span><span class="n">hToken</span><span class="p">)</span> <span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">_tprintf</span><span class="p">(</span><span class="sa">L</span><span class="s">&#34;OpenProcessToken error: %u</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">GetLastError</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">FALSE</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="n">LookupPrivilegeValue</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span>           <span class="c1">// lookup privilege on local system
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                              <span class="n">lpszPrivilege</span><span class="p">,</span>  <span class="c1">// privilege to lookup 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                              <span class="o">&amp;</span><span class="n">luid</span><span class="p">)</span> <span class="p">)</span>        <span class="c1">// receives LUID of privilege
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">_tprintf</span><span class="p">(</span><span class="sa">L</span><span class="s">&#34;LookupPrivilegeValue error: %u</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">GetLastError</span><span class="p">()</span> <span class="p">);</span> 
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">FALSE</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">tp</span><span class="p">.</span><span class="n">PrivilegeCount</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">tp</span><span class="p">.</span><span class="n">Privileges</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">Luid</span> <span class="o">=</span> <span class="n">luid</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span> <span class="n">bEnablePrivilege</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">tp</span><span class="p">.</span><span class="n">Privileges</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">Attributes</span> <span class="o">=</span> <span class="n">SE_PRIVILEGE_ENABLED</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="n">tp</span><span class="p">.</span><span class="n">Privileges</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">Attributes</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Enable the privilege or disable all privileges.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="cm">/*
+</span></span></span><span class="line"><span class="cl"><span class="cm">    AdjustTokenPrivilege
+</span></span></span><span class="line"><span class="cl"><span class="cm">    BOOL WINAPI AdjustTokenPrivileges(   
+</span></span></span><span class="line"><span class="cl"><span class="cm">                                __in          HANDLE TokenHandle,   
+</span></span></span><span class="line"><span class="cl"><span class="cm">                                __in          BOOL DisableAllPrivileges,   
+</span></span></span><span class="line"><span class="cl"><span class="cm">                                __in_opt      PTOKEN_PRIVILEGES NewState,   
+</span></span></span><span class="line"><span class="cl"><span class="cm">                                __in          DWORD BufferLength,   
+</span></span></span><span class="line"><span class="cl"><span class="cm">                                __out_opt     PTOKEN_PRIVILEGES PreviousState,   
+</span></span></span><span class="line"><span class="cl"><span class="cm">                                __out_opt     PDWORD ReturnLength   
+</span></span></span><span class="line"><span class="cl"><span class="cm">                                );  
+</span></span></span><span class="line"><span class="cl"><span class="cm">                                1.OpenProcessToken第三个指针参数传出的句柄值
+</span></span></span><span class="line"><span class="cl"><span class="cm">                                2.是否禁用所有所有的特权(这里填false)
+</span></span></span><span class="line"><span class="cl"><span class="cm">                                3.新的TOKEN_PRIVILEGES的特权结构体指针
+</span></span></span><span class="line"><span class="cl"><span class="cm">                                4.是上面结构体的字节长度(sizeof)
+</span></span></span><span class="line"><span class="cl"><span class="cm">                                5.接受原先的特权的结构体
+</span></span></span><span class="line"><span class="cl"><span class="cm">                                6.这个结构体的字节长度的指针
+</span></span></span><span class="line"><span class="cl"><span class="cm">    */</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="n">AdjustTokenPrivileges</span><span class="p">(</span><span class="n">hToken</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                               <span class="n">FALSE</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                               <span class="o">&amp;</span><span class="n">tp</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                               <span class="k">sizeof</span><span class="p">(</span><span class="n">TOKEN_PRIVILEGES</span><span class="p">),</span> 
+</span></span><span class="line"><span class="cl">                               <span class="p">(</span><span class="n">PTOKEN_PRIVILEGES</span><span class="p">)</span> <span class="nb">NULL</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                               <span class="p">(</span><span class="n">PDWORD</span><span class="p">)</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">        <span class="n">_tprintf</span><span class="p">(</span><span class="sa">L</span><span class="s">&#34;AdjustTokenPrivileges error: %u</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">GetLastError</span><span class="p">()</span> <span class="p">);</span> 
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">FALSE</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//输出错误信息
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span><span class="p">(</span> <span class="n">GetLastError</span><span class="p">()</span> <span class="o">==</span> <span class="n">ERROR_NOT_ALL_ASSIGNED</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">_tprintf</span><span class="p">(</span><span class="sa">L</span><span class="s">&#34;The token does not have the specified privilege. </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">FALSE</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">TRUE</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">BOOL</span> <span class="nf">InjectDll</span><span class="p">(</span><span class="n">DWORD</span> <span class="n">dwPID</span><span class="p">,</span> <span class="n">LPCTSTR</span> <span class="n">szDllPath</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">HANDLE</span> <span class="n">hProcess</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">,</span> <span class="n">hThread</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">HMODULE</span> <span class="n">hMod</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">LPVOID</span> <span class="n">pRemoteBuf</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">DWORD</span> <span class="n">dwBufSize</span> <span class="o">=</span> <span class="p">(</span><span class="n">DWORD</span><span class="p">)(</span><span class="n">lstrlen</span><span class="p">(</span><span class="n">szDllPath</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">TCHAR</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">LPTHREAD_START_ROUTINE</span> <span class="n">pThreadProc</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 获得dwPID进程ID对应的目标进程句柄
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="p">(</span><span class="n">hProcess</span> <span class="o">=</span> <span class="n">OpenProcess</span><span class="p">(</span><span class="n">PROCESS_ALL_ACCESS</span><span class="p">,</span> <span class="n">FALSE</span><span class="p">,</span> <span class="n">dwPID</span><span class="p">))</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">FALSE</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 在目标进程地址空间中为DLL路径名szDllPath开辟一块存储空间，将szDllPath路径字符串写入该空间
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">pRemoteBuf</span> <span class="o">=</span> <span class="n">VirtualAllocEx</span><span class="p">(</span><span class="n">hProcess</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="n">dwBufSize</span><span class="p">,</span> <span class="n">MEM_COMMIT</span><span class="p">,</span> <span class="n">PAGE_READWRITE</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">WriteProcessMemory</span><span class="p">(</span><span class="n">hProcess</span><span class="p">,</span> <span class="n">pRemoteBuf</span><span class="p">,</span> <span class="p">(</span><span class="n">LPVOID</span><span class="p">)</span><span class="n">szDllPath</span><span class="p">,</span> <span class="n">dwBufSize</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 获取当前进程地址空间中LoadLibraryW()函数的地址，该函数由kernel32.dll导入
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">hMod</span> <span class="o">=</span> <span class="n">GetModuleHandle</span><span class="p">(</span><span class="sa">L</span><span class="s">&#34;kernel32.dll&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pThreadProc</span> <span class="o">=</span> <span class="p">(</span><span class="n">LPTHREAD_START_ROUTINE</span><span class="p">)</span><span class="n">GetProcAddress</span><span class="p">(</span><span class="n">hMod</span><span class="p">,</span> <span class="s">&#34;LoadLibraryW&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// 在目标进程中运行线程，该线程执行LoadLibraryW()函数并传入被注入DLL路径作为参数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">hThread</span> <span class="o">=</span> <span class="n">CreateRemoteThread</span><span class="p">(</span><span class="n">hProcess</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">pThreadProc</span><span class="p">,</span> <span class="n">pRemoteBuf</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">WaitForSingleObject</span><span class="p">(</span><span class="n">hThread</span><span class="p">,</span> <span class="n">INFINITE</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">CloseHandle</span><span class="p">(</span><span class="n">hThread</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">CloseHandle</span><span class="p">(</span><span class="n">hProcess</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">TRUE</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">_tmain</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="n">TCHAR</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span><span class="c1">//程序入口
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//如果参数数量不对则退出并提示
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span><span class="p">(</span> <span class="n">argc</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">_tprintf</span><span class="p">(</span><span class="sa">L</span><span class="s">&#34;USAGE : %s &lt;pid&gt; &lt;dll_path&gt;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//为程序提升权限
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="n">SetPrivilege</span><span class="p">(</span><span class="n">SE_DEBUG_NAME</span><span class="p">,</span> <span class="n">TRUE</span><span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// inject dll
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span><span class="p">(</span> <span class="n">InjectDll</span><span class="p">((</span><span class="n">DWORD</span><span class="p">)</span><span class="n">_tstol</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">_tprintf</span><span class="p">(</span><span class="sa">L</span><span class="s">&#34;InjectDll(</span><span class="se">\&#34;</span><span class="s">%s</span><span class="se">\&#34;</span><span class="s">) success.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="n">_tprintf</span><span class="p">(</span><span class="sa">L</span><span class="s">&#34;InjectDll(</span><span class="se">\&#34;</span><span class="s">%s</span><span class="se">\&#34;</span><span class="s">) failed.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h2 id="mydllcpp"><a href="#mydllcpp" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>MyDll.cpp</h2>
 <h3 id="dllmain"><a href="#dllmain" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>DllMain</h3>
@@ -1256,60 +1256,60 @@ END main
 </span><span class="lnt">53
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&#34;windows.h&#34;</span><span class="cp">
-</span><span class="cp">#include</span> <span class="cpf">&#34;tchar.h&#34;</span><span class="cp">
-</span><span class="cp"></span>
-<span class="c1">//和URlDownloadToFile()函数有关
-</span><span class="c1"></span><span class="cp">#pragma comment(lib, &#34;urlmon.lib&#34;)
-</span><span class="cp"></span>
-<span class="c1">//当前DLL实例的句柄
-</span><span class="c1"></span><span class="n">HMODULE</span> <span class="n">g_hMod</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
-
-<span class="n">DWORD</span> <span class="n">WINAPI</span> <span class="nf">ThreadProc</span><span class="p">(</span><span class="n">LPVOID</span> <span class="n">lParam</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">TCHAR</span> <span class="n">szPath</span><span class="p">[</span><span class="n">MAX_PATH</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,};</span>
-
-    <span class="c1">//GetModuleFileName-&gt;得到当前运行程序所在目录
-</span><span class="c1"></span>    <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="n">GetModuleFileName</span><span class="p">(</span> <span class="n">g_hMod</span><span class="p">,</span> <span class="n">szPath</span><span class="p">,</span> <span class="n">MAX_PATH</span> <span class="p">)</span> <span class="p">)</span>
-        <span class="k">return</span> <span class="n">FALSE</span><span class="p">;</span>
-
-    <span class="n">TCHAR</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="n">_tcsrchr</span><span class="p">(</span> <span class="n">szPath</span><span class="p">,</span> <span class="sc">&#39;\\&#39;</span> <span class="p">);</span>
-    <span class="c1">//_tcsrchr-&gt;从右查找以“\\”起始的字符串
-</span><span class="c1"></span>
-    <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="n">p</span> <span class="p">)</span>
-        <span class="k">return</span> <span class="n">FALSE</span><span class="p">;</span>
-
-    <span class="c1">//_tcscpy_s-&gt;拷贝字符串并添加文件名：所在文件夹目录名+&#34;index.html&#34;
-</span><span class="c1"></span>    <span class="n">_tcscpy_s</span><span class="p">(</span><span class="n">p</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">MAX_PATH</span><span class="p">,</span> <span class="sa">L</span><span class="s">&#34;index.html&#34;</span><span class="p">);</span>
-    <span class="c1">//也可写作lstrcpy(p+1, _T(“index.html”) );
-</span><span class="c1"></span>    
-    <span class="c1">//URLDownloadToFile-&gt;下载网页成html
-</span><span class="c1"></span>    <span class="n">URLDownloadToFile</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="sa">L</span><span class="s">&#34;http://www.xidian.edu.cn&#34;</span> <span class="p">,</span> <span class="n">szPath</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
-
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="c1">//DllMain一般为DLL的函数入口
-</span><span class="c1"></span><span class="n">BOOL</span> <span class="n">WINAPI</span> <span class="nf">DllMain</span><span class="p">(</span><span class="n">HINSTANCE</span> <span class="n">hinstDLL</span><span class="p">,</span> <span class="n">DWORD</span> <span class="n">fdwReason</span><span class="p">,</span> <span class="n">LPVOID</span> <span class="n">lpvReserved</span><span class="p">)</span> <span class="p">{</span>
-    
-    <span class="n">HANDLE</span> <span class="n">hThread</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
-
-    <span class="c1">//获得当前DLL的句柄
-</span><span class="c1"></span>    <span class="n">g_hMod</span> <span class="o">=</span> <span class="p">(</span><span class="n">HMODULE</span><span class="p">)</span><span class="n">hinstDLL</span><span class="p">;</span>
-
-    <span class="k">switch</span><span class="p">(</span> <span class="n">fdwReason</span> <span class="p">)</span><span class="c1">//fdwReason指明了系统调用Dll的原因
-</span><span class="c1"></span>    <span class="p">{</span>
-    <span class="k">case</span> <span class="nl">DLL_PROCESS_ATTACH</span><span class="p">:</span><span class="c1">//当一个DLL文件被映射到进程的地址空间时，系统调用该DLL的DllMain函数 
-</span><span class="c1"></span>        <span class="c1">//创建进程
-</span><span class="c1"></span>        <span class="n">hThread</span> <span class="o">=</span> <span class="n">CreateThread</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ThreadProc</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
-        <span class="c1">//关闭一个打开的对象句柄
-</span><span class="c1"></span>        <span class="n">CloseHandle</span><span class="p">(</span><span class="n">hThread</span><span class="p">);</span>
-        
-        <span class="k">break</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="k">return</span> <span class="n">TRUE</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;windows.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;tchar.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">//和URlDownloadToFile()函数有关
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cp">#pragma comment(lib, &#34;urlmon.lib&#34;)
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">//当前DLL实例的句柄
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">HMODULE</span> <span class="n">g_hMod</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">DWORD</span> <span class="n">WINAPI</span> <span class="nf">ThreadProc</span><span class="p">(</span><span class="n">LPVOID</span> <span class="n">lParam</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">TCHAR</span> <span class="n">szPath</span><span class="p">[</span><span class="n">MAX_PATH</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//GetModuleFileName-&gt;得到当前运行程序所在目录
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="n">GetModuleFileName</span><span class="p">(</span> <span class="n">g_hMod</span><span class="p">,</span> <span class="n">szPath</span><span class="p">,</span> <span class="n">MAX_PATH</span> <span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">FALSE</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">TCHAR</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="n">_tcsrchr</span><span class="p">(</span> <span class="n">szPath</span><span class="p">,</span> <span class="sc">&#39;\\&#39;</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//_tcsrchr-&gt;从右查找以“\\”起始的字符串
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="n">p</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">FALSE</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//_tcscpy_s-&gt;拷贝字符串并添加文件名：所在文件夹目录名+&#34;index.html&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">_tcscpy_s</span><span class="p">(</span><span class="n">p</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">MAX_PATH</span><span class="p">,</span> <span class="sa">L</span><span class="s">&#34;index.html&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//也可写作lstrcpy(p+1, _T(“index.html”) );
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    
+</span></span><span class="line"><span class="cl">    <span class="c1">//URLDownloadToFile-&gt;下载网页成html
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">URLDownloadToFile</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="sa">L</span><span class="s">&#34;http://www.xidian.edu.cn&#34;</span> <span class="p">,</span> <span class="n">szPath</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//DllMain一般为DLL的函数入口
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">BOOL</span> <span class="n">WINAPI</span> <span class="nf">DllMain</span><span class="p">(</span><span class="n">HINSTANCE</span> <span class="n">hinstDLL</span><span class="p">,</span> <span class="n">DWORD</span> <span class="n">fdwReason</span><span class="p">,</span> <span class="n">LPVOID</span> <span class="n">lpvReserved</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">HANDLE</span> <span class="n">hThread</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//获得当前DLL的句柄
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">g_hMod</span> <span class="o">=</span> <span class="p">(</span><span class="n">HMODULE</span><span class="p">)</span><span class="n">hinstDLL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">switch</span><span class="p">(</span> <span class="n">fdwReason</span> <span class="p">)</span><span class="c1">//fdwReason指明了系统调用Dll的原因
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="nl">DLL_PROCESS_ATTACH</span><span class="p">:</span><span class="c1">//当一个DLL文件被映射到进程的地址空间时，系统调用该DLL的DllMain函数 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">//创建进程
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">hThread</span> <span class="o">=</span> <span class="n">CreateThread</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ThreadProc</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//关闭一个打开的对象句柄
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">CloseHandle</span><span class="p">(</span><span class="n">hThread</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">TRUE</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h2 id="mydll2cpp"><a href="#mydll2cpp" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>MyDll2.cpp</h2>
 <h3 id="dllmain-1"><a href="#dllmain-1" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>DllMain</h3>
@@ -1375,56 +1375,56 @@ END main
 </span><span class="lnt">49
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&#34;windows.h&#34;</span><span class="cp">
-</span><span class="cp">#include</span> <span class="cpf">&#34;tchar.h&#34;</span><span class="cp">
-</span><span class="cp"></span>
-<span class="n">BOOL</span> <span class="n">WINAPI</span> <span class="nf">DllMain</span><span class="p">(</span><span class="n">HINSTANCE</span> <span class="n">hinstDLL</span><span class="p">,</span> <span class="n">DWORD</span> <span class="n">fdwReason</span><span class="p">,</span> <span class="n">LPVOID</span> <span class="n">lpvReserved</span><span class="p">)</span> <span class="p">{</span>
-
-    <span class="c1">//存放cmd命令的字符串数组
-</span><span class="c1"></span>    <span class="n">TCHAR</span> <span class="n">szCmd</span><span class="p">[</span><span class="n">MAX_PATH</span><span class="p">]</span>  <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,};</span>
-    <span class="c1">//存放路径的字符串数组
-</span><span class="c1"></span>    <span class="n">TCHAR</span> <span class="n">szPath</span><span class="p">[</span><span class="n">MAX_PATH</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,};</span>
-    <span class="n">TCHAR</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
-
-    <span class="c1">//STARTUPINFO结构 该结构用于指定新进程的主窗口特性
-</span><span class="c1"></span>    <span class="n">STARTUPINFO</span> <span class="n">si</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,};</span>
-
-    <span class="c1">//该结构返回有关新进程及其主线程的信息
-</span><span class="c1"></span>    <span class="n">PROCESS_INFORMATION</span> <span class="n">pi</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,};</span>
-
-    <span class="n">si</span><span class="p">.</span><span class="n">cb</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">STARTUPINFO</span><span class="p">);</span>
-    <span class="n">si</span><span class="p">.</span><span class="n">dwFlags</span> <span class="o">=</span> <span class="n">STARTF_USESHOWWINDOW</span><span class="p">;</span>
-    <span class="n">si</span><span class="p">.</span><span class="n">wShowWindow</span> <span class="o">=</span> <span class="n">SW_HIDE</span><span class="p">;</span>
-
-    <span class="k">switch</span><span class="p">(</span> <span class="n">fdwReason</span> <span class="p">)</span> <span class="p">{</span>
-    <span class="k">case</span> <span class="nl">DLL_PROCESS_ATTACH</span><span class="p">:</span> 
-        <span class="c1">//获得当前DLL被装载到的进程的可执行文件的路径到szPath中
-</span><span class="c1"></span>        <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="n">GetModuleFileName</span><span class="p">(</span> <span class="nb">NULL</span><span class="p">,</span> <span class="n">szPath</span><span class="p">,</span> <span class="n">MAX_PATH</span> <span class="p">)</span> <span class="p">)</span>
-            <span class="k">break</span><span class="p">;</span>
-
-        <span class="c1">//从右面开始查找&#34;\\&#34;
-</span><span class="c1"></span>        <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="p">(</span><span class="n">p</span> <span class="o">=</span> <span class="n">_tcsrchr</span><span class="p">(</span><span class="n">szPath</span><span class="p">,</span> <span class="sc">&#39;\\&#39;</span><span class="p">))</span> <span class="p">)</span>
-            <span class="k">break</span><span class="p">;</span>
-
-        <span class="c1">//比较程序的名称是否为notepad.exe
-</span><span class="c1"></span>        <span class="k">if</span><span class="p">(</span> <span class="n">lstrcmpi</span><span class="p">(</span><span class="n">p</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">_T</span><span class="p">(</span><span class="s">&#34;notepad.exe&#34;</span><span class="p">))</span> <span class="p">)</span>
-            <span class="k">break</span><span class="p">;</span>
-
-        <span class="c1">//调用IE访问www.xidian.edu.cn
-</span><span class="c1"></span>        <span class="n">wsprintf</span><span class="p">(</span><span class="n">szCmd</span><span class="p">,</span> <span class="n">_T</span><span class="p">(</span><span class="s">&#34;%s %s&#34;</span><span class="p">),</span> <span class="n">_T</span><span class="p">(</span><span class="s">&#34;c:</span><span class="se">\\</span><span class="s">Program Files</span><span class="se">\\</span><span class="s">Internet Explorer</span><span class="se">\\</span><span class="s">iexplore.exe&#34;</span><span class="p">),</span> <span class="n">_T</span><span class="p">(</span><span class="s">&#34;http://www.xidian.edu.cn&#34;</span><span class="p">));</span>
-
-        <span class="c1">//创建新进程
-</span><span class="c1"></span>        <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="n">CreateProcess</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="p">(</span><span class="n">LPTSTR</span><span class="p">)(</span><span class="n">LPCTSTR</span><span class="p">)</span><span class="n">szCmd</span><span class="p">,</span> 
-                            <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="n">FALSE</span><span class="p">,</span> <span class="n">NORMAL_PRIORITY_CLASS</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">si</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">pi</span><span class="p">)</span> <span class="p">)</span>
-            <span class="k">break</span><span class="p">;</span>
-
-        <span class="k">if</span><span class="p">(</span> <span class="n">pi</span><span class="p">.</span><span class="n">hProcess</span> <span class="o">!=</span> <span class="nb">NULL</span> <span class="p">)</span>
-            <span class="n">CloseHandle</span><span class="p">(</span><span class="n">pi</span><span class="p">.</span><span class="n">hProcess</span><span class="p">);</span>
-        <span class="k">break</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="n">TRUE</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;windows.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;tchar.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="n">BOOL</span> <span class="n">WINAPI</span> <span class="nf">DllMain</span><span class="p">(</span><span class="n">HINSTANCE</span> <span class="n">hinstDLL</span><span class="p">,</span> <span class="n">DWORD</span> <span class="n">fdwReason</span><span class="p">,</span> <span class="n">LPVOID</span> <span class="n">lpvReserved</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//存放cmd命令的字符串数组
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">TCHAR</span> <span class="n">szCmd</span><span class="p">[</span><span class="n">MAX_PATH</span><span class="p">]</span>  <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,};</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//存放路径的字符串数组
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">TCHAR</span> <span class="n">szPath</span><span class="p">[</span><span class="n">MAX_PATH</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,};</span>
+</span></span><span class="line"><span class="cl">    <span class="n">TCHAR</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//STARTUPINFO结构 该结构用于指定新进程的主窗口特性
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">STARTUPINFO</span> <span class="n">si</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//该结构返回有关新进程及其主线程的信息
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">PROCESS_INFORMATION</span> <span class="n">pi</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">si</span><span class="p">.</span><span class="n">cb</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">STARTUPINFO</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">si</span><span class="p">.</span><span class="n">dwFlags</span> <span class="o">=</span> <span class="n">STARTF_USESHOWWINDOW</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">si</span><span class="p">.</span><span class="n">wShowWindow</span> <span class="o">=</span> <span class="n">SW_HIDE</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">switch</span><span class="p">(</span> <span class="n">fdwReason</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="nl">DLL_PROCESS_ATTACH</span><span class="p">:</span> 
+</span></span><span class="line"><span class="cl">        <span class="c1">//获得当前DLL被装载到的进程的可执行文件的路径到szPath中
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="n">GetModuleFileName</span><span class="p">(</span> <span class="nb">NULL</span><span class="p">,</span> <span class="n">szPath</span><span class="p">,</span> <span class="n">MAX_PATH</span> <span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">//从右面开始查找&#34;\\&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="p">(</span><span class="n">p</span> <span class="o">=</span> <span class="n">_tcsrchr</span><span class="p">(</span><span class="n">szPath</span><span class="p">,</span> <span class="sc">&#39;\\&#39;</span><span class="p">))</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">//比较程序的名称是否为notepad.exe
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span><span class="p">(</span> <span class="n">lstrcmpi</span><span class="p">(</span><span class="n">p</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">_T</span><span class="p">(</span><span class="s">&#34;notepad.exe&#34;</span><span class="p">))</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">//调用IE访问www.xidian.edu.cn
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">wsprintf</span><span class="p">(</span><span class="n">szCmd</span><span class="p">,</span> <span class="n">_T</span><span class="p">(</span><span class="s">&#34;%s %s&#34;</span><span class="p">),</span> <span class="n">_T</span><span class="p">(</span><span class="s">&#34;c:</span><span class="se">\\</span><span class="s">Program Files</span><span class="se">\\</span><span class="s">Internet Explorer</span><span class="se">\\</span><span class="s">iexplore.exe&#34;</span><span class="p">),</span> <span class="n">_T</span><span class="p">(</span><span class="s">&#34;http://www.xidian.edu.cn&#34;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">//创建新进程
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="n">CreateProcess</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="p">(</span><span class="n">LPTSTR</span><span class="p">)(</span><span class="n">LPCTSTR</span><span class="p">)</span><span class="n">szCmd</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                            <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="n">FALSE</span><span class="p">,</span> <span class="n">NORMAL_PRIORITY_CLASS</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">si</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">pi</span><span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span> <span class="n">pi</span><span class="p">.</span><span class="n">hProcess</span> <span class="o">!=</span> <span class="nb">NULL</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">CloseHandle</span><span class="p">(</span><span class="n">pi</span><span class="p">.</span><span class="n">hProcess</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">TRUE</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h2 id="ejectdllcpp"><a href="#ejectdllcpp" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>EjectDll.cpp</h2>
 <h3 id="_tmain-1"><a href="#_tmain-1" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>_tmain</h3>
@@ -1590,137 +1590,137 @@ END main
 </span><span class="lnt">130
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// EjectDll.exe
-</span><span class="c1"></span>
-<span class="cp">#include</span> <span class="cpf">&#34;windows.h&#34;</span><span class="cp">
-</span><span class="cp">#include</span> <span class="cpf">&#34;tlhelp32.h&#34;</span><span class="cp">
-</span><span class="cp">#include</span> <span class="cpf">&#34;tchar.h&#34;</span><span class="cp">
-</span><span class="cp"></span>
-
-<span class="c1">//查找该进程下有没有加载该DLL模块
-</span><span class="c1"></span>    <span class="c1">//由进程名找到进程id号
-</span><span class="c1"></span><span class="n">DWORD</span> <span class="nf">FindProcessID</span><span class="p">(</span><span class="n">LPCTSTR</span> <span class="n">szProcessName</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">DWORD</span> <span class="n">dwPID</span> <span class="o">=</span> <span class="mh">0xFFFFFFFF</span><span class="p">;</span>
-    <span class="n">HANDLE</span> <span class="n">hSnapShot</span> <span class="o">=</span> <span class="n">INVALID_HANDLE_VALUE</span><span class="p">;</span>
-    <span class="c1">//用来存放快照进程信息的一个结构体
-</span><span class="c1"></span>    <span class="n">PROCESSENTRY32</span> <span class="n">pe</span><span class="p">;</span>
-
-    <span class="c1">// 获得系统进程的快照
-</span><span class="c1"></span>    <span class="n">pe</span><span class="p">.</span><span class="n">dwSize</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span> <span class="n">PROCESSENTRY32</span> <span class="p">);</span>
-
-    <span class="c1">//CreateToolhelp32Snapshot-&gt;可以通过获取进程信息为指定的进程、进程使用的堆[HEAP]、模块[MODULE]、线程建立一个快照
-</span><span class="c1"></span>    <span class="n">hSnapShot</span> <span class="o">=</span> <span class="n">CreateToolhelp32Snapshot</span><span class="p">(</span> <span class="n">TH32CS_SNAPALL</span><span class="p">,</span> <span class="nb">NULL</span> <span class="p">);</span>
-
-    <span class="c1">//process32First-&gt;是一个进程获取函数
-</span><span class="c1"></span>    <span class="c1">//当利用CreateToolhelp32Snapshot()获得当前运行进程的快照后，可以利用process32First函数来获得第一个进程的句柄
-</span><span class="c1"></span>    <span class="n">Process32First</span><span class="p">(</span><span class="n">hSnapShot</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">pe</span><span class="p">);</span>
-    <span class="k">do</span> <span class="p">{</span>
-        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">_tcsicmp</span><span class="p">(</span><span class="n">szProcessName</span><span class="p">,</span> <span class="p">(</span><span class="n">LPCTSTR</span><span class="p">)</span><span class="n">pe</span><span class="p">.</span><span class="n">szExeFile</span><span class="p">))</span> <span class="p">{</span>
-            <span class="n">dwPID</span> <span class="o">=</span> <span class="n">pe</span><span class="p">.</span><span class="n">th32ProcessID</span><span class="p">;</span>
-            <span class="c1">//如果已经加载，则退出
-</span><span class="c1"></span>            <span class="k">break</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">}</span> <span class="k">while</span><span class="p">(</span><span class="n">Process32Next</span><span class="p">(</span><span class="n">hSnapShot</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">pe</span><span class="p">));</span>
-
-    <span class="n">CloseHandle</span><span class="p">(</span><span class="n">hSnapShot</span><span class="p">);</span>
-    <span class="k">return</span> <span class="n">dwPID</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="c1">//设置程序权限(同InjectDll.cpp)
-</span><span class="c1"></span><span class="n">BOOL</span> <span class="nf">SetPrivilege</span><span class="p">(</span><span class="n">LPCTSTR</span> <span class="n">lpszPrivilege</span><span class="p">,</span> <span class="n">BOOL</span> <span class="n">bEnablePrivilege</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">TOKEN_PRIVILEGES</span> <span class="n">tp</span><span class="p">;</span>
-    <span class="n">HANDLE</span> <span class="n">hToken</span><span class="p">;</span>
-    <span class="n">LUID</span> <span class="n">luid</span><span class="p">;</span>
-
-    <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="n">OpenProcessToken</span><span class="p">(</span><span class="n">GetCurrentProcess</span><span class="p">(),</span>
-           <span class="n">TOKEN_ADJUST_PRIVILEGES</span> <span class="o">|</span> <span class="n">TOKEN_QUERY</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">hToken</span><span class="p">)</span> <span class="p">)</span>
-        <span class="k">return</span> <span class="n">FALSE</span><span class="p">;</span>
-
-    <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="n">LookupPrivilegeValue</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span>           <span class="c1">// lookup privilege on local system
-</span><span class="c1"></span>                              <span class="n">lpszPrivilege</span><span class="p">,</span>  <span class="c1">// privilege to lookup 
-</span><span class="c1"></span>                              <span class="o">&amp;</span><span class="n">luid</span><span class="p">)</span> <span class="p">)</span>        <span class="c1">// receives LUID of privilege
-</span><span class="c1"></span>        <span class="k">return</span> <span class="n">FALSE</span><span class="p">;</span> 
-
-    <span class="n">tp</span><span class="p">.</span><span class="n">PrivilegeCount</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="n">tp</span><span class="p">.</span><span class="n">Privileges</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">Luid</span> <span class="o">=</span> <span class="n">luid</span><span class="p">;</span>
-    <span class="k">if</span><span class="p">(</span> <span class="n">bEnablePrivilege</span> <span class="p">)</span>
-        <span class="n">tp</span><span class="p">.</span><span class="n">Privileges</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">Attributes</span> <span class="o">=</span> <span class="n">SE_PRIVILEGE_ENABLED</span><span class="p">;</span>
-    <span class="k">else</span>
-        <span class="n">tp</span><span class="p">.</span><span class="n">Privileges</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">Attributes</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-
-    <span class="c1">// Enable the privilege or disable all privileges.
-</span><span class="c1"></span>    <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="n">AdjustTokenPrivileges</span><span class="p">(</span><span class="n">hToken</span><span class="p">,</span> <span class="n">FALSE</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">tp</span><span class="p">,</span> 
-         <span class="k">sizeof</span><span class="p">(</span><span class="n">TOKEN_PRIVILEGES</span><span class="p">),</span> <span class="p">(</span><span class="n">PTOKEN_PRIVILEGES</span><span class="p">)</span> <span class="nb">NULL</span><span class="p">,</span> <span class="p">(</span><span class="n">PDWORD</span><span class="p">)</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">)</span>
-        <span class="k">return</span> <span class="n">FALSE</span><span class="p">;</span> 
-
-    <span class="k">if</span><span class="p">(</span> <span class="n">GetLastError</span><span class="p">()</span> <span class="o">==</span> <span class="n">ERROR_NOT_ALL_ASSIGNED</span> <span class="p">)</span>
-        <span class="k">return</span> <span class="n">FALSE</span><span class="p">;</span>
-
-    <span class="k">return</span> <span class="n">TRUE</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="n">BOOL</span> <span class="nf">EjectDll</span><span class="p">(</span><span class="n">DWORD</span> <span class="n">dwPID</span><span class="p">,</span> <span class="n">LPCTSTR</span> <span class="n">szDllName</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">BOOL</span> <span class="n">bMore</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">,</span> <span class="n">bFound</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">;</span>
-    <span class="n">HANDLE</span> <span class="n">hSnapshot</span><span class="p">,</span> <span class="n">hProcess</span><span class="p">,</span> <span class="n">hThread</span><span class="p">;</span>
-    <span class="n">HMODULE</span> <span class="n">hModule</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
-    <span class="n">MODULEENTRY32</span> <span class="n">me</span> <span class="o">=</span> <span class="p">{</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">me</span><span class="p">)</span> <span class="p">};</span>
-    <span class="n">LPTHREAD_START_ROUTINE</span> <span class="n">pThreadProc</span><span class="p">;</span>
-
-    <span class="c1">// dwPID = notepad进程的id号
-</span><span class="c1"></span>    <span class="c1">// 使用TH32CS_SNAPMODULE参数，获得加载到notepad进程地址空间的DLL信息
-</span><span class="c1"></span>    <span class="n">hSnapshot</span> <span class="o">=</span> <span class="n">CreateToolhelp32Snapshot</span><span class="p">(</span><span class="n">TH32CS_SNAPMODULE</span><span class="p">,</span> <span class="n">dwPID</span><span class="p">);</span>
-
-    <span class="n">bMore</span> <span class="o">=</span> <span class="n">Module32First</span><span class="p">(</span><span class="n">hSnapshot</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">me</span><span class="p">);</span>
-    <span class="k">for</span><span class="p">(</span> <span class="p">;</span> <span class="n">bMore</span> <span class="p">;</span> <span class="n">bMore</span> <span class="o">=</span> <span class="n">Module32Next</span><span class="p">(</span><span class="n">hSnapshot</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">me</span><span class="p">)</span> <span class="p">){</span>
-        <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="n">_tcsicmp</span><span class="p">((</span><span class="n">LPCTSTR</span><span class="p">)</span><span class="n">me</span><span class="p">.</span><span class="n">szModule</span><span class="p">,</span> <span class="n">szDllName</span><span class="p">)</span> <span class="o">||</span> 
-            <span class="o">!</span><span class="n">_tcsicmp</span><span class="p">((</span><span class="n">LPCTSTR</span><span class="p">)</span><span class="n">me</span><span class="p">.</span><span class="n">szExePath</span><span class="p">,</span> <span class="n">szDllName</span><span class="p">)</span> <span class="p">){</span>
-            <span class="n">bFound</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">;</span>
-            <span class="k">break</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-
-    <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="n">bFound</span> <span class="p">){</span>
-        <span class="n">CloseHandle</span><span class="p">(</span><span class="n">hSnapshot</span><span class="p">);</span>
-        <span class="k">return</span> <span class="n">FALSE</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="p">(</span><span class="n">hProcess</span> <span class="o">=</span> <span class="n">OpenProcess</span><span class="p">(</span><span class="n">PROCESS_ALL_ACCESS</span><span class="p">,</span> <span class="n">FALSE</span><span class="p">,</span> <span class="n">dwPID</span><span class="p">))</span> <span class="p">)</span>
-        <span class="k">return</span> <span class="n">FALSE</span><span class="p">;</span>
-
-    <span class="n">hModule</span> <span class="o">=</span> <span class="n">GetModuleHandle</span><span class="p">(</span><span class="sa">L</span><span class="s">&#34;kernel32.dll&#34;</span><span class="p">);</span>
-    <span class="n">pThreadProc</span> <span class="o">=</span> <span class="p">(</span><span class="n">LPTHREAD_START_ROUTINE</span><span class="p">)</span><span class="n">GetProcAddress</span><span class="p">(</span><span class="n">hModule</span><span class="p">,</span> <span class="s">&#34;FreeLibrary&#34;</span><span class="p">);</span>
-    <span class="n">hThread</span> <span class="o">=</span> <span class="n">CreateRemoteThread</span><span class="p">(</span><span class="n">hProcess</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> 
-                                 <span class="n">pThreadProc</span><span class="p">,</span> <span class="n">me</span><span class="p">.</span><span class="n">modBaseAddr</span><span class="p">,</span> 
-                                 <span class="mi">0</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
-    <span class="n">WaitForSingleObject</span><span class="p">(</span><span class="n">hThread</span><span class="p">,</span> <span class="n">INFINITE</span><span class="p">);</span> 
-
-    <span class="n">CloseHandle</span><span class="p">(</span><span class="n">hThread</span><span class="p">);</span>
-    <span class="n">CloseHandle</span><span class="p">(</span><span class="n">hProcess</span><span class="p">);</span>
-    <span class="n">CloseHandle</span><span class="p">(</span><span class="n">hSnapshot</span><span class="p">);</span>
-
-    <span class="k">return</span> <span class="n">TRUE</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">int</span> <span class="nf">_tmain</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="n">TCHAR</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span> <span class="p">{</span>
-    <span class="n">DWORD</span> <span class="n">dwPID</span> <span class="o">=</span> <span class="mh">0xFFFFFFFF</span><span class="p">;</span>
-
-    <span class="n">dwPID</span> <span class="o">=</span> <span class="n">FindProcessID</span><span class="p">(</span><span class="sa">L</span><span class="s">&#34;notepad.exe&#34;</span><span class="p">);</span>
-    <span class="k">if</span><span class="p">(</span> <span class="n">dwPID</span> <span class="o">==</span> <span class="mh">0xFFFFFFFF</span> <span class="p">)</span> <span class="c1">//没有找到notepad进程
-</span><span class="c1"></span>        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
-
-    <span class="c1">// 更改特权
-</span><span class="c1"></span>    <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="n">SetPrivilege</span><span class="p">(</span><span class="n">SE_DEBUG_NAME</span><span class="p">,</span> <span class="n">TRUE</span><span class="p">)</span> <span class="p">)</span>
-        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
-
-    <span class="c1">// 卸载DLL
-</span><span class="c1"></span>    <span class="k">if</span><span class="p">(</span> <span class="n">EjectDll</span><span class="p">(</span><span class="n">dwPID</span><span class="p">,</span> <span class="sa">L</span><span class="s">&#34;MyDll.dll&#34;</span><span class="p">)</span> <span class="p">)</span>
-        <span class="n">_tprintf</span><span class="p">(</span><span class="sa">L</span><span class="s">&#34;EjectDll(%d, </span><span class="se">\&#34;</span><span class="s">%s</span><span class="se">\&#34;</span><span class="s">) success!!!</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">dwPID</span><span class="p">,</span> <span class="sa">L</span><span class="s">&#34;MyDll.dll&#34;</span><span class="p">);</span>
-    <span class="k">else</span>
-        <span class="n">_tprintf</span><span class="p">(</span><span class="sa">L</span><span class="s">&#34;EjectDll(%d, </span><span class="se">\&#34;</span><span class="s">%s</span><span class="se">\&#34;</span><span class="s">) failed!!!</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">dwPID</span><span class="p">,</span> <span class="sa">L</span><span class="s">&#34;MyDll.dll&#34;</span><span class="p">);</span>
-
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="c1">// EjectDll.exe
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;windows.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;tlhelp32.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;tchar.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//查找该进程下有没有加载该DLL模块
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">//由进程名找到进程id号
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">DWORD</span> <span class="nf">FindProcessID</span><span class="p">(</span><span class="n">LPCTSTR</span> <span class="n">szProcessName</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">DWORD</span> <span class="n">dwPID</span> <span class="o">=</span> <span class="mh">0xFFFFFFFF</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">HANDLE</span> <span class="n">hSnapShot</span> <span class="o">=</span> <span class="n">INVALID_HANDLE_VALUE</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//用来存放快照进程信息的一个结构体
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">PROCESSENTRY32</span> <span class="n">pe</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 获得系统进程的快照
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">pe</span><span class="p">.</span><span class="n">dwSize</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span> <span class="n">PROCESSENTRY32</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//CreateToolhelp32Snapshot-&gt;可以通过获取进程信息为指定的进程、进程使用的堆[HEAP]、模块[MODULE]、线程建立一个快照
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">hSnapShot</span> <span class="o">=</span> <span class="n">CreateToolhelp32Snapshot</span><span class="p">(</span> <span class="n">TH32CS_SNAPALL</span><span class="p">,</span> <span class="nb">NULL</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//process32First-&gt;是一个进程获取函数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">//当利用CreateToolhelp32Snapshot()获得当前运行进程的快照后，可以利用process32First函数来获得第一个进程的句柄
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">Process32First</span><span class="p">(</span><span class="n">hSnapShot</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">pe</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">do</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">_tcsicmp</span><span class="p">(</span><span class="n">szProcessName</span><span class="p">,</span> <span class="p">(</span><span class="n">LPCTSTR</span><span class="p">)</span><span class="n">pe</span><span class="p">.</span><span class="n">szExeFile</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">dwPID</span> <span class="o">=</span> <span class="n">pe</span><span class="p">.</span><span class="n">th32ProcessID</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">//如果已经加载，则退出
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">while</span><span class="p">(</span><span class="n">Process32Next</span><span class="p">(</span><span class="n">hSnapShot</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">pe</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">CloseHandle</span><span class="p">(</span><span class="n">hSnapShot</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">dwPID</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//设置程序权限(同InjectDll.cpp)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">BOOL</span> <span class="nf">SetPrivilege</span><span class="p">(</span><span class="n">LPCTSTR</span> <span class="n">lpszPrivilege</span><span class="p">,</span> <span class="n">BOOL</span> <span class="n">bEnablePrivilege</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">TOKEN_PRIVILEGES</span> <span class="n">tp</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">HANDLE</span> <span class="n">hToken</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">LUID</span> <span class="n">luid</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="n">OpenProcessToken</span><span class="p">(</span><span class="n">GetCurrentProcess</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">           <span class="n">TOKEN_ADJUST_PRIVILEGES</span> <span class="o">|</span> <span class="n">TOKEN_QUERY</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">hToken</span><span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">FALSE</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="n">LookupPrivilegeValue</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span>           <span class="c1">// lookup privilege on local system
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                              <span class="n">lpszPrivilege</span><span class="p">,</span>  <span class="c1">// privilege to lookup 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                              <span class="o">&amp;</span><span class="n">luid</span><span class="p">)</span> <span class="p">)</span>        <span class="c1">// receives LUID of privilege
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">return</span> <span class="n">FALSE</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">tp</span><span class="p">.</span><span class="n">PrivilegeCount</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">tp</span><span class="p">.</span><span class="n">Privileges</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">Luid</span> <span class="o">=</span> <span class="n">luid</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span> <span class="n">bEnablePrivilege</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">tp</span><span class="p">.</span><span class="n">Privileges</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">Attributes</span> <span class="o">=</span> <span class="n">SE_PRIVILEGE_ENABLED</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="n">tp</span><span class="p">.</span><span class="n">Privileges</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">Attributes</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Enable the privilege or disable all privileges.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="n">AdjustTokenPrivileges</span><span class="p">(</span><span class="n">hToken</span><span class="p">,</span> <span class="n">FALSE</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">tp</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">         <span class="k">sizeof</span><span class="p">(</span><span class="n">TOKEN_PRIVILEGES</span><span class="p">),</span> <span class="p">(</span><span class="n">PTOKEN_PRIVILEGES</span><span class="p">)</span> <span class="nb">NULL</span><span class="p">,</span> <span class="p">(</span><span class="n">PDWORD</span><span class="p">)</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">FALSE</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span> <span class="n">GetLastError</span><span class="p">()</span> <span class="o">==</span> <span class="n">ERROR_NOT_ALL_ASSIGNED</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">FALSE</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">TRUE</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">BOOL</span> <span class="nf">EjectDll</span><span class="p">(</span><span class="n">DWORD</span> <span class="n">dwPID</span><span class="p">,</span> <span class="n">LPCTSTR</span> <span class="n">szDllName</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">BOOL</span> <span class="n">bMore</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">,</span> <span class="n">bFound</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">HANDLE</span> <span class="n">hSnapshot</span><span class="p">,</span> <span class="n">hProcess</span><span class="p">,</span> <span class="n">hThread</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">HMODULE</span> <span class="n">hModule</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">MODULEENTRY32</span> <span class="n">me</span> <span class="o">=</span> <span class="p">{</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">me</span><span class="p">)</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="n">LPTHREAD_START_ROUTINE</span> <span class="n">pThreadProc</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// dwPID = notepad进程的id号
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 使用TH32CS_SNAPMODULE参数，获得加载到notepad进程地址空间的DLL信息
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">hSnapshot</span> <span class="o">=</span> <span class="n">CreateToolhelp32Snapshot</span><span class="p">(</span><span class="n">TH32CS_SNAPMODULE</span><span class="p">,</span> <span class="n">dwPID</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">bMore</span> <span class="o">=</span> <span class="n">Module32First</span><span class="p">(</span><span class="n">hSnapshot</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">me</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span> <span class="p">;</span> <span class="n">bMore</span> <span class="p">;</span> <span class="n">bMore</span> <span class="o">=</span> <span class="n">Module32Next</span><span class="p">(</span><span class="n">hSnapshot</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">me</span><span class="p">)</span> <span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="n">_tcsicmp</span><span class="p">((</span><span class="n">LPCTSTR</span><span class="p">)</span><span class="n">me</span><span class="p">.</span><span class="n">szModule</span><span class="p">,</span> <span class="n">szDllName</span><span class="p">)</span> <span class="o">||</span> 
+</span></span><span class="line"><span class="cl">            <span class="o">!</span><span class="n">_tcsicmp</span><span class="p">((</span><span class="n">LPCTSTR</span><span class="p">)</span><span class="n">me</span><span class="p">.</span><span class="n">szExePath</span><span class="p">,</span> <span class="n">szDllName</span><span class="p">)</span> <span class="p">){</span>
+</span></span><span class="line"><span class="cl">            <span class="n">bFound</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="n">bFound</span> <span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">CloseHandle</span><span class="p">(</span><span class="n">hSnapshot</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">FALSE</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="p">(</span><span class="n">hProcess</span> <span class="o">=</span> <span class="n">OpenProcess</span><span class="p">(</span><span class="n">PROCESS_ALL_ACCESS</span><span class="p">,</span> <span class="n">FALSE</span><span class="p">,</span> <span class="n">dwPID</span><span class="p">))</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">FALSE</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">hModule</span> <span class="o">=</span> <span class="n">GetModuleHandle</span><span class="p">(</span><span class="sa">L</span><span class="s">&#34;kernel32.dll&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pThreadProc</span> <span class="o">=</span> <span class="p">(</span><span class="n">LPTHREAD_START_ROUTINE</span><span class="p">)</span><span class="n">GetProcAddress</span><span class="p">(</span><span class="n">hModule</span><span class="p">,</span> <span class="s">&#34;FreeLibrary&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">hThread</span> <span class="o">=</span> <span class="n">CreateRemoteThread</span><span class="p">(</span><span class="n">hProcess</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                                 <span class="n">pThreadProc</span><span class="p">,</span> <span class="n">me</span><span class="p">.</span><span class="n">modBaseAddr</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                                 <span class="mi">0</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">WaitForSingleObject</span><span class="p">(</span><span class="n">hThread</span><span class="p">,</span> <span class="n">INFINITE</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">CloseHandle</span><span class="p">(</span><span class="n">hThread</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">CloseHandle</span><span class="p">(</span><span class="n">hProcess</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">CloseHandle</span><span class="p">(</span><span class="n">hSnapshot</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">TRUE</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">_tmain</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="n">TCHAR</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">DWORD</span> <span class="n">dwPID</span> <span class="o">=</span> <span class="mh">0xFFFFFFFF</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">dwPID</span> <span class="o">=</span> <span class="n">FindProcessID</span><span class="p">(</span><span class="sa">L</span><span class="s">&#34;notepad.exe&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span> <span class="n">dwPID</span> <span class="o">==</span> <span class="mh">0xFFFFFFFF</span> <span class="p">)</span> <span class="c1">//没有找到notepad进程
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 更改特权
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="n">SetPrivilege</span><span class="p">(</span><span class="n">SE_DEBUG_NAME</span><span class="p">,</span> <span class="n">TRUE</span><span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 卸载DLL
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span><span class="p">(</span> <span class="n">EjectDll</span><span class="p">(</span><span class="n">dwPID</span><span class="p">,</span> <span class="sa">L</span><span class="s">&#34;MyDll.dll&#34;</span><span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">_tprintf</span><span class="p">(</span><span class="sa">L</span><span class="s">&#34;EjectDll(%d, </span><span class="se">\&#34;</span><span class="s">%s</span><span class="se">\&#34;</span><span class="s">) success!!!</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">dwPID</span><span class="p">,</span> <span class="sa">L</span><span class="s">&#34;MyDll.dll&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="n">_tprintf</span><span class="p">(</span><span class="sa">L</span><span class="s">&#34;EjectDll(%d, </span><span class="se">\&#34;</span><span class="s">%s</span><span class="se">\&#34;</span><span class="s">) failed!!!</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">dwPID</span><span class="p">,</span> <span class="sa">L</span><span class="s">&#34;MyDll.dll&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h2 id="testhookcpp"><a href="#testhookcpp" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>TestHook.cpp</h2>
 <div class="highlight"><div class="chroma">
@@ -1758,38 +1758,38 @@ END main
 </span><span class="lnt">31
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&#34;stdio.h&#34;</span><span class="cp">
-</span><span class="cp">#include</span> <span class="cpf">&#34;conio.h&#34;</span><span class="cp">
-</span><span class="cp">#include</span> <span class="cpf">&#34;windows.h&#34;</span><span class="cp">
-</span><span class="cp"></span>
-<span class="k">typedef</span> <span class="nf">void</span> <span class="p">(</span><span class="o">*</span><span class="n">PFN_HOOKSTART</span><span class="p">)();</span>
-<span class="k">typedef</span> <span class="nf">void</span> <span class="p">(</span><span class="o">*</span><span class="n">PFN_HOOKSTOP</span><span class="p">)();</span>
-
-<span class="kt">void</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="n">HMODULE</span>         <span class="n">hDll</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
-    <span class="n">PFN_HOOKSTART</span>   <span class="n">HookStart</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
-    <span class="n">PFN_HOOKSTOP</span>    <span class="n">HookStop</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
-
-    <span class="n">hDll</span> <span class="o">=</span> <span class="n">LoadLibraryA</span><span class="p">(</span><span class="s">&#34;HookDll.dll&#34;</span><span class="p">);</span> <span class="c1">// 装载HookDll.dll
-</span><span class="c1"></span>    <span class="k">if</span><span class="p">(</span> <span class="n">hDll</span> <span class="o">==</span> <span class="nb">NULL</span> <span class="p">)</span>
-        <span class="k">return</span><span class="p">;</span>
-
-    <span class="c1">// 获取导出函数HookStart()和HookStop()的地址
-</span><span class="c1"></span>    <span class="n">HookStart</span> <span class="o">=</span> <span class="p">(</span><span class="n">PFN_HOOKSTART</span><span class="p">)</span><span class="n">GetProcAddress</span><span class="p">(</span><span class="n">hDll</span><span class="p">,</span> <span class="s">&#34;HookStart&#34;</span><span class="p">);</span>
-    <span class="n">HookStop</span> <span class="o">=</span> <span class="p">(</span><span class="n">PFN_HOOKSTOP</span><span class="p">)</span><span class="n">GetProcAddress</span><span class="p">(</span><span class="n">hDll</span><span class="p">,</span> <span class="s">&#34;HookStop&#34;</span><span class="p">);</span>
-
-    <span class="n">HookStart</span><span class="p">();</span> <span class="c1">//开始钩取键盘消息
-</span><span class="c1"></span>
-    <span class="c1">// 等到用户输入&#39;q&#39;才终止钩取
-</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;press &#39;q&#39; to quit!</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-    <span class="k">while</span><span class="p">(</span> <span class="n">_getch</span><span class="p">()</span> <span class="o">!=</span> <span class="sc">&#39;q&#39;</span> <span class="p">)</span>    <span class="p">;</span>
-
-    <span class="n">HookStop</span><span class="p">();</span> <span class="c1">//终止钩取键盘消息
-</span><span class="c1"></span>
-    <span class="n">FreeLibrary</span><span class="p">(</span><span class="n">hDll</span><span class="p">);</span> <span class="c1">//卸载HookDll.dll
-</span><span class="c1"></span><span class="p">}</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;stdio.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;conio.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;windows.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="nf">void</span> <span class="p">(</span><span class="o">*</span><span class="n">PFN_HOOKSTART</span><span class="p">)();</span>
+</span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="nf">void</span> <span class="p">(</span><span class="o">*</span><span class="n">PFN_HOOKSTOP</span><span class="p">)();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">HMODULE</span>         <span class="n">hDll</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">PFN_HOOKSTART</span>   <span class="n">HookStart</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">PFN_HOOKSTOP</span>    <span class="n">HookStop</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">hDll</span> <span class="o">=</span> <span class="n">LoadLibraryA</span><span class="p">(</span><span class="s">&#34;HookDll.dll&#34;</span><span class="p">);</span> <span class="c1">// 装载HookDll.dll
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span><span class="p">(</span> <span class="n">hDll</span> <span class="o">==</span> <span class="nb">NULL</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 获取导出函数HookStart()和HookStop()的地址
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">HookStart</span> <span class="o">=</span> <span class="p">(</span><span class="n">PFN_HOOKSTART</span><span class="p">)</span><span class="n">GetProcAddress</span><span class="p">(</span><span class="n">hDll</span><span class="p">,</span> <span class="s">&#34;HookStart&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">HookStop</span> <span class="o">=</span> <span class="p">(</span><span class="n">PFN_HOOKSTOP</span><span class="p">)</span><span class="n">GetProcAddress</span><span class="p">(</span><span class="n">hDll</span><span class="p">,</span> <span class="s">&#34;HookStop&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">HookStart</span><span class="p">();</span> <span class="c1">//开始钩取键盘消息
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 等到用户输入&#39;q&#39;才终止钩取
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;press &#39;q&#39; to quit!</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span><span class="p">(</span> <span class="n">_getch</span><span class="p">()</span> <span class="o">!=</span> <span class="sc">&#39;q&#39;</span> <span class="p">)</span>    <span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">HookStop</span><span class="p">();</span> <span class="c1">//终止钩取键盘消息
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="n">FreeLibrary</span><span class="p">(</span><span class="n">hDll</span><span class="p">);</span> <span class="c1">//卸载HookDll.dll
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div>
             </div>
