@@ -1,6 +1,6 @@
 ---
-title: 安装ohmyposh和poshgit
-date: 2022-04-28 18:43:44
+title: "安装ohmyposh和poshgit"
+date: 2022-04-28T18:43:44+08:00
 tags: ["powershell", "ohmyposh", "poshgit"]
 categories: ["技术"]
 ---
