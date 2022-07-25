@@ -15,19 +15,24 @@ adb shell pm disable-user XXX
 
 # 自己的华为禁用列表
 
-|     应用     | 名称                     |
-| :----------: | :----------------------- |
-|   应用助手   | com.huawei.gameassistant |
-|   系统更新   | com.huawei.android.hwouc |
-|   华为市场   | com.vmall.client         |
-|    浏览器    | com.huawei.browser       |
-|   华为阅读   | com.huawei.hwireader     |
-|  sim卡应用   | com.android.stk          |
-| 华为杂志锁屏 | com.android.keyguard     |
-|   精品推荐   | com.huawei.hifolder      |
-|     镜子     | com.android.hwmirror     |
-|   华为视频   | com.huawei.himovie       |
-|   华为音乐   | com.android.mediacenter  |
+|     应用     | 名称                        |
+| :----------: | :-------------------------- |
+|   应用助手   |  com.huawei.gameassistant   |
+|   系统更新   |  com.huawei.android.hwouc   |
+|   华为市场   |  com.vmall.client           |
+|    浏览器    |  com.huawei.browser         |
+|   华为阅读   |  com.huawei.hwireader       |
+|  sim卡应用   |  com.android.stk            |
+| 华为杂志锁屏 |  com.android.keyguard       |
+|   精品推荐   |  com.huawei.hifolder        |
+|     镜子     |  com.android.hwmirror       |
+|     镜子     |  com.android.mirror         |
+|   华为视频   |  com.huawei.himovie         |
+|   华为音乐   |  com.android.mediacenter    |
+|  区块链服务  |  com.huawei.hwblockchain    |
+|   畅联服务   |  com.huawei.hwvoipservice   |
+|     音乐     |  com.huawei.music           |
+|  sim卡管理   |  com.huawei.dsdscardmanager |
 
 
 
