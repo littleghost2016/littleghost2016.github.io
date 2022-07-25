@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Tue, 12 Jul 2022 11:15:59 &#43;0800</lastBuildDate>
+        <lastBuildDate>Mon, 25 Jul 2022 17:11:58 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://blog.littleghost.ml/rss.xml" />
         
@@ -675,12 +675,32 @@ eval &amp;#34;$(pyenv init -)&amp;#34;
 &lt;td style=&#34;text-align:left&#34;&gt;com.android.hwmirror&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;镜子&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;com.android.mirror&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;华为视频&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;com.huawei.himovie&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;华为音乐&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;com.android.mediacenter&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;区块链服务&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;com.huawei.hwblockchain&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;畅联服务&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;com.huawei.hwvoipservice&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;音乐&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;com.huawei.music&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;sim卡管理&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;com.huawei.dsdscardmanager&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
