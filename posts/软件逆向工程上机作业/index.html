@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.103.1" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.104.0" /><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -486,8 +486,8 @@
 </span><span class="lnt">36
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="line"><span class="cl"><span class="c">; strchr.asm
-</span></span></span><span class="line"><span class="cl"><span class="c"></span>
+<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="line"><span class="cl"><span class="c1">; strchr.asm
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
 </span></span><span class="line"><span class="cl"><span class="nf">.386</span>
 </span></span><span class="line"><span class="cl"><span class="na">.model</span> <span class="no">flat</span><span class="p">,</span> <span class="no">stdcall</span>
 </span></span><span class="line"><span class="cl">
@@ -505,19 +505,19 @@
 </span></span><span class="line"><span class="cl"><span class="na">.code</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nf">main</span> <span class="no">PROC</span>
-</span></span><span class="line"><span class="cl">    <span class="nf">LEA</span> <span class="no">EDI</span><span class="p">,</span> <span class="no">szText</span>             <span class="c">;将字符串偏移地址送给EDI
-</span></span></span><span class="line"><span class="cl"><span class="c"></span>    <span class="no">MOV</span> <span class="no">ECX</span><span class="p">,</span><span class="mi">0</span><span class="no">FFFFFFFFH</span>          <span class="c">;ECX置为-1
-</span></span></span><span class="line"><span class="cl"><span class="c"></span>    <span class="c">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-</span></span></span><span class="line"><span class="cl"><span class="c"></span>    <span class="c">;strchr逻辑
-</span></span></span><span class="line"><span class="cl"><span class="c"></span>    <span class="c">;SCAS:将AL/AX/EAX与[EDI]比较，并对EDI自增/自减
-</span></span></span><span class="line"><span class="cl"><span class="c"></span>    <span class="no">MOV</span> <span class="no">AL</span><span class="p">,</span> <span class="no">chr</span>                 <span class="c">;将要比较的字符&#39;i&#39;送给AL
-</span></span></span><span class="line"><span class="cl"><span class="c"></span>    <span class="no">MOV</span> <span class="no">EBX</span><span class="p">,</span> <span class="no">EDI</span>                <span class="c">;保存szText首地址
-</span></span></span><span class="line"><span class="cl"><span class="c"></span>    <span class="no">REPNE</span> <span class="no">SCASB</span>                 <span class="c">;执行SCASB逻辑
-</span></span></span><span class="line"><span class="cl"><span class="c"></span>    <span class="no">SUB</span> <span class="no">EDI</span><span class="p">,</span> <span class="no">EBX</span>                <span class="c">;&#39;i&#39;在字符串中的位置=EDI-EBX
-</span></span></span><span class="line"><span class="cl"><span class="c"></span>
-</span></span><span class="line"><span class="cl">    <span class="nf">INVOKE</span> <span class="no">crt_printf</span><span class="p">,</span> <span class="no">addr</span> <span class="no">format</span><span class="p">,</span> <span class="no">EDI</span><span class="c">;输出结果
-</span></span></span><span class="line"><span class="cl"><span class="c"></span>    <span class="c">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-</span></span></span><span class="line"><span class="cl"><span class="c"></span>    <span class="no">INVOKE</span> <span class="no">crt_getchar</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">LEA</span> <span class="no">EDI</span><span class="p">,</span> <span class="no">szText</span>             <span class="c1">;将字符串偏移地址送给EDI
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">MOV</span> <span class="no">ECX</span><span class="p">,</span><span class="mi">0</span><span class="no">FFFFFFFFH</span>          <span class="c1">;ECX置为-1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">;strchr逻辑
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">;SCAS:将AL/AX/EAX与[EDI]比较，并对EDI自增/自减
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">MOV</span> <span class="no">AL</span><span class="p">,</span> <span class="no">chr</span>                 <span class="c1">;将要比较的字符&#39;i&#39;送给AL
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">MOV</span> <span class="no">EBX</span><span class="p">,</span> <span class="no">EDI</span>                <span class="c1">;保存szText首地址
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">REPNE</span> <span class="no">SCASB</span>                 <span class="c1">;执行SCASB逻辑
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">SUB</span> <span class="no">EDI</span><span class="p">,</span> <span class="no">EBX</span>                <span class="c1">;&#39;i&#39;在字符串中的位置=EDI-EBX
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="nf">INVOKE</span> <span class="no">crt_printf</span><span class="p">,</span> <span class="no">addr</span> <span class="no">format</span><span class="p">,</span> <span class="no">EDI</span><span class="c1">;输出结果
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">INVOKE</span> <span class="no">crt_getchar</span>
 </span></span><span class="line"><span class="cl">    <span class="nf">INVOKE</span> <span class="no">ExitProcess</span><span class="p">,</span> <span class="mi">0</span>
 </span></span><span class="line"><span class="cl"><span class="nf">main</span> <span class="no">ENDP</span>
 </span></span><span class="line"><span class="cl">
