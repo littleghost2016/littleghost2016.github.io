@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.106.0"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.107.0"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -520,11 +520,11 @@ DoSub 								;子程序DoSub执行减法操作
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="k">switch</span><span class="p">(</span><span class="n">ucChar</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">	<span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="k">case</span> <span class="mi">1</span><span class="o">:</span><span class="n">yigedeng</span><span class="p">();</span><span class="k">break</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">		<span class="k">case</span> <span class="mi">2</span><span class="o">:</span><span class="n">lianggedeng</span><span class="p">();</span><span class="k">break</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">		<span class="k">case</span> <span class="mi">3</span><span class="o">:</span><span class="n">sangedeng</span><span class="p">();</span><span class="k">break</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">		<span class="k">case</span> <span class="mi">4</span><span class="o">:</span><span class="n">sigedeng</span><span class="p">();</span><span class="k">break</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">		<span class="k">case</span> <span class="mi">5</span><span class="o">:</span><span class="n">shan</span><span class="p">();</span><span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">case</span> <span class="mi">1</span><span class="o">:</span><span class="nf">yigedeng</span><span class="p">();</span><span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">case</span> <span class="mi">2</span><span class="o">:</span><span class="nf">lianggedeng</span><span class="p">();</span><span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">case</span> <span class="mi">3</span><span class="o">:</span><span class="nf">sangedeng</span><span class="p">();</span><span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">case</span> <span class="mi">4</span><span class="o">:</span><span class="nf">sigedeng</span><span class="p">();</span><span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">case</span> <span class="mi">5</span><span class="o">:</span><span class="nf">shan</span><span class="p">();</span><span class="k">break</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">				<span class="n">ucChar</span><span class="o">-=</span><span class="mi">1</span><span class="p">;</span> <span class="k">break</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">		<span class="k">case</span> <span class="mi">9</span><span class="o">:</span>
 </span></span><span class="line"><span class="cl">		<span class="k">case</span> <span class="mi">10</span><span class="o">:</span>
@@ -689,10 +689,10 @@ if (nummun_1 == 2) Lcd_Clear(0x1f);
 </span></span><span class="line"><span class="cl"><span class="n">Global</span> <span class="kt">void</span> <span class="nf">Task6</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">pdata</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="n">Global</span> <span class="kt">void</span> <span class="nf">Task7</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">pdata</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">sem6</span> <span class="o">=</span> <span class="n">OSSemCreate</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">sem7</span> <span class="o">=</span> <span class="n">OSSemCreate</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">OSTaskCreate</span><span class="p">(</span><span class="n">Task6</span><span class="p">,(</span><span class="kt">void</span> <span class="o">*</span><span class="p">)</span><span class="mi">6</span><span class="p">,</span><span class="o">&amp;</span><span class="n">TestTask6Stk</span><span class="p">[</span><span class="n">TaskStkLeath</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="mi">10</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">OSTaskCreate</span><span class="p">(</span><span class="n">Task7</span><span class="p">,(</span><span class="kt">void</span> <span class="o">*</span><span class="p">)</span><span class="mi">7</span><span class="p">,</span><span class="o">&amp;</span><span class="n">TestTask7Stk</span><span class="p">[</span><span class="n">TaskStkLeath</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="mi">11</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">sem6</span> <span class="o">=</span> <span class="nf">OSSemCreate</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">sem7</span> <span class="o">=</span> <span class="nf">OSSemCreate</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nf">OSTaskCreate</span><span class="p">(</span><span class="n">Task6</span><span class="p">,(</span><span class="kt">void</span> <span class="o">*</span><span class="p">)</span><span class="mi">6</span><span class="p">,</span><span class="o">&amp;</span><span class="n">TestTask6Stk</span><span class="p">[</span><span class="n">TaskStkLeath</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="mi">10</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nf">OSTaskCreate</span><span class="p">(</span><span class="n">Task7</span><span class="p">,(</span><span class="kt">void</span> <span class="o">*</span><span class="p">)</span><span class="mi">7</span><span class="p">,</span><span class="o">&amp;</span><span class="n">TestTask7Stk</span><span class="p">[</span><span class="n">TaskStkLeath</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="mi">11</span><span class="p">);</span>
 </span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>每个task调整OSTimeDly()和OSTaskCreate中的最后一个值有10倍关系，调整OSSemPost()为模7后相邻的两位哲学家，例如第1为哲学家设置OSSemPost(sem1);OSSemPost(sem7);</p>

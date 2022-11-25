@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.106.0"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.107.0"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -267,7 +267,7 @@
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="p">$</span> <span class="no">[environment]</span><span class="p">::</span><span class="n">setEnvironmentVariable</span><span class="p">(</span><span class="s1">&#39;SCOOP&#39;</span><span class="p">,</span><span class="s1">&#39;D:\scoop&#39;</span><span class="p">,</span><span class="s1">&#39;User&#39;</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="p">$</span> <span class="p">[</span><span class="no">environment</span><span class="p">]::</span><span class="n">setEnvironmentVariable</span><span class="p">(</span><span class="s1">&#39;SCOOP&#39;</span><span class="p">,</span><span class="s1">&#39;D:\scoop&#39;</span><span class="p">,</span><span class="s1">&#39;User&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">$</span> <span class="nv">$env:SCOOP</span><span class="p">=</span><span class="s1">&#39;D:\scoop&#39;</span>
 </span></span></code></pre></td></tr></table></div>
 </div>
@@ -277,7 +277,7 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="p">$</span> <span class="nb">iex </span><span class="p">(</span><span class="nb">new-object</span> <span class="n">net</span><span class="p">.</span><span class="n">webclient</span><span class="p">).</span><span class="n">downloadstring</span><span class="p">(</span><span class="s1">&#39;https://get.scoop.sh&#39;</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="p">$</span> <span class="nb">iex </span><span class="p">(</span><span class="nb">new-object</span> <span class="n">net</span><span class="p">.</span><span class="n">webclient</span><span class="p">).</span><span class="py">downloadstring</span><span class="p">(</span><span class="s1">&#39;https://get.scoop.sh&#39;</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table></div>
 </div>
 </div>

@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.106.0"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.107.0"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -425,11 +425,11 @@
 </span></span><span class="line"><span class="cl"><span class="n">git</span> <span class="n">checkout</span> <span class="n">master</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c"># delete all files except .git</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$files</span> <span class="p">=</span> <span class="nb">Get-ChildItem</span> <span class="n">-Path</span> <span class="p">.\</span> <span class="n">-Exclude</span> <span class="p">.</span><span class="n">git</span>
-</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nv">$files</span><span class="p">.</span><span class="n">count</span> <span class="o">-gt</span> <span class="n">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$files</span> <span class="p">=</span> <span class="nb">Get-ChildItem</span> <span class="n">-Path</span> <span class="p">.\</span> <span class="n">-Exclude</span> <span class="p">.</span><span class="py">git</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nv">$files</span><span class="p">.</span><span class="py">count</span> <span class="o">-gt</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">foreach</span><span class="p">(</span><span class="nv">$file</span> <span class="k">in</span> <span class="nv">$files</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nb">Remove-Item</span> <span class="nv">$file</span><span class="p">.</span><span class="n">FullName</span> <span class="n">-Recurse</span> <span class="n">-Force</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">Remove-Item</span> <span class="nv">$file</span><span class="p">.</span><span class="py">FullName</span> <span class="n">-Recurse</span> <span class="n">-Force</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
@@ -447,21 +447,21 @@
 </span></span><span class="line"><span class="cl"><span class="n">git</span> <span class="n">checkout</span> <span class="n">source</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c"># delete all files except .git</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$files</span> <span class="p">=</span> <span class="nb">Get-ChildItem</span> <span class="n">-Path</span> <span class="p">.\</span> <span class="n">-Exclude</span> <span class="p">.</span><span class="n">git</span>
-</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nv">$files</span><span class="p">.</span><span class="n">count</span> <span class="o">-gt</span> <span class="n">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$files</span> <span class="p">=</span> <span class="nb">Get-ChildItem</span> <span class="n">-Path</span> <span class="p">.\</span> <span class="n">-Exclude</span> <span class="p">.</span><span class="py">git</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nv">$files</span><span class="p">.</span><span class="py">count</span> <span class="o">-gt</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">foreach</span><span class="p">(</span><span class="nv">$file</span> <span class="k">in</span> <span class="nv">$files</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nb">Remove-Item</span> <span class="nv">$file</span><span class="p">.</span><span class="n">FullName</span> <span class="n">-Recurse</span> <span class="n">-Force</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">Remove-Item</span> <span class="nv">$file</span><span class="p">.</span><span class="py">FullName</span> <span class="n">-Recurse</span> <span class="n">-Force</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c"># copy some files</span>
 </span></span><span class="line"><span class="cl"><span class="nb">Copy-Item</span> <span class="n">-Path</span> <span class="p">..\</span><span class="n">content</span> <span class="n">-Recurse</span> <span class="n">-Destination</span> <span class="p">.\</span>
 </span></span><span class="line"><span class="cl"><span class="nb">Copy-Item</span> <span class="n">-Path</span> <span class="p">..\</span><span class="n">README</span><span class="p">.</span><span class="nb">md </span><span class="n">-Recurse</span> <span class="n">-Destination</span> <span class="p">.\</span>
-</span></span><span class="line"><span class="cl"><span class="nb">Copy-Item</span> <span class="n">-Path</span> <span class="p">..\.</span><span class="n">gitmodules</span> <span class="n">-Recurse</span> <span class="n">-Destination</span> <span class="p">.\</span>
-</span></span><span class="line"><span class="cl"><span class="nb">Copy-Item</span> <span class="n">-Path</span> <span class="p">..\</span><span class="n">config</span><span class="p">.</span><span class="n">toml</span> <span class="n">-Recurse</span> <span class="n">-Destination</span> <span class="p">.\</span>
-</span></span><span class="line"><span class="cl"><span class="nb">Copy-Item</span> <span class="n">-Path</span> <span class="p">..\</span><span class="n">myDeploy</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-Recurse</span> <span class="n">-Destination</span> <span class="p">.\</span>
-</span></span><span class="line"><span class="cl"><span class="nb">Copy-Item</span> <span class="n">-Path</span> <span class="p">..\</span><span class="n">myDeploy</span><span class="p">.</span><span class="n">sh</span> <span class="n">-Recurse</span> <span class="n">-Destination</span> <span class="p">.\</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Copy-Item</span> <span class="n">-Path</span> <span class="p">..\.</span><span class="py">gitmodules</span> <span class="n">-Recurse</span> <span class="n">-Destination</span> <span class="p">.\</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Copy-Item</span> <span class="n">-Path</span> <span class="p">..\</span><span class="n">config</span><span class="p">.</span><span class="py">toml</span> <span class="n">-Recurse</span> <span class="n">-Destination</span> <span class="p">.\</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Copy-Item</span> <span class="n">-Path</span> <span class="p">..\</span><span class="n">myDeploy</span><span class="p">.</span><span class="py">ps1</span> <span class="n">-Recurse</span> <span class="n">-Destination</span> <span class="p">.\</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Copy-Item</span> <span class="n">-Path</span> <span class="p">..\</span><span class="n">myDeploy</span><span class="p">.</span><span class="py">sh</span> <span class="n">-Recurse</span> <span class="n">-Destination</span> <span class="p">.\</span>
 </span></span><span class="line"><span class="cl"><span class="nb">Copy-Item</span> <span class="n">-Path</span> <span class="p">..\</span><span class="n">themes</span> <span class="n">-Recurse</span> <span class="n">-Destination</span> <span class="p">.\</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">git</span> <span class="n">add</span> <span class="n">-A</span>
