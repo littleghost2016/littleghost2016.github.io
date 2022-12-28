@@ -10,7 +10,7 @@
         <title>LittleGhost的博客</title>
         <link>https://blog.littleghost.ml/</link>
         <description>MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</description>
-        <generator>Hugo 0.107.0 https://gohugo.io/</generator>
+        <generator>Hugo 0.109.0 https://gohugo.io/</generator>
         
             <language>zh-CN</language>
         
@@ -23,10 +23,106 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Fri, 25 Nov 2022 20:49:08 &#43;0800</lastBuildDate>
+        <lastBuildDate>Wed, 28 Dec 2022 20:46:10 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://blog.littleghost.ml/rss.xml" />
         
+        
+            <item>
+                <title>windowsserver2022关闭iis</title>
+                <link>https://blog.littleghost.ml/posts/windowsserver2022%E5%85%B3%E9%97%ADiis/</link>
+                <guid isPermaLink="true">https://blog.littleghost.ml/posts/windowsserver2022%E5%85%B3%E9%97%ADiis/</guid>
+                <pubDate>Wed, 28 Dec 2022 20:30:54 &#43;0800</pubDate>
+                
+                    <author>785340571@qq.com (LittleGhost)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;blockquote&gt;
+&lt;p&gt;参考自&lt;a href=&#34;https://cloud.tencent.com/developer/article/1538468&#34;&gt;Server2016如何关闭和禁用IIS服务器 - 腾讯云开发者社区-腾讯云 (tencent.com)&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;起因&#34;&gt;起因&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;image-20221228201028301.png&#34; alt=&#34;image-20221228201028301&#34;&gt;&lt;/p&gt;
+&lt;p&gt;windows server 2022的iis（Internet Information Services）会占用80端口，使用命令查看端口占用。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;netstat&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-ano&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;findstr&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;80&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;TCP    0.0.0.0:80             0.0.0.0:0              LISTENING       4
+TCP    [::]:80                [::]:0                 LISTENING       4
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;想要关闭并且禁用自启动一共需要2个步骤。&lt;/p&gt;
+&lt;h1 id=&#34;1关闭服务&#34;&gt;1.关闭服务&lt;/h1&gt;
+&lt;h2 id=&#34;11打开服务器管理器&#34;&gt;1.1打开“服务器管理器”&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;image-20221228201535408.png&#34; alt=&#34;image-20221228201535408&#34;&gt;&lt;/p&gt;
+&lt;p&gt;或者在开始菜单里面打开&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;image-20221228201615132.png&#34; alt=&#34;image-20221228201615132&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;12打开计算机管理&#34;&gt;1.2打开“计算机管理”&lt;/h2&gt;
+&lt;p&gt;点击“工具”-“计算机管理”&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;image-20221228201714008.png&#34; alt=&#34;image-20221228201714008&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;13打开iis管理器&#34;&gt;1.3打开iis管理器&lt;/h2&gt;
+&lt;p&gt;点击“服务和应用程序”-“Internet Information Services（iis）管理器”&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;image-20221228202009113.png&#34; alt=&#34;image-20221228202009113&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;14停止服务&#34;&gt;1.4停止服务&lt;/h2&gt;
+&lt;p&gt;左边点击服务器，弹出的页面中点击”停止“&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;image-20221228202217249.png&#34; alt=&#34;image-20221228202217249&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;15或者使用命令&#34;&gt;（1.5或者使用命令）&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;net&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;stop&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;w3svc&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;World Wide Web 发布服务 服务正在停止.
+World Wide Web 发布服务 服务已成功停止。
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;2关闭服务自启动&#34;&gt;2.关闭服务自启动&lt;/h1&gt;
+&lt;h2 id=&#34;21重复11和12后打开服务&#34;&gt;2.1重复1.1和1.2后，打开服务&lt;/h2&gt;
+&lt;p&gt;点击”服务“&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;image-20221228202520429.png&#34; alt=&#34;image-20221228202520429&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;22找到iis管理服务&#34;&gt;2.2找到iis管理服务&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;image-20221228202631907.png&#34; alt=&#34;image-20221228202631907&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;23关闭自启动&#34;&gt;2.3关闭自启动&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;image-20221228202804579.png&#34; alt=&#34;image-20221228202804579&#34;&gt;&lt;/p&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/tags/windows/">windows</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://blog.littleghost.ml/tags/iis/">iis</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>搭建ruoyi框架所需环境</title>
