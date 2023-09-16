@@ -38,6 +38,8 @@ WantedBy=multi-user.target
 
 # 解决下载文件中文乱码
 
+> 参考自[解决 debian 10 中文显示乱码的问题-CNBoy 四海部落](https://cnboy.org/2025)
+
 下载文件名中有中文时会乱码（一个中文字显示一个"."），使用以下命令
 
 ```bash
