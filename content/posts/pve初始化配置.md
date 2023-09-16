@@ -163,3 +163,17 @@ options i915 enable_guc=3
 $ reboot
 ```
 
+# 3.以映射方式直通硬盘
+
+查看硬盘id
+
+```bash
+$ ls -la /dev/disk/by-id/|grep -v dm|grep -v lvm|grep -v part
+```
+
+使用命令为虚拟机添加硬盘
+
+```bash
+$ qm set 101 --sata1 /dev/disk/by-id/xxx
+```
+
