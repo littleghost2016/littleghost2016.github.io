@@ -165,6 +165,8 @@ $ reboot
 
 # 3.以映射方式直通硬盘
 
+> 参考自[佛西博客 - Proxmox VE pve硬盘直通 (buduanwang.vip)](https://foxi.buduanwang.vip/virtualization/1754.html/)
+
 查看硬盘id
 
 ```bash
