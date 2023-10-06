@@ -126,7 +126,32 @@ vainfo: Supported profile and entrypoints
 	采样率：48000 Hz
 ```
 
+# 解决tmdb dns污染
+
+```
+https://dnschecker.org/
+```
+
+```
+api.themoviedb.org
+image.tmdb.org
+www.themoviedb.org
+```
+
+以下ip可能过段时间会变，不具有时效性。
+
+```
+api.themoviedb.org 13.32.99.119
+api.themoviedb.org 13.32.99.112
+api.themoviedb.org 13.32.99.49
+api.themoviedb.org 13.32.99.17
+image.tmdb.org 169.150.249.168
+www.themoviedb.org 18.66.122.3
+www.themoviedb.org 18.66.122.47
+www.themoviedb.org 18.66.122.113
+www.themoviedb.org 18.66.122.75
+```
+
 # 最后
 
 如果挂载了硬盘，可以把【常规】中的【缓存路径】、【常规】中的【媒体资料路径】、【播放】中的【转码路径】都换到挂载目录下，以节省lxc中的硬盘空间。
-
