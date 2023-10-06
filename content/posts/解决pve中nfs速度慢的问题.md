@@ -220,6 +220,12 @@ $ dd if=/dev/zero of=./130-v4mp-1G-1.bin bs=1G count=1
 
 简单总结：**客户端版本从v3改为了v4.2**（v4和v4.1未测试）。两个版本存在速度差异的原因未知，困扰了我好几天，再不解决都打算直接在omv中安装qbittorrent了。
 
+# 5.增加
+
+使用了半天发现，qbittorrent下载速度不超过20MB/s，但是使用`dd`命令在nfs挂载目录中创建文件时速度在100MB/s以上，说明目前问题并不出在nfs上。增加qbittorrent lxc的内存（512MB->2GB），同时勾选【选项】-【高级】-【磁盘IO写入模式】-【连续写入（libtorrent>=2.0.6】后速度提升...
+
+> 磁盘io写入模式参考自[libtorrent](https://www.libtorrent.org/reference-Settings.html#disk_io_write_mode)
+
 # 附录
 
 在更换了nfs客户端版本以后，我在jellyfin的lxc中同样使用`dd`命令测速，结果如下，速度能达到120MB/s。
