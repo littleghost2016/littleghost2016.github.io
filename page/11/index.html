@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.127.0"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.136.5"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -58,7 +58,7 @@
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "datePublished": "2016-08-21T20:00:00+08:00",
+        "datePublished": "2023-09-16T22:46:34+08:00",
         "dateModified": "2024-03-17T22:15:19+08:00",
         "url": "https://blog.littleghost.ml/",
         "description": "MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。",
@@ -226,7 +226,10 @@
 
                 
                 <summary class="summary p-summary">
-                    图片来自_王爵的技术小黑屋
+                    <blockquote>
+<p>图片来自<a href="https://zhuanlan.zhihu.com/p/28674639">_王爵的技术小黑屋</a></p>
+</blockquote>
+<p><img src="%E5%86%99%E4%BB%A3%E7%A0%81%E6%80%8E%E8%83%BD%E4%B8%8D%E4%BC%9A%E8%BF%99%E4%BA%9BLinux%E5%91%BD%E4%BB%A4.jpg" alt="写代码怎能不会这些Linux命令"></p>
                 </summary>
                 
             </article>
@@ -273,7 +276,12 @@
 
                 
                 <summary class="summary p-summary">
-                    CPU天梯图 移动端笔记本电脑显卡天梯图 桌面级台式电脑显卡天梯图
+                    <h1 id="cpu天梯图">CPU天梯图</h1>
+<p><img src="CPU%E5%A4%A9%E6%A2%AF%E5%9B%BE.jpg" alt="CPU天梯图"></p>
+<h1 id="移动端笔记本电脑显卡天梯图">移动端笔记本电脑显卡天梯图</h1>
+<p><img src="%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%AC%94%E8%AE%B0%E6%9C%AC%E7%94%B5%E8%84%91%E6%98%BE%E5%8D%A1%E5%A4%A9%E6%A2%AF%E5%9B%BE.jpg" alt="移动端笔记本电脑显卡天梯图"></p>
+<h1 id="桌面级台式电脑显卡天梯图">桌面级台式电脑显卡天梯图</h1>
+<p><img src="%E6%A1%8C%E9%9D%A2%E7%BA%A7%E5%8F%B0%E5%BC%8F%E7%94%B5%E8%84%91%E6%98%BE%E5%8D%A1%E5%A4%A9%E6%A2%AF%E5%9B%BE.jpg" alt="桌面级台式电脑显卡天梯图"></p>
                 </summary>
                 
             </article>
@@ -320,7 +328,65 @@
 
                 
                 <summary class="summary p-summary">
-                    不使用netplan 1. 安装工具 1 $ sudo apt install ifupdown 2. 修改/etc/network/inter……
+                    <h1 id="不使用netplan">不使用netplan</h1>
+<h2 id="1-安装工具">1. 安装工具</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo apt install ifupdown
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="2-修改etcnetworkinterfaces文件">2. 修改<code>/etc/network/interfaces</code>文件</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo vim /etc/network/interfaces
+</span></span></code></pre></td></tr></table>
+</div>
+</div><pre tabindex="0"><code># ifupdown has been replaced by netplan(5) on this system.  See
+# /etc/netplan for current configuration.
+# To re-enable ifupdown on this system, you can run:
+#    sudo apt install ifupdown
+
+auto wlan0
+allow-hotplug wlan0
+#iface wlan0 inet static
+iface wlan0 inet dhcp
+#       address 192.168.1.52
+#       netmask 255.255.255.0
+        wpa_conf /etc/wpa_supplicant/wpa_supplicant.conf
+</code></pre><h2 id="3-修改etcwpa_supplicantwpa_supplicantconf文件">3. 修改<code>/etc/wpa_supplicant/wpa_supplicant.conf</code>文件</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo vim /etc/wpa_supplicant/wpa_supplicant.conf
+</span></span></code></pre></td></tr></table>
+</div>
+</div><pre tabindex="0"><code>ctrl_interface=/var/run/wpa_supplicant
+#ap_scan=1
+
+network={
+       ssid=&#34;SSID&#34;
+       scan_ssid=1
+       psk=&#34;password&#34;
+       priority=5
+}
+</code></pre><h2 id="4-重启网卡">4. 重启网卡</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo ifdown wlan0
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>回显：</p>……
                 </summary>
                 
                     <div class="read-more-container">
@@ -371,12 +437,21 @@
 
                 
                 <summary class="summary p-summary">
-                    压缩图片的网页 http://www.bejson.com/ui/compress_img/ 图片转Base64的网页 http://imgbase64.duoshitong.com/ Markdown中的使用格式 其他内容 ![image][linkid1] 其他……
+                    <h1 id="压缩图片的网页">压缩图片的网页</h1>
+<p><a href="http://www.bejson.com/ui/compress_img/">http://www.bejson.com/ui/compress_img/</a></p>
+<h1 id="图片转base64的网页">图片转Base64的网页</h1>
+<p><a href="http://imgbase64.duoshitong.com/">http://imgbase64.duoshitong.com/</a></p>
+<h1 id="markdown中的使用格式">Markdown中的使用格式</h1>
+<pre tabindex="0"><code>其他内容
+
+![image][linkid1]
+
+其他内容
+
+[linkid1]: data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDACg...
+</code></pre><h1 id="例">例：</h1>
+<p><img src="%E7%A4%BA%E4%BE%8B.jpg" alt="示例"></p>
                 </summary>
-                
-                    <div class="read-more-container">
-                        <a href="/posts/Markdown%E4%B8%AD%E4%BD%BF%E7%94%A8Base64%E6%A0%BC%E5%BC%8F%E4%BF%9D%E5%AD%98%E5%9B%BE%E7%89%87/" class="read-more-link">阅读更多 »</a>
-                    </div>
                 
             </article>
         
@@ -422,12 +497,68 @@
 
                 
                 <summary class="summary p-summary">
-                    安装Hexo 初始化文件夹 1 2 3 4 $ hexo init myblog $ cd myblog $ npm install 安装主题 1 2 3 $ git clone git@github.com:forsigner/fexo.git themes/fexo $ npm install hexo-deployer-git……
+                    <h1 id="安装hexo">安装Hexo</h1>
+<h2 id="初始化文件夹">初始化文件夹</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ hexo init myblog
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ <span class="nb">cd</span> myblog
+</span></span><span class="line"><span class="cl">$ npm install
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="安装主题">安装主题</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ git clone git@github.com:forsigner/fexo.git themes/fexo
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ npm install hexo-deployer-git --save
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="常用hexo命令">常用hexo命令</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ hexo g
+</span></span><span class="line"><span class="cl">$ hexo s
+</span></span><span class="line"><span class="cl">$ hexo d
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="迁移hexo需要移动的文件夹">迁移<code>hexo</code>需要移动的文件（夹）</h2>
+<pre tabindex="0"><code>_config.yml
+package.json
+scaffolds/
+source/
+themes/
+</code></pre><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ npm install hexo-cli -g
+</span></span><span class="line"><span class="cl">$ npm install
+</span></span><span class="line"><span class="cl">$ npm install hexo-deployer-git --save  // 文章部署到 git 的模块
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
                 </summary>
-                
-                    <div class="read-more-container">
-                        <a href="/posts/hexo%E7%9A%84%E4%BD%BF%E7%94%A8/" class="read-more-link">阅读更多 »</a>
-                    </div>
                 
             </article>
         

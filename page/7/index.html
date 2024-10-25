@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.127.0"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.136.5"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -58,7 +58,7 @@
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "datePublished": "2016-08-21T20:00:00+08:00",
+        "datePublished": "2023-09-16T22:46:34+08:00",
         "dateModified": "2024-03-17T22:15:19+08:00",
         "url": "https://blog.littleghost.ml/",
         "description": "MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。",
@@ -226,7 +226,9 @@
 
                 
                 <summary class="summary p-summary">
-                    原来一直使用cloudflare做域名解析，还写过通过API自动更新Cloudfla……
+                    <p>原来一直使用cloudflare做域名解析，还写过<a href="https://blog.littleghost.ml/posts/%E9%80%9A%E8%BF%87API%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0Cloudflare%E7%9A%84DNS%E8%A7%A3%E6%9E%90-Go%E8%AF%AD%E8%A8%80%E7%89%88%E6%9C%AC/">通过API自动更新Cloudflare的DNS解析-Go语言版本</a>，但从哪一天开始域名无法正确更新，根据回显提示：</p>
+<blockquote>
+<p>Check the log file and find the error message: “error”: &quot;You cannot use this API for domains (top-level domains) with .cf, .ga, .gq, .ml or .tk TLDs. DNS settings for this domain, please Use the Cloudflare dashboard.</p>……
                 </summary>
                 
                     <div class="read-more-container">
@@ -277,7 +279,8 @@
 
                 
                 <summary class="summary p-summary">
-                    阅读信息论相关论文，《基于熵理论的无线网络安全的模糊风险评估》。 随着无线网络的迅速发……
+                    <p>阅读信息论相关论文，《基于熵理论的无线网络安全的模糊风险评估》。</p>
+<p>随着无线网络的迅速发展, 无线网络的安全受到极大关注。 而网络安全的核心问题是风险评估, 本文讨论了对无线网络安全的风险评估方法。</p>……
                 </summary>
                 
                     <div class="read-more-container">
@@ -328,7 +331,8 @@
 
                 
                 <summary class="summary p-summary">
-                    实验要求 将附件中的英文文献用最佳不等长编码进行压缩。即利用霍夫曼编码（Huffman……
+                    <h1 id="实验要求">实验要求</h1>
+<p>将附件中的英文文献用最佳不等长编码进行压缩。即利用霍夫曼编码（Huffman Code）、算术编码（Arithmetic Code）和LZ编码（Lempel-Ziv Code）任一编码算法对文献实现无损压缩。</p>……
                 </summary>
                 
                     <div class="read-more-container">
@@ -379,7 +383,8 @@
 
                 
                 <summary class="summary p-summary">
-                    这学期选修了《计算智能》，大作业是阅读论文完成报告，于是记录下读论文的过程。 A new approach to……
+                    <p>这学期选修了《计算智能》，大作业是阅读论文完成报告，于是记录下读论文的过程。</p>
+<p><a href="http://www.cloudbus.org/~adel/pdf/ccj2007.pdf">A new approach to intrusion detection based on an evolutionary soft computing model using neuro-fuzzy classifiers</a></p>……
                 </summary>
                 
                     <div class="read-more-container">
@@ -430,7 +435,19 @@
 
                 
                 <summary class="summary p-summary">
-                    签到题 操作内容 此题writeup来自队友。 进入容器，首先按 Ctrl+U 查看页面源码，发现存在j……
+                    <h1 id="签到题">签到题</h1>
+<h2 id="操作内容">操作内容</h2>
+<p>此题writeup来自队友。</p>
+<p>进入容器，首先按 Ctrl+U 查看页面源码，发现存在js脚本<a href="http://578f4cd5c5f143e48046562a9ff01bdbc05a630dd1404d2c.cloudgame1.ichunqiu.com/css/game_manager.js">css/game_manager.js</a>，点击查看内容，全局搜索php，寻找脚本文件，发现p14.php文件。为ajax请求，post方式提交token和success数据，在全局搜索token，寻找token从何而来，发现</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">var</span> <span class="nx">token</span><span class="o">=</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\x70\x6c\x65\x61\x73\x65</span><span class="s2"> </span><span class="se">\x69\x6e\x70\x75\x74</span><span class="s2"> </span><span class="se">\x79\x6f\x75\x72</span><span class="s2"> </span><span class="se">\x74\x65\x61\x6d</span><span class="s2"> </span><span class="se">\x54\x6f\x6b\x65\x6e\x3a</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>解码后为：please input your team Token。故token的值为本队的token。然后success输入data，获取flag。</p>……
                 </summary>
                 
                     <div class="read-more-container">

@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.127.0"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.136.5"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -58,7 +58,7 @@
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "datePublished": "2016-08-21T20:00:00+08:00",
+        "datePublished": "2023-09-16T22:46:34+08:00",
         "dateModified": "2024-03-17T22:15:19+08:00",
         "url": "https://blog.littleghost.ml/",
         "description": "MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。",
@@ -226,7 +226,20 @@
 
                 
                 <summary class="summary p-summary">
-                    安装zsh后报错，解决方案： 1 2 3 $ compaudit | xargs -I &#39;%&#39; chmod g-w,o-w &#39;%&#39; $ rm ~/.zcompdump* $ exec zsh
+                    <p>安装zsh后报错，解决方案：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ compaudit <span class="p">|</span> xargs -I <span class="s1">&#39;%&#39;</span> chmod g-w,o-w <span class="s1">&#39;%&#39;</span>
+</span></span><span class="line"><span class="cl">$ rm ~/.zcompdump*
+</span></span><span class="line"><span class="cl">$ <span class="nb">exec</span> zsh
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
                 </summary>
                 
             </article>
@@ -273,7 +286,10 @@
 
                 
                 <summary class="summary p-summary">
-                    2019年07月10日 实验室突然断电导致开启虚拟机时报错另一个程序已锁定文件的一部分……
+                    <p>2019年07月10日</p>
+<p>实验室突然断电导致开启虚拟机时报错<code>另一个程序已锁定文件的一部分</code>。</p>
+<h1 id="分析原因">分析原因：</h1>
+<p>虚拟机在运行的过程中会锁定文件，以防止文件被修改。当出现突然断电或者本地系统崩溃时，虚拟机无法及时地解除对于虚拟机文件的锁定，当再次启动时就会出现如上现象。</p>……
                 </summary>
                 
                     <div class="read-more-container">
@@ -322,8 +338,18 @@
 
                 
                 <summary class="summary p-summary">
-                    Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick Start Create a new post 1 $ hexo new &#34;My New Post&#34; More info: Writing
+                    <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="create-a-new-post">Create a new post</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ hexo new <span class="s2">&#34;My New Post&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
                 </summary>
                 
                     <div class="read-more-container">
@@ -374,7 +400,9 @@ Quick Start Create a new post 1 $ hexo new &#34;My New Post&#34; More info: Writ
 
                 
                 <summary class="summary p-summary">
-                    基于Flask框架的动态代理池系统 一、项目简介 如今是网络与信息时代，互联网成为了大量……
+                    <h1 id="基于flask框架的动态代理池系统">基于Flask框架的动态代理池系统</h1>
+<h1 id="一项目简介">一、项目简介</h1>
+<p>如今是网络与信息时代，互联网成为了大量信息的载体，它的出现是人类科学技术的一次革命，这场革命使得人们获取信息更加便利，更加可信，更加低廉，更加有趣。但这其中的信息是碎片分散的，之间的关系也是纷繁复杂的，所以如何有效地提取并利用这些信息成为了一个巨大的挑战。搜索引擎，例如传统的通用搜索引擎，例如Yahoo和Google等，作为一个辅助人们检索信息的工具，运用爬虫技术，成为用户访问网络的入口和指南<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>。</p>……
                 </summary>
                 
                     <div class="read-more-container">
@@ -425,12 +453,80 @@ Quick Start Create a new post 1 $ hexo new &#34;My New Post&#34; More info: Writ
 
                 
                 <summary class="summary p-summary">
-                    安装 1 2 3 4 sudo apt-get install openssl libssl-dev sudo wget http://xrl.us/cpanm --no-check-certificate -O /sbin/cpanm &amp;&amp; chmod +x /sbin/cpanm sudo chmod 755 /sbin/cpanm sudo cpanm Mojo::Webqq 配置 1 $ vim Mojoqq/qq1.pl 1 2 3 4 5 6 7 8……
+                    <h1 id="安装">安装</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt-get install openssl libssl-dev
+</span></span><span class="line"><span class="cl">sudo wget  http://xrl.us/cpanm  --no-check-certificate -O /sbin/cpanm <span class="o">&amp;&amp;</span> chmod +x  /sbin/cpanm
+</span></span><span class="line"><span class="cl">sudo chmod <span class="m">755</span> /sbin/cpanm
+</span></span><span class="line"><span class="cl">sudo cpanm Mojo::Webqq
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="配置">配置</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ vim Mojoqq/qq1.pl
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-perl" data-lang="perl"><span class="line"><span class="cl"><span class="k">use</span> <span class="nn">Mojo::Webqq</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#微信使用 use Mojo::Weixin</span>
+</span></span><span class="line"><span class="cl"><span class="k">my</span> <span class="nv">$client</span> <span class="o">=</span> <span class="nn">Mojo::Webqq</span><span class="o">-&gt;</span><span class="k">new</span><span class="p">(</span><span class="n">log_encoding</span><span class="o">=&gt;</span><span class="s">&#34;utf-8&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$client</span><span class="o">-&gt;</span><span class="n">load</span><span class="p">(</span><span class="s">&#34;ShowMsg&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#以下为 MiPush 推送</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$client</span><span class="o">-&gt;</span><span class="n">load</span><span class="p">(</span><span class="s">&#34;MiPush&#34;</span><span class="p">,</span><span class="n">data</span><span class="o">=&gt;</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">registration_ids</span><span class="o">=&gt;</span><span class="p">[</span><span class="s">&#34;FP5FHPzvfB1p3lntV75WgycDuAVwWExmsHa8vQn0NuKniv4kjkHM1aIraZWYh/mF&#34;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># allow_group=&gt;[&#34;&#34;],</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># ban_group=&gt;[],</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># allow_discuss=&gt;[],</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># ban_discuss=&gt;[],</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$client</span><span class="o">-&gt;</span><span class="n">load</span><span class="p">(</span><span class="s">&#34;Openqq&#34;</span><span class="p">,</span><span class="n">data</span><span class="o">=&gt;</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#如果是微信改为 Openwx</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">listen</span> <span class="o">=&gt;</span> <span class="p">[{</span><span class="n">host</span><span class="o">=&gt;</span><span class="s">&#34;0.0.0.0&#34;</span><span class="p">,</span><span class="n">port</span><span class="o">=&gt;</span><span class="mi">1098</span><span class="p">},</span> <span class="p">]</span> <span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#如果是推送微信的话需要保证端口不重复，并请保证所设定的端口已经在防火墙内放行，同时需要在 APP 内设定好推送服务器的地址和端口</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#不需要 APP 内回复功能请删除以上三行（不包括被 # 号注释掉的几行）</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$client</span><span class="o">-&gt;</span><span class="n">run</span><span class="p">();</span> 
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
                 </summary>
-                
-                    <div class="read-more-container">
-                        <a href="/posts/MojoQQ/" class="read-more-link">阅读更多 »</a>
-                    </div>
                 
             </article>
         

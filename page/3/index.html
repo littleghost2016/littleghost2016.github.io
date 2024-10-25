@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.127.0"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.136.5"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -58,7 +58,7 @@
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "datePublished": "2016-08-21T20:00:00+08:00",
+        "datePublished": "2023-09-16T22:46:34+08:00",
         "dateModified": "2024-03-17T22:15:19+08:00",
         "url": "https://blog.littleghost.ml/",
         "description": "MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。",
@@ -226,7 +226,12 @@
 
                 
                 <summary class="summary p-summary">
-                    参考自Server2016如何关闭和禁用IIS服务器 - 腾讯云开发者社区-腾讯云 (tencent.com) 起因……
+                    <blockquote>
+<p>参考自<a href="https://cloud.tencent.com/developer/article/1538468">Server2016如何关闭和禁用IIS服务器 - 腾讯云开发者社区-腾讯云 (tencent.com)</a></p>
+</blockquote>
+<h1 id="起因">起因</h1>
+<p><img src="image-20221228201028301.png" alt="image-20221228201028301"></p>
+<p>windows server 2022的iis（Internet Information Services）会占用80端口，使用命令查看端口占用。</p>……
                 </summary>
                 
                     <div class="read-more-container">
@@ -277,7 +282,32 @@
 
                 
                 <summary class="summary p-summary">
-                    [TOC] 阅读本文请注意 所有以$开头的命令均为命令行中的输入，只需要复制$后面的内容即可，无……
+                    <p>[TOC]</p>
+<h1 id="阅读本文请注意">阅读本文请注意</h1>
+<ol>
+<li>所有以<code>$</code>开头的命令均为命令行中的输入，只需要复制<code>$</code>后面的内容即可，无需输入<code>$</code>。</li>
+<li>以<code>Debian 12</code>系统为基础。</li>
+</ol>
+<h1 id="mariadb">mariadb</h1>
+<h2 id="安装">安装</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo apt install mariadb-server
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="允许远程连接">允许远程连接</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo vim /etc/mysql/mariadb.conf.d/50-server.cnf
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>mariadb的配置文件有点多，得去mariadb.conf.d文件夹下面找。</em></p>……
                 </summary>
                 
                     <div class="read-more-container">
@@ -328,7 +358,15 @@
 
                 
                 <summary class="summary p-summary">
-                    [TOC] 参考自EMQ X MQTT 服务器启用 SSL/TLS 安全连接 - 简书 (jianshu.com) 原文为emqx-server-ssl-……
+                    <p>[TOC]</p>
+<blockquote>
+<p>参考自<a href="https://www.jianshu.com/p/9da0b8073b8e">EMQ X MQTT 服务器启用 SSL/TLS 安全连接 - 简书 (jianshu.com)</a></p>
+<p>原文为<a href="https://links.jianshu.com/go?to=https%3A%2F%2Fwww.emqx.io%2Fcn%2Fblog%2Femqx-server-ssl-tls-secure-connection-configuration-guide">emqx-server-ssl-tls-secure-connection-configuration-guide</a>，目前打开已404。应该是改成了<a href="https://www.emqx.com/zh/blog/emqx-server-ssl-tls-secure-connection-configuration-guide">EMQX MQTT 服务器启用 SSL/TLS 安全连接 | EMQ</a></p>
+</blockquote>
+<h1 id="阅读本文请注意">阅读本文请注意</h1>
+<ol>
+<li>
+<p>所有以<code>$</code>开头的命令均为命令行中的输入，只需要复制<code>$</code>后面的内容即可，无需输入<code>$</code>。</p>……
                 </summary>
                 
                     <div class="read-more-container">
@@ -379,7 +417,11 @@
 
                 
                 <summary class="summary p-summary">
-                    阅读论文《Mosh: An Interactive Remote Shell for Mobile Clients》。 好久都没写博客了 -_-| Keith Winstein Hari Balakrishnan M.I.T. Computer Science and……
+                    <p>阅读论文《Mosh: An Interactive Remote Shell for Mobile Clients》。</p>
+<p>好久都没写博客了 -_-|</p>
+<p>Keith Winstein</p>
+<p>Hari Balakrishnan</p>
+<p><em>M.I.T. Computer Science and Artificial Intelligence Laboratory, Cambridge, Mass.</em></p>……
                 </summary>
                 
                     <div class="read-more-container">
@@ -430,7 +472,31 @@
 
                 
                 <summary class="summary p-summary">
-                    操作系统信息 版本 Windows 10 企业版 LTSC 版本号 21H2 安装日期 ‎2021/‎11/‎24 操作系统内部版……
+                    <h1 id="操作系统信息">操作系统信息</h1>
+<table>
+  <thead>
+      <tr>
+          <th>版本</th>
+          <th>Windows 10 企业版 LTSC</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>版本号</td>
+          <td>21H2</td>
+      </tr>
+      <tr>
+          <td>安装日期</td>
+          <td>‎2021/‎11/‎24</td>
+      </tr>
+      <tr>
+          <td>操作系统内部版本</td>
+          <td>19044.1645</td>
+      </tr>
+  </tbody>
+</table>
+<h1 id="系统自带powershell信息">系统自带powershell信息</h1>
+<p>使用<code>host</code>命令查看powershell信息。</p>……
                 </summary>
                 
                     <div class="read-more-container">

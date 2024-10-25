@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.127.0"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.136.5"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -58,7 +58,7 @@
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "datePublished": "2016-08-21T20:00:00+08:00",
+        "datePublished": "2023-09-16T22:46:34+08:00",
         "dateModified": "2024-03-17T22:15:19+08:00",
         "url": "https://blog.littleghost.ml/",
         "description": "MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。",
@@ -226,7 +226,33 @@
 
                 
                 <summary class="summary p-summary">
-                    很简单，有手就行。 安装 安装二进制文件 1 $ sudo apt install samba 修改配置文件 1 $ sudo vim /etc/samba/smb.conf 最后添加如下内……
+                    <blockquote>
+<p><del>很简单，有手就行。</del></p>
+</blockquote>
+<h1 id="安装">安装</h1>
+<ol>
+<li>安装二进制文件</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo apt install samba
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>修改配置文件</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo vim /etc/samba/smb.conf
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>最后添加如下内容。<em>path为共享文件夹的路径，请根据自身情况修改</em></p>……
                 </summary>
                 
                     <div class="read-more-container">
@@ -277,7 +303,10 @@
 
                 
                 <summary class="summary p-summary">
-                    Painstaking but rewarding. 艰苦卓绝但富有成效。 本篇模板汇总内容为备战考研时的笔记，考研时用了感觉还不错。……
+                    <blockquote>
+<p>Painstaking but rewarding. 艰苦卓绝但富有成效。</p>
+</blockquote>
+<p>本篇模板汇总内容为备战考研时的笔记，考研时用了感觉还不错。所有内容来自微博 <a href="http://weibo.com/u/6089373308">@薛非英语</a>，感谢您！</p>……
                 </summary>
                 
                     <div class="read-more-container">
@@ -328,7 +357,74 @@
 
                 
                 <summary class="summary p-summary">
-                    功能 调用Cloudflare（下称CF）API查询域名对应的identifier和i……
+                    <h1 id="功能">功能</h1>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 调用Cloudflare（下称CF）API查询域名对应的identifier和ip</li>
+<li><input checked="" disabled="" type="checkbox"> 查询本地2001段IPv6地址</li>
+<li><input checked="" disabled="" type="checkbox"> 通过爬虫查询路由器中的10.173段IPv4地址</li>
+<li><input checked="" disabled="" type="checkbox"> 对比ip判断是否需要调用CF的API更新ip</li>
+<li><input checked="" disabled="" type="checkbox"> 在Windows上设置任务计划，定时执行二进制文件</li>
+</ul>
+<h1 id="网络信息说明">网络信息说明</h1>
+<ul>
+<li>实验室路由器翼讯拨号，路由器分配<code>10.173</code>段内网IPv4地址，做端口转发。电脑被分配<code>192.168</code>段地址，但这个内网不是我想要的地址。</li>
+<li>直连校园网，被分配<code>2001</code>段IPv6地址。</li>
+</ul>
+<h1 id="代码结构">代码结构</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// 初始化http请求的client端以复用
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">func</span> <span class="nf">initiateHttpClient</span><span class="p">()</span> <span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Client</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 通过HTTP的GET请求获取identifier和ip
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">func</span> <span class="nf">getIdentifierAndIp</span><span class="p">(</span><span class="nx">name</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">dnsType</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">httpClient</span> <span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Client</span><span class="p">)</span> <span class="p">(</span><span class="nx">identifier</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">ip</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">err</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 获取本机的IPv4和IPv6地址
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">func</span> <span class="nf">getNativeIp</span><span class="p">(</span><span class="nx">ipType</span> <span class="kt">string</span><span class="p">)</span> <span class="p">(</span><span class="nx">ip</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">err</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 检查ip是否需要更新
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">func</span> <span class="nf">checkIp</span><span class="p">(</span><span class="nx">identifier</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">ip</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">ipType</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">httpClient</span> <span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Client</span><span class="p">)</span> <span class="p">(</span><span class="nx">nativeIp</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">updateFlag</span> <span class="kt">bool</span><span class="p">)</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 通过HTTP的PUT请求更新ip
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">func</span> <span class="nf">updateCloudflareDns</span><span class="p">(</span><span class="nx">identifier</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">name</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">dnsType</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">ip</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">httpClient</span> <span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Client</span><span class="p">)</span> <span class="p">(</span><span class="nx">err</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 程序入口
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="工作流程">工作流程</h1>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph TD
+A(开始) --&gt; B[初始化HTTPClient]
+B --&gt; C[通过HTTP的GET请求获取identifier和ip]
+B --&gt; D{获取本地地址}
+D --&gt; |IPv4| E[模拟登录路由器获取地址]
+D --&gt; |IPv6| F[调用Go语言net库提取地址]
+C --&gt; G
+E --&gt; G{对比ip判断是否需要更新}
+F --&gt; G
+G --&gt; |需要| H[通过HTTP的PUT请求更新ip]
+G --&gt; |不需要| I(结束)
+H --&gt; I
+</code></pre><p><img src="%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="流程图"></p>……
                 </summary>
                 
                     <div class="read-more-container">
@@ -379,7 +475,7 @@
 
                 
                 <summary class="summary p-summary">
-                    VPS套餐只提供ipv4地址，无ipv6，使用TunnelBroker搭建6in4隧……
+                    <p>VPS套餐只提供ipv4地址，无ipv6，使用<code>TunnelBroker</code>搭建6in4隧道，获取可使用的ipv6地址。</p>……
                 </summary>
                 
                     <div class="read-more-container">
@@ -430,7 +526,81 @@
 
                 
                 <summary class="summary p-summary">
-                    总体工作 工作列表 重装系统ubuntu18.04 旧域名更换为新域名littleghos……
+                    <h1 id="总体工作">总体工作</h1>
+<h2 id="工作列表">工作列表</h2>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 重装系统ubuntu18.04</li>
+<li><input checked="" disabled="" type="checkbox"> 旧域名更换为新域名<a href="www.littleghost.ml">littleghost.ml</a></li>
+<li><input checked="" disabled="" type="checkbox"> Web服务器由<code>Nginx</code>切换为<code>Caddy</code>
+<ul>
+<li>实际使用的caddy为<code>caddy2Beta20</code>版本（当前最新），启动命令和caddyfile与1.X版本有不小的差别。</li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> 部署<code>V2ray</code>服务
+<ul>
+<li>模式为WebSocket + TLS，并未使用CDN。</li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> <code>caddy</code>和<code>v2ray</code>均使用<code>systemd</code>做进程守护。</li>
+<li><input checked="" disabled="" type="checkbox"> 通知小伙伴们重装期间无法提供服务，且原域名基本不再使用。</li>
+<li><input disabled="" type="checkbox"> 编写自动安装和升级caddy和v2ray的脚本。</li>
+</ul>
+<h2 id="整体文件布局">整体文件布局</h2>
+<pre tabindex="0"><code>/etc/systemd/system
+├── caddy.service
+└── v2ray.service
+
+/home/ubuntu/program
+├── caddy
+│   ├── bin
+│   │   ├── caddy
+│   ├── config
+│   │   └── caddyfile
+│   └── ssl
+│       ├── acme
+│       ├── locks
+│       └── ocsp
+└── v2ray
+    ├── bin
+    │   ├── v2ctl
+    │   ├── v2ray
+    ├── config
+    │   ├── v2ray.service
+    │   └── config.json
+    └── log
+</code></pre><h1 id="caddy">caddy</h1>
+<h2 id="文件布局">文件布局</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ tree caddy -L <span class="m">2</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><pre tabindex="0"><code>caddy
+├── bin
+│   ├── caddy
+├── config
+│   └── caddyfile
+└── ssl
+    ├── acme
+    ├── locks
+    └── ocsp
+</code></pre><h2 id="说明">说明</h2>
+<ol>
+<li>caddy包含1.X和2.0 beta 20两个版本的二进制执行文件和配置文件，两种版本都能够实现所需功能。</li>
+<li>1.0和2.0版本的配置文件和启动命令都不同。</li>
+<li>域名映射
+<ul>
+<li><code>www.littleghost.cn</code> --301--&gt; <code>littleghost2016.github.io</code></li>
+<li><code>blog.littleghost.ml</code> &amp; <code>www.littleghost.ml</code> 反向代理<code>littleghost2016.github.io</code></li>
+<li><code>blog.littleghost.ml/game</code> -&gt; 反向代理</li>
+</ul>
+</li>
+</ol>
+<h2 id="caddy-20-beta20-版本">caddy 2.0 beta20 版本</h2>
+<p>推荐使用caddy的新版本。</p>……
                 </summary>
                 
                     <div class="read-more-container">

@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.127.0"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.136.5"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -58,7 +58,7 @@
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "datePublished": "2016-08-21T20:00:00+08:00",
+        "datePublished": "2023-09-16T22:46:34+08:00",
         "dateModified": "2024-03-17T22:15:19+08:00",
         "url": "https://blog.littleghost.ml/",
         "description": "MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。",
@@ -226,7 +226,14 @@
 
                 
                 <summary class="summary p-summary">
-                    大三上学期《软件逆向工程》考前整理。现在看好像都忘得差不多了... 第一章-前言 逆向工……
+                    <p>大三上学期《软件逆向工程》考前整理。<em>现在看好像都忘得差不多了...</em></p>
+<h1 id="第一章-前言">第一章-前言</h1>
+<ol>
+<li>
+<p>逆向工程的应用：</p>
+<ul>
+<li>
+<p>逆向工程的应用(动态、静态)</p>……
                 </summary>
                 
                     <div class="read-more-container">
@@ -277,7 +284,187 @@
 
                 
                 <summary class="summary p-summary">
-                    1 CREATE SCHEMA TEST AUTHORIZATION ZHANG; 1 DROP SCHEMA &lt;模式名&gt; &lt;CASCADE | RESTRICT&gt;; 1 2 DROP TABLE &lt;表 名&gt; &lt;CASCADE | RESTRICT&gt;; --……
+                    <div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">CREATE</span><span class="w"> </span><span class="k">SCHEMA</span><span class="w"> </span><span class="n">TEST</span><span class="w"> </span><span class="k">AUTHORIZATION</span><span class="w"> </span><span class="n">ZHANG</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">DROP</span><span class="w"> </span><span class="k">SCHEMA</span><span class="w"> </span><span class="o">&lt;</span><span class="err">模式名</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="k">CASCADE</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="k">RESTRICT</span><span class="o">&gt;</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w">  </span><span class="o">&lt;</span><span class="err">表</span><span class="w">  </span><span class="err">名</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="k">CASCADE</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="k">RESTRICT</span><span class="o">&gt;</span><span class="p">;</span><span class="w">     </span><span class="c1">---缺省是RESTRICT
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">                       </span><span class="err">级联</span><span class="w">      </span><span class="err">限制</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">SC</span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Sno</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Cno</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Grade</span><span class="w"> </span><span class="nb">int</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    　  </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">Sno</span><span class="p">,</span><span class="n">Cno</span><span class="p">),</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    　  </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">Sno</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">S</span><span class="p">(</span><span class="n">Sno</span><span class="p">),</span><span class="w">       </span><span class="c1">--- FOREIGN KEY &lt;列名&gt;REFERENCES &lt;被参照表名&gt;(&lt;列名&gt;)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    　  </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">Cno</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="k">C</span><span class="p">(</span><span class="n">Cno</span><span class="p">));</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="err">表名</span><span class="o">&gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">[</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="o">&lt;</span><span class="err">新列名</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="err">数据类型</span><span class="o">&gt;</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="err">完整性约束</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">[</span><span class="w"> </span><span class="k">DROP</span><span class="w"> </span><span class="o">&lt;</span><span class="err">完整性约束名</span><span class="o">&gt;</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">　　</span><span class="p">[</span><span class="w"> </span><span class="k">ALTER</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="o">&lt;</span><span class="err">列名</span><span class="o">&gt;</span><span class="w">  </span><span class="o">&lt;</span><span class="err">数据类型</span><span class="o">&gt;</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="n">Scome</span><span class="w"> </span><span class="nb">DATE</span><span class="w"> </span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="k">Drop</span><span class="w"> </span><span class="n">Scome</span><span class="w"> </span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="k">ALTER</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">Sage</span><span class="w"> </span><span class="nb">SMALLINT</span><span class="w"> </span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">(</span><span class="n">Sname</span><span class="p">)</span><span class="w"> </span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="k">DROP</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">(</span><span class="n">Sname</span><span class="p">)</span><span class="w"> </span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="n">SC表按学号升序和课程号降序建唯一索引</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">CREATE</span><span class="w"> </span><span class="k">UNIQUE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">SCno</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">SC</span><span class="p">(</span><span class="n">Sno</span><span class="p">,</span><span class="n">Cno</span><span class="w"> </span><span class="k">DESC</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="err">在</span><span class="n">Student表的Sname列上建立一个聚簇索引</span><span class="err">，而且</span><span class="n">Student表中的记录将按照Sname值的升序存放</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">CREATE</span><span class="w"> </span><span class="k">CLUSTER</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">Stusname</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Student</span><span class="p">(</span><span class="n">Sname</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">DROP</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">Stusname</span><span class="p">;</span><span class="w"> </span><span class="c1">---SQL标准中没有定义对索引的修改功能，而采用删除后重新定义索引的方式实现
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">Sno</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">SC</span><span class="p">;</span><span class="w"> </span><span class="c1">---DISTINCT取消重复行,作用范围是所有目标列
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="err">投影</span><span class="p">(</span><span class="err">π</span><span class="p">)</span><span class="err">运算的定义中直接去掉了结果中的重复元组，</span><span class="n">SQL中必须明确指定DISTINCT</span><span class="p">,</span><span class="err">否则默认</span><span class="k">ALL</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="o">-</span><span class="err">查询年龄不在</span><span class="mi">20</span><span class="err">～</span><span class="mi">23</span><span class="err">岁之间的学生姓名、系别和年龄。</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">SELECT</span><span class="w"> </span><span class="n">Sname</span><span class="p">,</span><span class="n">Sdept</span><span class="p">,</span><span class="n">Sage</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Sage</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="mi">20</span><span class="w">  </span><span class="k">AND</span><span class="w"> </span><span class="mi">23</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">-</span><span class="err">查询不是信息系</span><span class="p">(</span><span class="k">IS</span><span class="p">)</span><span class="err">、数学系</span><span class="p">(</span><span class="n">MA</span><span class="p">)</span><span class="err">和计算机科学系</span><span class="p">(</span><span class="n">CS</span><span class="p">)</span><span class="err">学生的姓名和性别。</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">SELECT</span><span class="w"> </span><span class="n">Sname</span><span class="p">,</span><span class="n">Ssex</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Sdept</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;IS&#39;</span><span class="p">,</span><span class="s1">&#39;MA&#39;</span><span class="p">,</span><span class="s1">&#39;CS&#39;</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="o">%</span><span class="p">:</span><span class="err">任意长度</span><span class="p">(</span><span class="err">可以为</span><span class="mi">0</span><span class="p">)</span><span class="err">的字符串</span><span class="w">    </span><span class="n">_</span><span class="p">:</span><span class="err">任意单个字符</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">-</span><span class="err">查询姓名中第二个字为“阳”字的学生姓名和学号。</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">SELECT</span><span class="w"> </span><span class="n">Sname</span><span class="p">,</span><span class="n">Sno</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Sname</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;__阳％&#39;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">-</span><span class="err">查询以</span><span class="s2">&#34;DB_&#34;</span><span class="err">开头，倒数第</span><span class="mi">3</span><span class="err">个字符为</span><span class="n">i的课程的详细情况</span><span class="err">。</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Course</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Cname</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;DB\_%i__&#39;</span><span class="w"> </span><span class="k">ESCAPE</span><span class="w"> </span><span class="s1">&#39;\&#39;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">-</span><span class="err">查询所有有成绩的学生学号和课程号</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">SELECT</span><span class="w"> </span><span class="n">Sno</span><span class="p">,</span><span class="n">Cno</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">SC</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Grade</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">!!!</span><span class="w">   </span><span class="p">[</span><span class="k">NOT</span><span class="p">]</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="err">…</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="err">…</span><span class="w"> </span><span class="err">和</span><span class="w"> </span><span class="p">[</span><span class="k">NOT</span><span class="p">]</span><span class="w"> </span><span class="n">IN将不会利用索引提高查询效率</span><span class="err">，应改为多重条件查询</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="o">-</span><span class="err">所在系的系名升序排列</span><span class="p">,</span><span class="err">年龄降序排列</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">Sdept</span><span class="p">,</span><span class="n">Sage</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="err">集函数</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">COUNT</span><span class="w"> </span><span class="p">([</span><span class="k">DISTINCT</span><span class="o">|</span><span class="k">ALL</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="err">列名</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="k">SUM</span><span class="w"> </span><span class="k">AVG</span><span class="w"> </span><span class="k">MAX</span><span class="w"> </span><span class="k">MIN</span><span class="w">   </span><span class="c1">---DISTINCT以避免重复
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="err">查询有</span><span class="mi">3</span><span class="err">门以上课程是</span><span class="mi">90</span><span class="err">分以上的学生的学号及</span><span class="p">(</span><span class="mi">90</span><span class="err">分以上的</span><span class="p">)</span><span class="err">课程数。</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">SELECT</span><span class="w"> </span><span class="n">Sno</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">SC</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Grade</span><span class="o">&gt;</span><span class="mi">90</span><span class="w"> </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">Sno</span><span class="w"> </span><span class="k">HAVING</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">3</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>WHERE-&gt;GROUP BY-&gt;HAVING-&gt;SELECT</p>……
                 </summary>
                 
                     <div class="read-more-container">
@@ -328,7 +515,25 @@
 
                 
                 <summary class="summary p-summary">
-                    实验一 EMU8086使用及指令系统熟悉 实验要求 熟悉并掌握EMU8086 汇编语言调试环……
+                    <h1 id="实验一-emu8086使用及指令系统熟悉">实验一 EMU8086使用及指令系统熟悉</h1>
+<h2 id="实验要求">实验要求</h2>
+<ol>
+<li>熟悉并掌握EMU8086 汇编语言调试环境；</li>
+<li>学习8086的指令系统，输入简单的指令，观察各寄存器、内存相关单元以及处理器标志位的变化（数据传送类指令，算数运算类指令，逻辑运算类指令，标志处理和CPU控制类指令，移位和循环移位类指令，处理器控制类指令等，要求每类指令至少一个用例。具体用例自行设计，可参考教材用例）；</li>
+<li>学习汇编语言程序设计的基本步骤和方法；</li>
+<li>学会使用EMU8086 debug调试程序；</li>
+<li>编写一个简单的程序：将“This is my first ASM program-姓名（汉语拼音各人的姓名）”放在DS=1000H，BX=0000H开始的存储器单元中，然后将该内容搬移到BX=0100H开始的单元中，最后将该字符串通过DOS功能调用显示在屏幕上。</li>
+</ol>
+<h2 id="实验目的">实验目的</h2>
+<ol>
+<li>学习EMU8086仿真开发环境的使用，理解和掌握汇编语言编程的基本步骤；</li>
+<li>熟悉8086指令系统；</li>
+<li>熟悉变量、常量及伪指令的使用；</li>
+<li>熟悉内存单元的存储结构，字符串的处理以及简单的编程。</li>
+</ol>
+<h2 id="实验内容">实验内容</h2>
+<h3 id="一书本指令用例调试">一、书本指令用例调试</h3>
+<p>传送指令：mov（直接寻址）</p>……
                 </summary>
                 
                     <div class="read-more-container">
@@ -379,7 +584,10 @@
 
                 
                 <summary class="summary p-summary">
-                    实验2 组合逻辑电路部件实验 实验目的 掌握逻辑电路设计的基本方法 掌握EDA工具MAX-P……
+                    <h1 id="实验2-组合逻辑电路部件实验">实验2 组合逻辑电路部件实验</h1>
+<h2 id="实验目的">实验目的</h2>
+<p>掌握逻辑电路设计的基本方法</p>
+<p>掌握EDA工具MAX-PlusII的原理图输入方法</p>……
                 </summary>
                 
                     <div class="read-more-container">
@@ -430,7 +638,267 @@
 
                 
                 <summary class="summary p-summary">
-                    课后题 2-3 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 public class Work3 { public static void main(String[] args) { int i=0,j=0; double[] b={1,-2,+0,-0,Double.POSITIVE_INFINITY,Double.NEGATIVE_INFINITY,Double.NaN}; double[][] a=new double[7][7]; for(i=0;i&lt;=6;i++) for(j=0;j&lt;=6;j++)……
+                    <h1 id="课后题">课后题</h1>
+<h2 id="2-3">2-3</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Work3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="n">0</span><span class="p">,</span><span class="n">j</span><span class="o">=</span><span class="n">0</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">double</span><span class="o">[]</span><span class="w"> </span><span class="n">b</span><span class="o">=</span><span class="p">{</span><span class="n">1</span><span class="p">,</span><span class="o">-</span><span class="n">2</span><span class="p">,</span><span class="o">+</span><span class="n">0</span><span class="p">,</span><span class="o">-</span><span class="n">0</span><span class="p">,</span><span class="n">Double</span><span class="p">.</span><span class="na">POSITIVE_INFINITY</span><span class="p">,</span><span class="n">Double</span><span class="p">.</span><span class="na">NEGATIVE_INFINITY</span><span class="p">,</span><span class="n">Double</span><span class="p">.</span><span class="na">NaN</span><span class="p">};</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">double</span><span class="o">[][]</span><span class="w"> </span><span class="n">a</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="kt">double</span><span class="o">[</span><span class="n">7</span><span class="o">][</span><span class="n">7</span><span class="o">]</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="n">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">6</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="n">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;=</span><span class="n">6</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="n">a</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]=</span><span class="n">b</span><span class="o">[</span><span class="n">i</span><span class="o">]/</span><span class="n">b</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">a</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]+</span><span class="s">&#34;      &#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="k">if</span><span class="p">(</span><span class="n">j</span><span class="o">==</span><span class="n">6</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&#34;\n&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="2-17">2-17</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Work17</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">a</span><span class="o">=</span><span class="p">{</span><span class="n">4</span><span class="p">,</span><span class="n">6</span><span class="p">,</span><span class="n">23</span><span class="p">,</span><span class="n">78</span><span class="p">,</span><span class="n">2</span><span class="p">,</span><span class="n">345</span><span class="p">,</span><span class="n">90098</span><span class="p">,</span><span class="n">2</span><span class="p">,</span><span class="n">5</span><span class="p">,</span><span class="n">1</span><span class="p">,</span><span class="n">90098</span><span class="p">};</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">min</span><span class="o">=</span><span class="n">0</span><span class="p">,</span><span class="n">min_value</span><span class="o">=</span><span class="n">0</span><span class="p">,</span><span class="n">i</span><span class="o">=</span><span class="n">0</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">for</span><span class="p">(;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">a</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">[</span><span class="n">i</span><span class="o">]&gt;</span><span class="n">min_value</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="n">min_value</span><span class="o">=</span><span class="n">a</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="n">min</span><span class="o">=</span><span class="n">i</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">[</span><span class="n">i</span><span class="o">]==</span><span class="n">min_value</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="k">continue</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;The min is NO.&#34;</span><span class="o">+</span><span class="n">min</span><span class="o">+</span><span class="s">&#34; : &#34;</span><span class="o">+</span><span class="n">min_value</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Attention please:The array is began with \&#34;0\&#34;&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="2-18">2-18</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Work18</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">array</span><span class="o">=</span><span class="p">{{</span><span class="n">99</span><span class="p">,</span><span class="n">22</span><span class="p">,</span><span class="n">639</span><span class="p">,</span><span class="n">15</span><span class="p">,</span><span class="n">66</span><span class="p">,</span><span class="n">19</span><span class="p">},{</span><span class="n">17</span><span class="p">,</span><span class="n">85</span><span class="p">,</span><span class="n">56</span><span class="p">,</span><span class="n">535</span><span class="p">,</span><span class="n">89</span><span class="p">,</span><span class="n">76</span><span class="p">},{</span><span class="n">56</span><span class="p">,</span><span class="n">67</span><span class="p">,</span><span class="n">71</span><span class="p">,</span><span class="n">51</span><span class="p">,</span><span class="n">24</span><span class="p">,</span><span class="n">873</span><span class="p">},{</span><span class="n">821</span><span class="p">,</span><span class="n">61</span><span class="p">,</span><span class="n">83</span><span class="p">,</span><span class="n">17</span><span class="p">,</span><span class="n">24</span><span class="p">,</span><span class="n">78</span><span class="p">},{</span><span class="n">2</span><span class="p">,</span><span class="n">232</span><span class="p">,</span><span class="n">87</span><span class="p">,</span><span class="n">95</span><span class="p">,</span><span class="n">68</span><span class="p">,</span><span class="n">49</span><span class="p">},{</span><span class="n">25</span><span class="p">,</span><span class="n">90</span><span class="p">,</span><span class="n">869</span><span class="p">,</span><span class="n">92</span><span class="p">,</span><span class="n">93</span><span class="p">,</span><span class="n">25</span><span class="p">}};</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">sum</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="n">6</span><span class="o">]</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">max</span><span class="o">=</span><span class="n">0</span><span class="p">,</span><span class="n">max_value</span><span class="o">=</span><span class="n">0</span><span class="p">,</span><span class="n">i</span><span class="o">=</span><span class="n">0</span><span class="p">,</span><span class="n">j</span><span class="o">=</span><span class="n">0</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">for</span><span class="p">(;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">array</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">for</span><span class="p">(;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">array</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">sum</span><span class="o">[</span><span class="n">i</span><span class="o">]=</span><span class="n">sum</span><span class="o">[</span><span class="n">i</span><span class="o">]+</span><span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="n">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">array</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">sum</span><span class="o">[</span><span class="n">i</span><span class="o">]&gt;</span><span class="n">max</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="n">max_value</span><span class="o">=</span><span class="n">sum</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="n">max</span><span class="o">=</span><span class="n">i</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">sum</span><span class="o">[</span><span class="n">i</span><span class="o">]==</span><span class="n">max_value</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">continue</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;The max sum_value(&#34;</span><span class="o">+</span><span class="n">max_value</span><span class="o">+</span><span class="s">&#34;) is in the Line.&#34;</span><span class="o">+</span><span class="n">max</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="2-19">2-19</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Work19</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">args</span><span class="o">[]</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">a</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="n">4</span><span class="o">]</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="n">1000</span><span class="p">,</span><span class="n">j</span><span class="o">=</span><span class="n">0</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">for</span><span class="p">(;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">10000</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">a</span><span class="o">[</span><span class="n">0</span><span class="o">]=</span><span class="n">i</span><span class="o">/</span><span class="n">1000</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">a</span><span class="o">[</span><span class="n">1</span><span class="o">]=</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="n">a</span><span class="o">[</span><span class="n">0</span><span class="o">]*</span><span class="n">1000</span><span class="p">)</span><span class="o">/</span><span class="n">100</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">a</span><span class="o">[</span><span class="n">2</span><span class="o">]=</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="n">a</span><span class="o">[</span><span class="n">0</span><span class="o">]*</span><span class="n">1000</span><span class="o">-</span><span class="n">a</span><span class="o">[</span><span class="n">1</span><span class="o">]*</span><span class="n">100</span><span class="p">)</span><span class="o">/</span><span class="n">10</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">a</span><span class="o">[</span><span class="n">3</span><span class="o">]=</span><span class="n">i</span><span class="o">-</span><span class="n">a</span><span class="o">[</span><span class="n">0</span><span class="o">]*</span><span class="n">1000</span><span class="o">-</span><span class="n">a</span><span class="o">[</span><span class="n">1</span><span class="o">]*</span><span class="n">100</span><span class="o">-</span><span class="n">a</span><span class="o">[</span><span class="n">2</span><span class="o">]*</span><span class="n">10</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">if</span><span class="p">((</span><span class="n">a</span><span class="o">[</span><span class="n">0</span><span class="o">]*</span><span class="n">10</span><span class="o">+</span><span class="n">a</span><span class="o">[</span><span class="n">1</span><span class="o">]</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">[</span><span class="n">2</span><span class="o">]*</span><span class="n">10</span><span class="o">+</span><span class="n">a</span><span class="o">[</span><span class="n">3</span><span class="o">]</span><span class="p">)</span><span class="o">==</span><span class="n">i</span><span class="o">||</span><span class="p">(</span><span class="n">a</span><span class="o">[</span><span class="n">1</span><span class="o">]*</span><span class="n">10</span><span class="o">+</span><span class="n">a</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">[</span><span class="n">2</span><span class="o">]*</span><span class="n">10</span><span class="o">+</span><span class="n">a</span><span class="o">[</span><span class="n">3</span><span class="o">]</span><span class="p">)</span><span class="o">==</span><span class="n">i</span><span class="o">||</span><span class="p">(</span><span class="n">a</span><span class="o">[</span><span class="n">0</span><span class="o">]*</span><span class="n">10</span><span class="o">+</span><span class="n">a</span><span class="o">[</span><span class="n">1</span><span class="o">]</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">[</span><span class="n">3</span><span class="o">]*</span><span class="n">10</span><span class="o">+</span><span class="n">a</span><span class="o">[</span><span class="n">2</span><span class="o">]</span><span class="p">)</span><span class="o">==</span><span class="n">i</span><span class="o">||</span><span class="p">(</span><span class="n">a</span><span class="o">[</span><span class="n">1</span><span class="o">]*</span><span class="n">10</span><span class="o">+</span><span class="n">a</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">[</span><span class="n">3</span><span class="o">]*</span><span class="n">10</span><span class="o">+</span><span class="n">a</span><span class="o">[</span><span class="n">2</span><span class="o">]</span><span class="p">)</span><span class="o">==</span><span class="n">i</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">if</span><span class="p">((</span><span class="n">a</span><span class="o">[</span><span class="n">0</span><span class="o">]*</span><span class="n">10</span><span class="o">+</span><span class="n">a</span><span class="o">[</span><span class="n">2</span><span class="o">]</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">[</span><span class="n">1</span><span class="o">]*</span><span class="n">10</span><span class="o">+</span><span class="n">a</span><span class="o">[</span><span class="n">3</span><span class="o">]</span><span class="p">)</span><span class="o">==</span><span class="n">i</span><span class="o">||</span><span class="p">(</span><span class="n">a</span><span class="o">[</span><span class="n">2</span><span class="o">]*</span><span class="n">10</span><span class="o">+</span><span class="n">a</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">[</span><span class="n">1</span><span class="o">]*</span><span class="n">10</span><span class="o">+</span><span class="n">a</span><span class="o">[</span><span class="n">3</span><span class="o">]</span><span class="p">)</span><span class="o">==</span><span class="n">i</span><span class="o">||</span><span class="p">(</span><span class="n">a</span><span class="o">[</span><span class="n">0</span><span class="o">]*</span><span class="n">10</span><span class="o">+</span><span class="n">a</span><span class="o">[</span><span class="n">2</span><span class="o">]</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">[</span><span class="n">3</span><span class="o">]*</span><span class="n">10</span><span class="o">+</span><span class="n">a</span><span class="o">[</span><span class="n">1</span><span class="o">]</span><span class="p">)</span><span class="o">==</span><span class="n">i</span><span class="o">||</span><span class="p">(</span><span class="n">a</span><span class="o">[</span><span class="n">2</span><span class="o">]*</span><span class="n">10</span><span class="o">+</span><span class="n">a</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">[</span><span class="n">3</span><span class="o">]*</span><span class="n">10</span><span class="o">+</span><span class="n">a</span><span class="o">[</span><span class="n">1</span><span class="o">]</span><span class="p">)</span><span class="o">==</span><span class="n">i</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">if</span><span class="p">((</span><span class="n">a</span><span class="o">[</span><span class="n">0</span><span class="o">]*</span><span class="n">10</span><span class="o">+</span><span class="n">a</span><span class="o">[</span><span class="n">3</span><span class="o">]</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">[</span><span class="n">1</span><span class="o">]*</span><span class="n">10</span><span class="o">+</span><span class="n">a</span><span class="o">[</span><span class="n">2</span><span class="o">]</span><span class="p">)</span><span class="o">==</span><span class="n">i</span><span class="o">||</span><span class="p">(</span><span class="n">a</span><span class="o">[</span><span class="n">3</span><span class="o">]*</span><span class="n">10</span><span class="o">+</span><span class="n">a</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">[</span><span class="n">1</span><span class="o">]*</span><span class="n">10</span><span class="o">+</span><span class="n">a</span><span class="o">[</span><span class="n">2</span><span class="o">]</span><span class="p">)</span><span class="o">==</span><span class="n">i</span><span class="o">||</span><span class="p">(</span><span class="n">a</span><span class="o">[</span><span class="n">0</span><span class="o">]*</span><span class="n">10</span><span class="o">+</span><span class="n">a</span><span class="o">[</span><span class="n">3</span><span class="o">]</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">[</span><span class="n">2</span><span class="o">]*</span><span class="n">10</span><span class="o">+</span><span class="n">a</span><span class="o">[</span><span class="n">1</span><span class="o">]</span><span class="p">)</span><span class="o">==</span><span class="n">i</span><span class="o">||</span><span class="p">(</span><span class="n">a</span><span class="o">[</span><span class="n">3</span><span class="o">]*</span><span class="n">10</span><span class="o">+</span><span class="n">a</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">[</span><span class="n">2</span><span class="o">]*</span><span class="n">10</span><span class="o">+</span><span class="n">a</span><span class="o">[</span><span class="n">1</span><span class="o">]</span><span class="p">)</span><span class="o">==</span><span class="n">i</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="3-2">3-2</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Work2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">args</span><span class="o">[]</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">NewRectangle</span><span class="w"> </span><span class="n">a</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="n">NewRectangle</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">a</span><span class="p">.</span><span class="na">Initialize</span><span class="p">(</span><span class="n">3</span><span class="p">,</span><span class="n">4</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">a</span><span class="p">.</span><span class="na">getArea</span><span class="p">(</span><span class="n">3</span><span class="p">,</span><span class="n">4</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">a</span><span class="p">.</span><span class="na">getPerimeter</span><span class="p">(</span><span class="n">3</span><span class="p">,</span><span class="n">4</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">class</span> <span class="nc">NewRectangle</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="n">height</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Initialize</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="kt">double</span><span class="w"> </span><span class="n">height</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">width</span><span class="o">=</span><span class="n">width</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">height</span><span class="o">=</span><span class="n">height</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;width initialize:&#34;</span><span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="na">width</span><span class="o">+</span><span class="sc">&#39;\n&#39;</span><span class="o">+</span><span class="s">&#34;height initialize:&#34;</span><span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="na">height</span><span class="o">+</span><span class="sc">&#39;\n&#39;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">getArea</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="kt">double</span><span class="w"> </span><span class="n">height</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;The area is:&#34;</span><span class="o">+</span><span class="n">width</span><span class="o">*</span><span class="n">height</span><span class="o">+</span><span class="sc">&#39;\n&#39;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">getPerimeter</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="kt">double</span><span class="w"> </span><span class="n">height</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;The perimeter is:&#34;</span><span class="o">+</span><span class="n">2</span><span class="o">*</span><span class="p">(</span><span class="n">width</span><span class="o">+</span><span class="n">height</span><span class="p">));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>3-2和3-3中有重复的类NewRectan，会相互覆盖...</em></p>……
                 </summary>
                 
                     <div class="read-more-container">

@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.127.0"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.136.5"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -58,7 +58,7 @@
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "datePublished": "2016-08-21T20:00:00+08:00",
+        "datePublished": "2023-09-16T22:46:34+08:00",
         "dateModified": "2024-03-17T22:15:19+08:00",
         "url": "https://blog.littleghost.ml/",
         "description": "MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。",
@@ -224,7 +224,14 @@
 
                 
                 <summary class="summary p-summary">
-                    原因 间接原因 hexo基于nodejs，部署hexo的时候需要加载许多包。而hugo只……
+                    <h1 id="原因">原因</h1>
+<h2 id="间接原因">间接原因</h2>
+<ol>
+<li><code>hexo</code>基于<code>nodejs</code>，部署<code>hexo</code>的时候需要加载许多包。而<code>hugo</code>只需要一个二进制文件，相对来说部署更加简便。</li>
+<li><code>hugo</code>的文件分布更简洁一些，可以通过自己写的部署脚本将博客源md文件也上传至同一仓库下的另一分支（<code>hexo</code>也可以实现，但我没尝试-_-||</li>
+</ol>
+<h2 id="直接原因">直接原因</h2>
+<p>前几天在使用<code>scoop</code>升级了<code>nodejs</code>之后，<code>hexo d</code>命令报错<code>TypeError [ERR_INVALID_ARG_TYPE]: The &quot;mode&quot; argument must be integer</code>，无法将本地修改推到<code>github</code>，就打算迁移至<code>hugo</code>试一试。</p>……
                 </summary>
                 
                     <div class="read-more-container">
@@ -275,7 +282,7 @@
 
                 
                 <summary class="summary p-summary">
-                    没用移动之前听家人说100M网速，还想着挺快的，用了之后才知道什么叫真正的“墙内墙”……
+                    <p>没用移动之前听家人说100M网速，还想着挺快的，用了之后才知道什么叫真正的“墙内墙”...</p>……
                 </summary>
                 
                     <div class="read-more-container">
@@ -326,7 +333,8 @@
 
                 
                 <summary class="summary p-summary">
-                    图片转自如何选择开源许可证？
+                    <p>图片转自<a href="https://blog.csdn.net/wadefelix/article/details/6384317">如何选择开源许可证？</a></p>
+<p><img src="Licence%E9%80%89%E6%8B%A9.png" alt=""></p>
                 </summary>
                 
             </article>
@@ -373,12 +381,38 @@
 
                 
                 <summary class="summary p-summary">
-                    安装 允许本地脚本执行 1 $ set-executionpolicy remotesigned -scope currentuser 自定义scoop安装路径 1 2 $ [environment]::setEnvironmentVariable(&#39;SCOOP&#39;,&#39;D:\scoop&#39;,&#39;User&#39;) $ $env:SCOOP=&#39;D:\scoop&#39; 执行安装脚本 1 $……
+                    <h1 id="安装">安装</h1>
+<h2 id="允许本地脚本执行">允许本地脚本执行</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="p">$</span> <span class="nb">set-executionpolicy</span> <span class="n">remotesigned</span> <span class="n">-scope</span> <span class="n">currentuser</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="自定义scoop安装路径">自定义scoop安装路径</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="p">$</span> <span class="p">[</span><span class="no">environment</span><span class="p">]::</span><span class="n">setEnvironmentVariable</span><span class="p">(</span><span class="s1">&#39;SCOOP&#39;</span><span class="p">,</span><span class="s1">&#39;D:\scoop&#39;</span><span class="p">,</span><span class="s1">&#39;User&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">$</span> <span class="nv">$env:SCOOP</span><span class="p">=</span><span class="s1">&#39;D:\scoop&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="执行安装脚本">执行安装脚本</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="p">$</span> <span class="nb">iex </span><span class="p">(</span><span class="nb">new-object</span> <span class="n">net</span><span class="p">.</span><span class="n">webclient</span><span class="p">).</span><span class="py">downloadstring</span><span class="p">(</span><span class="s1">&#39;https://get.scoop.sh&#39;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
                 </summary>
-                
-                    <div class="read-more-container">
-                        <a href="/posts/%E4%BD%BF%E7%94%A8scoop/" class="read-more-link">阅读更多 »</a>
-                    </div>
                 
             </article>
         
@@ -424,7 +458,48 @@
 
                 
                 <summary class="summary p-summary">
-                    解决Got permission denied问题 1 2 3 4 $ sudo groupadd docker #添加docker用户组 $ sudo gpasswd -a $USER docker #将……
+                    <h1 id="解决got-permission-denied问题">解决Got permission denied问题</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo groupadd docker				<span class="c1">#添加docker用户组</span>
+</span></span><span class="line"><span class="cl">$ sudo gpasswd -a <span class="nv">$USER</span> docker		<span class="c1">#将登陆用户加入到docker用户组中</span>
+</span></span><span class="line"><span class="cl">$ newgrp docker						<span class="c1">#更新用户组</span>
+</span></span><span class="line"><span class="cl">$ docker ps
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="配置国内镜像源">配置国内镜像源</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo vim /etc/docker/daemon.json
+</span></span></code></pre></td></tr></table>
+</div>
+</div><pre tabindex="0"><code>{
+  &#34;registry-mirrors&#34;: [
+    &#34;https://dockerhub.azk8s.cn&#34;,
+    &#34;https://hub-mirror.c.163.com&#34;
+  ]
+}
+</code></pre><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo systemctl daemon-reload
+</span></span><span class="line"><span class="cl">$ sudo systemctl restart docker.service
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="使用unblockneteasemusic">使用UnblockNeteaseMusic</h1>
+<p>项目地址：<a href="https://github.com/nondanee/UnblockNeteaseMusic">UnblockNeteaseMusic</a></p>……
                 </summary>
                 
                     <div class="read-more-container">

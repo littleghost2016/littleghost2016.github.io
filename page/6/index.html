@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.127.0"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.136.5"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -58,7 +58,7 @@
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "datePublished": "2016-08-21T20:00:00+08:00",
+        "datePublished": "2023-09-16T22:46:34+08:00",
         "dateModified": "2024-03-17T22:15:19+08:00",
         "url": "https://blog.littleghost.ml/",
         "description": "MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。",
@@ -226,7 +226,27 @@
 
                 
                 <summary class="summary p-summary">
-                    文章原创为西电睿思的小忧伤，感谢大佬提供技术和授权！本文在原文章的基础上做了部分修改……
+                    <blockquote>
+<p><a href="http://rs.xidian.edu.cn/forum.php?mod=viewthread&amp;tid=906698&amp;highlight=ipv6">文章</a>原创为西电睿思的小忧伤，感谢大佬提供技术和授权！本文在原文章的基础上做了部分修改，更新了NAT6转发部分的内容以适应新固件。</p>
+</blockquote>
+<blockquote>
+<p>最后效果为IPv4流量计算在翼讯，IPv6流量计算在校园网。</p>
+</blockquote>
+<h1 id="一路由器固件">一、路由器固件</h1>
+<p>虚拟机编译<a href="https://github.com/coolsnowwolf/lede">LEDE</a>，内核版本5.4.51。</p>
+<h2 id="包含插件">包含插件</h2>
+<ul>
+<li>$$R Plus+
+<ul>
+<li>$$</li>
+<li>v2ray</li>
+<li>socks</li>
+</ul>
+</li>
+<li>DDNS</li>
+<li>UPnP</li>
+</ul>
+<p><em>吐槽：自己K2P 16M能放的的插件太少了...</em></p>……
                 </summary>
                 
                     <div class="read-more-container">
@@ -277,7 +297,11 @@
 
                 
                 <summary class="summary p-summary">
-                    Peng Wang, Xiaojing Liao, Yue Qin, XiaoFeng Wang Indiana University Bloomington fpw7, xliao, qinyue, xw7g@indiana.edu Abstract E-commerce miscreants（电子商务罪犯） heavily rely on instant messaging (IM) to……
+                    <p>Peng Wang, Xiaojing Liao, Yue Qin, XiaoFeng Wang
+Indiana University Bloomington
+fpw7, xliao, qinyue, <a href="mailto:xw7g@indiana.edu">xw7g@indiana.edu</a></p>
+<h1 id="abstract">Abstract</h1>
+<p><u>E-commerce miscreants（电子商务罪犯）</u> heavily rely on instant messaging (IM) to <u>promote their illicit businesses（促进其非法生意）</u> and coordinate their operations. The <u>threat intelligence（威胁情报）</u> provided by IM communication, therefore, becomes <u>invaluable（无价的）</u> for understanding and <u>mitigating（缓解）</u> the threats of e-commerce <u>frauds（威胁）</u>. However, such information is hard to obtain since it is usually shared only through one-on-one conversations with the criminals. In this paper, we present the first chatbot, called Aubrey, to actively collect such intelligence through <u>autonomous chats（自动聊天）</u> with realworld e-commerce miscreants. Our approach <u>leverages（利用了）</u> the question-driven conversation pattern of small-time workers, who seek jobs and/or attack resources from e-commerce <u>fraudsters（骗子）</u>, to <u>model the interaction process as a finite state machine（将交互过程建模为有限状态机）</u>, <u>thereby（从而）</u> <u>enabling（实现）</u> an autonomous conversation. Aubrey successfully chatted with 470 real-world e-commerce miscreants and gathered a large amount of fraud-related <u>artifacts（文物）</u>, including <u>previously-unknown（以前未知的）</u> SIM gateways, <u>account trading websites（账户交易网站）</u>, and attack toolkits, etc. Further, the conversations revealed the supply chain of e-commerce fraudulent activities on the deep web and the <u>complicated relations（复杂关系）</u> (e.g., <u>complicity and reselling（同谋和转售）</u>) among miscreants.</p>……
                 </summary>
                 
                     <div class="read-more-container">
@@ -328,7 +352,7 @@
 
                 
                 <summary class="summary p-summary">
-                    今天实验室师兄晚上有华为笔试，凑着看了两道用于笔试前练习的题。主要用于练习标准输入，……
+                    <p>今天实验室师兄晚上有华为笔试，凑着看了两道用于笔试前练习的题。主要用于练习标准输入，从命令行读入响应数据。</p>……
                 </summary>
                 
                     <div class="read-more-container">
@@ -379,7 +403,63 @@
 
                 
                 <summary class="summary p-summary">
-                    安装 使用scoop很简单地安装Anaconda3 1 scoop install anaconda3 配置环境并激活 创建环境 1 conda create……
+                    <h1 id="安装">安装</h1>
+<p>使用<code>scoop</code>很简单地安装<code>Anaconda3</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">scoop</span> <span class="n">install</span> <span class="n">anaconda3</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="配置环境并激活">配置环境并激活</h1>
+<h2 id="创建环境">创建环境</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">create</span> <span class="n">-n</span> <span class="nb">learn-scikit</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="激活环境">激活环境</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">activate</span> <span class="nb">learn-scikit</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="退出环境">退出环境</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">deactive</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="删除环境">删除环境</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">remove</span> <span class="n">-n</span> <span class="nb">learn-scikit</span> <span class="p">-</span><span class="n">-all</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="列出当前所有已创建的环境">列出当前所有已创建的环境</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">env</span> <span class="n">list</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em><code>Windows</code>上的最新命令<code>activate</code>和<code>deactivate</code>前都有加<code>conda</code>了，以前不加可以使用，但现在必须要加了。</em></p>……
                 </summary>
                 
                     <div class="read-more-container">
@@ -430,7 +510,18 @@
 
                 
                 <summary class="summary p-summary">
-                    阅读论文 BlindBox: Deep Packet Inspection over Encrypted Traffic Justine Sherry UC Berkeley Chang Lan UC Berkeley Raluca Ada Popa ETH Zürich and UC Berkeley Sylvia Ratnasamy UC Berkeley ABSTRACT Many network mid……
+                    <p>阅读论文 BlindBox: Deep Packet Inspection over Encrypted Traffic</p>
+<p>Justine Sherry
+UC Berkeley</p>
+<p>Chang Lan
+UC Berkeley</p>
+<p>Raluca Ada Popa
+ETH Zürich and UC Berkeley</p>
+<p>Sylvia Ratnasamy
+UC Berkeley</p>
+<h1 id="abstract">ABSTRACT</h1>
+<p>Many network <u>middleboxes（中间件）</u> perform deep packet inspection (DPI), a set of useful tasks which examine packet payloads. These tasks include intrusion detection (IDS), <u>exfiltration detection（渗透检测）</u>, and <u>parental filtering（家长监管）</u>. However, a <u>long-standing（长期存在的）</u> issue is that once packets are sent over HTTPS, middleboxes can no longer <u>accomplish（完成）</u> their tasks because the payloads are encrypted. Hence, one is faced with the choice of only one of two <u>desirable（理想的）</u> properties: the functionality of middleboxes and the <u>privacy of encryption（加密的私密性）</u>.
+We propose BlindBox, the first system that <u>simultaneously（同时）</u> provides both of these properties. The approach of BlindBox is to perform the deep-packet inspection directly on the encrypted traffic. BlindBox <u>realizes this approach（实现了这种方法）</u> through a new protocol and new encryption schemes. We demonstrate（证明了） that BlindBox enables applications such as IDS, exfiltration detection and parental filtering, and supports <u>real rulesets（真实的规则集）</u> from both open-source and industrial DPI systems. We implemented BlindBox and showed that it is practical for settings with long-lived HTTPS connections. Moreover, its core encryption scheme is <u>3-6 orders of magnitude（3-6个数量级）</u> faster than existing relevant cryptographic schemes.</p>……
                 </summary>
                 
                     <div class="read-more-container">

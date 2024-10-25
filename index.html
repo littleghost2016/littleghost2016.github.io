@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.127.0"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.136.5"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -58,7 +58,7 @@
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "datePublished": "2016-08-21T20:00:00+08:00",
+        "datePublished": "2023-09-16T22:46:34+08:00",
         "dateModified": "2024-03-17T22:15:19+08:00",
         "url": "https://blog.littleghost.ml/",
         "description": "MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。",
@@ -226,7 +226,8 @@
 
                 
                 <summary class="summary p-summary">
-                    0.起因 最近在pve中虚拟机安装omv（5.6.13）之后，打算把一块14T的东芝硬……
+                    <h1 id="0起因">0.起因</h1>
+<p>最近在pve中虚拟机安装omv（5.6.13）之后，打算把一块14T的东芝硬盘空间通过<a href="https://www.techtarget.com/searchenterprisedesktop/definition/Network-File-System">NFS</a>挂载出去，以便其他虚拟机使用。</p>……
                 </summary>
                 
                     <div class="read-more-container">
@@ -277,12 +278,83 @@
 
                 
                 <summary class="summary p-summary">
-                    参考自Alpine安装SSH服务，并开启SSH远程登录 - 初心 (mayanpeng.cn) 更换软件源 1 $ sed -i &#39;s/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g&#39; /etc/apk/repositories……
+                    <blockquote>
+<p>参考自<a href="https://mayanpeng.cn/archives/248.html">Alpine安装SSH服务，并开启SSH远程登录 - 初心 (mayanpeng.cn)</a></p>
+</blockquote>
+<h1 id="更换软件源">更换软件源</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sed -i <span class="s1">&#39;s/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g&#39;</span> /etc/apk/repositories
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="安装sshd">安装sshd</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ apk add openssh-server
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="启动sshd">启动sshd</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ rc-service sshd start
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="设置开机启动">设置开机启动</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ rc-update add sshd
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="取消开机启动">取消开机启动</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ rc-update del sshd
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="重启sshd服务">重启sshd服务</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ rc-service sshd restart
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="显示所有服务">显示所有服务</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ rc-status -a
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="安装oh-my-zsh">安装oh-my-zsh</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sh -c <span class="s2">&#34;</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span class="k">)</span><span class="s2">&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
                 </summary>
-                
-                    <div class="read-more-container">
-                        <a href="/posts/lxc%E5%AE%89%E8%A3%85alpine%E5%B9%B6%E5%AE%89%E8%A3%85sshd/" class="read-more-link">阅读更多 »</a>
-                    </div>
                 
             </article>
         
@@ -328,7 +400,22 @@
 
                 
                 <summary class="summary p-summary">
-                    参考自Debian 11安装qbittorrent-nox并设置Nginx反代 - 怕刺 (pa.ci)……
+                    <blockquote>
+<p>参考自<a href="https://pa.ci/210.html">Debian 11安装qbittorrent-nox并设置Nginx反代 - 怕刺 (pa.ci)</a></p>
+</blockquote>
+<h1 id="安装">安装</h1>
+<pre tabindex="0"><code>apt update 
+apt install qbittorrent-nox -y
+</code></pre><h1 id="配置开机自启">配置开机自启</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ vim /etc/systemd/system/qbittorrent-nox.service
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>写入以下内容（我直接在1个新建的lxc中安装qbittorrent，所以直接使用了root用户）</p>……
                 </summary>
                 
                     <div class="read-more-container">
@@ -379,7 +466,31 @@
 
                 
                 <summary class="summary p-summary">
-                    lxc模板：debian12 编辑lxc配置文件 1 $ vim /etc/pve/lxc/121.conf 写入以下内容 lxc.cgroup2.devices.allow: c 226:0 rwm lxc.cgroup2.devices.allow: c 226:128 rwm lxc.autodev:……
+                    <p>lxc模板：debian12</p>
+<h1 id="编辑lxc配置文件">编辑lxc配置文件</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ vim /etc/pve/lxc/121.conf
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>写入以下内容</p>
+<pre tabindex="0"><code>lxc.cgroup2.devices.allow: c 226:0 rwm
+lxc.cgroup2.devices.allow: c 226:128 rwm
+lxc.autodev: 1
+lxc.hook.autodev: /var/lib/lxc/121/mount_hook.sh
+</code></pre><p>编辑设备映射</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ vim /var/lib/lxc/121/mount_hook.sh
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>写入以下内容</p>……
                 </summary>
                 
                     <div class="read-more-container">
@@ -430,7 +541,11 @@
 
                 
                 <summary class="summary p-summary">
-                    1.下载安装包 PLSQL 14.0.6 下载地址 oracle client 下载地址 2.安装 plsql安装略过，oracle cli……
+                    <h1 id="1下载安装包">1.下载安装包</h1>
+<p><a href="https://www.allroundautomations.com/registered-plsqldev/">PLSQL 14.0.6 下载地址</a></p>
+<p><a href="https://www.oracle.com/database/technologies/%5Binstant%5D(https://so.csdn.net/so/search?q=instant&amp;spm=1001.2101.3001.7020)-client/downloads.html">oracle client 下载地址</a></p>
+<h1 id="2安装">2.安装</h1>
+<p>plsql安装略过，oracle client解压略过。</p>……
                 </summary>
                 
                     <div class="read-more-container">

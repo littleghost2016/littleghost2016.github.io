@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.127.0"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.136.5"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -58,7 +58,7 @@
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "datePublished": "2016-08-21T20:00:00+08:00",
+        "datePublished": "2023-09-16T22:46:34+08:00",
         "dateModified": "2024-03-17T22:15:19+08:00",
         "url": "https://blog.littleghost.ml/",
         "description": "MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。",
@@ -226,7 +226,24 @@
 
                 
                 <summary class="summary p-summary">
-                    nmap oN/oX ping -c -i -s -t tcpdump -i 使标准输出变为缓冲行形式 -e 在输出行打印出数据链路层的头部信息，包括……
+                    <h1 id="nmap">nmap</h1>
+<ul>
+<li>oN/oX</li>
+</ul>
+<h1 id="ping">ping</h1>
+<ul>
+<li>-c</li>
+<li>-i</li>
+<li>-s</li>
+<li>-t</li>
+</ul>
+<h1 id="tcpdump">tcpdump</h1>
+<ul>
+<li>
+<p>-i 使标准输出变为缓冲行形式</p>
+</li>
+<li>
+<p>-e 在输出行打印出数据链路层的头部信息，包括源mac和目的mac，以及网络层的协议</p>……
                 </summary>
                 
                     <div class="read-more-container">
@@ -277,12 +294,56 @@
 
                 
                 <summary class="summary p-summary">
-                    zsh 1 $ sudo apt install zsh git oh-my-zsh 1 2 3 4 5 $ sh -c &#34;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&#34; # or $ sh -c &#34;$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)&#34; zsh替换bash 1 $ vim ~/.bash_profile……
+                    <h1 id="zsh">zsh</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo apt install zsh git
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="oh-my-zsh">oh-my-zsh</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sh -c <span class="s2">&#34;</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh<span class="k">)</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># or </span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ sh -c <span class="s2">&#34;</span><span class="k">$(</span>wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -<span class="k">)</span><span class="s2">&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="zsh替换bash">zsh替换bash</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ vim ~/.bash_profile
+</span></span></code></pre></td></tr></table>
+</div>
+</div><pre tabindex="0"><code>exec zsh
+source ~/.zshrc
+</code></pre><h2 id="更改配置">更改配置</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ vim ~/.zshrc
+</span></span></code></pre></td></tr></table>
+</div>
+</div><pre tabindex="0"><code>#ZSH_THEME=&#34;rubbyrussell&#34;
+ZSH_THEME=&#34;ys&#34;
+</code></pre>
                 </summary>
-                
-                    <div class="read-more-container">
-                        <a href="/posts/%E5%AE%89%E8%A3%85zsh%E4%BB%A5%E5%8F%8Aoh-my-zsh/" class="read-more-link">阅读更多 »</a>
-                    </div>
                 
             </article>
         
@@ -328,7 +389,9 @@
 
                 
                 <summary class="summary p-summary">
-                    实验5 AM 信号接收解调 一、AM信号调制解调的原理 使用另一余弦信号，对AM信号进行频谱搬……
+                    <h1 id="实验5--am-信号接收解调">实验5  AM 信号接收解调</h1>
+<h2 id="一am信号调制解调的原理">一、AM信号调制解调的原理</h2>
+<p>使用另一余弦信号，对AM信号进行频谱搬移，通过带通滤波器滤除其他信号，然后对信号进行解调，即可收听解调后的AM信号。</p>……
                 </summary>
                 
                     <div class="read-more-container">
@@ -379,7 +442,11 @@
 
                 
                 <summary class="summary p-summary">
-                    第一章 7种主要安全威胁 窃听、篡改、伪装、重放、非授权访问、拒绝服务、否认。 3种无线通……
+                    <h1 id="第一章">第一章</h1>
+<h2 id="7种主要安全威胁">7种主要安全威胁</h2>
+<p>窃听、篡改、伪装、重放、非授权访问、拒绝服务、否认。</p>
+<h2 id="3种无线通信攻击方式">3种无线通信攻击方式</h2>
+<p>无线窃听/假冒/篡改、信号重放、信号劫持。</p>……
                 </summary>
                 
                     <div class="read-more-container">
@@ -430,7 +497,109 @@
 
                 
                 <summary class="summary p-summary">
-                    一、概论 协议是网络中互相通信的对等实体间进行数据交换而建立的规则、标准或约定，保证实……
+                    <h1 id="一概论">一、概论</h1>
+<ol>
+<li><em>协议是网络中互相通信的<strong>对等实体间</strong>进行数据交换而建立的<strong>规则</strong>、标准或约定，保证实体在计算机网络中<strong>有序地交换数据</strong>。实体(Entity)是指任何可以发送或接收信息的硬件或软件进程，在大多数情况下，就是一个特定的软件进程。位于<strong>不同系统</strong>的<strong>同一层次内交互</strong>的实体，就构成了<strong>对等实体</strong>。</em></li>
+<li><strong>协议</strong>是规则，约定，而服务是功能，本领。从层次上来说：协议是通信双方对等层之间才有的，是水平方向上的关系。而<strong>服务</strong>则是通信某一端上下层之间才有的，是垂直方向上的关系，而且是自下向上提供的 。<strong>每一层的协议是通过下层对本层提供的服务来支持实现的，服务是指下层为紧向邻的上层提供的功能调用。</strong></li>
+<li>网络协议就是具有规定文法、语法和语义的语言 。<em>文法给出了有效信息的精确格式 ，语法描述了数据交换的规则，语义规定了可交换信息的词汇及其含义。</em></li>
+<li>协议<strong>三要素</strong>：<strong>语法</strong>、<strong>语义</strong>、<strong>同步</strong>。<strong>六元素</strong>：<strong>服务原语和服务原语时序</strong>、<strong>协议数据单元PDU和PDU交换时序</strong> 、<strong>协议状态</strong>、<strong>协议事件</strong>、<strong>协议变量</strong>、<strong>协议操作和谓词</strong>。</li>
+<li>网络协议中的语法体现为数据报文中的控制信息(通常在报文的首部)和各种控制报文的结构、格式。<em>即规定报文的长度，报文中划分多少个域(Field)，每个域的名称、数据类型、长度等。其中，报文中各个域的类型、长度及相互间的位置、顺序关系则构成了词法。</em></li>
+<li>网络协议的语义可以理解为：协议数据报文中的<u>控制信息和控制报文所约定的含义</u>，即<u>需要完成何种动作，发出何种控制信息以及做出何种响应</u>。<em>例：IP报文首部控制信息中的目的地址域指明了报文的目的地，接收到此报文的网络节点均将该域作为进行路由选择的依据，因而，规定在首部控制信息中的给定域给出目的节点地址就是一种语义。</em></li>
+<li>简单地说，同步是指<u>事件发生顺序</u>的详细说明。具体来说指通信过程中各种<u>控制报文传送的顺序关系</u>。<em>例：例如“允许连接”或“拒绝连接”报文必须是作为请求连接报文的一种响应来发送，“拆除连接”报文也必须在建立连接后的某种条件下发送。</em></li>
+<li>为什么推崇协议标准化：1.产品质量和可靠性 2.提供更好的产品互联性 3.简化使用 4.提高发布效率</li>
+<li>ISO/IETF/W3C/ATM Forum/ANSI/IEEE/ACM</li>
+<li>协议工程过程是<u>协议化</u>、<u>工程化</u>的。</li>
+<li>“协议的设计、形式描述、验证、实现、测试、运行”这一全过程称为“协议开发”，即协议开发是指协议工程活动的全过程。</li>
+<li><em>协议设计阶段的结果是非形式描述协议文本。协议设计涉及到很多技术，如差错控制技术、流量控制技术、连接管理技术、路由选择技术等。协议设计还必须遵循一些基本原则，如结构化、模块化等。</em></li>
+<li>形式描述模型：有限状态机FSM (Finite State Machine) 、Petri网(PetriNet) 。形式描述语言：CCITT制定的SDL。</li>
+<li>协议的验证主要内容包括：<u>可达性分析、死锁和活锁检测、协议的有界性和完整性检验、协议的动作序列检查、通道溢出检查</u>等</li>
+<li>协议一致性测试要做到两点：<u>彻底性(彻底测试所实现的协议)</u>和<u>标准化(使用的测试集必须是标准的)</u>。协议的性能主要包括<u>吞吐量</u>和<u>时延</u>。</li>
+<li><img src="%E5%8D%8F%E8%AE%AE%E8%AE%BE%E8%AE%A1%E8%BF%87%E7%A8%8B.png" alt=""></li>
+</ol>
+<h1 id="二协议设计">二、协议设计</h1>
+<ol>
+<li>同一系统相邻两层的实体进行交互的地方，通常称为<strong>服务访问点SAP</strong> (Service Access Point)，服务用户通过SAP调用服务，<u>一个SAP拥有唯一的地址</u>。服务用户通过<u>在一个SAP递交数据</u>并从<u>另一个SAP读出</u>。</li>
+<li>在进行交互时所要交换的一些必须信息(或命令)称为<strong>服务原语</strong>(Service Primitives)，以表明需要本地的或远端的对等实体做什么事情。<u>原语告诉服务实体要执行某个动作，或者将对等实体所执行的动作报告给服务用户</u>。服务的调用是通过SP描述的，具体而言，SP就是服务用户与服务提供者之间的交互的抽象描述，并不限定这些交互如何实现。</li>
+<li>每层均可使用的<strong>4</strong>种服务原语。Request/Indication/Response/Confirm</li>
+<li>一个(n)实体向上一层所提供的服务由以下三部分构成： <u>(n)实体自己提供的某些功能</u>、<u>通过与处在另一系统中的对等(n)实体的通信而得到的服务</u>、<u>从(n-1)层及其以下各层以及本地系统环境得到的服务</u>。将(n)层对等实体之间，为实现该层协议所交换的信息单元称为<strong>协议数据单元PDU</strong> (Protocol Data Unit)。通常将第n层的协议数据单元记为(n)PDU。</li>
+<li>PDU通常由2部分构成：<strong>用户数据</strong>和<strong>协议控制信息PCI</strong>(Protocol Control Information)。PDU两种类型：<strong>数据PDU</strong>、<strong>控制PDU</strong>（不携带用户数据）。在不同的协议层次中，PDU还的一些其它的表示法：<u>物理层：比特(bit)</u>；<u>数据链路层：帧(frame)或信元(cell)</u>；<u>网络层 ：分组或包(packet)</u> ；<u>传输层 ：分段(segment)、数据报(datagram)</u>；<u>应用层：消息(message)</u>。</li>
+<li>OSI将层与层之间交换的数据的单元称为<strong>服务数据单元SDU</strong> (Service Data Unit)。<em>一个(n)服务数据单元就是(n)服务所要传送的逻辑数据单元。SDU就是数据PDU中的用户数据，但不一定是一一对应关系。 可以是多个SDU合成为一个PDU(称为“拼装”)，也可以是将一个SDU划分为几个PDU(称为“分段”)。</em></li>
+<li>协议是“水平的”，即协议是<u>控制对等实体之间通信的规则</u>。服务是“垂直的”，即服务是<u>由下层向上层通过层间接口提供的</u>。<em>“虚拟”指看起来存在但实际上不存在的事物，“透明”相反。</em></li>
+<li>N层中任何两个协议实体通过<u>(n-1)SAP</u>所形成的逻辑数据通路称为<u>(n-1)层通道</u>。通道的类型：空通道、非缓冲通道、缓冲通道。通道队列的主要性质是<u>平均队列长度</u>以及<u>最大队列允许长度</u>。</li>
+<li><strong>回程时延RTT</strong>。从n层源端实体<u>发出报文到该报文的确认信息到达</u>该实体之间的时间间隔，它包括目标实体收到报文之后，对报文进行处理然后发出确认信息的时间。（处理时延、排队时延、发送时延、传播时延）</li>
+<li>如果通道是利用(n-1)层的<u>有</u>（无）连接服务形成的，那么传递的报文<u>不会</u>（有可能）失序。通道的工作方式：单工、半双工、全双工 | 同步与异步。</li>
+<li>协议的两大功能：<strong>连接管理</strong>，<strong>数据交换</strong>。</li>
+</ol>
+<ul>
+<li>连接管理：
+<ul>
+<li>两种连接：点对点、点对多点</li>
+</ul>
+</li>
+<li>三种主要功能：连接建立、连接释放。连接维护
+<ul>
+<li>数据交换：</li>
+<li>n层协议接收<u>n层用户递交的(n)SDU</u>（(n-1)层通道的(n)PDU），<u>将之转换成(n)PDU</u>（提取其中的(n)SDU），<u>从(n-1)层通道发送出去</u>（转交给n层用户）。</li>
+<li>一般要实现功能：对齐、分段和合段、拼装和分离、PDU的装配和拆装、SDU的编码与解码、加校验和、抖动补偿、带外数据和紧急数据的发送。<em>(n-1)通道提供的数据通道的可靠性越高，则n层协议需实现的差错控制机制则越少。</em></li>
+</ul>
+</li>
+</ul>
+<ol start="12">
+<li>用来防止丢失、重复和乱序的方法包括：<u>序号、确认、重传、计时器</u>。<em>(n-1)通道提供的数据通道的可靠性越高，则n层协议需实现的差错控制机制则越少。</em></li>
+</ol>
+<ul>
+<li>序号：检测PDU重复、失序、丢失|进行无二义性编号|SDU序号、PDU序号、字节序号|使用一个非常大的序号空间*（从一端到另一端的最大可能的延迟时间L内，所有从源点发送出去的新的数据单元都具有不同的序号）*序号是确认和重传的基础，此外序号还可用于流量控制 </li>
+<li>ACK可以确定<u>PDU</u>和<u>字节</u>。可确认的情况：<u>已正确到达</u>，<u>还没有收到</u>，<u>收到但有错(相当于没有收到)</u>。分为三种类型：<u>AcK</u>，<u>Nak</u>，<u>Select Ack</u>。两种发送方式：<u>独立确认</u>（指用一个确认PDU，可随时发送），<u>应答携带</u>（放在数据PDU中可提高效率，但需要接收方有数据发送）。<em>通常在一种协议中两种确认形式均存在</em>。选择确认信息中包含多个序号时有三种格式：<u>表</u>，<u>范围</u>，<u>位图</u>。</li>
+<li>计时器的超时值设置依赖RTT。计时器的超时值<u>太短：大量数据重传，加剧网络拥塞程度</u>；<u>太长：数据丢失得不到及时纠正，降低协议性能</u>。</li>
+<li>基于滑动窗口的重传方法：<u>回退N帧</u>和<u>选择重传</u>。</li>
+</ul>
+<ol start="13">
+<li>N层协议所提供的服务是N层协议外部行为的体现。在协议的控制下， N层的两个对等实体间通信，使其能够向上一层提供服务。要实现本层协议，需要使用下一层所提供的服务。一般用服务规范(Service Specification)来定义和描述N层协议向外部所提供的服务，包括：服务原语和服务原语时序。N 层协议的服务原语和原语参数详细准确地描述了N层协议和它的服务用户之间的接口。</li>
+<li>协议的主体是它的<strong>状态-事件</strong>转换机制 。一个完整的服务原语通常包括<u>原语名字</u>、<u>原语类型</u>和<u>原语参数</u>三大部分，如T-CONNECT.request(被叫地址，主叫地址，......)。</li>
+<li>根据使用服务原语的角度来考虑，可将服务分为两类： <u>需要证实的服务</u>，<u>不需要证实的服务</u>。根据所提供的服务的不同，为完成某功能所需的<u>服务原语的个数</u>和<u>服务原语的时序</u>是不同的。</li>
+<li>三次握手需要用到三个PDU：<u>CR(连接请求)</u>，<u>CC(连接证实)</u>，<u>AK(确认)</u>。</li>
+<li>协议状态分为：<u>局部状态</u>，<u>全局状态</u>。N层协议必须定义<strong>所有的</strong>协议状态。</li>
+<li>协议事件根据用途可分为：<u>输入事件</u>，<u>输出事件</u>。根据作用范围可分为：<strong>通信事件</strong>（收发服务原语或收发PDU，可分为同步时间或叫协同事件和异步事件），<strong>内部事件</strong>。三个性质：<strong>成对性</strong>（通信事件成对，内部事件不成对）、<strong>原子性</strong>、<strong>时序性</strong>。每种协议功能都是通过<strong>一组协议过程的执行</strong>来实现。</li>
+<li>协议操作只有在<u>一定条件</u>（谓词）下才能够被执行。<em>描述一个协议过程必须说明该过程所包含的操作以及执行操作的谓词。</em></li>
+<li>元素之间的有机联系：<strong>在什么协议状态下，在什么输入事件驱动下，调用什么协议过程；协议过程在什么条件下(谓词)，采取什么协议动作(操作)，输出什么事件或修改哪些协议状态和变量。</strong></li>
+<li>协议三种运行方式：<strong>协议交替</strong>、<strong>协议并发</strong>、<strong>协议并行</strong>。</li>
+<li>协议文本中最重要、最主要部分是<strong>协议元素的描述</strong>。必须对每一项协议元素作出<strong>准确、清晰、无二义性</strong>的定义。</li>
+<li>一个好的结构化协议设计，应具有以下特点：<strong><u>简单、模块化</strong>、<u>有界性自稳定性和自适应性</u>、<u>健壮性</u>、<u>一致性</u></u>。前两个最基本。分层设计难点：层<u>次太少会使每一层协议太复杂</u>，太多则在<u>描述和综合各层的系统时难度较大</u>。协议分层优点：<u>各层独立、灵活性好、结构上可分割、易于实现和维护、能促进标准化工作</u>。</li>
+<li>流量控制：<u>发送方以不超过接收方处理能力的速率发送数据</u>。差错控制<u>有全局性</u>。相同：<u>提高网络性能</u>。</li>
+</ol>
+<h1 id="三协议形式化描述技术-概述">三、协议形式化描述技术-概述</h1>
+<ol>
+<li>形式化技术 FDTs (Formal Description Techniques)，FSM是个五元组：FSM = (S, s0, I, delta, F)</li>
+</ol>
+<ul>
+<li>S，有限状态集合。任一确定时刻，FSM只能处于一个确定的状态。</li>
+<li>s0，初始状态，开始接受输入。</li>
+<li>I，有限输入字符集合，任一确定的时刻智能接受一个。</li>
+<li>delta，状态转换函数，</li>
+<li>F，终态集(可空)，不再接收输入。</li>
+</ul>
+<ol start="2">
+<li>Moore 机：输出与状态有关。Moore FSM is 6-tuple: FSM = (S, s0, I, O, delta, lambda)。</li>
+</ol>
+<ul>
+<li>O，有限输出字符集合。</li>
+<li>lambda，s-&gt;O，输出函数。</li>
+<li>Moore机只是在接收输入串的过程中不断改变状态，并且<u>在每个状态上有字符输出</u>。
+<em>有限状态机可看做是Moore机的一个特例。</em>
+对于任何一个有限状态机(S, s0, I, delta, F)，引入输出字符集合 O = {0, 1}，并定义S到O的映射lambda为：s属于F, lambda(s)=1；s不属于F, lambda(s)=0。这样得到一个Moore机M=(S, s0, I, O, delta, lambda)，在该Moore机中，输出为1的状态为终结状态，输出为0的状态即为非终结状态。</li>
+</ul>
+<ol start="3">
+<li>Mealy机：输出与状态和输入有关</li>
+</ol>
+<ul>
+<li>lambda，s*I-&gt;O，输出函数。</li>
+<li>Mealy机只是在接收输入串的过程中不断改变状态，并且<u>字符输出与当前状态及输入串有关</u>。
+<em>Moore机可看做是Mealy机的一个特例。</em>
+对于任何一个Moore机 M=(S, s0, I, O, delta, lambda)，PPT三-32</li>
+</ul>
+<ol start="4">
+<li>
+<p>停等协议的状态变迁表：发帧的2竖列除了准备发且发了的，其他状态都不改变，且斜杠后只有发了的有东西。准备发时收到ACK状态不变。准备发和发了的超时，变为准备发相同的状态。</p>……
                 </summary>
                 
                     <div class="read-more-container">

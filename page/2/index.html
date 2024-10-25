@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.127.0"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.136.5"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -58,7 +58,7 @@
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "datePublished": "2016-08-21T20:00:00+08:00",
+        "datePublished": "2023-09-16T22:46:34+08:00",
         "dateModified": "2024-03-17T22:15:19+08:00",
         "url": "https://blog.littleghost.ml/",
         "description": "MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。",
@@ -226,7 +226,7 @@
 
                 
                 <summary class="summary p-summary">
-                    lxc模板为debian10。后来因经常掉盘问题，放弃lxc安装omv，改为虚拟机安……
+                    <p>lxc模板为debian10。后来因经常掉盘问题，放弃lxc安装omv，改为虚拟机安装omv的方式。</p>……
                 </summary>
                 
                     <div class="read-more-container">
@@ -277,7 +277,8 @@
 
                 
                 <summary class="summary p-summary">
-                    1.编译openwrt固件 我是在OpenWrt固件下载与在线定制编译 (supes.t……
+                    <h1 id="1编译openwrt固件">1.编译openwrt固件</h1>
+<p>我是在<a href="https://supes.top/">OpenWrt固件下载与在线定制编译 (supes.top)</a>中定制固件，下载<code>xxx-GENERIC-ROOTFS.TAR.GZ</code>用于lxc中系统的安装。</p>……
                 </summary>
                 
                     <div class="read-more-container">
@@ -328,7 +329,8 @@
 
                 
                 <summary class="summary p-summary">
-                    1.lxc创建alpine系统 可以是“无特权的容器”，可以取消勾选”嵌套“。ip在p……
+                    <h1 id="1lxc创建alpine系统">1.lxc创建alpine系统</h1>
+<p>可以是“无特权的容器”，可以取消勾选”嵌套“。ip在pve创建lxc容器时设置固定ip并指定ip。</p>……
                 </summary>
                 
                     <div class="read-more-container">
@@ -379,7 +381,31 @@
 
                 
                 <summary class="summary p-summary">
-                    pve安装时选择btrfs为文件系统。 1.修改基础系统（Debian）的源文件 1 2 3……
+                    <p>pve安装时选择btrfs为文件系统。</p>
+<h1 id="1修改基础系统debian的源文件">1.修改基础系统（Debian）的源文件</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sed -i <span class="s1">&#39;s|^deb http://deb.debian.org|deb https://mirrors.tuna.tsinghua.edu.cn|g&#39;</span> /etc/apt/sources.list
+</span></span><span class="line"><span class="cl">$ sed -i <span class="s1">&#39;s|^deb http://security.debian.org|deb https://mirrors.tuna.tsinghua.edu.cn/debian-security|g&#39;</span> /etc/apt/sources.list
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ <span class="nb">source</span> /etc/os-release
+</span></span><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="s2">&#34;deb https://mirrors.tuna.tsinghua.edu.cn/proxmox/debian/pve </span><span class="nv">$VERSION_CODENAME</span><span class="s2"> pve-no-subscription&#34;</span> &gt; /etc/apt/sources.list.d/pve-no-subscription.list
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ cp /usr/share/perl5/PVE/APLInfo.pm /usr/share/perl5/PVE/APLInfo.pm_back
+</span></span><span class="line"><span class="cl">$ sed -i <span class="s1">&#39;s|http://download.proxmox.com|https://mirrors.tuna.tsinghua.edu.cn/proxmox|g&#39;</span> /usr/share/perl5/PVE/APLInfo.pm
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>更新</p>……
                 </summary>
                 
                     <div class="read-more-container">
@@ -430,7 +456,9 @@
 
                 
                 <summary class="summary p-summary">
-                    参考自PVE用LXC几乎完美运行openwrt更新无需编译内核支持fullconen……
+                    <blockquote>
+<p>参考自<a href="https://www.right.com.cn/forum/thread-4053183-1-1.html">PVE用LXC几乎完美运行openwrt更新无需编译内核支持fullconenat-软路由,x86系统,openwrt(x86),Router OS 等-恩山无线论坛 - Powered by Discuz! (right.com.cn)</a></p>
+<p>参考自<a href="https://post.smzdm.com/p/aoowpzp7/p2/?sort_tab=new/#comments">proxmox折腾 篇一：解决j3455直通iommu分组问题，PVE内核编译教程_服务软件_什么值得买 (smzdm.com)</a></p>……
                 </summary>
                 
                     <div class="read-more-container">

@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.127.0"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.136.5"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -30,7 +30,9 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" media="print" onload="this.media='all'" />
         <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" /></noscript>
 
-    <meta name="author" content="LittleGhost" /><meta name="description" content="实验一 已知notepad.exe的各节区的RVA地址/RAW偏移范围如下： 节区名称 R……" />
+    <meta name="author" content="LittleGhost" /><meta name="description" content="实验一 已知notepad.exe的各节区的RVA地址/RAW偏移范围如下：
+节区名称 RVA起始地址 节区在内存中大小 RAW起始偏移量 节区在外存中大小 .text 00001000H 7748H 00000400H 7800H .data 00009000H 1BA8H 00007C00H 800H .rsrc 0000B000H 7F20H 00008400H 8000H PE头中的DataDirectory[1]这一项的RAW偏移在160H～167H。
+……" />
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
@@ -60,7 +62,7 @@
         "dateModified": "2020-05-25T19:29:54+08:00",
         "url": "https://blog.littleghost.ml/posts/%E8%BD%AF%E4%BB%B6%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E4%B8%8A%E6%9C%BA%E4%BD%9C%E4%B8%9A/",
         "headline": "软件逆向工程上机作业",
-        "description": "实验一 已知notepad.exe的各节区的RVA地址/RAW偏移范围如下： 节区名称 R……",
+        "description": "实验一 已知notepad.exe的各节区的RVA地址/RAW偏移范围如下：\n节区名称 RVA起始地址 节区在内存中大小 RAW起始偏移量 节区在外存中大小 .text 00001000H 7748H 00000400H 7800H .data 00009000H 1BA8H 00007C00H 800H .rsrc 0000B000H 7F20H 00008400H 8000H PE头中的DataDirectory[1]这一项的RAW偏移在160H～167H。\n……",
         "inLanguage" : "zh-CN",
         "articleSection": "posts",
         "wordCount":  7153 ,
@@ -101,7 +103,9 @@
 
 
 <meta property="og:title" content="软件逆向工程上机作业" />
-<meta property="og:description" content="实验一 已知notepad.exe的各节区的RVA地址/RAW偏移范围如下： 节区名称 R……" />
+<meta property="og:description" content="实验一 已知notepad.exe的各节区的RVA地址/RAW偏移范围如下：
+节区名称 RVA起始地址 节区在内存中大小 RAW起始偏移量 节区在外存中大小 .text 00001000H 7748H 00000400H 7800H .data 00009000H 1BA8H 00007C00H 800H .rsrc 0000B000H 7F20H 00008400H 8000H PE头中的DataDirectory[1]这一项的RAW偏移在160H～167H。
+……" />
 <meta property="og:url" content="https://blog.littleghost.ml/posts/%E8%BD%AF%E4%BB%B6%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E4%B8%8A%E6%9C%BA%E4%BD%9C%E4%B8%9A/" />
 <meta property="og:site_name" content="LittleGhost的博客" />
 <meta property="og:locale" content="zh" /><meta property="og:image" content="https://blog.littleghost.ml/clip_image002.png" />
@@ -254,147 +258,147 @@
                 <h1 id="实验一"><a href="#实验一" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>实验一</h1>
 <p>已知notepad.exe的各节区的RVA地址/RAW偏移范围如下：</p>
 <div class="table-container"><table>
-<thead>
-<tr>
-<th>节区名称</th>
-<th>RVA起始地址</th>
-<th>节区在内存中大小</th>
-<th>RAW起始偏移量</th>
-<th>节区在外存中大小</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>.text</td>
-<td>00001000H</td>
-<td>7748H</td>
-<td>00000400H</td>
-<td>7800H</td>
-</tr>
-<tr>
-<td>.data</td>
-<td>00009000H</td>
-<td>1BA8H</td>
-<td>00007C00H</td>
-<td>800H</td>
-</tr>
-<tr>
-<td>.rsrc</td>
-<td>0000B000H</td>
-<td>7F20H</td>
-<td>00008400H</td>
-<td>8000H</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>节区名称</th>
+          <th>RVA起始地址</th>
+          <th>节区在内存中大小</th>
+          <th>RAW起始偏移量</th>
+          <th>节区在外存中大小</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>.text</td>
+          <td>00001000H</td>
+          <td>7748H</td>
+          <td>00000400H</td>
+          <td>7800H</td>
+      </tr>
+      <tr>
+          <td>.data</td>
+          <td>00009000H</td>
+          <td>1BA8H</td>
+          <td>00007C00H</td>
+          <td>800H</td>
+      </tr>
+      <tr>
+          <td>.rsrc</td>
+          <td>0000B000H</td>
+          <td>7F20H</td>
+          <td>00008400H</td>
+          <td>8000H</td>
+      </tr>
+  </tbody>
 </table></div>
 <p>PE头中的DataDirectory[1]这一项的RAW偏移在160H～167H。</p>
 <ol>
 <li>解析notepad.exe的IMAGE_IMPORT_DESCRIPTOR数组的内容，填充下面表格：</li>
 </ol>
 <div class="table-container"><table>
-<thead>
-<tr>
-<th>OriginalFirstThunk</th>
-<th></th>
-<th>Name</th>
-<th></th>
-<th></th>
-<th>FirstThunk</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>RVA</td>
-<td>RAW</td>
-<td>RVA</td>
-<td>RAW</td>
-<td>库文件名</td>
-<td>RVA</td>
-<td>RAW</td>
-</tr>
-<tr>
-<td>00007990H</td>
-<td>00006A04H</td>
-<td>00007AACH</td>
-<td>00006EACH</td>
-<td>comdlg32.dll</td>
-<td>000012C4H</td>
-<td>000006C4H</td>
-</tr>
-<tr>
-<td>00007840H</td>
-<td>00006C40H</td>
-<td>00007AFAH</td>
-<td>00006EFAH</td>
-<td>SHELL32.dll</td>
-<td>00001174H</td>
-<td>00000574H</td>
-</tr>
-<tr>
-<td>00007980H</td>
-<td>00006D80H</td>
-<td>00007B3AH</td>
-<td>00006F3AH</td>
-<td>WINSPOOL.DRV</td>
-<td>000012B4H</td>
-<td>000006B4H</td>
-</tr>
-<tr>
-<td>000076ECH</td>
-<td>00006AECH</td>
-<td>00007B5EH</td>
-<td>00006F5EH</td>
-<td>COMCTL32.dll</td>
-<td>00001020H</td>
-<td>00000420H</td>
-</tr>
-<tr>
-<td>000079B8H</td>
-<td>00006DB8H</td>
-<td>00007C76H</td>
-<td>00007076H</td>
-<td>msvcrt.dll</td>
-<td>000012ECH</td>
-<td>000006ECH</td>
-</tr>
-<tr>
-<td>000076CCH</td>
-<td>00006ACCH</td>
-<td>00007D08H</td>
-<td>00007108H</td>
-<td>ADVAPI32.dll</td>
-<td>00001000H</td>
-<td>00000400H</td>
-</tr>
-<tr>
-<td>00007758H</td>
-<td>00006B58H</td>
-<td>000080ECH</td>
-<td>000074ECH</td>
-<td>KERNEL32.dll</td>
-<td>0000108CH</td>
-<td>0000048CH</td>
-</tr>
-<tr>
-<td>000076F4H</td>
-<td>00006AF4H</td>
-<td>0000825EH</td>
-<td>0000765EH</td>
-<td>GDI32.dll</td>
-<td>00001028H</td>
-<td>00000428</td>
-</tr>
-<tr>
-<td>00007854H</td>
-<td>00006C54H</td>
-<td>0000873CH</td>
-<td>00007B3CH</td>
-<td>USER32.dll</td>
-<td>00001188H</td>
-<td>00000588H</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>OriginalFirstThunk</th>
+          <th></th>
+          <th>Name</th>
+          <th></th>
+          <th></th>
+          <th>FirstThunk</th>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>RVA</td>
+          <td>RAW</td>
+          <td>RVA</td>
+          <td>RAW</td>
+          <td>库文件名</td>
+          <td>RVA</td>
+          <td>RAW</td>
+      </tr>
+      <tr>
+          <td>00007990H</td>
+          <td>00006A04H</td>
+          <td>00007AACH</td>
+          <td>00006EACH</td>
+          <td>comdlg32.dll</td>
+          <td>000012C4H</td>
+          <td>000006C4H</td>
+      </tr>
+      <tr>
+          <td>00007840H</td>
+          <td>00006C40H</td>
+          <td>00007AFAH</td>
+          <td>00006EFAH</td>
+          <td>SHELL32.dll</td>
+          <td>00001174H</td>
+          <td>00000574H</td>
+      </tr>
+      <tr>
+          <td>00007980H</td>
+          <td>00006D80H</td>
+          <td>00007B3AH</td>
+          <td>00006F3AH</td>
+          <td>WINSPOOL.DRV</td>
+          <td>000012B4H</td>
+          <td>000006B4H</td>
+      </tr>
+      <tr>
+          <td>000076ECH</td>
+          <td>00006AECH</td>
+          <td>00007B5EH</td>
+          <td>00006F5EH</td>
+          <td>COMCTL32.dll</td>
+          <td>00001020H</td>
+          <td>00000420H</td>
+      </tr>
+      <tr>
+          <td>000079B8H</td>
+          <td>00006DB8H</td>
+          <td>00007C76H</td>
+          <td>00007076H</td>
+          <td>msvcrt.dll</td>
+          <td>000012ECH</td>
+          <td>000006ECH</td>
+      </tr>
+      <tr>
+          <td>000076CCH</td>
+          <td>00006ACCH</td>
+          <td>00007D08H</td>
+          <td>00007108H</td>
+          <td>ADVAPI32.dll</td>
+          <td>00001000H</td>
+          <td>00000400H</td>
+      </tr>
+      <tr>
+          <td>00007758H</td>
+          <td>00006B58H</td>
+          <td>000080ECH</td>
+          <td>000074ECH</td>
+          <td>KERNEL32.dll</td>
+          <td>0000108CH</td>
+          <td>0000048CH</td>
+      </tr>
+      <tr>
+          <td>000076F4H</td>
+          <td>00006AF4H</td>
+          <td>0000825EH</td>
+          <td>0000765EH</td>
+          <td>GDI32.dll</td>
+          <td>00001028H</td>
+          <td>00000428</td>
+      </tr>
+      <tr>
+          <td>00007854H</td>
+          <td>00006C54H</td>
+          <td>0000873CH</td>
+          <td>00007B3CH</td>
+          <td>USER32.dll</td>
+          <td>00001188H</td>
+          <td>00000588H</td>
+      </tr>
+  </tbody>
 </table></div>
 <ol start="2">
 <li>查找所使用的KERNEL32.dll库的第一个函数的名称。</li>
@@ -411,30 +415,30 @@
 <h1 id="实验二"><a href="#实验二" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>实验二</h1>
 <p>用x86汇编语言实现以下C语言函数功能</p>
 <div class="table-container"><table>
-<thead>
-<tr>
-<th>函数</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>unsigned intstrlen(char *s);</td>
-<td>计算给定字符串的长度，不包括'\0'在内</td>
-</tr>
-<tr>
-<td>char <em>strchr(const char</em> s,charc);</td>
-<td>查找字符串s中首次出现字符c的位置，返回首次出现c的位置的指针，如果s中不存在c则返回0</td>
-</tr>
-<tr>
-<td>intstrcmp(const char *s1,const char *s2);</td>
-<td>当s1&lt;s2时，返回为-1；当s1==s2时，返回值= 0；当s1&gt;s2时，返回1。</td>
-</tr>
-<tr>
-<td>char *strset(char *s, char c);</td>
-<td>把字符串s中的所有字符都设置成字符c</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>函数</th>
+          <th>功能</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>unsigned intstrlen(char *s);</td>
+          <td>计算给定字符串的长度，不包括'\0'在内</td>
+      </tr>
+      <tr>
+          <td>char <em>strchr(const char</em> s,charc);</td>
+          <td>查找字符串s中首次出现字符c的位置，返回首次出现c的位置的指针，如果s中不存在c则返回0</td>
+      </tr>
+      <tr>
+          <td>intstrcmp(const char *s1,const char *s2);</td>
+          <td>当s1&lt;s2时，返回为-1；当s1==s2时，返回值= 0；当s1&gt;s2时，返回1。</td>
+      </tr>
+      <tr>
+          <td>char *strset(char *s, char c);</td>
+          <td>把字符串s中的所有字符都设置成字符c</td>
+      </tr>
+  </tbody>
 </table></div>
 <h2 id="实验要求"><a href="#实验要求" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>实验要求:</h2>
 <ol>
@@ -1853,21 +1857,21 @@ END main
             
                 <div class="share-item douban">
                     
-                    <a href="https://www.douban.com/share/service?href=https://blog.littleghost.ml/posts/%E8%BD%AF%E4%BB%B6%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E4%B8%8A%E6%9C%BA%E4%BD%9C%E4%B8%9A/&amp;name=%e8%bd%af%e4%bb%b6%e9%80%86%e5%90%91%e5%b7%a5%e7%a8%8b%e4%b8%8a%e6%9c%ba%e4%bd%9c%e4%b8%9a&amp;text=%e5%ae%9e%e9%aa%8c%e4%b8%80%20%e5%b7%b2%e7%9f%a5notepad.exe%e7%9a%84%e5%90%84%e8%8a%82%e5%8c%ba%e7%9a%84RVA%e5%9c%b0%e5%9d%80/RAW%e5%81%8f%e7%a7%bb%e8%8c%83%e5%9b%b4%e5%a6%82%e4%b8%8b%ef%bc%9a%20%e8%8a%82%e5%8c%ba%e5%90%8d%e7%a7%b0%20R%e2%80%a6%e2%80%a6" title="分享到「豆瓣」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon douban-icon"><path d="M.643.92v2.412h22.714V.92H.643zm1.974 4.926v9.42h18.764v-9.42H2.617zm2.72 2.408H18.69v4.605H5.338V8.254zm1.657 7.412l-2.512.938c1.037 1.461 1.87 2.825 2.512 4.091H0v2.385h24v-2.385h-6.678c.818-1.176 1.589-2.543 2.303-4.091l-2.73-.938a29.952 29.952 0 01-2.479 5.03h-4.75c-.786-1.962-1.677-3.641-2.672-5.03Z"/></svg></a>
+                    <a href="https://www.douban.com/share/service?href=https://blog.littleghost.ml/posts/%E8%BD%AF%E4%BB%B6%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E4%B8%8A%E6%9C%BA%E4%BD%9C%E4%B8%9A/&amp;name=%e8%bd%af%e4%bb%b6%e9%80%86%e5%90%91%e5%b7%a5%e7%a8%8b%e4%b8%8a%e6%9c%ba%e4%bd%9c%e4%b8%9a&amp;text=%e5%ae%9e%e9%aa%8c%e4%b8%80%20%e5%b7%b2%e7%9f%a5notepad.exe%e7%9a%84%e5%90%84%e8%8a%82%e5%8c%ba%e7%9a%84RVA%e5%9c%b0%e5%9d%80/RAW%e5%81%8f%e7%a7%bb%e8%8c%83%e5%9b%b4%e5%a6%82%e4%b8%8b%ef%bc%9a%0a%e8%8a%82%e5%8c%ba%e5%90%8d%e7%a7%b0%20RVA%e8%b5%b7%e5%a7%8b%e5%9c%b0%e5%9d%80%20%e8%8a%82%e5%8c%ba%e5%9c%a8%e5%86%85%e5%ad%98%e4%b8%ad%e5%a4%a7%e5%b0%8f%20RAW%e8%b5%b7%e5%a7%8b%e5%81%8f%e7%a7%bb%e9%87%8f%20%e8%8a%82%e5%8c%ba%e5%9c%a8%e5%a4%96%e5%ad%98%e4%b8%ad%e5%a4%a7%e5%b0%8f%20.text%2000001000H%207748H%2000000400H%207800H%20.data%2000009000H%201BA8H%2000007C00H%20800H%20.rsrc%200000B000H%207F20H%2000008400H%208000H%20PE%e5%a4%b4%e4%b8%ad%e7%9a%84DataDirectory[1]%e8%bf%99%e4%b8%80%e9%a1%b9%e7%9a%84RAW%e5%81%8f%e7%a7%bb%e5%9c%a8160H%ef%bd%9e167H%e3%80%82%0a%e2%80%a6%e2%80%a6" title="分享到「豆瓣」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon douban-icon"><path d="M.643.92v2.412h22.714V.92H.643zm1.974 4.926v9.42h18.764v-9.42H2.617zm2.72 2.408H18.69v4.605H5.338V8.254zm1.657 7.412l-2.512.938c1.037 1.461 1.87 2.825 2.512 4.091H0v2.385h24v-2.385h-6.678c.818-1.176 1.589-2.543 2.303-4.091l-2.73-.938a29.952 29.952 0 01-2.479 5.03h-4.75c-.786-1.962-1.677-3.641-2.672-5.03Z"/></svg></a>
                 </div>
             
 
             
                 <div class="share-item qq">
                     
-                    <a href="https://connect.qq.com/widget/shareqq/index.html?url=https://blog.littleghost.ml/posts/%E8%BD%AF%E4%BB%B6%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E4%B8%8A%E6%9C%BA%E4%BD%9C%E4%B8%9A/&amp;title=%e8%bd%af%e4%bb%b6%e9%80%86%e5%90%91%e5%b7%a5%e7%a8%8b%e4%b8%8a%e6%9c%ba%e4%bd%9c%e4%b8%9a&amp;summary=%e5%ae%9e%e9%aa%8c%e4%b8%80%20%e5%b7%b2%e7%9f%a5notepad.exe%e7%9a%84%e5%90%84%e8%8a%82%e5%8c%ba%e7%9a%84RVA%e5%9c%b0%e5%9d%80/RAW%e5%81%8f%e7%a7%bb%e8%8c%83%e5%9b%b4%e5%a6%82%e4%b8%8b%ef%bc%9a%20%e8%8a%82%e5%8c%ba%e5%90%8d%e7%a7%b0%20R%e2%80%a6%e2%80%a6&amp;pics=https://blog.littleghost.ml/clip_image002.png&amp;site=LittleGhost%e7%9a%84%e5%8d%9a%e5%ae%a2" title="分享到「QQ」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon qq-icon"><path d="M433.754 420.445c-11.526 1.393-44.86-52.741-44.86-52.741 0 31.345-16.136 72.247-51.051 101.786 16.842 5.192 54.843 19.167 45.803 34.421-7.316 12.343-125.51 7.881-159.632 4.037-34.122 3.844-152.316 8.306-159.632-4.037-9.045-15.25 28.918-29.214 45.783-34.415-34.92-29.539-51.059-70.445-51.059-101.792 0 0-33.334 54.134-44.859 52.741-5.37-.65-12.424-29.644 9.347-99.704 10.261-33.024 21.995-60.478 40.144-105.779C60.683 98.063 108.982.006 224 0c113.737.006 163.156 96.133 160.264 214.963 18.118 45.223 29.912 72.85 40.144 105.778 21.768 70.06 14.716 99.053 9.346 99.704z"/></svg></a>
+                    <a href="https://connect.qq.com/widget/shareqq/index.html?url=https://blog.littleghost.ml/posts/%E8%BD%AF%E4%BB%B6%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E4%B8%8A%E6%9C%BA%E4%BD%9C%E4%B8%9A/&amp;title=%e8%bd%af%e4%bb%b6%e9%80%86%e5%90%91%e5%b7%a5%e7%a8%8b%e4%b8%8a%e6%9c%ba%e4%bd%9c%e4%b8%9a&amp;summary=%e5%ae%9e%e9%aa%8c%e4%b8%80%20%e5%b7%b2%e7%9f%a5notepad.exe%e7%9a%84%e5%90%84%e8%8a%82%e5%8c%ba%e7%9a%84RVA%e5%9c%b0%e5%9d%80/RAW%e5%81%8f%e7%a7%bb%e8%8c%83%e5%9b%b4%e5%a6%82%e4%b8%8b%ef%bc%9a%0a%e8%8a%82%e5%8c%ba%e5%90%8d%e7%a7%b0%20RVA%e8%b5%b7%e5%a7%8b%e5%9c%b0%e5%9d%80%20%e8%8a%82%e5%8c%ba%e5%9c%a8%e5%86%85%e5%ad%98%e4%b8%ad%e5%a4%a7%e5%b0%8f%20RAW%e8%b5%b7%e5%a7%8b%e5%81%8f%e7%a7%bb%e9%87%8f%20%e8%8a%82%e5%8c%ba%e5%9c%a8%e5%a4%96%e5%ad%98%e4%b8%ad%e5%a4%a7%e5%b0%8f%20.text%2000001000H%207748H%2000000400H%207800H%20.data%2000009000H%201BA8H%2000007C00H%20800H%20.rsrc%200000B000H%207F20H%2000008400H%208000H%20PE%e5%a4%b4%e4%b8%ad%e7%9a%84DataDirectory[1]%e8%bf%99%e4%b8%80%e9%a1%b9%e7%9a%84RAW%e5%81%8f%e7%a7%bb%e5%9c%a8160H%ef%bd%9e167H%e3%80%82%0a%e2%80%a6%e2%80%a6&amp;pics=https://blog.littleghost.ml/clip_image002.png&amp;site=LittleGhost%e7%9a%84%e5%8d%9a%e5%ae%a2" title="分享到「QQ」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon qq-icon"><path d="M433.754 420.445c-11.526 1.393-44.86-52.741-44.86-52.741 0 31.345-16.136 72.247-51.051 101.786 16.842 5.192 54.843 19.167 45.803 34.421-7.316 12.343-125.51 7.881-159.632 4.037-34.122 3.844-152.316 8.306-159.632-4.037-9.045-15.25 28.918-29.214 45.783-34.415-34.92-29.539-51.059-70.445-51.059-101.792 0 0-33.334 54.134-44.859 52.741-5.37-.65-12.424-29.644 9.347-99.704 10.261-33.024 21.995-60.478 40.144-105.779C60.683 98.063 108.982.006 224 0c113.737.006 163.156 96.133 160.264 214.963 18.118 45.223 29.912 72.85 40.144 105.778 21.768 70.06 14.716 99.053 9.346 99.704z"/></svg></a>
                 </div>
             
 
             
                 <div class="share-item qzone">
                     
-                    <a href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.littleghost.ml/posts/%E8%BD%AF%E4%BB%B6%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E4%B8%8A%E6%9C%BA%E4%BD%9C%E4%B8%9A/&amp;title=%e8%bd%af%e4%bb%b6%e9%80%86%e5%90%91%e5%b7%a5%e7%a8%8b%e4%b8%8a%e6%9c%ba%e4%bd%9c%e4%b8%9a&amp;summary=%e5%ae%9e%e9%aa%8c%e4%b8%80%20%e5%b7%b2%e7%9f%a5notepad.exe%e7%9a%84%e5%90%84%e8%8a%82%e5%8c%ba%e7%9a%84RVA%e5%9c%b0%e5%9d%80/RAW%e5%81%8f%e7%a7%bb%e8%8c%83%e5%9b%b4%e5%a6%82%e4%b8%8b%ef%bc%9a%20%e8%8a%82%e5%8c%ba%e5%90%8d%e7%a7%b0%20R%e2%80%a6%e2%80%a6&amp;pics=https://blog.littleghost.ml/clip_image002.png&amp;site=LittleGhost%e7%9a%84%e5%8d%9a%e5%ae%a2" title="分享到「QQ 空间」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon qzone-icon"><path d="M23.985 9.202c-.032-.099-.127-.223-.334-.258-.207-.036-7.351-1.406-7.351-1.406s-.105-.022-.198-.07c-.092-.047-.127-.167-.127-.167S12.447.956 12.349.77C12.25.583 12.104.532 12 .532c-.104 0-.251.051-.349.238-.098.186-3.626 6.531-3.626 6.531s-.035.12-.128.167c-.092.047-.197.07-.197.07S.556 8.908.348 8.943c-.208.036-.302.16-.333.258a.477.477 0 0 0 .125.449l5.362 5.49s.072.08.119.172c.016.104.005.21.005.21s-1.189 7.242-1.22 7.45.075.369.159.43c.083.062.233.106.421.013.189-.093 6.812-3.261 6.812-3.261s.098-.044.201-.061c.103-.017.201.061.201.061s6.623 3.168 6.812 3.261c.188.094.338.049.421-.013a.463.463 0 0 0 .159-.43c-.021-.14-.93-5.677-.93-5.677.876-.54 1.425-1.039 1.849-1.747-2.594.969-6.006 1.717-9.415 1.866-.915.041-2.41.097-3.473-.015-.678-.071-1.17-.144-1.243-.438-.053-.215.054-.46.545-.831a2640.5 2640.5 0 0 1 2.861-2.155c1.285-.968 3.559-2.47 3.559-2.731 0-.285-2.144-.781-4.037-.781-1.945 0-2.275.132-2.811.168-.488.034-.769.005-.804-.138-.06-.248.183-.389.588-.568.709-.314 1.86-.594 1.984-.626.194-.052 3.082-.805 5.618-.535 1.318.14 3.244.668 3.244 1.276 0 .342-1.721 1.494-3.225 2.597-1.149.843-2.217 1.561-2.217 1.688 0 .342 3.533 1.241 6.689 1.01l.003-.022c.048-.092.119-.172.119-.172l5.362-5.49a.477.477 0 0 0 .127-.449z"/></svg></a>
+                    <a href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.littleghost.ml/posts/%E8%BD%AF%E4%BB%B6%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E4%B8%8A%E6%9C%BA%E4%BD%9C%E4%B8%9A/&amp;title=%e8%bd%af%e4%bb%b6%e9%80%86%e5%90%91%e5%b7%a5%e7%a8%8b%e4%b8%8a%e6%9c%ba%e4%bd%9c%e4%b8%9a&amp;summary=%e5%ae%9e%e9%aa%8c%e4%b8%80%20%e5%b7%b2%e7%9f%a5notepad.exe%e7%9a%84%e5%90%84%e8%8a%82%e5%8c%ba%e7%9a%84RVA%e5%9c%b0%e5%9d%80/RAW%e5%81%8f%e7%a7%bb%e8%8c%83%e5%9b%b4%e5%a6%82%e4%b8%8b%ef%bc%9a%0a%e8%8a%82%e5%8c%ba%e5%90%8d%e7%a7%b0%20RVA%e8%b5%b7%e5%a7%8b%e5%9c%b0%e5%9d%80%20%e8%8a%82%e5%8c%ba%e5%9c%a8%e5%86%85%e5%ad%98%e4%b8%ad%e5%a4%a7%e5%b0%8f%20RAW%e8%b5%b7%e5%a7%8b%e5%81%8f%e7%a7%bb%e9%87%8f%20%e8%8a%82%e5%8c%ba%e5%9c%a8%e5%a4%96%e5%ad%98%e4%b8%ad%e5%a4%a7%e5%b0%8f%20.text%2000001000H%207748H%2000000400H%207800H%20.data%2000009000H%201BA8H%2000007C00H%20800H%20.rsrc%200000B000H%207F20H%2000008400H%208000H%20PE%e5%a4%b4%e4%b8%ad%e7%9a%84DataDirectory[1]%e8%bf%99%e4%b8%80%e9%a1%b9%e7%9a%84RAW%e5%81%8f%e7%a7%bb%e5%9c%a8160H%ef%bd%9e167H%e3%80%82%0a%e2%80%a6%e2%80%a6&amp;pics=https://blog.littleghost.ml/clip_image002.png&amp;site=LittleGhost%e7%9a%84%e5%8d%9a%e5%ae%a2" title="分享到「QQ 空间」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon qzone-icon"><path d="M23.985 9.202c-.032-.099-.127-.223-.334-.258-.207-.036-7.351-1.406-7.351-1.406s-.105-.022-.198-.07c-.092-.047-.127-.167-.127-.167S12.447.956 12.349.77C12.25.583 12.104.532 12 .532c-.104 0-.251.051-.349.238-.098.186-3.626 6.531-3.626 6.531s-.035.12-.128.167c-.092.047-.197.07-.197.07S.556 8.908.348 8.943c-.208.036-.302.16-.333.258a.477.477 0 0 0 .125.449l5.362 5.49s.072.08.119.172c.016.104.005.21.005.21s-1.189 7.242-1.22 7.45.075.369.159.43c.083.062.233.106.421.013.189-.093 6.812-3.261 6.812-3.261s.098-.044.201-.061c.103-.017.201.061.201.061s6.623 3.168 6.812 3.261c.188.094.338.049.421-.013a.463.463 0 0 0 .159-.43c-.021-.14-.93-5.677-.93-5.677.876-.54 1.425-1.039 1.849-1.747-2.594.969-6.006 1.717-9.415 1.866-.915.041-2.41.097-3.473-.015-.678-.071-1.17-.144-1.243-.438-.053-.215.054-.46.545-.831a2640.5 2640.5 0 0 1 2.861-2.155c1.285-.968 3.559-2.47 3.559-2.731 0-.285-2.144-.781-4.037-.781-1.945 0-2.275.132-2.811.168-.488.034-.769.005-.804-.138-.06-.248.183-.389.588-.568.709-.314 1.86-.594 1.984-.626.194-.052 3.082-.805 5.618-.535 1.318.14 3.244.668 3.244 1.276 0 .342-1.721 1.494-3.225 2.597-1.149.843-2.217 1.561-2.217 1.688 0 .342 3.533 1.241 6.689 1.01l.003-.022c.048-.092.119-.172.119-.172l5.362-5.49a.477.477 0 0 0 .127-.449z"/></svg></a>
                 </div>
             
 
